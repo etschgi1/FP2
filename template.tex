@@ -1,0 +1,96 @@
+% class
+\documentclass[ngerman]{scrartcl}
+
+% input preamble
+\input{../../shared_preamble.tex}
+
+% biblatex
+\addbibresource{irgendeine_bib_file.bib}
+
+
+% manual header
+\ihead{Versuch}  % inner (left) head
+\chead{\textsc{Wachmann} Elias (12004232)\\\textsc{Zach} Andreas (12004790)}  % center head
+\ohead{Datum}  % outer (right) head
+
+
+
+\begin{document}
+
+\includepdf{deckblatt.pdf}
+
+\clearpage
+\tableofcontents
+\newpage
+
+\section{Aufgabenstellung}
+\label{sec:aufgabenstellung}
+
+
+
+\section{Grundlagen und Voraussetzungen}
+\label{sec:grundlagen_voraussetzungen}
+
+
+
+\subsection{Unsicherheitsanalyse}
+\label{subsec:unsicherheitsanalyse}
+
+Die explizit angegebenen Unsicherheiten der ermittelten Messgrößen basieren auf Berechnungen durch die Unsicherheitsangabe nach den Datenblättern der verwendeten Messgeräte. Diese sind in \autoref{tab:geraeteliste} vermerkt beziehungsweise referenziert.
+
+Die Fehlerfortpflanzung der berechneten Werte basiert auf der Größtunsicherheitsmethode nach Gauß. Um diese Berechnungen zeiteffizient durchführen zu können, wird für jeden Unterpunkt der Laborübung ein Skript in \verb!Python! implementiert. Kernstück dessen ist das package \verb!uncertainties! \cite{ref:uncertainties}, das intern die Fehlerfortpflanzung berechnet. Gerundet wird nach den Angaben des Skriptums der Lehrveranstaltung \enquote{Einführung in die physikalischen Messmethoden} \cite{ref:messmethoden}.
+
+
+
+\section{Versuchsanordnung}
+\label{sec:versuchsanordnung}
+
+
+
+\section{Geräteliste}
+\label{sec:geraeteliste}
+
+\begin{table}[H]
+    \centering
+    \begin{samepage}  % caption and table on same page
+        \caption[Geräteliste]{Verwendete Geräte und wichtige Materialien}  % optional argument for List of Tables, mandatory argument for caption
+        \label{tab:geraeteliste}
+        \begin{tblrx}{colspec={}, row{1}={guard}}
+
+        \end{tblrx}
+    \end{samepage}
+\end{table}
+
+
+
+\section{Versuchsdurchführung und Messergebnisse}
+\label{sec:versuchsdurchfuehrung_messergebnisse}
+
+
+
+\section{Auswertung}
+\label{sec:auswertung}
+
+
+
+\section{Diskussion}
+\label{sec:diskussion}
+
+
+
+\section{Zusammenfassung}
+\label{sec:zusammenfassung}
+
+
+
+\clearpage
+% Literaturverzeichnis
+\printbibliography
+
+% Abbildungsverzeichnis
+\listoffigures
+
+% Tabellenverzeichnis
+\listoftables
+
+\end{document}
