@@ -1,0 +1,33 @@
+Aufbau laut Angaben des Herstellers :)))
+
+Beobachtung und Dokumentation der Interferenzmuster: 
+Durch drehen an den Stellschrauben an den Spiegel stellt man diese so ein, dass die zwei 0. Maxima übereinanderliegen (ohne Linse). Dann wird die Linse eingebracht und es ergeben sich Besselartige Beugungsmuster. 
+
+- Justieren SP1
+Die Einstellungen bewirken, dass sich das 0. Maximum bzw. das 0. Minimum der Interferenzmuster am Schirm auf und ab bzw. links und rechts verschieben. 
+Wir haben nun die Verschiebung so gewählt, dass das 0. Maximum bzw. das 0. Minimum der Interferenzmuster am Schirm in der Mitte abgebildet ist. 
+
+- Verifizieren der komplementären Muster. 
+siehe Bilder
+
+- Wellenlänge bestimmen. 
+Maxima zählen Start bei Maximum und Schraube auf 0
+Messung 1: 140 +- 5 µm (+- 2 Maxima) FAKTOR
+FAKTOR beachten 5,3!!!
+
+- Position des SP2 bei gleichen Längen 13110 µm +- viel weil nicht so genau FAKTOR beachten !!!!
+
+- L2 mit f = -16 mm 
+- Justieren von S1 so dass ein paralleles Streifenmuster sichtbar ist. 
+obere stellschraube dreht quasi die parallelen Strahlen
+untere stellschraube verändert die Breite der Strahlen und damit die Anzahl die sichtbar sind. bei weiterem drehen der unteren schraube bzw. oberen schraube dreht das bild "über" und es sind wieder große streifen zu sehen. 
+
+- kleinste messbare Längenänderung. 
+For example, if we use green light with a wavelength of 532 nm (typical for a laser), and assume air as the medium (with a refractive index of 1), the smallest resolvable length would be ΔL = 266 nm.
+halbe Wellenlänge
+
+- Stabilität der Interferenzmuster.
+Stabilität des Interferenzmuster siehe Video etc. 
+
+
+- Fresnel und Arago siehe Bilder. 

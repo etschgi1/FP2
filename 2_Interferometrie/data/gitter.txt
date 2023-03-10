@@ -1,0 +1,20 @@
+Info Abstand zum Schirm wie beim Doppelspaltversuch. 
+
+Gitterkonstante 8 Strich / mm == 1/8000
+
+Unsicherheit +- 1 mm
+0. Maxima: 0 mm (REFERENZ keiner Unsicherheit)
+1. Maxima: 11 mm
+2. Maxima: 21.5 mm
+3. Maxima: 32.5 
+4. Maxima: 43 mm
+5. Maxima: 53.5 mm
+6. Maxima: 64.5 mm
+7. Maxima: 75 mm
+8. Maxima: 86 mm
+9. Maxima: 97 mm
+10. Maxima: 108 mm
+11. Maxima: 118 mm
+12. Maxima: 128 mm
+13. Maxima: 139 mm
+14. Maxima: 151 mm
