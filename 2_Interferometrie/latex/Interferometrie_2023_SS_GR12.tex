@@ -1,0 +1,256 @@
+% !TEX Program = xelatex
+% class
+\documentclass[ngerman]{scrartcl}
+
+% input preamble
+\input{../../shared_preamble.tex}
+
+% manual header
+\ihead{Interferometrie}  % inner (left) head
+\chead{\textsc{Wachmann} Elias (12004232)\\\textsc{Zach} Andreas (12004790)}  % center head
+\ohead{10.03.2023}  % outer (right) head
+
+\addbibresource{Interferometrie_2023.bib} %!TODO cite stuff
+
+
+
+\begin{document}
+
+%%%%Title Page %%%%
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.5\textwidth]{../../99_Misc/Logo_Uni_Graz.jpg}\par\vspace{0.8cm}
+    {\scshape\LARGE Karl-Franzens-Universität Graz \par}
+    {\scshape\LARGE Institut für Physik \par}
+    \vspace{1cm}
+    {\scshape\Large 23S PHY.L02UB Fortgeschrittenenpraktikum 2 LU
+\par}
+    678 Bachelorstudium Physik, UG2002/2021W\par
+    \vspace{1.5cm}
+    {\huge\bfseries II. Interferometrie\par}
+    \vspace{2cm}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c c c}
+           \Large Wachmann Elias & & \Large Zach Andreas \\
+           \Large 12004232       & & \Large 12004790 \\
+           \multicolumn{3}{c}{Gruppe 12}
+        \end{tabular}
+    \end{table}
+    \vfill
+    \Large Betreut von\par
+    BSc. MSc. Thomas Georg \textsc{Boné}
+
+    \vfill
+
+% Bottom of the page
+    {\large 10.03.2023\par}
+\end{titlepage}
+%%%%
+
+\clearpage
+\tableofcontents
+\newpage
+
+\section{Aufgabenstellung} %!TODO referenzieren
+\label{sec:aufgabenstellung}
+Der folgende Laborversuch gliedert sich in 4 Teilversuche welche sich abermals wie folgt in Unterversuche glieder:
+\begin{itemize}
+    \item Young'scher Doppelspalt
+    \begin{itemize}
+        \item Bestimmen des Beugungsmusters von vier Doppelspalten mit unterschiedlichen Spaltbreiten und Spaltabständen. 
+        \item Daraus Berechnung der Wellenlänge des Lasers.
+        \item Erklärung der Beugungsmuster durch Vergleich mit errechneten Mustern.
+        \item Bestimmung der Beugungsmuster eines Liniengitters und vergleich mit errechneten Werten. 
+        \item Bestimmung der Gitterkonstante
+    \end{itemize}
+    \item Wellenfront-Analyse / Shearing Interferometer
+    \item Polarisation
+    \begin{itemize}
+        \item Verifizieren des Gesetzes von Malus
+        \item Untersuchung des Einflusses des Durchlasswinkels eines weiteren Polarisators zwischen zwei gekreuzten Polarisatoren. 
+    \end{itemize}
+    \item Michelson Interferometer
+    \begin{itemize}
+        \item Justieren und generieren von konzentrischen Interfernzmustern. 
+        \item Bestimmung der Wellenlänge des Lasers durch Weglängenänderung. 
+        \item Untersuchung des absoluten Weglängenunterschieds in den beiden Interferometerarmen, sowie Auflösung und Stabilität des Interferometers. 
+        \item Untersuchung der Rolle der Polarisation auf die Interfenzfähigkeit des Laserlichts. 
+    \end{itemize}
+\end{itemize}
+
+
+\section{Grundlagen} %!TODO referenzieren
+\label{sec:grundlagen}
+\subsection{Young'scher Doppelspalt}
+\label{sec:grundlagen_youngscher_doppelspalt}
+Bescheint man mit einer Lichtquelle zwei eng beieinander liegende Spalte mit dem Abstand $d$ in einem ansonsten undurchsichtigen Schirm, so wirkt die Spalte als kohärente Lichtquellen (Anmerkung: Dies ist evident für einen kohärente Lichtquelle, gilt für eine thermische Lichtquelle aber nur unter bestimmten Bedingungen, jenen der räumlichen Kohärenz). Die Wellen aus den Spalten überlagern sich in Abhängigkeit vom Beobachtungswinkel konstruktiv oder destruktiv, was auf einen Schirm projiziert eine Abfolge an Intensitätsmaxima und -minima ergibt. Unter der Bedingung, dass der Abstand zwischen Doppelspalt und Beobachtungsebene viel größer als der Spaltabstand $d$ ist, ergibt sich der optische Gangunterschied in die durch den Winkel $\phi$ definierte Richtung als ($\lambda$ Wellenlänge)
+
+\begin{equation}
+    \Delta = \frac{2 \pi d}{\lambda} \sin \phi
+\end{equation}
+Mit der Näherung $\sin \phi \approx \nicefrac{x}{z}$ (erfüllt für große Abstände $z$ zwischen Doppelspalt und Schirm) ergibt sich ein Streifenmuster mit der Periode $x$ der Form
+\begin{equation}
+    I(x)_{\text{Interferenz}} = I_0(1+ \cos \frac{2 \pi x d}{\lambda z})
+\end{equation}
+Dafür wurde die endliche Breite des Spalts vernachlässigt bzw. ein unendlich schmaler Spalt angenommen. Tatsächlich überlagert sich dem Interferenzmuster das Beugungsmuster des Einzelspalts, das i.A. symmetrisch mit zu größeren Winkeln hin abnehmender Intensität ist. Ein einzelner rechteckiger Spalt der Breite $D$ führt zu einem Beugungsmuster der Form
+\begin{equation}
+    I(x)_{\text{Beugung}} = I_0 \frac{\sin^2 \frac{\pi D x}{\lambda z}}{\left(\frac{\pi D x}{\lambda z}\right)^2}
+\end{equation}
+Das Beugungsmuster des Doppelspalts ergibt sich multiplikativ als $I(x) = I(x)_{\text{Interferenz}} \cdot I(x)_{\text{Beugung}}$.
+\subsection{Shearing-Interferometer / Wellenfront-Analyse}
+\label{sec:grundlagen_shearing_interferometer}
+Das Erscheinungsbild von optischen Interferenzmustern ist sowohl durch die Natur der Lichtwelle als auch der optischen Grenzflächen bestimmt, man denke an die färbigen Interferenzen auf Seifenblasen. Entsprechend ist es möglich, aus der Beobachtung von Interferenzen an Grenzflächen bekannter Geometrie auf die Eigenschaften der Lichtwelle zu schließen.
+
+%? Evtl. Bilder
+Beim Shearing-Interferometer handelt es sich um ein simples Interferometer, mit dem bestimmt werden kann, ob ein Lichtstrahl kollimiert, konvergent oder divergent ist. Dazu trifft das Licht unter $45°$ auf eine Glasplatte, welche keilförmig ausgeführt ist. Durch die Reflexion an der vorderen und hinteren Fläche der Glasplatte entstehen zwei reflektierte Strahlen (Abb. 5a), in deren Überlappungsbereich Interferenz auftritt (Abb. 5b). Durch die keilförmige Geometrie führt dies für einen kollimierten Strahl zu einem zur Einfallsebene des Lichts parallelen Streifenmuster (Abb. 5b). Ein konvergierender bzw. divergierender Strahl führt dagegen nach Abb. 5b zu einem gedrehten Streifenmuster. Aus dem lateralen Versatz der beiden reflektierten Strahlen $l$, dem Streifenabstand $s$ und dem (bezogen auf die Senkrechte) Winkel der Interferenzstreifen $\Theta$ (siehe Abb. 5b) lässt sich der Radius $r$ der Wellenfront mit $r = \nicefrac{ls}{\lambda \sin \Theta}$ berechnen.
+%ggf hier ein Bild
+\subsection{Polarisation}
+\label{sec:grundlagen_polarisation}
+Für den Fall linearer Polarisation gilt für die transmittierte Intensität durch einen Polarisator mit der Durchlassrichtung entlang der durch den Winkel Null definierten Richtung das Gesetz von Malus.
+\begin{equation}
+    I(\alpha) = I_0 \cos^2 \alpha
+\end{equation}
+Die nicht transmittierte Intensität wird je nach Art des Polarisators absorbiert oder reflektiert. Die Polarisation ist entscheidend für die Interferenzfähigkeit von Licht, es gelten die vier Gesetze nach Fresnel und Arago \textbf{(siehe dazu auch einen entsprechenden Versuch mit dem Michelson-Interferometer)}.
+\begin{itemize}
+    \item In dieselbe Richtung linear polarisierte Lichtstrahlen interferieren (wie nicht polarisiertes Licht).11
+    \item Zueinander senkrecht linear polarisierte Lichtstrahlen interferieren nicht (mit den folgenden Einschränkungen).
+    \item Zueinander senkrecht linear polarisierte Lichtstrahlen interferieren, wenn sie ursprünglich dieselbe Polarisationsebene besaßen und wieder in diese zurückgeführt werden.
+    \item  Zueinander senkrecht linear polarisierte Lichtstrahlen interferieren nicht, wenn sie in dieselbe Polarisationsebene zurückgeführt werden, diese aber nicht ursprünglich besaßen.
+\end{itemize}
+
+\subsection{Michelson-Interferometer} %? evtl. noch ein Bild
+\label{sec:grundlagen_michelson_interferometer}
+Der prinzipielle Strahlengang eines Michelson-Interferometers ist in Abb. 8 dargestellt. Ein Lichtstrahl aus einer (Laser-)Quelle (1) wird an einem Strahlteiler (2) aufgeteilt. Der Strahlteiler ist ein dünnes Glasplättchen mit einer teilreflektierenden Schicht auf einer Fläche. Die beiden resultierenden Lichtstrahlen werden an zwei Spiegeln reflektiert und am Strahlteiler wieder vereint. Die Lichtstrahlen im Detektorarm treffen auf den Schirm (4), wo sie sich in Abhängigkeit vom Unterschied der Weglängen s1 und s2 überlagern. Für ebene Wellen der Form
+\begin{equation}
+    E(x,t) = E_0 \exp{\omega t - k x}
+\end{equation}
+ist die Lichtintensität am Beobachtungsschirm gegeben durch
+\begin{equation}
+    I = \nicefrac{1}{4} c \epsilon_0 E_0^2 (1+\cos{\Delta \phi})
+\end{equation}
+wobei $\Delta \phi$ die Phasendifferenz bezeichnet, die mit dem Unterschied der Weglängen $\Delta s = \left| s_1  - s_2 \right|$ nach $\Delta \phi = (\nicefrac{2 \pi}{\lambda})\Delta s$ zusammenhängt. 
+
+Es stellt sich die Frage, wo bei destruktiver Interferenz im Detektorarm die Energie der Lichtwellen bleibt. Tatsächlich hat das Interferometer ja zwei „Ausgänge“, wobei einer eben zum Beobachtungs-schirm, der zweite zurück zum Laser führt. Tatsächlich beobachtet man in zweiterem konstruktive Interferenz, wenn am Schirm destruktive Interferenz (also keine Lichtintensität) zu beobachten ist.
+
+Das am Schirm beobachtete Interferenzmuster reagiert empfindlich auf kleine Änderungen in der Richtung des einfallenden Laserstrahls und in der Ausrichtung der Spiegel. Gleichzeitig sind diese Änderungen durch den nur wenige mm durchmessenden Strahl schwer zu beobachten. Deshalb wird der Strahl durch eine Linse aufgeweitet, was zwischen Laser und Strahlteiler oder zwischen Strahlteiler und Schirm geschehen kann. Ersteres führt zu einem konzentrischen Interferenzmuster, zweiteres zu parallelen Interferenzstreifen. Wie in Abb. 9a skizziert, können divergierende Strahlen auf (bei Vorliegen eines Weglängenunterschieds $\Delta s$ zwischen den beiden Interferometerarmen) auf zwei virtuelle Lichtquellen A und B zurückgeführt werden, wodurch sich das Auftreten eines konzentrischen Interferenzmusters erklärt. Gleichzeitig kann dieses genutzt werden, um die Interferometerarme auf die gleiche Länge einzustellen (im Prinzip auf einen Bruchteil der Wellenlänge), da sich dabei nach Abb. 9b die Größe des zentralen Interferenz“spots“ maximiert. Alternativ könnte dazu eine breitbandige Lichtquelle mit geringer Kohärenzlänge verwendet werde, wobei die Kohärenzlänge durch die Verwendung von Bandpassfiltern erhöht werden kann.
+
+\section{Geräteliste}
+\label{sec:geraeteliste}
+
+Für den praktischen Aufbau und die Messungen der geforderten Größen wurden die in \autoref{tab:geraeteliste} aufgelisteten Geräte und Hilfsmittel verwendet.
+
+\begin{table}[H]
+    \centering
+    \begin{samepage}
+        \caption[Geräteliste]{Verwendete Geräte und wichtige Materialien}
+        \label{tab:geraeteliste}
+        \begin{tblrx}{cells={font=\footnotesize}}
+            Gerät & Hersteller & Modell & Messsbereich / Unsicherheit & Inventar-Nr. \\
+            Laser & Thorlabs & CPS532 &$\lambda = 532$&22442-S01\\
+            diverse Spiegel & Thorlabs & KM100 &- &- \\
+            Graufilter & Thorlabs & NX1N/M &- &- \\
+            Doppelspalte & Phywe & 0852300 &- &- \\
+            Gitter & Phywe & 0852400 &- &- \\
+            Optischer Tisch& - & - &- &- \\ 
+            diverse Halterungen & Thorlabs & - &- &- \\
+            Sammellinse & Thorlabs & FMP1/M &f = $40$ mm &- \\
+            Zerstreuungslinse & Thorlabs & FMP1/M &f = $-16$ mm &- \\
+            Shearing-Interferometer & Thorlabs & nicht vorhanden &- &- \\
+            Lichtintensitätsmesser & Sauter & SO 200k & $\Delta I = (\pm 3\% \text{rdg} \pm 0.5\% \text{fs}) \cdot I$ &51152203 \\
+            Polarisationsfolie & Nitto denko & - &- &- \\
+            Maßband& Schuller Eh klar& Power Tape $3$ m& Klasse 2 &- \\
+            Michelson Interferometer & - & - &- &- \\
+            Rohr & - & - &- &- \\
+            diverse Abbildungsschirme & Wand, Papier, Tür, etc. & - &- &- \\
+            Mobiltelefon & OnePlus & $8$-Pro &- &- \\
+
+        \end{tblrx}
+    \end{samepage}
+\end{table}
+Die verwendeten Doppelspalte haben folgende Abmessungen in \autoref{tab:doppelspalt_abmessungen}:
+\textbf{TABELLE FEHLT NOCH!}
+% \begin{table}[H] %! Irgendeinen schmarn mags da ned. will jetzt grad ned debuggen. 
+%     \centering
+%     \begin{samepage}
+%         \caption[Doppelspaltmaße]{Verwendete Doppelspalte. Mit der jeweiligen Nummer $i$, der Spaltbreite $D$ in $\unit{\milli\meter}$ und dem Spaltabstand $d$ in $\unit{\milli\meter}$}
+%         \label{tab:doppelspalt_abmessungen}
+%         \begin{tblr}{colspec = {Q S[table-format=1.1]S[table-format=1.2]},row{1}={guard}}
+%             $i$ / 1& $D$ / \si{\milli\meter} & $d$ / \si{\milli\meter} \\
+%             1 & 0.2 & 0.25 \\
+%             2 & 0.1 & 0.25 \\
+%             3 & 0.1 & 0.50 \\
+%             4 & 0.1 & 1.00 \\
+%         \end{tblr}
+%     \end{samepage}
+% \end{table}
+
+\textbf{Anmerkung zu den Unsicherheiten:}\\
+Zur Unsicherheitsangabe werden die jeweiligen Unsicherheitsmaße der Geräte, welche aus den Datenblättern (sofern vorhanden) entnommen werden, verwendet. Für die analogen Messgeräte wird eine kombinierte Ablese- und Mess-Unsicherheit von $\pm$ 1 Skalenstrich verwendet.
+
+
+
+\section{Versuchsdurchführung}
+\label{sec:versuchsdurchfuehrung}
+
+Das Labor zur Leistungsmessung teilt sich auf mehrere Teilversuche auf, welche im Folgenden gesondert behandelt werden. Referenzierte Schalpläne für die Teilversuche sind im Anhang angeführt.
+
+\subsection{Leistungsmessung an einer Ohm'schen Last}
+\label{subsec:durchf_versuch1}
+
+Für den ersten Teilversuch wird eine 60-Watt-Glühlampe (Wolfram) im Sinne einer Sternschaltung über eine Phase und den Neutralleiter an ein Netzteil angeschlossen. Dies geschieht jedoch nicht direkt, sondern mittels eines zwischengeschalteten digitalen Wattmeters. Das Netzteil ermöglicht schließlich das Variieren der Spannung im Bereich \SIrange{10}{230}{\volt} und damit eine Anpassung der verbrauchten Leistung. In \autoref{fig:aufbau_eine_ohmsche_last} ist der Aufbau zum ersten Versuch abgebildet. Der zugehörige Schaltplan in \autoref{fig:Plan0} findet sich im Anhang.
+
+% \begin{figure}[H]
+%     \centering
+%     \begin{samepage}
+%         \includegraphics[width=0.7\linewidth]{figures/Aufbau_eine_ohmsche_last.jpg}
+%         \caption{Aufbau Leistungsmessung an einer ohmschen Last}
+%         \label{fig:aufbau_eine_ohmsche_last}
+%     \end{samepage}
+% \end{figure}
+
+\section{Auswertung}
+\label{sec:auswertung}
+
+% \setcapindent{0pt}
+% \begin{figure}[H]
+%     \centering
+%     \begin{minipage}[t]{0.45\linewidth}
+%         \centering
+%         \includegraphics[width=\linewidth]{plots/stern_allgemein.png}
+%         \caption[Zeigerdiagramm allgemeine Sternschaltung]{Zeigerdiagramm allgemeine Sternschaltung, Strom $I_{xx}$ in \si{\centi\ampere} und Spannung $U_{xx}$ in \si{\volt}}
+%         \label{fig:stern_asym_allg_zeigerdiagramm}
+%     \end{minipage}%
+%     \hspace*{\fill}
+%     \begin{minipage}[t]{0.45\linewidth}
+%         \centering
+%         \includegraphics[width=\linewidth]{plots/stern_allgemein_tausch.png}
+%         \caption[Zeigerdiagramm allgemeine Sternschaltung mit vertauschten Außenleitern ($\text{L2} \leftrightarrow \text{L3}$)]{Zeigerdiagramm allgemeine Sternschaltung mit vertauschten Außenleitern ($\text{L2} \leftrightarrow \text{L3}$), Strom $I_{xx}$ in \si{\centi\ampere} und Spannung $U_{xx}$ in \si{\volt}}
+%         \label{fig:stern_asym_allg_tausch_zeigerdiagramm}
+%     \end{minipage}
+% \end{figure}
+% \setcaphanging
+
+
+
+
+\section{Diskussion}
+\label{sec:diskussion}
+
+
+\section{Zusammenfassung}
+\label{sec:zusammenfassung}
+
+
+\clearpage
+% Literaturverzeichnis
+\printbibliography
+
+% Abbildungsverzeichnis
+\listoffigures
+
+% Tabellenverzeichnis
+\listoftables
+
+
+\end{document}
