@@ -32,28 +32,28 @@ Unsicherheit (+- 1 mm)
 10. Maxima: 54 mm
 
 3. Doppelspalt - Spaltbreite D = 0.1, Spaltabstand d = 0.5
-0. Maximum: 0 mm
-1. Maximum: 2.5 mm
-2. Maximum: 8 mm
-3. Maximum: 10.5 mm
-4. Maximum: 13 mm
-5. Maximum: 16 mm
-6. Maximum: 18.5 mm
-7. Maximum: 21 mm
-8. Maximum: 24 mm
-9. Maximum: 26.5 mm
-10. Maximum: 29 mm
+0. Maxima: 0 mm
+1. Maxima: 2.5 mm
+2. Maxima: 8 mm
+3. Maxima: 10.5 mm
+4. Maxima: 13 mm
+5. Maxima: 16 mm
+6. Maxima: 18.5 mm
+7. Maxima: 21 mm
+8. Maxima: 24 mm
+9. Maxima: 26.5 mm
+10. Maxima: 29 mm
 
 4. Doppelspalt - Spaltbreite D = 0.1, Spaltabstand d = 1
-0. Maximum: 0 mm +-1 mm
-1. Maximum: 1.5
-2. Maximum: 2.5
-3. Maximum: 4
-4. Maximum: 5.5
-5. Maximum: 6.5
-6. Maximum: 8
-7. Maximum: 9.5
-8. Maximum: 10.5
-9. Maximum: 12
-10. Maximum: 13.5
-11. Maximum: 15
+0. Maxima: 0 mm +-1 mm
+1. Maxima: 1.5
+2. Maxima: 2.5
+3. Maxima: 4
+4. Maxima: 5.5
+5. Maxima: 6.5
+6. Maxima: 8
+7. Maxima: 9.5
+8. Maxima: 10.5
+9. Maxima: 12
+10. Maxima: 13.5
+11. Maxima: 15
