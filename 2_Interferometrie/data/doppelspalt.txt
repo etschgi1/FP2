@@ -1,6 +1,7 @@
 Info - 
 Abstand Doppelspalt - (Schirm) auf Lab-Wand: 252 cm +- 1 cm (Klasse 2 Rollmaß!)
-
+Maßband Formel = Delta = a+bL+c(für Flächen) wobei a=0.3 mm und b = 0.2mm/M
+---> 252 cm = 2520 mm +- 0.9 mm
 1. Doppelspalt - Spaltbreite D = 0.2, Spaltabstand d = 0.25
 Unsicherheit (+- 1 mm)
 0. Maxima: 0 mm (REFERENZ - keine Unsicherheit)
