@@ -3,7 +3,7 @@ Polarisationsfilter
 Messreihe 1 - Laser war noch am aufwärmen - Messreihe 2 Laser sollte schon warm genug sein. 
 Eventuell hat das Messgerät einen Drift. 
 gewählter Ausgangspunkt: P1 70° zu 1144 lx
-° deg; lux 1. Messung lux 2. Messung
+deg;lux 1;lux 2
 330;1022;1074
 340;999;1050
 350;911;966
