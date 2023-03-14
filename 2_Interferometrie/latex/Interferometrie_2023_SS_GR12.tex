@@ -426,59 +426,73 @@ Nachdem der Versuchaufbau ordnungsgemäß hergestellt ist, wird der Laser einges
 \label{sec:durchfuehrung_polarisation}
 Der Strahl wird für den ersten Unterpunkt dieses Versuchs durch zwei Polarisationsfilter geführt. Für den ersten der beiden Filter wurde \SI{70}{\degree} als Ausgangswinkel gewählt, der zweite wird im folgenden Versuch einmal um \SI{360}{\degree} gedreht, wobei die Ausgangsstellung hier so gewählt wird, dass zuerst die höchste Lichtintensität am Messgerät abgelesen werden kann. So stehen die Polarisationsfilter gleich; Dies ist bei \SI{330}{\degree} des zweiten Filters der Fall.
 Die Messung wurde zweimal durchgeführt und die gemessenen Werte des Lichtintensitätsmesser sind in \autoref{tab:messwerte_polarisation} angeführt.
-% \begin{table}[H] 
-%     \centering
-%     \begin{samepage}
-%         \caption[Messwerte Polarisation]{Messwerte nach Durchgang durch zwei Polarisationsfilter \\Winkel des ersten Filters: \SI{70}{\degree}, Winkel des zweiten Filters $\alpha$ mit $\Delta \alpha$ = \SI{3}{\degree}, Intensität $I$ }
-%         \label{tab:messwerte_polarisation}
-%         \begin{tblr}{colspec={S[table-format=3.0]S[table-format=4.0]S[table-format=4.0]}}
-%             {{{$\alpha$}}} & {{{$I_1$ / \unit{\lux}}}}& {{{$I_2$ / \unit{\lux}}}} & {{{$\Delta I_1$ / \unit{\lux}}}} & {{{$\Delta I_2$ / \unit{\lux}}}} \\
-% 330.0   & 1022.0        & 1074.0        & 40.66         & 42.22 \\
-% 340.0   & 999.0         & 1050.0        & 39.97         & 41.5  \\
-% 350.0   & 911.0         & 966.0         & 37.33         & 38.98 \\
-% 0.0     & 781.0         & 820.0         & 33.43         & 34.6  \\
-% 10.0    & 617.0         & 643.0         & 28.51         & 29.29 \\
-% 20.0    & 444.0         & 456.0         & 23.32         & 23.68 \\
-% 30.0    & 279.0         & 285.0         & 18.37         & 18.55 \\
-% 40.0    & 132.0         & 142.0         & 13.96         & 14.26 \\
-% 50.0    & 37.0  & 38.0  & 11.11         & 11.14 \\
-% 60.0    & 0.0   & 0.0   & 10.0  & 10.0  \\
-% 70.0    & 24.0  & 26.0  & 10.72         & 10.78 \\
-% 80.0    & 108.0         & 110.0         & 13.24         & 13.3  \\
-% 90.0    & 236.0         & 252.0         & 17.08         & 17.56 \\
-% 100.0   & 397.0         & 412.0         & 21.91         & 22.36 \\
-% 110.0   & 578.0         & 603.0         & 27.34         & 28.09 \\
-% 120.0   & 756.0         & 793.0         & 32.68         & 33.79 \\
-% 130.0   & 896.0         & 943.0         & 36.88         & 38.29 \\
-% 140.0   & 1000.0        & 1046.0        & 40.0  & 41.38 \\
-% 150.0   & 1047.0        & 1097.0        & 41.41         & 42.91 \\
-% 160.0   & 1028.0        & 1074.0        & 40.84         & 42.22 \\
-% 170.0   & 950.0         & 993.0         & 38.5  & 39.79 \\
-% 180.0   & 816.0         & 847.0         & 34.48         & 35.41 \\
-% 190.0   & 653.0         & 679.0         & 29.59         & 30.37 \\
-% 200.0   & 471.0         & 490.0         & 24.13         & 24.7  \\
-% 210.0   & 288.0         & 304.0         & 18.64         & 19.12 \\
-% 220.0   & 150.0         & 150.0         & 14.5  & 14.5  \\
-% 230.0   & 38.0  & 43.0  & 11.14         & 11.29 \\
-% 240.0   & 0.0   & 0.0   & 10.0  & 10.0  \\
-% 250.0   & 25.0  & 24.0  & 10.75         & 10.72 \\
-% 260.0   & 114.0         & 121.0         & 13.42         & 13.63 \\
-% 270.0   & 257.0         & 263.0         & 17.71         & 17.89 \\
-% 280.0   & 421.0         & 440.0         & 22.63         & 23.2  \\
-% 290.0   & 607.0         & 635.0         & 28.21         & 29.05 \\
-% 300.0   & 747.0         & 819.0         & 32.41         & 34.57 \\
-% 310.0   & 927.0         & 971.0         & 37.81         & 39.13 \\
-% 320.0   & 1029.0        & 1070.0        & 40.87         & 42.1  \\
-% 330.0   & 1067.0        & 1109.0        & 42.01         & 43.27 \\
-%         \end{tblr}
-%     \end{samepage}
-% \end{table}
+
+\begin{longtblr}[
+    caption = {Messwerte nach Durchgang durch zwei Polarisationsfilter                                                                           \\Winkel des ersten Filters: \SI{70}{\degree}, Winkel des zweiten Filters $\alpha$ mit $\Delta \alpha$ = \SI{3}{\degree}, Intensität $I$ },
+    label = {tab:messwerte_polarisation}]{
+    colspec={S[table-format=3.0]S[table-format=4.0]S[table-format=2.0]S[table-format=4.0]S[table-format=2.0]}}
+    {{{$\alpha$}}} & {{{$I_1$ / \unit{\lux}}}} & {{{$I_2$ / \unit{\lux}}}} & {{{$\Delta I_1$ / \unit{\lux}}}} & {{{$\Delta I_2$ / \unit{\lux}}}} \\
+    330            & 1020                      & 50                        & 1070                             & 50                               \\
+    340            & 990                       & 50                        & 1050                             & 50                               \\
+    350            & 910                       & 40                        & 960                              & 40                               \\
+    0              & 780                       & 40                        & 820                              & 40                               \\
+    10             & 610                       & 30                        & 640                              & 30                               \\
+    20             & 440                       & 30                        & 450                              & 30                               \\
+    30             & 270                       & 20                        & 280                              & 20                               \\
+    40             & 130                       & 20                        & 140                              & 20                               \\
+    50             & 30                        & 20                        & 30                               & 20                               \\
+    60             & 0                         & 10                        & 0                                & 10                               \\
+    70             & 20                        & 20                        & 20                               & 20                               \\
+    80             & 100                       & 20                        & 110                              & 20                               \\
+    90             & 230                       & 20                        & 250                              & 20                               \\
+    100            & 390                       & 30                        & 410                              & 30                               \\
+    110            & 570                       & 30                        & 600                              & 30                               \\
+    120            & 750                       & 40                        & 790                              & 40                               \\
+    130            & 890                       & 40                        & 940                              & 40                               \\
+    140            & 1000                      & 50                        & 1040                             & 50                               \\
+    150            & 1040                      & 50                        & 1090                             & 50                               \\
+    160            & 1020                      & 50                        & 1070                             & 50                               \\
+    170            & 950                       & 40                        & 990                              & 50                               \\
+    180            & 810                       & 40                        & 840                              & 40                               \\
+    190            & 650                       & 40                        & 670                              & 40                               \\
+    200            & 470                       & 30                        & 490                              & 30                               \\
+    210            & 280                       & 20                        & 300                              & 20                               \\
+    220            & 150                       & 20                        & 150                              & 20                               \\
+    230            & 30                        & 20                        & 40                               & 20                               \\
+    240            & 0                         & 10                        & 0                                & 10                               \\
+    250            & 20                        & 20                        & 20                               & 20                               \\
+    260            & 110                       & 20                        & 120                              & 20                               \\
+    270            & 250                       & 20                        & 260                              & 20                               \\
+    280            & 420                       & 30                        & 440                              & 30                               \\
+    290            & 600                       & 30                        & 630                              & 30                               \\
+    300            & 740                       & 40                        & 810                              & 40                               \\
+    310            & 920                       & 40                        & 970                              & 40                               \\
+    320            & 1020                      & 50                        & 1070                             & 50                               \\
+    330            & 1060                      & 50                        & 1100                             & 50                               \\
+\end{longtblr}
 
 
 \subsection{Michelson Interferometer}
 \label{sec:durchfuehrung_michelson}
+Das Michelson Interferometer wird wie in \autoref{fig:aufbau_michelson} beschrieben in den Strahlengang eingebracht. Nun werden die beiden Spiegel des Michelsoninterfereometer so justiert, dass die beiden Strahlen, die durch die beiden Arme des Interferometers laufen übereinander am Schirm auftreffen. Nun wird eine Sammellinse vor dem Interferometer eingebracht, dies führt zur Ausbildung von Interferenzmustern welche in konzentrischer Anordnung abwechselnd Maxima und Minima am Schirm, aber auch am Laser aufweisen. Beispielhaft finden sich in \autoref{fig:michelson_konz_sammel} und \autoref{fig:michelson_konz_sammel_tuer} die Interferenzmuster am Schirm und neben dem Laser.
 
-
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=0.7\linewidth]{fig/michelson_konz_schirm.jpg}
+        \caption{Interferenzmuster des Lasers nach Durchgang durchs Michelsoninterfereometer am Schirm}
+        \label{fig:michelson_konz_sammel}
+    \end{samepage}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=0.7\linewidth]{fig/michelson_konz_tuer.jpg}
+        \caption{Interferenzmuster des Lasers nach Durchgang durchs Michelsoninterfereometer neben dem Laser}
+        \label{fig:michelson_konz_sammel_tuer}
+    \end{samepage}
+\end{figure}
+Zur Bestimmung der Wellenlänge des Lasers wird nun mittels Mikrometerschraube ein Spiegel im Michelsoninterfereometer verschoben. Dies führt nun dazu, dass sich das Interferenzmuster am Schirm ändert, da der Gangunterschied zwischen den beiden Teilstrahlen geändert wird. Die Wellenlänge des Lasers kann nun durch die Verschiebung des Spiegels bestimmt werden, indem man die Anzahl der Maxima beim verschieben um eine gewisse Distanz misst. Konkret wurde so lange an der Mikrometerschraube gedreht, bis am Schirm $n = \num{100(1)}$ Maxima zu sehen waren. Dabei verschiebt sich der Spiegel um eine Distanz von $d_\text{Spiegel} = \SI{26.4(1)}{\micro\meter}$, wobei hier schon die Übersetzung der Mikrometerschraube zur tatsächlichen Spiegelbewegung (Faktor $5.3$) berücksichtigt wurde. Die Unsicherheit der Mikrometerschraube beläuft sich hier auf $\SI{5}{\micro\meter}$ (nicht untersetzt!); Die Unsicherheit am Start und Ende der Messung - um eben möglichst die gleiche Maxima Intensität zu erreichen - wird auf etwa $\SI{0.3}{\micro\meter}$ geschätzt.
 
 \section{Auswertung}
 \label{sec:auswertung}
