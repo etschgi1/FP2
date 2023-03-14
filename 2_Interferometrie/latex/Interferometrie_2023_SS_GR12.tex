@@ -181,6 +181,11 @@ Das am Schirm beobachtete Interferenzmuster reagiert empfindlich auf kleine Änd
     \end{samepage}
 \end{figure}
 
+\subsection{Unsicherheitsanalyse}
+\label{subsec:unsicherheitsanalyse}
+
+Die Fehlerfortpflanzung der berechneten Werte basiert auf der Größtunsicherheitsmethode nach Gauß. Um diese Berechnungen zeiteffizient durchführen zu können, wird für jeden Unterpunkt der Laborübung ein Skript in \verb!Python! implementiert. Kernstück dessen ist das package \verb!uncertainties! \cite{ref:uncertainties}, das intern die Fehlerfortpflanzung berechnet. Gerundet wird nach den Angaben des Skriptums der Lehrveranstaltung \enquote{Einführung in die physikalischen Messmethoden} \cite{ref:messmethoden}.
+
 \clearpage
 
 \section{Geräteliste}
@@ -194,24 +199,24 @@ Für den praktischen Aufbau und die Messungen der geforderten Größen wurden di
         \caption[Geräteliste]{Verwendete Geräte und wichtige Materialien}
         \label{tab:geraeteliste}
         \begin{tblrx}{cells={font=\footnotesize}}
-            Gerät & Hersteller & Modell & Messsbereich / Unsicherheit & Inventar-Nr. \\
-            Laser & Thorlabs & CPS532 &$\lambda = 532$&22442-S01\\
-            diverse Spiegel & Thorlabs & KM100 &- &- \\
-            Graufilter & Thorlabs & NX1N/M &- &- \\
-            Doppelspalte & Phywe & 0852300 &- &- \\
-            Gitter & Phywe & 0852400 &- &- \\
-            Optischer Tisch& - & - &- &- \\
-            diverse Halterungen & Thorlabs & - &- &- \\
-            Sammellinse & Thorlabs & FMP1/M &f = $40$ mm &- \\
-            Zerstreuungslinse & Thorlabs & FMP1/M &f = $-16$ mm &- \\
-            Shearing-Interferometer & Thorlabs & nicht vorhanden &- &- \\
-            Lichtintensitätsmesser & Sauter & SO 200k & $\Delta I = (\pm \SI{3}{\percent}\text{rdg} \pm \SI{0.5}{\percent}\text{fs}) \cdot I$ &51152203 \\
-            Polarisationsfolie & Nitto denko & - &- &- \\
-            Maßband& Schuller Eh klar& Power Tape \SI{3}{m}& Klasse II &- \\
-            Michelson Interferometer & - & - &- &- \\
-            Rohr & - & - &- &- \\
-            diverse Abbildungsschirme & Wand, Papier, Tür, etc. & - &- &- \\
-            Mobiltelefon & OnePlus & $8$-Pro &- &- \\
+            Gerät                     & Hersteller              & Modell               & Messsbereich / Unsicherheit                                                           & Inventar-Nr. \\
+            Laser                     & Thorlabs                & CPS532               & $\lambda = \SI{532}{nm}$                                                              & 22442-S01    \\
+            diverse Spiegel           & Thorlabs                & KM100                & -                                                                                     & -            \\
+            Graufilter                & Thorlabs                & NX1N/M               & -                                                                                     & -            \\
+            Doppelspalte              & Phywe                   & 0852300              & -                                                                                     & -            \\
+            Gitter                    & Phywe                   & 0852400              & -                                                                                     & -            \\
+            Optischer Tisch           & -                       & -                    & -                                                                                     & -            \\
+            diverse Halterungen       & Thorlabs                & -                    & -                                                                                     & -            \\
+            Sammellinse               & Thorlabs                & FMP1/M               & $f = \SI{40}{mm}$                                                                     & -            \\
+            Zerstreuungslinse         & Thorlabs                & FMP1/M               & $f = \SI{-16}{mm}$                                                                    & -            \\
+            Shearing-Interferometer   & Thorlabs                & nicht vorhanden      & -                                                                                     & -            \\
+            Lichtintensitätsmesser    & Sauter                  & SO 200k              & $\Delta I = (\pm \SI{3}{\percent}\text{rdg} \pm \SI{0.5}{\percent}\text{fs}) \cdot I$ & 51152203     \\
+            Polarisationsfolie        & Nitto denko             & -                    & -                                                                                     & -            \\
+            Maßband                   & Schuller Eh klar        & Power Tape \SI{3}{m} & Klasse II                                                                             & -            \\
+            Michelson Interferometer  & -                       & -                    & -                                                                                     & -            \\
+            Rohr                      & -                       & -                    & -                                                                                     & -            \\
+            diverse Abbildungsschirme & Wand, Papier, Tür, etc. & -                    & -                                                                                     & -            \\
+            Mobiltelefon              & OnePlus                 & 8 Pro                & -                                                                                     & -            \\
         \end{tblrx}
     \end{samepage}
 \end{table}
@@ -401,34 +406,31 @@ Die eben beschriebene Messung wird nun in analoger Weise nochmals mit dem Gitter
 \label{sec:durchfuehrung_shearing}
 
 Nachdem der Versuchaufbau ordnungsgemäß hergestellt ist, wird der Laser eingeschaltet. Am optischen Ausgang am oberen Ende des Shearing-Interferometers erscheint dadurch ein streifenförmiges Interferenzmuster. Aus diesem Interfenzmuster werden der Versatz in laterale Richtung $l$, der Abstand der Interferenzstreifen $d$ und der Winkelversatz zur einfallenden Ebene $\theta$ vermessen. Vermessen wurde direkt am optischen Ausgang mit einem handelsüblichen durchsichtigen Geodreieck. Für die Längenmessung wird eine Ableseunsicherheit von \SI{0.5}{mm} angenommen, die Winkelmessung wird mit einer Ungenauigkeit von \SI{3}{\degree} abgeschätzt. Aufgrund der hohen Messungenauigkeit dieser Methodik wird die Messung zwei weitere Male wiederholt, um so zumindest eine geringfügige statistische Aussage treffen zu können. Die Messergebnisse werden notiert und tabelliert.
+
+%!Natürlich komplett frei erfunden
 \begin{table}[H]
     \centering
     \begin{samepage}
-        \caption[Messung Shearing]{Gemessene Größen beim Versuchsaufbau Shearing-Interferometer mit $l$ Versatz in laterale Richtung, $d$ dem Abstand der Interferenzstreifen $\theta$ und dem Winkelversatz zur einfallenden Ebene. }
-        \label{tab:}
-        \begin{tblr}{colspec={}, row{1}={guard}}
+        \caption[Messung Shearing]{Gemessene Größen beim Versuchsaufbau \textit{Shearing-Interferometer} mit $i$ dem Laufindex der einzelnen Messungen, $l$ dem Versatz in laterale Richtung, $d$ dem Abstand der Interferenzstreifen $\theta$ und dem Winkelversatz zur einfallenden Ebene. Unsicherheiten: $\Delta l = \Delta s = \SI{0.5}{mm}$, $\Delta \theta = \SI{3}{\degree}$}
+        \label{tab:messergebnisse_shearing}
+        \begin{tblr}{colspec={cS[table-format=1.1(1)]S[table-format=1.1(1)]S[table-format=-2(1)]}, row{1}={guard}}
+            $i$ / 1 & $l$ / \unit{\milli\meter} & $d$ / \unit{\milli\meter} & $\theta$ / \unit{\degree} \\
+            1       & 8.0(5)                    & 4.0(5)                    & -19(3)                    \\
+            2       & 8.5(5)                    & 3.5(5)                    & -17(3)                    \\
+            3       & 8.0(5)                    & 4.5(5)                    & -20(3)                    \\
         \end{tblr}
     \end{samepage}
 \end{table}
 
-%!Natürlich komplett frei erfunden
-\begin{itemize}
-    \item $l$ = \SI{8.0(5)}{\milli\meter}
-    \item $\Theta$ = \SI{-19(3)}{\degree}
-    \item $d$ = \SI{4.0(5)}{\milli\meter}
-\end{itemize}
-
-
-
-
 
 \subsection{Polarisation}
 \label{sec:durchfuehrung_polarisation}
-Der Strahl wird für den ersten Unterpunkt dieses Versuchs durch zwei Polarisationsfilter geführt. Für den ersten der beiden Filter wurde \SI{70}{\degree} als Ausgangswinkel gewählt, der zweite wird im folgenden Versuch einmal um \SI{360}{\degree} gedreht, wobei die Ausgangsstellung hier so gewählt wird, dass zuerst die höchste Lichtintensität am Messgerät abgelesen werden kann. So stehen die Polarisationsfilter gleich; Dies ist bei \SI{330}{\degree} des zweiten Filters der Fall.
+
+Der Strahl wird für den ersten Unterpunkt dieses Versuchs durch zwei Polarisationsfilter geführt. Für den ersten der beiden Filter wurde \SI{70}{\degree} als Ausgangswinkel gewählt, der zweite wird im folgenden Versuch einmal um \SI{360}{\degree} gedreht, wobei die Ausgangsstellung hier so gewählt wird, dass zuerst die höchste Lichtintensität am Messgerät abgelesen werden kann. So stehen die Polarisationsfilter gleich, dies ist bei \SI{330}{\degree} des zweiten Filters der Fall.
 Die Messung wurde zweimal durchgeführt und die gemessenen Werte des Lichtintensitätsmesser sind in \autoref{tab:messwerte_polarisation} angeführt.
 
 \begin{longtblr}[
-    caption = {Messwerte nach Durchgang durch zwei Polarisationsfilter                                                                           \\Winkel des ersten Filters: \SI{70}{\degree}, Winkel des zweiten Filters $\alpha$ mit $\Delta \alpha$ = \SI{3}{\degree}, Intensität $I$ },
+    caption = {Messwerte nach Durchgang durch zwei Polarisationsfilter. Winkel des ersten Filters: \SI{70}{\degree}, Winkel des zweiten Filters $\alpha$ mit $\Delta \alpha = \SI{3}{\degree}$, Intensität $I$},
     label = {tab:messwerte_polarisation}]{
     colspec={S[table-format=3.0]S[table-format=4.0]S[table-format=2.0]S[table-format=4.0]S[table-format=2.0]}}
     {{{$\alpha$}}} & {{{$I_1$ / \unit{\lux}}}} & {{{$I_2$ / \unit{\lux}}}} & {{{$\Delta I_1$ / \unit{\lux}}}} & {{{$\Delta I_2$ / \unit{\lux}}}} \\
@@ -472,49 +474,50 @@ Die Messung wurde zweimal durchgeführt und die gemessenen Werte des Lichtintens
 \end{longtblr}
 
 
-\subsection{Michelson Interferometer}
+\subsection{Michelson-Interferometer}
 \label{sec:durchfuehrung_michelson}
-Das Michelson Interferometer wird wie in \autoref{fig:aufbau_michelson} beschrieben in den Strahlengang eingebracht. Nun werden die beiden Spiegel des Michelsoninterfereometer so justiert, dass die beiden Strahlen, die durch die beiden Arme des Interferometers laufen übereinander am Schirm auftreffen. Nun wird eine Sammellinse vor dem Interferometer eingebracht, dies führt zur Ausbildung von Interferenzmustern welche in konzentrischer Anordnung abwechselnd Maxima und Minima am Schirm, aber auch am Laser aufweisen. Beispielhaft finden sich in \autoref{fig:michelson_konz_sammel} und \autoref{fig:michelson_konz_sammel_tuer} die Interferenzmuster am Schirm und neben dem Laser.
 
+Das Michelson-Interferometer wird wie in \autoref{fig:aufbau_michelson} beschrieben in den Strahlengang eingebracht. Nun werden die beiden Spiegel des Michelson-Interfereometers so justiert, dass die beiden Strahlen, die durch die beiden Arme des Interferometers laufen, überlagert am Schirm auftreffen. Nun wird eine Sammellinse vor dem Interferometer eingebracht, dies führt zur Ausbildung von Interferenzmustern, welche in konzentrischer Anordnung abwechselnd Maxima und Minima am Schirm, aber auch am Laser aufweisen. Beispielhaft finden sich in \autoref{fig:michelson_konz_sammel} und \autoref{fig:michelson_konz_sammel_tuer} die Interferenzmuster am Schirm und neben dem Laser.
+
+\setcapindent{0pt}
 \begin{figure}[H]
     \centering
-    \begin{samepage}
-        \includegraphics[width=0.7\linewidth]{fig/michelson_konz_schirm.jpg}
+    \begin{minipage}[t]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/michelson_konz_schirm.jpg}
         \caption{Interferenzmuster des Lasers nach Durchgang durchs Michelsoninterfereometer am Schirm}
         \label{fig:michelson_konz_sammel}
-    \end{samepage}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \begin{samepage}
-        \includegraphics[width=0.7\linewidth]{fig/michelson_konz_tuer.jpg}
+    \end{minipage}%
+    \hspace*{\fill}
+    \begin{minipage}[t]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/michelson_konz_tuer.jpg}
         \caption{Interferenzmuster des Lasers nach Durchgang durchs Michelsoninterfereometer neben dem Laser}
         \label{fig:michelson_konz_sammel_tuer}
-    \end{samepage}
+    \end{minipage}
 \end{figure}
-Zur Bestimmung der Wellenlänge des Lasers wird nun mittels Mikrometerschraube ein Spiegel im Michelsoninterfereometer verschoben. Dies führt nun dazu, dass sich das Interferenzmuster am Schirm ändert, da der Gangunterschied zwischen den beiden Teilstrahlen geändert wird. Die Wellenlänge des Lasers kann nun durch die Verschiebung des Spiegels bestimmt werden, indem man die Anzahl der Maxima beim verschieben um eine gewisse Distanz misst. Konkret wurde so lange an der Mikrometerschraube gedreht, bis am Schirm $n = \num{100(1)}$ Maxima zu sehen waren. Dabei verschiebt sich der Spiegel um eine Distanz von $d_\text{Spiegel} = \SI{26.4(1)}{\micro\meter}$, wobei hier schon die Übersetzung der Mikrometerschraube zur tatsächlichen Spiegelbewegung (Faktor $5.3$) berücksichtigt wurde. Die Unsicherheit der Mikrometerschraube beläuft sich hier auf $\SI{5}{\micro\meter}$ (nicht untersetzt!); Die Unsicherheit am Start und Ende der Messung - um eben möglichst die gleiche Maxima Intensität zu erreichen - wird auf etwa $\SI{0.3}{\micro\meter}$ geschätzt.
+\setcaphanging
+
+Zur Bestimmung der Wellenlänge des Lasers wird nun mittels Mikrometerschraube ein Spiegel im Michelson-Interfereometer verschoben. Dies führt nun dazu, dass sich das Interferenzmuster am Schirm ändert, da der Gangunterschied zwischen den beiden Teilstrahlen geändert wird. Die Wellenlänge des Lasers kann nun durch die Verschiebung des Spiegels bestimmt werden, indem man die Anzahl der Maxima beim verschieben um eine gewisse Distanz misst. Konkret wurde so lange an der Mikrometerschraube gedreht, bis am Schirm $n = \num{100(1)}$ Maxima zu sehen waren. Dabei verschiebt sich der Spiegel um eine Distanz von $d_\text{Spiegel} = \SI{26.4(1)}{\micro\meter}$, wobei hier schon die Übersetzung der Mikrometerschraube zur tatsächlichen Spiegelbewegung (Faktor $5,3$) berücksichtigt wurde. Die Unsicherheit der Mikrometerschraube beläuft sich hier auf $\SI{5}{\micro\meter}$ (nicht untersetzt!). Die Unsicherheit am Start und am Ende der Messung -- um eben möglichst die gleiche Intensität zu erreichen -- wird auf etwa $\SI{0.3}{\micro\meter}$ geschätzt.
+
+
 
 \section{Auswertung}
 \label{sec:auswertung}
 
-% \setcapindent{0pt}
-% \begin{figure}[H]
-%     \centering
-%     \begin{minipage}[t]{0.45\linewidth}
-%         \centering
-%         \includegraphics[width=\linewidth]{plots/stern_allgemein.png}
-%         \caption[Zeigerdiagramm allgemeine Sternschaltung]{Zeigerdiagramm allgemeine Sternschaltung, Strom $I_{xx}$ in \si{\centi\ampere} und Spannung $U_{xx}$ in \si{\volt}}
-%         \label{fig:stern_asym_allg_zeigerdiagramm}
-%     \end{minipage}%
-%     \hspace*{\fill}
-%     \begin{minipage}[t]{0.45\linewidth}
-%         \centering
-%         \includegraphics[width=\linewidth]{plots/stern_allgemein_tausch.png}
-%         \caption[Zeigerdiagramm allgemeine Sternschaltung mit vertauschten Außenleitern ($\text{L2} \leftrightarrow \text{L3}$)]{Zeigerdiagramm allgemeine Sternschaltung mit vertauschten Außenleitern ($\text{L2} \leftrightarrow \text{L3}$), Strom $I_{xx}$ in \si{\centi\ampere} und Spannung $U_{xx}$ in \si{\volt}}
-%         \label{fig:stern_asym_allg_tausch_zeigerdiagramm}
-%     \end{minipage}
-% \end{figure}
-% \setcaphanging
+\subsection{Young'scher Doppelspalt}
+\label{sec:auswertung_doppelspalt}
+
+
+
+\subsection{Shearing-Interferometer}
+\label{sec:auswertung_shearing}
+
+\subsection{Polarisation}
+\label{sec:auswertung_polarisation}
+
+\subsection{Michelson-Interferometer}
+\label{sec:auswertung_michelson}
 
 
 
