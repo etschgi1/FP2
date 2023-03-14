@@ -1,16 +1,17 @@
-% !TEX Program = xelatex
+% !TEX Program = lualatex
 % class
 \documentclass[ngerman]{scrartcl}
 
 % input preamble
 \input{../../shared_preamble.tex}
+\usepackage{framed}
 
 % manual header
 \ihead{Interferometrie}  % inner (left) head
 \chead{\textsc{Wachmann} Elias (12004232)\\\textsc{Zach} Andreas (12004790)}  % center head
 \ohead{10.03.2023}  % outer (right) head
 
-\addbibresource{Interferometrie_2023.bib} %!TODO cite stuff
+\addbibresource{Interferometrie.bib}
 
 
 
@@ -19,12 +20,11 @@
 %%%%Title Page %%%%
 \begin{titlepage}
     \centering
-    \includegraphics[width=0.5\textwidth]{../../99_Misc/Logo_Uni_Graz.jpg}\par\vspace{0.8cm}
-    {\scshape\LARGE Karl-Franzens-Universität Graz \par}
-    {\scshape\LARGE Institut für Physik \par}
+    \includegraphics[width=0.5\textwidth]{../../99_Misc/Logo_KF.pdf}\par\vspace{0.8cm}
+    {\scshape\LARGE{Karl-Franzens-Universität Graz}\par}
+    {\scshape\LARGE{Institut für Physik}\par}
     \vspace{1cm}
-    {\scshape\Large 23S PHY.L02UB Fortgeschrittenenpraktikum 2 LU
-\par}
+    {\scshape\Large{23S PHY.L02UB Fortgeschrittenenpraktikum 2}\par}
     678 Bachelorstudium Physik, UG2002/2021W\par
     \vspace{1.5cm}
     {\huge\bfseries II. Interferometrie\par}
@@ -32,18 +32,18 @@
     \begin{table}[H]
         \centering
         \begin{tabular}{c c c}
-           \Large Wachmann Elias & & \Large Zach Andreas \\
-           \Large 12004232       & & \Large 12004790 \\
-           \multicolumn{3}{c}{Gruppe 12}
+            \Large Wachmann Elias &  & \Large Zach Andreas \\
+            \Large 12004232       &  & \Large 12004790     \\
+            \multicolumn{3}{c}{Gruppe 12}
         \end{tabular}
     \end{table}
     \vfill
     \Large Betreut von\par
-    BSc. MSc. Thomas Georg \textsc{Boné}
+    Thomas Georg \textsc{Boné}, BSc MSc
 
     \vfill
 
-% Bottom of the page
+    % Bottom of the page
     {\large 10.03.2023\par}
 \end{titlepage}
 %%%%
@@ -52,88 +52,136 @@
 \tableofcontents
 \newpage
 
-\section{Aufgabenstellung} %!TODO referenzieren
+\section[Aufgabenstellung]{Aufgabenstellung \cite{ref:angabe}}
 \label{sec:aufgabenstellung}
-Der folgende Laborversuch gliedert sich in 4 Teilversuche welche sich abermals wie folgt in Unterversuche glieder:
+
+Der folgende Laborversuch besteht aus vier separaten Teilversuchen, welche sich abermals wie folgt in Unterversuche gliedern:
+
 \begin{itemize}
-    \item Young'scher Doppelspalt
-    \begin{itemize}
-        \item Bestimmen des Beugungsmusters von vier Doppelspalten mit unterschiedlichen Spaltbreiten und Spaltabständen. 
-        \item Daraus Berechnung der Wellenlänge des Lasers.
-        \item Erklärung der Beugungsmuster durch Vergleich mit errechneten Mustern.
-        \item Bestimmung der Beugungsmuster eines Liniengitters und vergleich mit errechneten Werten. 
-        \item Bestimmung der Gitterkonstante
-    \end{itemize}
-    \item Wellenfront-Analyse / Shearing Interferometer
-    \item Polarisation
-    \begin{itemize}
-        \item Verifizieren des Gesetzes von Malus
-        \item Untersuchung des Einflusses des Durchlasswinkels eines weiteren Polarisators zwischen zwei gekreuzten Polarisatoren. 
-    \end{itemize}
-    \item Michelson Interferometer
-    \begin{itemize}
-        \item Justieren und generieren von konzentrischen Interfernzmustern. 
-        \item Bestimmung der Wellenlänge des Lasers durch Weglängenänderung. 
-        \item Untersuchung des absoluten Weglängenunterschieds in den beiden Interferometerarmen, sowie Auflösung und Stabilität des Interferometers. 
-        \item Untersuchung der Rolle der Polarisation auf die Interfenzfähigkeit des Laserlichts. 
-    \end{itemize}
+    \item \textbf{Young'scher Doppelspalt}
+          \begin{itemize}
+              \item Bestimmen des Beugungsmusters von vier Doppelspalten mit unterschiedlichen Spaltbreiten und Spaltabständen
+              \item Berechnung der Wellenlänge des Lasers
+              \item Erklärung der Beugungsmuster durch Vergleich mit errechneten Mustern
+              \item Bestimmung der Beugungsmuster eines Liniengitters und Vergleich mit errechneten Werten
+              \item Bestimmung der Gitterkonstante
+          \end{itemize}
+    \item \textbf{Wellenfront-Analyse / Shearing Interferometer}
+    \item \textbf{Polarisation}
+          \begin{itemize}
+              \item Verifizieren des Gesetzes von Malus
+              \item Untersuchen des Einflusses des Durchlasswinkels eines weiteren Polarisators zwischen zwei gekreuzten Polarisatoren
+          \end{itemize}
+    \item \textbf{Michelson Interferometer}
+          \begin{itemize}
+              \item Justieren und generieren von konzentrischen Interferenzmustern
+              \item Bestimmung der Wellenlänge des Lasers durch Weglängenänderung
+              \item Untersuchung des absoluten Weglängenunterschieds in den beiden Interferometerarmen sowie Auflösung und Stabilität des Interferometers
+              \item Untersuchung der Rolle der Polarisation auf die Interfenzfähigkeit des Laserlichts
+          \end{itemize}
 \end{itemize}
 
 
-\section{Grundlagen} %!TODO referenzieren
+\section[Grundlagen]{Grundlagen \cite{ref:angabe}}
 \label{sec:grundlagen}
+
 \subsection{Young'scher Doppelspalt}
 \label{sec:grundlagen_youngscher_doppelspalt}
-Bescheint man mit einer Lichtquelle zwei eng beieinander liegende Spalte mit dem Abstand $d$ in einem ansonsten undurchsichtigen Schirm, so wirkt die Spalte als kohärente Lichtquellen (Anmerkung: Dies ist evident für einen kohärente Lichtquelle, gilt für eine thermische Lichtquelle aber nur unter bestimmten Bedingungen, jenen der räumlichen Kohärenz). Die Wellen aus den Spalten überlagern sich in Abhängigkeit vom Beobachtungswinkel konstruktiv oder destruktiv, was auf einen Schirm projiziert eine Abfolge an Intensitätsmaxima und -minima ergibt. Unter der Bedingung, dass der Abstand zwischen Doppelspalt und Beobachtungsebene viel größer als der Spaltabstand $d$ ist, ergibt sich der optische Gangunterschied in die durch den Winkel $\phi$ definierte Richtung als ($\lambda$ Wellenlänge)
 
+Bescheint man mit einer Lichtquelle zwei eng beieinanderliegende Spalte mit dem Abstand $d$ und projiziert das Bild auf einen ansonsten undurchsichtigen Schirm, so wirkt der Spalt als kohärente Lichtquelle (Anmerkung: Dies ist evident für eine kohärente Lichtquelle, gilt für eine thermische Lichtquelle aber nur unter bestimmten Bedingungen, jenen der räumlichen Kohärenz). Die Wellen aus den Spalten überlagern sich in Abhängigkeit vom Beobachtungswinkel konstruktiv oder destruktiv, was auf einen Schirm projiziert eine Abfolge an Intensitätsmaxima und -minima ergibt. Unter der Bedingung, dass der Abstand zwischen Doppelspalt und Beobachtungsebene viel größer als der Spaltabstand $d$ ist, ergibt sich der optische Gangunterschied in die durch den Winkel $\phi$ definierte Richtung als
 \begin{equation}
-    \Delta = \frac{2 \pi d}{\lambda} \sin \phi
+    \Delta = \frac{2 \pi d}{\lambda} \sin(\phi)
 \end{equation}
-Mit der Näherung $\sin \phi \approx \nicefrac{x}{z}$ (erfüllt für große Abstände $z$ zwischen Doppelspalt und Schirm) ergibt sich ein Streifenmuster mit der Periode $x$ der Form
+mit $\lambda$ der Wellenlänge.
+Mit der Näherung $\sin(\phi) \approx \nicefrac{x}{z}$ (erfüllt für große Abstände $z$ zwischen Doppelspalt und Schirm) ergibt sich ein Streifenmuster mit der Periode $x$ der Form
 \begin{equation}
-    I(x)_{\text{Interferenz}} = I_0(1+ \cos \frac{2 \pi x d}{\lambda z})
+    I_{\text{Interferenz}}(x) = I_0 \left(1 + \cos(\frac{2 \pi x d}{\lambda z}) \right)
 \end{equation}
 Dafür wurde die endliche Breite des Spalts vernachlässigt bzw. ein unendlich schmaler Spalt angenommen. Tatsächlich überlagert sich dem Interferenzmuster das Beugungsmuster des Einzelspalts, das i.A. symmetrisch mit zu größeren Winkeln hin abnehmender Intensität ist. Ein einzelner rechteckiger Spalt der Breite $D$ führt zu einem Beugungsmuster der Form
 \begin{equation}
-    I(x)_{\text{Beugung}} = I_0 \frac{\sin^2 \frac{\pi D x}{\lambda z}}{\left(\frac{\pi D x}{\lambda z}\right)^2}
+    I_{\text{Beugung}}(x) = I_0 \cdot \frac{\sin^2(\frac{\pi D x}{\lambda z})}{\left(\frac{\pi D x}{\lambda z}\right)^2}
 \end{equation}
-Das Beugungsmuster des Doppelspalts ergibt sich multiplikativ als $I(x) = I(x)_{\text{Interferenz}} \cdot I(x)_{\text{Beugung}}$.
+Das Beugungsmuster des Doppelspalts ergibt sich multiplikativ als
+\[I(x) = I_{\text{Interferenz}}(x) \cdot I_{\text{Beugung}}(x).\]%
+%
+%
 \subsection{Shearing-Interferometer / Wellenfront-Analyse}
 \label{sec:grundlagen_shearing_interferometer}
-Das Erscheinungsbild von optischen Interferenzmustern ist sowohl durch die Natur der Lichtwelle als auch der optischen Grenzflächen bestimmt, man denke an die färbigen Interferenzen auf Seifenblasen. Entsprechend ist es möglich, aus der Beobachtung von Interferenzen an Grenzflächen bekannter Geometrie auf die Eigenschaften der Lichtwelle zu schließen.
 
+Das Erscheinungsbild von optischen Interferenzmustern ist sowohl durch die Natur der Lichtwelle als auch der optischen Grenzflächen bestimmt, man denke an die färbigen Interferenzen auf Seifenblasen. Entsprechend ist es möglich, aus der Beobachtung von Interferenzen an Grenzflächen bekannter Geometrie auf die Eigenschaften der Lichtwelle zu schließen.
 %? Evtl. Bilder
-Beim Shearing-Interferometer handelt es sich um ein simples Interferometer, mit dem bestimmt werden kann, ob ein Lichtstrahl kollimiert, konvergent oder divergent ist. Dazu trifft das Licht unter $45°$ auf eine Glasplatte, welche keilförmig ausgeführt ist. Durch die Reflexion an der vorderen und hinteren Fläche der Glasplatte entstehen zwei reflektierte Strahlen (Abb. 5a), in deren Überlappungsbereich Interferenz auftritt (Abb. 5b). Durch die keilförmige Geometrie führt dies für einen kollimierten Strahl zu einem zur Einfallsebene des Lichts parallelen Streifenmuster (Abb. 5b). Ein konvergierender bzw. divergierender Strahl führt dagegen nach Abb. 5b zu einem gedrehten Streifenmuster. Aus dem lateralen Versatz der beiden reflektierten Strahlen $l$, dem Streifenabstand $s$ und dem (bezogen auf die Senkrechte) Winkel der Interferenzstreifen $\Theta$ (siehe Abb. 5b) lässt sich der Radius $r$ der Wellenfront mit $r = \nicefrac{ls}{\lambda \sin \Theta}$ berechnen.
-%ggf hier ein Bild
+Beim Shearing-Interferometer handelt es sich um ein simples Interferometer, mit dem bestimmt werden kann, ob ein Lichtstrahl kollimiert, konvergent oder divergent ist. Dazu trifft das Licht unter \SI{45}{\degree} auf eine Glasplatte (in Seitenansicht, siehe \autoref{fig:shearing_interferometer}a), welche keilförmig ausgeführt ist. Durch die Reflexion an der vorderen und hinteren Fläche der Glasplatte entstehen zwei reflektierte Strahlen (\autoref{fig:shearing_interferometer}a), in deren Überlappungsbereich Interferenz auftritt (\autoref{fig:shearing_interferometer}b). Durch die keilförmige Geometrie führt dies für einen kollimierten Strahl zu einem zur Einfallsebene des Lichts parallelen Streifenmuster (\autoref{fig:shearing_interferometer}b). Ein konvergierender bzw. divergierender Strahl führt dagegen nach \autoref{fig:shearing_interferometer}b zu einem gedrehten Streifenmuster. Aus dem lateralen Versatz der beiden reflektierten Strahlen $l$, dem Streifenabstand $s$ und dem (auf die Senkrechte bezogenen) Winkel der Interferenzstreifen $\Theta$ (siehe \autoref{fig:shearing_interferometer}b) lässt sich der Radius $r$ der Wellenfront mit
+\[r = \frac{ls}{\lambda \cdot \sin(\Theta)}\]
+berechnen.
+
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=0.8\linewidth]{fig/Angabe_Abb5.png}
+        \caption[Shearing-Interferometer]{Shearing-Interferometer. (a) Schematischer Aufbau in Seitenansicht, (b) beobachtete
+            Interferenzmuster (in Aufsicht) für kollimierte, konvergierende und divergierende Wellenfronten, im
+            mittleren Bild sind die im Text besprochenen Bestimmungsgrößen eingezeichnet. \copyright{} Thorlabs, Quelle: \cite{ref:angabe}}
+        \label{fig:shearing_interferometer}
+    \end{samepage}
+\end{figure}
+
+
 \subsection{Polarisation}
 \label{sec:grundlagen_polarisation}
+
 Für den Fall linearer Polarisation gilt für die transmittierte Intensität durch einen Polarisator mit der Durchlassrichtung entlang der durch den Winkel Null definierten Richtung das Gesetz von Malus.
 \begin{equation}
-    I(\alpha) = I_0 \cos^2 \alpha
+    I(\alpha) = I_0 \cos^2(\alpha)
 \end{equation}
-Die nicht transmittierte Intensität wird je nach Art des Polarisators absorbiert oder reflektiert. Die Polarisation ist entscheidend für die Interferenzfähigkeit von Licht, es gelten die vier Gesetze nach Fresnel und Arago \textbf{(siehe dazu auch einen entsprechenden Versuch mit dem Michelson-Interferometer)}.
-\begin{itemize}
-    \item In dieselbe Richtung linear polarisierte Lichtstrahlen interferieren (wie nicht polarisiertes Licht).11
-    \item Zueinander senkrecht linear polarisierte Lichtstrahlen interferieren nicht (mit den folgenden Einschränkungen).
-    \item Zueinander senkrecht linear polarisierte Lichtstrahlen interferieren, wenn sie ursprünglich dieselbe Polarisationsebene besaßen und wieder in diese zurückgeführt werden.
-    \item  Zueinander senkrecht linear polarisierte Lichtstrahlen interferieren nicht, wenn sie in dieselbe Polarisationsebene zurückgeführt werden, diese aber nicht ursprünglich besaßen.
-\end{itemize}
+Die nicht transmittierte Intensität wird je nach Art des Polarisators absorbiert oder reflektiert. Die Polarisation ist entscheidend für die Interferenzfähigkeit von Licht, es gelten die vier Gesetze nach Fresnel und Arago.
+%? Is diese Anmerkung nötig?
+%? \textbf{(siehe dazu auch einen entsprechenden Versuch mit dem Michelson-Interferometer)}.
+\begin{framed}
+    \begin{itemize}
+        \item In dieselbe Richtung linear polarisierte Lichtstrahlen interferieren (wie nicht polarisiertes Licht).
+        \item Zueinander senkrecht linear polarisierte Lichtstrahlen interferieren nicht (mit den nachfolgend aufgelisteten zwei Einschränkungen).
+        \item Zueinander senkrecht linear polarisierte Lichtstrahlen interferieren, wenn sie ursprünglich dieselbe Polarisationsebene besaßen und wieder in diese zurückgeführt werden.
+        \item  Zueinander senkrecht linear polarisierte Lichtstrahlen interferieren nicht, wenn sie in dieselbe Polarisationsebene zurückgeführt werden, diese aber nicht ursprünglich besaßen.
+    \end{itemize}
+\end{framed}
 
-\subsection{Michelson-Interferometer} %? evtl. noch ein Bild
+\subsection{Michelson-Interferometer}
 \label{sec:grundlagen_michelson_interferometer}
-Der prinzipielle Strahlengang eines Michelson-Interferometers ist in Abb. 8 dargestellt. Ein Lichtstrahl aus einer (Laser-)Quelle (1) wird an einem Strahlteiler (2) aufgeteilt. Der Strahlteiler ist ein dünnes Glasplättchen mit einer teilreflektierenden Schicht auf einer Fläche. Die beiden resultierenden Lichtstrahlen werden an zwei Spiegeln reflektiert und am Strahlteiler wieder vereint. Die Lichtstrahlen im Detektorarm treffen auf den Schirm (4), wo sie sich in Abhängigkeit vom Unterschied der Weglängen s1 und s2 überlagern. Für ebene Wellen der Form
+
+Der prinzipielle Strahlengang eines Michelson-Interferometers ist in \autoref{fig:michalson_interferometer} dargestellt. Ein Lichtstrahl aus einer (Laser-)Quelle (1) wird an einem Strahlteiler (2) aufgeteilt. Der Strahlteiler ist ein dünnes Glasplättchen mit einer teilreflektierenden Schicht auf einer Fläche. Die beiden resultierenden Lichtstrahlen werden an zwei Spiegeln reflektiert und am Strahlteiler wieder vereint. Die Lichtstrahlen im Detektorarm treffen auf den Schirm (4), wo sie sich in Abhängigkeit vom Unterschied der Weglängen $s_1$ und $s_2$ überlagern. Für ebene Wellen der Form
 \begin{equation}
-    E(x,t) = E_0 \exp{\omega t - k x}
+    E(x,t) = E_0 e^{\omega t - k x}
 \end{equation}
 ist die Lichtintensität am Beobachtungsschirm gegeben durch
 \begin{equation}
-    I = \nicefrac{1}{4} c \epsilon_0 E_0^2 (1+\cos{\Delta \phi})
+    I = \nicefrac{1}{4} \cdot c \cdot \varepsilon_0 \cdot E_0^2 \cdot (1 + \cos(\Delta \varphi))
 \end{equation}
-wobei $\Delta \phi$ die Phasendifferenz bezeichnet, die mit dem Unterschied der Weglängen $\Delta s = \left| s_1  - s_2 \right|$ nach $\Delta \phi = (\nicefrac{2 \pi}{\lambda})\Delta s$ zusammenhängt. 
+wobei $\Delta \phi$ die Phasendifferenz bezeichnet, die mit dem Unterschied der Weglängen\linebreak
+$\Delta s = \left| s_1 - s_2 \right|$ nach $\Delta \varphi = (\nicefrac{2 \pi}{\lambda})\Delta s$ zusammenhängt.
 
-Es stellt sich die Frage, wo bei destruktiver Interferenz im Detektorarm die Energie der Lichtwellen bleibt. Tatsächlich hat das Interferometer ja zwei „Ausgänge“, wobei einer eben zum Beobachtungs-schirm, der zweite zurück zum Laser führt. Tatsächlich beobachtet man in zweiterem konstruktive Interferenz, wenn am Schirm destruktive Interferenz (also keine Lichtintensität) zu beobachten ist.
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=0.6\linewidth]{fig/Angabe_Abb8.png}
+        \caption[Michelson-Interferometer]{Michelson-Interferometer. Strahlengang im Michelson-Interferometer. Ein Laserstrahl aus der Quelle (1) wird am Strahlteiler (2) aufgeteilt, die beiden Teilstrahlen durchlaufen die beiden Interferometerarme der Länge s1 und s2. Nach ihrer Reflexion an den Spiegeln (3,4) werden die Teilstrahlen am Strahlteiler wieder überlagert und interferieren am Beobachtungsschirm (4). \copyright{} Thorlabs, Quelle: \cite{ref:angabe}}
+        \label{fig:michalson_interferometer}
+    \end{samepage}
+\end{figure}
 
-Das am Schirm beobachtete Interferenzmuster reagiert empfindlich auf kleine Änderungen in der Richtung des einfallenden Laserstrahls und in der Ausrichtung der Spiegel. Gleichzeitig sind diese Änderungen durch den nur wenige mm durchmessenden Strahl schwer zu beobachten. Deshalb wird der Strahl durch eine Linse aufgeweitet, was zwischen Laser und Strahlteiler oder zwischen Strahlteiler und Schirm geschehen kann. Ersteres führt zu einem konzentrischen Interferenzmuster, zweiteres zu parallelen Interferenzstreifen. Wie in Abb. 9a skizziert, können divergierende Strahlen auf (bei Vorliegen eines Weglängenunterschieds $\Delta s$ zwischen den beiden Interferometerarmen) auf zwei virtuelle Lichtquellen A und B zurückgeführt werden, wodurch sich das Auftreten eines konzentrischen Interferenzmusters erklärt. Gleichzeitig kann dieses genutzt werden, um die Interferometerarme auf die gleiche Länge einzustellen (im Prinzip auf einen Bruchteil der Wellenlänge), da sich dabei nach Abb. 9b die Größe des zentralen Interferenz“spots“ maximiert. Alternativ könnte dazu eine breitbandige Lichtquelle mit geringer Kohärenzlänge verwendet werde, wobei die Kohärenzlänge durch die Verwendung von Bandpassfiltern erhöht werden kann.
+Es stellt sich die Frage, wo bei destruktiver Interferenz im Detektorarm die Energie der Lichtwellen bleibt. Tatsächlich hat das Interferometer ja zwei \enquote{Ausgänge}, wobei einer eben zum Beobachtungs-schirm, der zweite zurück zum Laser führt. Tatsächlich beobachtet man in zweiterem konstruktive Interferenz, wenn am Schirm destruktive Interferenz (also keine Lichtintensität) zu beobachten ist.
+
+Das am Schirm beobachtete Interferenzmuster reagiert empfindlich auf kleine Änderungen in der Richtung des einfallenden Laserstrahls und in der Ausrichtung der Spiegel. Gleichzeitig sind diese Änderungen durch den nur wenige mm durchmessenden Strahl schwer zu beobachten. Deshalb wird der Strahl durch eine Linse aufgeweitet, was zwischen Laser und Strahlteiler oder zwischen Strahlteiler und Schirm geschehen kann. Ersteres führt zu einem konzentrischen Interferenzmuster, zweiteres zu parallelen Interferenzstreifen. Wie in \autoref{fig:interferenzmuster_michelson_interferometer}a skizziert, können divergierende Strahlen auf (bei Vorliegen eines Weglängenunterschieds $\Delta s$ zwischen den beiden Interferometerarmen) auf zwei virtuelle Lichtquellen A und B zurückgeführt werden, wodurch sich das Auftreten eines konzentrischen Interferenzmusters erklärt. Gleichzeitig kann dieses genutzt werden, um die Interferometerarme auf die gleiche Länge einzustellen (im Prinzip auf einen Bruchteil der Wellenlänge), da sich dabei nach \autoref{fig:interferenzmuster_michelson_interferometer}b die Größe des zentralen Interferenzspots maximiert. Alternativ könnte dazu eine breitbandige Lichtquelle mit geringer Kohärenzlänge verwendet werde, wobei die Kohärenzlänge durch die Verwendung von Bandpassfiltern erhöht werden kann.
+
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=\linewidth]{fig/Angabe_Abb9.png}
+        \caption[Interferenzmuster Michelson-Interferometer]{Zum kreisförmigen Interferenzmuster beim Michelson-Interferometer. (a) Skizze zur Erklärung seiner Entstehung, (b) Skizze zur Erklärung der Größe des zentralen Maximums (oder Minimums). \copyright{} Thorlabs, Quelle: \cite{ref:angabe}}
+        \label{fig:interferenzmuster_michelson_interferometer}
+    \end{samepage}
+\end{figure}
+
+\clearpage
 
 \section{Geräteliste}
 \label{sec:geraeteliste}
@@ -152,73 +200,84 @@ Für den praktischen Aufbau und die Messungen der geforderten Größen wurden di
             Graufilter & Thorlabs & NX1N/M &- &- \\
             Doppelspalte & Phywe & 0852300 &- &- \\
             Gitter & Phywe & 0852400 &- &- \\
-            Optischer Tisch& - & - &- &- \\ 
+            Optischer Tisch& - & - &- &- \\
             diverse Halterungen & Thorlabs & - &- &- \\
             Sammellinse & Thorlabs & FMP1/M &f = $40$ mm &- \\
             Zerstreuungslinse & Thorlabs & FMP1/M &f = $-16$ mm &- \\
             Shearing-Interferometer & Thorlabs & nicht vorhanden &- &- \\
-            Lichtintensitätsmesser & Sauter & SO 200k & $\Delta I = (\pm 3\% \text{rdg} \pm 0.5\% \text{fs}) \cdot I$ &51152203 \\
+            Lichtintensitätsmesser & Sauter & SO 200k & $\Delta I = (\pm \SI{3}{\percent}\text{rdg} \pm \SI{0.5}{\percent}\text{fs}) \cdot I$ &51152203 \\
             Polarisationsfolie & Nitto denko & - &- &- \\
-            Maßband& Schuller Eh klar& Power Tape $3$ m& Klasse 2 &- \\
+            Maßband& Schuller Eh klar& Power Tape \SI{3}{m}& Klasse II &- \\
             Michelson Interferometer & - & - &- &- \\
             Rohr & - & - &- &- \\
             diverse Abbildungsschirme & Wand, Papier, Tür, etc. & - &- &- \\
             Mobiltelefon & OnePlus & $8$-Pro &- &- \\
-
         \end{tblrx}
     \end{samepage}
 \end{table}
-Die verwendeten Doppelspalte haben folgende Abmessungen in \autoref{tab:doppelspalt_abmessungen}:
-\textbf{TABELLE FEHLT NOCH!}
-% \begin{table}[H] %! Irgendeinen schmarn mags da ned. will jetzt grad ned debuggen. 
-%     \centering
-%     \begin{samepage}
-%         \caption[Doppelspaltmaße]{Verwendete Doppelspalte. Mit der jeweiligen Nummer $i$, der Spaltbreite $D$ in $\unit{\milli\meter}$ und dem Spaltabstand $d$ in $\unit{\milli\meter}$}
-%         \label{tab:doppelspalt_abmessungen}
-%         \begin{tblr}{colspec = {Q S[table-format=1.1]S[table-format=1.2]},row{1}={guard}}
-%             $i$ / 1& $D$ / \si{\milli\meter} & $d$ / \si{\milli\meter} \\
-%             1 & 0.2 & 0.25 \\
-%             2 & 0.1 & 0.25 \\
-%             3 & 0.1 & 0.50 \\
-%             4 & 0.1 & 1.00 \\
-%         \end{tblr}
-%     \end{samepage}
-% \end{table}
 
-\textbf{Anmerkung zu den Unsicherheiten:}\\
-Zur Unsicherheitsangabe werden die jeweiligen Unsicherheitsmaße der Geräte, welche aus den Datenblättern (sofern vorhanden) entnommen werden, verwendet. Für die analogen Messgeräte wird eine kombinierte Ablese- und Mess-Unsicherheit von $\pm$ 1 Skalenstrich verwendet.
+Die verwendeten Doppelspalte haben die Abmessungen wie in \autoref{tab:doppelspalt_abmessungen} vermerkt.
+
+\begin{table}[H]
+    \centering
+    \begin{samepage}
+        \caption[Doppelspaltmaße]{Verwendete Doppelspalte mit der jeweiligen Nummer $i$, der Spaltbreite $D$ in \unit{\milli\meter} und dem Spaltabstand $d$ in \unit{\milli\meter}. Quelle: \cite{ref:angabe}}
+        \label{tab:doppelspalt_abmessungen}
+        \begin{tblr}{colspec={Q S[table-format=1.1]S[table-format=1.2]}, row{1}={guard}}
+            $i$ / 1 & $D$ / \si{\milli\meter} & $d$ / \si{\milli\meter} \\
+            1       & 0.2                     & 0.25                    \\
+            2       & 0.1                     & 0.25                    \\
+            3       & 0.1                     & 0.50                    \\
+            4       & 0.1                     & 1.00                    \\
+        \end{tblr}
+    \end{samepage}
+\end{table}
+
+\paragraph{Anmerkung zu den Unsicherheiten:} Zur Unsicherheitsangabe werden die jeweiligen Unsicherheitsmaße der Geräte, welche aus den Datenblättern (sofern vorhanden) entnommen werden, verwendet. Für die analogen Messgeräte wird eine kombinierte Ablese- und Messunsicherheit von $\pm\SI{1}{Skalenstrich}$ verwendet.
 
 Alle Teilversuche wurden bei einer Umgebungstemperatur von \SI{24(1)}{\celsius} einem Luftdruck von \SI{1000(10)}{\hecto\pascal} und einer relativen Luftfeuchtigkeit von \SI{33(1)}{\percent} durchgeführt.
 
 
+
 \section{Versuchsaufbau}
 \label{sec:aufbau}
+
 \subsection{Young'scher Doppelspalt}
 \label{sec:aufbau_doppelspalte}
-Für den Aufbau zum Versuch Young'scher Doppelspalt wird der Laser mittels zwei Spiegel auf das Plättchen mit den 4 verschiedenen (siehe \autoref{tab:doppelspalt_abmessungen}) Doppelspalten gelenkt. Der Abstand vom Doppelspalt wird zu \SI{2520(5)}{\milli\meter} - wobei hier noch zur vom Maßband gegebenen Unsicherheit von \SI{1.1}{\milli\meter} eine weitere Unsicherheit durch das Messen in der Luft hinzukommt - bestimmt. Der Aufbau in \autoref{fig:aufbau_doppelspalt} zeigt den optischen Tisch, der Schirm ist rechts im oben angeführten Abstand an der Wand befestigt. 
+
+Für den Aufbau zum Versuch \textit{Young'scher Doppelspalt} wird der Laser mittels zwei Spiegel auf das Plättchen mit den vier verschiedenen (siehe \autoref{tab:doppelspalt_abmessungen}) Doppelspalten gelenkt. Der Abstand vom Doppelspalt wird mit \SI{2520(5)}{\milli\meter} bestimmt -- wobei hier noch zur vom Maßband gegebenen Unsicherheit von \SI{1.1}{\milli\meter} eine weitere Unsicherheit durch das Messen in der Luft hinzukommt. Der Aufbau in \autoref{fig:aufbau_doppelspalt} zeigt den optischen Tisch, der Schirm ist rechts im oben angeführten Abstand an der Wand befestigt.
 \begin{figure}[H]
     \centering
     \begin{samepage}
         \includegraphics[width=0.7\linewidth]{fig/aufbau_doppelspalt.jpg}
-        \caption{Aufbau young'scher Doppelspalt}
+        \caption{Aufbau Young'scher Doppelspalt}
         \label{fig:aufbau_doppelspalt}
     \end{samepage}
 \end{figure}
-\subsection{Shearing Interferometer}
+
+
+\subsection{Shearing-Interferometer}
 \label{sec:aufbau_shearing}
-Der Aufbau des Shearing Interferometers ist in \autoref{fig:aufbau_shearing} gegeben. Dabei wird der untere Spiegel aus dem vorhergehenden Versuch wieder verwendet und der Laserstrahl auf die Frontalebene - welche um \SI{45}{\degree} zur Tischebene geneigt ist - gelenkt. 
+
+Der Aufbau des Shearing-Interferometers ist in \autoref{fig:aufbau_shearing} gegeben. Dabei wird der untere Spiegel aus dem vorhergehenden Versuch wiederverwendet und der Laserstrahl auf die Frontalebene gelenkt, welche um \SI{45}{\degree} zur Tischebene geneigt ist.
+%
 \begin{figure}[H]
     \centering
     \begin{samepage}
         \includegraphics[width=0.9\linewidth]{fig/shearing.jpg}
-        \caption{Aufbau Shearing Interferometer \textbf{CITE THIS!!!!}}
+        \caption[Aufbau Shearing Interferometer]{Aufbau Shearing Interferometer. Quelle: \cite{ref:angabe}}
         \label{fig:aufbau_shearing}
     \end{samepage}
 \end{figure}
-\textbf{Anmerkung zum Versuch:} Da sich das Shearing Interferometer leider zum Zeitpunkt der Übung in Reparatur befand, wird der Versuch im folgenden hyptotethisch abgehandelt.  
+%
+\paragraph{Anmerkung zum Versuch:} Da sich das Shearing Interferometer leider zum Zeitpunkt der Übung in Reparatur befand, wird der Versuch im folgenden hyptotethisch abgehandelt.
+
+
 \subsection{Polarisation}
 \label{sec:aufbau_polarisation}
-Anstelle des Shearing Interferometers werden jetzt zwei Polarisationsfilter in den Laserstrahl eingebracht. Nach dem zweitem Filter trifft der Laser auf einen Lichtintensitätsmesser welcher, wie in \autoref{fig:aufbau_polarisation} ersichtlich, durch ein Rohr von sonstigen Lichteinflüssen abgeschirmt wird.
+
+Anstelle des Shearing Interferometers werden jetzt zwei Polarisationsfilter in den Pfad des Lasers eingebracht. Nach dem zweitem Filter trifft der Laser auf einen Lichtintensitätsmesser, welcher wie in \autoref{fig:aufbau_polarisation} ersichtlich, durch ein Rohr von sonstigen Lichteinflüssen abgeschirmt wird.
+%
 \begin{figure}[H]
     \centering
     \begin{samepage}
@@ -227,127 +286,145 @@ Anstelle des Shearing Interferometers werden jetzt zwei Polarisationsfilter in d
         \label{fig:aufbau_polarisation}
     \end{samepage}
 \end{figure}
-\subsection{Michelson Interferometer}
+
+
+\subsection{Michelson-Interferometer}
 \label{sec:aufbau_michelson}
-Nun wird auch der letzte verbleibende Spiegel aus dem Strahlengang des Lasers gegeben und der Laserstrahl trifft so direkt auf das in \autoref{fig:aufbau_michelson} rechts gezeigte Michelson Interferometer. Wie gut in der Abbildung ersichtlich ist, wird der Strahl im Michelson Interferometer in die beiden Arme aufgeteilt. Nach letztlicher Zusammenführung der beiden Strahlen trifft der resultierende Strahl auf den Schirm. 
-Zum untersuchen verschiedenen Effekte wird eine Sammel- bzw. Zerstreuungslinse in den Strahlengang zwischen Laser und Michelsoninterfereometer eingebracht. 
+
+Nun wird auch der letzte verbleibende Spiegel aus dem Strahlengang des Lasers gegeben und der Laserstrahl trifft so direkt auf das in \autoref{fig:aufbau_michelson} rechts gezeigte Michelson-Interferometer. Wie gut in der Abbildung ersichtlich ist, wird der Strahl im Michelson-Interferometer in die beiden Arme aufgeteilt. Nach letztlicher Zusammenführung der beiden Strahlen trifft der resultierende Strahl auf den Schirm.
+Zur Untersuchung verschiedener Effekte wird je eine Sammel- bzw. Zerstreuungslinse in den Strahlengang zwischen Laser und Michelson-Interfereometer eingebracht.
+%
 \begin{figure}[H]
     \centering
     \begin{samepage}
-        \includegraphics[width=0.7\linewidth]{fig/aufbau_michalson.jpg}
-        \caption{Aufbau Michelson Interferometer}
+        \includegraphics[width=0.7\linewidth]{fig/aufbau_michelson.jpg}
+        \caption{Aufbau Michelson-Interferometer}
         \label{fig:aufbau_michelson}
     \end{samepage}
 \end{figure}
 
 
+
 \section{Versuchsdurchführung}
 \label{sec:durchfuehrung}
-Vor jedem Teilversuch wird nochmals überprüft, ob sich ein sinnvoller optischer Weg ergibt und der Laser nicht unkontrolliert oder ungewollt in nicht beabsichtige Richtungen abgelenkt wird. Weiters wird stets darauf geachtet, dass man nicht mit Gegenständen welche \enquote{unkontrolliert} reflektieren (z.B. Ring, Schraubenzieher) in den Strahlengang kommt. 
+
+Vor jedem Teilversuch wird nochmals überprüft, ob sich der gewünschte optische Weg ergibt und der Laser nicht unkontrolliert oder ungewollt in nicht beabsichtige Richtungen abgelenkt wird. Weiters wird stets darauf geachtet, dass man nicht mit reflektierenden Gegenständen (z.B. Ring, Schraubenzieher) im Strahlengang hantiert.
+
 \subsection{Young'scher Doppelspalt}
 \label{sec:durchfuehrung_doppelspalt}
-Der Versuch wird gemäß der Beschreibung in \autoref{sec:aufbau_doppelspalte} aufgebaut und die in \autoref{tab:doppelspalt_abmessungen} angeführten Doppelspalte werden der Reihe nach vom Laser durchstrahlt. Der $l_\text{Schirm}$ = \SI{2520(5)}{\milli\meter} entfernte Schirm - ein karriertes A4-Blatt an der Wand - wird nun vom sich ergebendem Interferenzmuster beleuchtet. 
 
-Es ergeben sich für die 4 Doppelspalte folgende Bilder in den Abbildungen \ref{fig:DS_1_interferenzmuster} bis \ref{fig:DS_2_interferenzmuster}. 
+Der Versuch wird gemäß der Beschreibung in \autoref{sec:aufbau_doppelspalte} aufgebaut und die in \autoref{tab:doppelspalt_abmessungen} angeführten Doppelspalte werden der Reihe nach vom Laser durchstrahlt. Der $l_\text{Schirm} = \SI{2520(5)}{\milli\meter}$ entfernte Schirm -- ein karriertes A4-Blatt an der Wand -- wird nun vom sich ergebenden Interferenzmuster beleuchtet.
+
+Es ergeben sich für die vier Doppelspalte folgende Interferenzbilder in den Abbildungen \ref{fig:DS_1_interferenzmuster} bis \ref{fig:DS_2_interferenzmuster}.
+%
+\setcapindent{0pt}
 \begin{figure}[H]
     \centering
-    \begin{samepage}
-        \includegraphics[width=0.7\linewidth]{fig/DS1_0_20_25.jpg}
+    \begin{minipage}[t]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/DS1_0_20_25.jpg}
         \caption{Interferenzmuster des Doppelspalts $i = 1$}
         \label{fig:DS_1_interferenzmuster}
-    \end{samepage}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \begin{samepage}
-        \includegraphics[width=0.7\linewidth]{fig/DS2_0_10_25.jpg}
-        \caption{Interferenzmuster des Doppelspalts $i = 2$}
-        \label{fig:DS_2_interferenzmuster}
-    \end{samepage}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \begin{samepage}
-        \includegraphics[width=0.7\linewidth]{fig/DS3_0_10_5.jpg}
+        \includegraphics[width=\linewidth]{fig/DS3_0_10_5.jpg}
         \caption{Interferenzmuster des Doppelspalts $i = 3$}
         \label{fig:DS_3_interferenzmuster}
-    \end{samepage}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \begin{samepage}
-        \includegraphics[width=0.7\linewidth]{fig/DS4_0_11.jpg}
+    \end{minipage}%
+    \hspace*{\fill}
+    \begin{minipage}[t]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/DS2_0_10_25.jpg}
+        \caption{Interferenzmuster des Doppelspalts $i = 2$}
+        \label{fig:DS_2_interferenzmuster}
+        \includegraphics[width=\linewidth]{fig/DS4_0_11.jpg}
         \caption{Interferenzmuster des Doppelspalts $i = 4$}
         \label{fig:DS_4_interferenzmuster}
-    \end{samepage}
+    \end{minipage}
 \end{figure}
+\setcaphanging
+%
 Neben der fotografischen Dokumentation werden auch die Abstände der Maxima mittels Lineal vermessen. Die Messungen ergeben die in \autoref{tab:messwerte_doppelspalten} angeführten Werte.
 
 %? Auf meinem laptop geht glaub i tabularray ned gescheit aber vermultich is es nur ein user error :D
-% \begin{table}[H]
-%     \centering
-%     \begin{samepage}
-%         \caption[Messwerte Doppelspalten]{Messwerte der Doppelspalten\\Unsicherheit der Messung: $\Delta l_i$ = \SI{0.5}{\milli\meter}
-%         \label{tab:messwerte_doppelspalten}
-%         \begin{tblr}{colspec={cS[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1]}}
-%             {{{$i$}}} & {{{$l_1$ / \unit{\milli\meter}}}} & {{{$l_2$ / \unit{\milli\meter}}}} & {{{$l_3$ / \unit{\milli\meter}}}} {{{&$l_4$ / \unit{\milli\meter}}}}\\
-%             0 & 0.0 & 0.0 & 0.0 & 0.0\\
-%             1 & 5.0 & 5.0 & 2.5 & 1.5\\
-%             2 & 11.0& 11.0& 8.0 & 2.5\\
-%             3 & 16.0& 16.0& 10.5& 4.0\\
-%             4 & 21.0& 22.0& 13.0& 5.5\\
-%             5 & 27.0& 27.0& 16.0& 6.5\\
-%             6 & 33.0& 32.0& 18.5& 8.0\\
-%             7 & 38.0& 38.0& 21.0& 9.5\\
-%             8 & 43.0& 43.0& 24.0& 10.5\\
-%             9 & 49.0& 48.0& 26.5& 12.0\\
-%             10& 55.0& 54.0& 29.0& 13.5\\
-%             11& 58.0& -   & -   & 15.0\\
-%         \end{tblr}
-%     \end{samepage}
-% \end{table}
+\begin{table}[H]
+    \centering
+    \begin{samepage}
+        \caption[Messwerte Doppelspalten]{Messwerte der Doppelspalten. Unsicherheit der Messung: $\Delta l_i = \SI{0.5}{\milli\meter}$}
+        \label{tab:messwerte_doppelspalten}
+        \begin{tblr}{colspec={cS[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1]}, row{1}={guard}}
+            $i$ & $l_1$ / \unit{\milli\meter} & $l_2$ / \unit{\milli\meter} & $l_3$ / \unit{\milli\meter} & $l_4$ / \unit{\milli\meter} \\
+            0   & 0.0                         & 0.0                         & 0.0                         & 0.0                         \\
+            1   & 5.0                         & 5.0                         & 2.5                         & 1.5                         \\
+            2   & 11.0                        & 11.0                        & 8.0                         & 2.5                         \\
+            3   & 16.0                        & 16.0                        & 10.5                        & 4.0                         \\
+            4   & 21.0                        & 22.0                        & 13.0                        & 5.5                         \\
+            5   & 27.0                        & 27.0                        & 16.0                        & 6.5                         \\
+            6   & 33.0                        & 32.0                        & 18.5                        & 8.0                         \\
+            7   & 38.0                        & 38.0                        & 21.0                        & 9.5                         \\
+            8   & 43.0                        & 43.0                        & 24.0                        & 10.5                        \\
+            9   & 49.0                        & 48.0                        & 26.5                        & 12.0                        \\
+            10  & 55.0                        & 54.0                        & 29.0                        & 13.5                        \\
+            11  & 58.0                        & {{{-}}}                     & {{{-}}}                     & 15.0                        \\
+        \end{tblr}
+    \end{samepage}
+\end{table}
 
-Die obige Messung wird nun in analoger Weise nochmals mit dem Gitter durchgeführt. Die Messungen ergeben die in \autoref{tab:messwerte_gitter} angeführten Werte. Dabei bleibt der Abstand zum Schirm $l_\text{Schirm}$ = \SI{2520(5)}{\milli\meter} konstant.
-% \begin{table}[H]
-%     \centering
-%     \begin{samepage}
-%         \caption[Messwerte Gitter]{Messwerte des Gitters\\Unsicherheit der Messung: $\Delta l_i$ = \SI{0.5}{\milli\meter}
-%         \label{tab:messwerte_gitter}
-%         \begin{tblr}{colspec={cS[table-format=3.1]}}
-%             {{{$i$}}} & {{{$l_1$ / \unit{\milli\meter}}}} \\
-%             0  & 0.0\\
-%             1  & 11.0\\
-%             2  & 21.5\\
-%             3  & 32.5\\
-%             4  & 43.0\\
-%             5  & 53.5\\
-%             6  & 64.5\\
-%             7  & 75.0\\
-%             8  & 86.0\\
-%             9  & 97.0\\
-%             10 & 108.0\\
-%             11 & 118.0\\
-%             12 & 128.0\\
-%             13 & 139.0\\
-%             14 & 151.0\\
-%         \end{tblr}
-%     \end{samepage}
-% \end{table}
+Die eben beschriebene Messung wird nun in analoger Weise nochmals mit dem Gitter durchgeführt. Die Messungen ergeben die in \autoref{tab:messwerte_gitter} angeführten Werte. Dabei bleibt der Abstand zum Schirm $l_\text{Schirm} = \SI{2520(5)}{\milli\meter}$ konstant.
 
-\subsection{Shearing Interferometer}
+\begin{table}[H]
+    \centering
+    \begin{samepage}
+        \caption[Messwerte Gitter]{Messwerte des Gitters. Unsicherheit der Messung: $\Delta l_i = \SI{0.5}{\milli\meter}$}
+        \label{tab:messwerte_gitter}
+        \begin{tblr}{colspec={c S[table-format=3.1]}, row{1}={guard}}
+            $i$ / 1 & $l_1$ / \unit{\milli\meter} \\
+            0       & 0.0                         \\
+            1       & 11.0                        \\
+            2       & 21.5                        \\
+            3       & 32.5                        \\
+            4       & 43.0                        \\
+            5       & 53.5                        \\
+            6       & 64.5                        \\
+            7       & 75.0                        \\
+            8       & 86.0                        \\
+            9       & 97.0                        \\
+            10      & 108.0                       \\
+            11      & 118.0                       \\
+            12      & 128.0                       \\
+            13      & 139.0                       \\
+            14      & 151.0                       \\
+        \end{tblr}
+    \end{samepage}
+\end{table}
+
+
+\subsection{Shearing-Interferometer}
 \label{sec:durchfuehrung_shearing}
-Der Aufbau erfolgt gemäß \autoref{sec:aufbau_shearing} und die der Laser wird mittels Spiegel wie beschrieben auf das Interferometer gelenkt. 
 
-Aus dem am Shearing Interferometer entstandenem Interferenzmuster wird werden nun die drei Größen: $l$ Versatz in laterale Richtung, $\Theta$ Winkelversatz zur einfallenden Ebene und der Streifenabstand $d$ bestimmt. Die Messungen ergeben sich zu: 
+Nachdem der Versuchaufbau ordnungsgemäß hergestellt ist, wird der Laser eingeschaltet. Am optischen Ausgang am oberen Ende des Shearing-Interferometers erscheint dadurch ein streifenförmiges Interferenzmuster. Aus diesem Interfenzmuster werden der Versatz in laterale Richtung $l$, der Abstand der Interferenzstreifen $d$ und der Winkelversatz zur einfallenden Ebene $\theta$ vermessen. Vermessen wurde direkt am optischen Ausgang mit einem handelsüblichen durchsichtigen Geodreieck. Für die Längenmessung wird eine Ableseunsicherheit von \SI{0.5}{mm} angenommen, die Winkelmessung wird mit einer Ungenauigkeit von \SI{3}{\degree} abgeschätzt. Aufgrund der hohen Messungenauigkeit dieser Methodik wird die Messung zwei weitere Male wiederholt, um so zumindest eine geringfügige statistische Aussage treffen zu können. Die Messergebnisse werden notiert und tabelliert.
+\begin{table}[H]
+    \centering
+    \begin{samepage}
+        \caption[Messung Shearing]{Gemessene Größen beim Versuchsaufbau Shearing-Interferometer mit $l$ Versatz in laterale Richtung, $d$ dem Abstand der Interferenzstreifen $\theta$ und dem Winkelversatz zur einfallenden Ebene. }
+        \label{tab:}
+        \begin{tblr}{colspec={}, row{1}={guard}}
+        \end{tblr}
+    \end{samepage}
+\end{table}
+
 %!Natürlich komplett frei erfunden
 \begin{itemize}
     \item $l$ = \SI{8.0(5)}{\milli\meter}
     \item $\Theta$ = \SI{-19(3)}{\degree}
     \item $d$ = \SI{4.0(5)}{\milli\meter}
 \end{itemize}
+
+
+
+
+
 \subsection{Polarisation}
 \label{sec:durchfuehrung_polarisation}
-Der Strahl wird für den ersten Unterpunkt dieses Versuchs durch zwei Polarisationsfilter geführt. Für den ersten der beiden Filter wurde \SI{70}{\degree} als Ausgangswinkel gewählt, der zweite wird im folgenden Versuch einmal um \SI{360}{\degree} gedreht, wobei die Ausgangsstellung hier so gewählt wird, dass zuerst die höchste Lichtintensität am Messgerät abgelesen werden kann. So stehen die Polarisationsfilter gleich; Dies ist bei \SI{330}{\degree} des zweiten Filters der Fall. 
+Der Strahl wird für den ersten Unterpunkt dieses Versuchs durch zwei Polarisationsfilter geführt. Für den ersten der beiden Filter wurde \SI{70}{\degree} als Ausgangswinkel gewählt, der zweite wird im folgenden Versuch einmal um \SI{360}{\degree} gedreht, wobei die Ausgangsstellung hier so gewählt wird, dass zuerst die höchste Lichtintensität am Messgerät abgelesen werden kann. So stehen die Polarisationsfilter gleich; Dies ist bei \SI{330}{\degree} des zweiten Filters der Fall.
 Die Messung wurde zweimal durchgeführt und die gemessenen Werte des Lichtintensitätsmesser sind in \autoref{tab:messwerte_polarisation} angeführt.
 % \begin{table}[H] 
 %     \centering
