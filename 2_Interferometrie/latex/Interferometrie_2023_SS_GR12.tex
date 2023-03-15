@@ -429,6 +429,7 @@ Nachdem der Versuchaufbau ordnungsgemäß hergestellt ist, wird der Laser einges
 Der Strahl wird für den ersten Unterpunkt dieses Versuchs durch zwei Polarisationsfilter geführt. Für den ersten der beiden Filter wurde \SI{70}{\degree} als Ausgangswinkel gewählt, der zweite wird im folgenden Versuch einmal um \SI{360}{\degree} gedreht, wobei die Ausgangsstellung hier so gewählt wird, dass zuerst die höchste Lichtintensität am Messgerät abgelesen werden kann. So stehen die Polarisationsfilter gleich, dies ist bei \SI{330}{\degree} des zweiten Filters der Fall.
 Die Messung wurde zweimal durchgeführt und die gemessenen Werte des Lichtintensitätsmesser sind in \autoref{tab:messwerte_polarisation} angeführt.
 
+%! Caption is scheiße und zu klein
 \begin{longtblr}[
     caption = {Messwerte nach Durchgang durch zwei Polarisationsfilter. Winkel des ersten Filters: \SI{70}{\degree}, Winkel des zweiten Filters $\alpha$ mit $\Delta \alpha = \SI{3}{\degree}$, Intensität $I$},
     label = {tab:messwerte_polarisation}]{
@@ -498,8 +499,59 @@ Das Michelson-Interferometer wird wie in \autoref{fig:aufbau_michelson} beschrie
 \end{figure}
 \setcaphanging
 
-Zur Bestimmung der Wellenlänge des Lasers wird nun mittels Mikrometerschraube ein Spiegel im Michelson-Interfereometer verschoben. Dies führt nun dazu, dass sich das Interferenzmuster am Schirm ändert, da der Gangunterschied zwischen den beiden Teilstrahlen geändert wird. Die Wellenlänge des Lasers kann nun durch die Verschiebung des Spiegels bestimmt werden, indem man die Anzahl der Maxima beim verschieben um eine gewisse Distanz misst. Konkret wurde so lange an der Mikrometerschraube gedreht, bis am Schirm $n = \num{100(1)}$ Maxima zu sehen waren. Dabei verschiebt sich der Spiegel um eine Distanz von $d_\text{Spiegel} = \SI{26.4(1)}{\micro\meter}$, wobei hier schon die Übersetzung der Mikrometerschraube zur tatsächlichen Spiegelbewegung (Faktor $5,3$) berücksichtigt wurde. Die Unsicherheit der Mikrometerschraube beläuft sich hier auf $\SI{5}{\micro\meter}$ (nicht untersetzt!). Die Unsicherheit am Start und am Ende der Messung -- um eben möglichst die gleiche Intensität zu erreichen -- wird auf etwa $\SI{0.3}{\micro\meter}$ geschätzt.
+Zur Bestimmung der Wellenlänge des Lasers wird nun mittels Mikrometerschraube ein Spiegel im Michelson-Interfereometer verschoben. Dies führt nun dazu, dass sich das Interferenzmuster am Schirm ändert, da der Gangunterschied zwischen den beiden Teilstrahlen geändert wird. Die Wellenlänge des Lasers kann nun durch die Verschiebung des Spiegels bestimmt werden, indem man die Anzahl der Maxima/Minima beim verschieben um eine gewisse Distanz misst. Konkret wurde so lange an der Mikrometerschraube gedreht, bis am Schirm $n = \num{100(1)}$ neue Maxima/Minima zu sehen waren. Dabei verschiebt sich der Spiegel um eine Distanz von $d_\text{Spiegel-S} = \SI{26.4(10)}{\micro\meter}$, wobei hier schon die Übersetzung der Mikrometerschraube zur tatsächlichen Spiegelbewegung (Faktor $5,3$) berücksichtigt wurde. Die Unsicherheit der Mikrometerschraube beläuft sich hier auf $\SI{5}{\micro\meter}$ (nicht untersetzt!). Die Unsicherheit am Start und am Ende der Messung -- um eben möglichst die gleiche Intensität zu erreichen -- wird auf etwa $\SI{0.3}{\micro\meter}$ geschätzt.
 
+Nun wird statt der Sammellinse eine Zerstreuungslinse eingesetzt und die Interferenzmuster erneut beobachtet. Es ergeben sich nun mit der Zerstreuungslinse keine konzentrischen Kreise im Interferzbild, sondern Linien-Interferenzmuster, wie auch in \autoref{fig:michelson_linien_zerstreu} dargestellt. 
+%info Des is natürlich Bullshit - hab ma vergessen:
+Analog zum Versuch mit der eingesetzten Sammellinse werden nun auch 100 Wechsel zwischen Maxima und Minima gezählt. Es ergibt sich für eine Distanz von $d_\text{Spiegel-Z} = \SI{26.6(10)}{\micro\meter}$ für die $n = \num{100(1)}$ Wechsel zwischen Maxima und Minima. Die Unsicherheit dieser Messung wird ebenso analog zum vorherigen versuch mit der konzentrischen Linse angenommen. 
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=0.7\linewidth]{fig/Zerstreuungslinse.jpg}
+        \caption{Interferenzmuster des Lasers nach Durchgang durchs Michelsoninterfereometer mit Zerstreuungslinse}
+        \label{fig:michelson_linien_zerstreu}
+    \end{samepage}
+\end{figure}
+
+Um nun die 4 Gesetze von Fresnel und Agaro zeigen zu können werden Polarisatoren in den Strahlengang gebracht.
+%!TODO des da noch gescheit beschreiben.  
+\setcapindent{0pt}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/Out_horizontal_detail.jpg} %! I glaub da hab ma kein Bild einfach irdendwas genommen :) was gleich ausschaut
+        \caption{Interferenzmuster mit einem Plarisator vor dem Interferometer}
+        \label{fig:michelson_pol_vor}
+    \end{minipage}%
+    \hspace*{\fill}
+    \begin{minipage}[t]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/Arago_2_Horizontal_detail.jpg}
+        \caption{Interferenzmuster mit jeweils einem Polarisator in horizontaler Anordnung pro Arm}
+        \label{fig:michelson_pol_2_horizontal}
+    \end{minipage}
+\end{figure}
+\setcaphanging
+
+\setcapindent{0pt}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/Arago_mixed Detail.jpg}
+        \caption{Interferenzmuster mit einem Polarisator in horizontaler Anordnung im ersten Arm und einem mit vertikaler im zweiten Arm}
+        \label{fig:michelson_pol_mixed}
+    \end{minipage}%
+    \hspace*{\fill}
+    \begin{minipage}[t]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/Arago_horizontal_detail.jpg}
+        \caption{Interferenzmuster mit einem Polarisator in horizontaler Anordnung in einem Arm}
+        \label{fig:michelson_pol_1_horizontal}
+    \end{minipage}
+\end{figure}
+\setcaphanging
 
 
 \section{Auswertung}
