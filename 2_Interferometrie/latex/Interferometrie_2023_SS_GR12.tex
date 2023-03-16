@@ -40,9 +40,7 @@
     \vfill
     \Large Betreut von\par
     Thomas Georg \textsc{Boné}, BSc MSc
-
     \vfill
-
     % Bottom of the page
     {\large 10.03.2023\par}
 \end{titlepage}
@@ -61,23 +59,29 @@ Der folgende Laborversuch besteht aus vier separaten Teilversuchen, welche sich 
     \item \textbf{Young'scher Doppelspalt}
           \begin{itemize}
               \item Bestimmen des Beugungsmusters von vier Doppelspalten mit unterschiedlichen Spaltbreiten und Spaltabständen
-              \item Berechnung der Wellenlänge des Lasers
-              \item Erklärung der Beugungsmuster durch Vergleich mit errechneten Mustern
-              \item Bestimmung der Beugungsmuster eines Liniengitters und Vergleich mit errechneten Werten
-              \item Bestimmung der Gitterkonstante
+              \item Berechnen der Wellenlänge des Lasers
+              \item Erklären der Beugungsmuster durch Vergleich mit errechneten Mustern
+              \item Bestimmen der Beugungsmuster eines Liniengitters und Vergleich mit errechneten Werten
+              \item Bestimmen der Gitterkonstante
           \end{itemize}
     \item \textbf{Wellenfront-Analyse / Shearing Interferometer}
+          \begin{itemize}
+              \item Vermessen des Interferenzmusters
+              \item Berechnen des Wellenfrontradius
+          \end{itemize}
     \item \textbf{Polarisation}
           \begin{itemize}
+              \item Darstellen der winkelabhängigen Transmission zusammen mit dem theoretischen Verlauf
               \item Verifizieren des Gesetzes von Malus
               \item Untersuchen des Einflusses des Durchlasswinkels eines weiteren Polarisators zwischen zwei gekreuzten Polarisatoren
           \end{itemize}
     \item \textbf{Michelson Interferometer}
           \begin{itemize}
               \item Justieren und generieren von konzentrischen Interferenzmustern
-              \item Bestimmung der Wellenlänge des Lasers durch Weglängenänderung
-              \item Untersuchung des absoluten Weglängenunterschieds in den beiden Interferometerarmen sowie Auflösung und Stabilität des Interferometers
-              \item Untersuchung der Rolle der Polarisation auf die Interfenzfähigkeit des Laserlichts
+              \item Bestimmen der Wellenlänge des Lasers durch Weglängenänderung
+              \item Untersuchen des absoluten Weglängenunterschieds in den beiden Interferometerarmen sowie Auflösung und Stabilität des Interferometers
+              \item Justieren und generieren von streifenförmigen Interferenzmustern
+              \item Untersuchen der Rolle der Polarisation auf die Interfenzfähigkeit des Laserlichts
           \end{itemize}
 \end{itemize}
 
@@ -88,30 +92,39 @@ Der folgende Laborversuch besteht aus vier separaten Teilversuchen, welche sich 
 \subsection{Young'scher Doppelspalt}
 \label{sec:grundlagen_youngscher_doppelspalt}
 
-Bescheint man mit einer Lichtquelle zwei eng beieinanderliegende Spalte mit dem Abstand $d$ und projiziert das Bild auf einen ansonsten undurchsichtigen Schirm, so wirkt der Spalt als kohärente Lichtquelle (Anmerkung: Dies ist evident für eine kohärente Lichtquelle, gilt für eine thermische Lichtquelle aber nur unter bestimmten Bedingungen, jenen der räumlichen Kohärenz). Die Wellen aus den Spalten überlagern sich in Abhängigkeit vom Beobachtungswinkel konstruktiv oder destruktiv, was auf einen Schirm projiziert eine Abfolge an Intensitätsmaxima und -minima ergibt. Unter der Bedingung, dass der Abstand zwischen Doppelspalt und Beobachtungsebene viel größer als der Spaltabstand $d$ ist, ergibt sich der optische Gangunterschied in die durch den Winkel $\phi$ definierte Richtung als
+Bescheint man mit einer Lichtquelle zwei eng beieinanderliegende Spalte mit dem Abstand $d$ und projiziert das Bild auf einen ansonsten undurchsichtigen Schirm, so wirkt der Spalt als kohärente Lichtquelle (Anmerkung: Dies ist evident für eine kohärente Lichtquelle, gilt für eine thermische Lichtquelle aber nur unter bestimmten Bedingungen, jenen der räumlichen Kohärenz). Die Wellen aus den Spalten überlagern sich in Abhängigkeit vom Beobachtungswinkel konstruktiv oder destruktiv, was auf einen Schirm projiziert eine Abfolge an Intensitätsmaxima und -minima ergibt. Unter der Bedingung, dass der Abstand zwischen Doppelspalt und Beobachtungsebene viel größer als der Spaltabstand $d$ ist, ergibt sich der optische Gangunterschied $\Delta$ in die durch den Winkel $\phi$ definierte Richtung als
 \begin{equation}
+    \label{eq:optischer_gangunterschied}
     \Delta = \frac{2 \pi d}{\lambda} \sin(\phi)
 \end{equation}
 mit $\lambda$ der Wellenlänge.
 Mit der Näherung $\sin(\phi) \approx \nicefrac{x}{z}$ (erfüllt für große Abstände $z$ zwischen Doppelspalt und Schirm) ergibt sich ein Streifenmuster mit der Periode $x$ der Form
 \begin{equation}
+    \label{eq:intensity_interferenz}
     I_{\text{Interferenz}}(x) = I_0 \left(1 + \cos(\frac{2 \pi x d}{\lambda z}) \right)
 \end{equation}
 Dafür wurde die endliche Breite des Spalts vernachlässigt bzw. ein unendlich schmaler Spalt angenommen. Tatsächlich überlagert sich dem Interferenzmuster das Beugungsmuster des Einzelspalts, das i.A. symmetrisch mit zu größeren Winkeln hin abnehmender Intensität ist. Ein einzelner rechteckiger Spalt der Breite $D$ führt zu einem Beugungsmuster der Form
 \begin{equation}
+    \label{eq:intensity_beugung}
     I_{\text{Beugung}}(x) = I_0 \cdot \frac{\sin^2(\frac{\pi D x}{\lambda z})}{\left(\frac{\pi D x}{\lambda z}\right)^2}
 \end{equation}
 Das Beugungsmuster des Doppelspalts ergibt sich multiplikativ als
-\[I(x) = I_{\text{Interferenz}}(x) \cdot I_{\text{Beugung}}(x).\]%
-%
-%
+\begin{equation}
+    \label{eq:intensity_gesamt}
+    I(x) = I_{\text{Interferenz}}(x) \cdot I_{\text{Beugung}}(x).
+\end{equation}
+
+
 \subsection{Shearing-Interferometer / Wellenfront-Analyse}
 \label{sec:grundlagen_shearing_interferometer}
 
 Das Erscheinungsbild von optischen Interferenzmustern ist sowohl durch die Natur der Lichtwelle als auch der optischen Grenzflächen bestimmt, man denke an die färbigen Interferenzen auf Seifenblasen. Entsprechend ist es möglich, aus der Beobachtung von Interferenzen an Grenzflächen bekannter Geometrie auf die Eigenschaften der Lichtwelle zu schließen.
 %? Evtl. Bilder
 Beim Shearing-Interferometer handelt es sich um ein simples Interferometer, mit dem bestimmt werden kann, ob ein Lichtstrahl kollimiert, konvergent oder divergent ist. Dazu trifft das Licht unter \SI{45}{\degree} auf eine Glasplatte (in Seitenansicht, siehe \autoref{fig:shearing_interferometer}a), welche keilförmig ausgeführt ist. Durch die Reflexion an der vorderen und hinteren Fläche der Glasplatte entstehen zwei reflektierte Strahlen (\autoref{fig:shearing_interferometer}a), in deren Überlappungsbereich Interferenz auftritt (\autoref{fig:shearing_interferometer}b). Durch die keilförmige Geometrie führt dies für einen kollimierten Strahl zu einem zur Einfallsebene des Lichts parallelen Streifenmuster (\autoref{fig:shearing_interferometer}b). Ein konvergierender bzw. divergierender Strahl führt dagegen nach \autoref{fig:shearing_interferometer}b zu einem gedrehten Streifenmuster. Aus dem lateralen Versatz der beiden reflektierten Strahlen $l$, dem Streifenabstand $s$ und dem (auf die Senkrechte bezogenen) Winkel der Interferenzstreifen $\Theta$ (siehe \autoref{fig:shearing_interferometer}b) lässt sich der Radius $r$ der Wellenfront mit
-\[r = \frac{ls}{\lambda \cdot \sin(\Theta)}\]
+\begin{equation}
+    \label{eq:radius_wellenfront}
+    r = \frac{ls}{\lambda \cdot \sin(\Theta)}
+\end{equation}
 berechnen.
 
 \begin{figure}[H]
@@ -168,9 +181,17 @@ $\Delta s = \left| s_1 - s_2 \right|$ nach $\Delta \varphi = (\nicefrac{2 \pi}{\
     \end{samepage}
 \end{figure}
 
-Es stellt sich die Frage, wo bei destruktiver Interferenz im Detektorarm die Energie der Lichtwellen bleibt. Tatsächlich hat das Interferometer ja zwei \enquote{Ausgänge}, wobei einer eben zum Beobachtungs-schirm, der zweite zurück zum Laser führt. Tatsächlich beobachtet man in zweiterem konstruktive Interferenz, wenn am Schirm destruktive Interferenz (also keine Lichtintensität) zu beobachten ist.
+Es stellt sich die Frage, wo bei destruktiver Interferenz im Detektorarm die Energie der Lichtwellen bleibt. Tatsächlich hat das Interferometer ja zwei \enquote{Ausgänge}, wobei einer eben zum Beobachtungsschirm, der zweite zurück zum Laser führt. Tatsächlich beobachtet man in zweiterem konstruktive Interferenz, wenn am Schirm destruktive Interferenz (also keine Lichtintensität) zu beobachten ist.
 
-Das am Schirm beobachtete Interferenzmuster reagiert empfindlich auf kleine Änderungen in der Richtung des einfallenden Laserstrahls und in der Ausrichtung der Spiegel. Gleichzeitig sind diese Änderungen durch den nur wenige mm durchmessenden Strahl schwer zu beobachten. Deshalb wird der Strahl durch eine Linse aufgeweitet, was zwischen Laser und Strahlteiler oder zwischen Strahlteiler und Schirm geschehen kann. Ersteres führt zu einem konzentrischen Interferenzmuster, zweiteres zu parallelen Interferenzstreifen. Wie in \autoref{fig:interferenzmuster_michelson_interferometer}a skizziert, können divergierende Strahlen auf (bei Vorliegen eines Weglängenunterschieds $\Delta s$ zwischen den beiden Interferometerarmen) auf zwei virtuelle Lichtquellen A und B zurückgeführt werden, wodurch sich das Auftreten eines konzentrischen Interferenzmusters erklärt. Gleichzeitig kann dieses genutzt werden, um die Interferometerarme auf die gleiche Länge einzustellen (im Prinzip auf einen Bruchteil der Wellenlänge), da sich dabei nach \autoref{fig:interferenzmuster_michelson_interferometer}b die Größe des zentralen Interferenzspots maximiert. Alternativ könnte dazu eine breitbandige Lichtquelle mit geringer Kohärenzlänge verwendet werde, wobei die Kohärenzlänge durch die Verwendung von Bandpassfiltern erhöht werden kann.
+Das am Schirm beobachtete Interferenzmuster reagiert empfindlich auf kleine Änderungen in der Richtung des einfallenden Laserstrahls und in der Ausrichtung der Spiegel. Gleichzeitig sind diese Änderungen durch den nur wenige Millimeter durchmessenden Strahl schwer zu beobachten. Deshalb wird der Strahl durch eine Linse aufgeweitet, was zwischen Laser und Strahlteiler oder zwischen Strahlteiler und Schirm geschehen kann. Ersteres führt zu einem konzentrischen Interferenzmuster, zweiteres zu parallelen Interferenzstreifen. Wie in \autoref{fig:interferenzmuster_michelson_interferometer}a skizziert, können divergierende Strahlen auf (bei Vorliegen eines Weglängenunterschieds $\Delta s$ zwischen den beiden Interferometerarmen) auf zwei virtuelle Lichtquellen A und B zurückgeführt werden, wodurch sich das Auftreten eines konzentrischen Interferenzmusters erklärt. Gleichzeitig kann dieses genutzt werden, um die Interferometerarme auf die gleiche Länge einzustellen (im Prinzip auf einen Bruchteil der Wellenlänge), da sich dabei nach \autoref{fig:interferenzmuster_michelson_interferometer}b die Größe des zentralen Interferenzspots maximiert.
+
+Ändert man den Weglängenunterschied der Interferometerarme, so ändern sich auch das Interferenzmuster und wandern nach innen bzw. außen (für die Interferenzringe, je nach Richtungsänderung) bzw. nach links oder rechts (für die Interferenzstreifen, wieder je nach Richtungsänderung), wo sie dann letztlich \enquote{verschwinden}. Die Anzahl an generierten bzw. vernichteten (gekrümmten oder geraden) Interferenzstreifen bei einem bestimmten Weglängenunterschied ist indirekt proportional zur Wellenlänge $\lambda$ des Lasers nach \autoref{eq:wegunterschied_anzahl}:
+\begin{equation}
+    \label{eq:wegunterschied_anzahl}
+    \Delta s = n \cdot \frac{\lambda}{2}
+\end{equation}
+
+
 
 \begin{figure}[H]
     \centering
@@ -186,7 +207,7 @@ Das am Schirm beobachtete Interferenzmuster reagiert empfindlich auf kleine Änd
 
 Die Fehlerfortpflanzung der berechneten Werte basiert auf der Größtunsicherheitsmethode nach Gauß. Um diese Berechnungen zeiteffizient durchführen zu können, wird für jeden Unterpunkt der Laborübung ein Skript in \verb!Python! implementiert. Kernstück dessen ist das package \verb!uncertainties! \cite{ref:uncertainties}, das intern die Fehlerfortpflanzung berechnet. Gerundet wird nach den Angaben des Skriptums der Lehrveranstaltung \enquote{Einführung in die physikalischen Messmethoden} \cite{ref:messmethoden}.
 
-\clearpage
+
 
 \section{Geräteliste}
 \label{sec:geraeteliste}
@@ -355,7 +376,7 @@ Neben der fotografischen Dokumentation werden auch die Abstände der Maxima mitt
     \begin{samepage}
         \caption[Messwerte Doppelspalten]{Messwerte der Doppelspalten. Unsicherheit der Messung: $\Delta l_i = \SI{0.5}{\milli\meter}$}
         \label{tab:messwerte_doppelspalten}
-        \begin{tblr}{colspec={cS[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1]}, row{1}={guard}}
+        \begin{tblr}{colspec={Q S[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1]}, row{1}={guard}}
             $i$ & $l_1$ / \unit{\milli\meter} & $l_2$ / \unit{\milli\meter} & $l_3$ / \unit{\milli\meter} & $l_4$ / \unit{\milli\meter} \\
             0   & 0.0                         & 0.0                         & 0.0                         & 0.0                         \\
             1   & 5.0                         & 5.0                         & 2.5                         & 1.5                         \\
@@ -380,8 +401,8 @@ Die eben beschriebene Messung wird nun in analoger Weise nochmals mit dem Gitter
     \begin{samepage}
         \caption[Messwerte Gitter]{Messwerte des Gitters. Unsicherheit der Messung: $\Delta l_i = \SI{0.5}{\milli\meter}$}
         \label{tab:messwerte_gitter}
-        \begin{tblr}{colspec={c S[table-format=3.1]}, row{1}={guard}}
-            $i$ / 1 & $l_1$ / \unit{\milli\meter} \\
+        \begin{tblr}{colspec={Q S[table-format=3.1]}, row{1}={guard}}
+            $i$ / 1 & $l_i$ / \unit{\milli\meter} \\
             0       & 0.0                         \\
             1       & 11.0                        \\
             2       & 21.5                        \\
@@ -413,11 +434,11 @@ Nachdem der Versuchaufbau ordnungsgemäß hergestellt ist, wird der Laser einges
     \begin{samepage}
         \caption[Messung Shearing]{Gemessene Größen beim Versuchsaufbau \textit{Shearing-Interferometer} mit $i$ dem Laufindex der einzelnen Messungen, $l$ dem Versatz in laterale Richtung, $d$ dem Abstand der Interferenzstreifen $\theta$ und dem Winkelversatz zur einfallenden Ebene. Unsicherheiten: $\Delta l = \Delta s = \SI{0.5}{mm}$, $\Delta \theta = \SI{3}{\degree}$}
         \label{tab:messergebnisse_shearing}
-        \begin{tblr}{colspec={cS[table-format=1.1(1)]S[table-format=1.1(1)]S[table-format=-2(1)]}, row{1}={guard}}
+        \begin{tblr}{colspec={Q S[table-format=2.1(1)] S[table-format=1.1(1)] S[table-format=2(1)]}, row{1}={guard}}
             $i$ / 1 & $l$ / \unit{\milli\meter} & $d$ / \unit{\milli\meter} & $\theta$ / \unit{\degree} \\
-            1       & 8.0(5)                    & 4.0(5)                    & -19(3)                    \\
-            2       & 8.5(5)                    & 3.5(5)                    & -17(3)                    \\
-            3       & 8.0(5)                    & 4.5(5)                    & -20(3)                    \\
+            1       & 10.0(5)                   & 3.0(5)                    & 22(3)                     \\
+            2       & 9.5(5)                    & 3.5(5)                    & 20(3)                     \\
+            3       & 10.0(5)                   & 3.0(5)                    & 25(3)                     \\
         \end{tblr}
     \end{samepage}
 \end{table}
@@ -431,47 +452,47 @@ Die Messung wurde zweimal durchgeführt und die gemessenen Werte des Lichtintens
 
 %! Caption is scheiße und zu klein
 \begin{longtblr}[
-    caption = {Messwerte nach Durchgang durch zwei Polarisationsfilter. Winkel des ersten Filters: \SI{70}{\degree}, Winkel des zweiten Filters $\alpha$ mit $\Delta \alpha = \SI{3}{\degree}$, Intensität $I$},
-    label = {tab:messwerte_polarisation}]{
-    colspec={S[table-format=3.0]S[table-format=4.0]S[table-format=2.0]S[table-format=4.0]S[table-format=2.0]}}
-    {{{$\alpha$}}} & {{{$I_1$ / \unit{\lux}}}} & {{{$I_2$ / \unit{\lux}}}} & {{{$\Delta I_1$ / \unit{\lux}}}} & {{{$\Delta I_2$ / \unit{\lux}}}} \\
-    330            & 1020                      & 50                        & 1070                             & 50                               \\
-    340            & 990                       & 50                        & 1050                             & 50                               \\
-    350            & 910                       & 40                        & 960                              & 40                               \\
-    0              & 780                       & 40                        & 820                              & 40                               \\
-    10             & 610                       & 30                        & 640                              & 30                               \\
-    20             & 440                       & 30                        & 450                              & 30                               \\
-    30             & 270                       & 20                        & 280                              & 20                               \\
-    40             & 130                       & 20                        & 140                              & 20                               \\
-    50             & 30                        & 20                        & 30                               & 20                               \\
-    60             & 0                         & 10                        & 0                                & 10                               \\
-    70             & 20                        & 20                        & 20                               & 20                               \\
-    80             & 100                       & 20                        & 110                              & 20                               \\
-    90             & 230                       & 20                        & 250                              & 20                               \\
-    100            & 390                       & 30                        & 410                              & 30                               \\
-    110            & 570                       & 30                        & 600                              & 30                               \\
-    120            & 750                       & 40                        & 790                              & 40                               \\
-    130            & 890                       & 40                        & 940                              & 40                               \\
-    140            & 1000                      & 50                        & 1040                             & 50                               \\
-    150            & 1040                      & 50                        & 1090                             & 50                               \\
-    160            & 1020                      & 50                        & 1070                             & 50                               \\
-    170            & 950                       & 40                        & 990                              & 50                               \\
-    180            & 810                       & 40                        & 840                              & 40                               \\
-    190            & 650                       & 40                        & 670                              & 40                               \\
-    200            & 470                       & 30                        & 490                              & 30                               \\
-    210            & 280                       & 20                        & 300                              & 20                               \\
-    220            & 150                       & 20                        & 150                              & 20                               \\
-    230            & 30                        & 20                        & 40                               & 20                               \\
-    240            & 0                         & 10                        & 0                                & 10                               \\
-    250            & 20                        & 20                        & 20                               & 20                               \\
-    260            & 110                       & 20                        & 120                              & 20                               \\
-    270            & 250                       & 20                        & 260                              & 20                               \\
-    280            & 420                       & 30                        & 440                              & 30                               \\
-    290            & 600                       & 30                        & 630                              & 30                               \\
-    300            & 740                       & 40                        & 810                              & 40                               \\
-    310            & 920                       & 40                        & 970                              & 40                               \\
-    320            & 1020                      & 50                        & 1070                             & 50                               \\
-    330            & 1060                      & 50                        & 1100                             & 50                               \\
+        caption = {Messwerte nach Durchgang durch zwei Polarisationsfilter. Winkel des ersten Filters: \SI{70}{\degree}, Winkel des zweiten Filters $\alpha$ mit $\Delta \alpha = \SI{3}{\degree}$, Intensität $I_i$ mit Index $i=1 \mathcomma 2$ für die beiden nacheinanderfolgenden Messungen, $\Delta I_i$ Unsicherheit der Messung.},
+        label = {tab:messwerte_polarisation}]{
+        colspec={S[table-format=3] S[table-format=4] S[table-format=2] S[table-format=4] S[table-format=2]}}
+    {{{$\alpha$}}} & {{{$I_1$ / \unit{\lux}}}} & {{{$\Delta I_1$ / \unit{\lux}}}} & {{{$I_2$ / \unit{\lux}}}} & {{{$\Delta I_2$ / \unit{\lux}}}} \\
+    330            & 1020                      & 50                               & 1070                      & 50                               \\
+    340            & 990                       & 50                               & 1050                      & 50                               \\
+    350            & 910                       & 40                               & 960                       & 40                               \\
+    0              & 780                       & 40                               & 820                       & 40                               \\
+    10             & 610                       & 30                               & 640                       & 30                               \\
+    20             & 440                       & 30                               & 450                       & 30                               \\
+    30             & 270                       & 20                               & 280                       & 20                               \\
+    40             & 130                       & 20                               & 140                       & 20                               \\
+    50             & 30                        & 20                               & 30                        & 20                               \\
+    60             & 0                         & 10                               & 0                         & 10                               \\
+    70             & 20                        & 20                               & 20                        & 20                               \\
+    80             & 100                       & 20                               & 110                       & 20                               \\
+    90             & 230                       & 20                               & 250                       & 20                               \\
+    100            & 390                       & 30                               & 410                       & 30                               \\
+    110            & 570                       & 30                               & 600                       & 30                               \\
+    120            & 750                       & 40                               & 790                       & 40                               \\
+    130            & 890                       & 40                               & 940                       & 40                               \\
+    140            & 1000                      & 50                               & 1040                      & 50                               \\
+    150            & 1040                      & 50                               & 1090                      & 50                               \\
+    160            & 1020                      & 50                               & 1070                      & 50                               \\
+    170            & 950                       & 40                               & 990                       & 50                               \\
+    180            & 810                       & 40                               & 840                       & 40                               \\
+    190            & 650                       & 40                               & 670                       & 40                               \\
+    200            & 470                       & 30                               & 490                       & 30                               \\
+    210            & 280                       & 20                               & 300                       & 20                               \\
+    220            & 150                       & 20                               & 150                       & 20                               \\
+    230            & 30                        & 20                               & 40                        & 20                               \\
+    240            & 0                         & 10                               & 0                         & 10                               \\
+    250            & 20                        & 20                               & 20                        & 20                               \\
+    260            & 110                       & 20                               & 120                       & 20                               \\
+    270            & 250                       & 20                               & 260                       & 20                               \\
+    280            & 420                       & 30                               & 440                       & 30                               \\
+    290            & 600                       & 30                               & 630                       & 30                               \\
+    300            & 740                       & 40                               & 810                       & 40                               \\
+    310            & 920                       & 40                               & 970                       & 40                               \\
+    320            & 1020                      & 50                               & 1070                      & 50                               \\
+    330            & 1060                      & 50                               & 1100                      & 50                               \\
 \end{longtblr}
 
 
@@ -499,11 +520,11 @@ Das Michelson-Interferometer wird wie in \autoref{fig:aufbau_michelson} beschrie
 \end{figure}
 \setcaphanging
 
-Zur Bestimmung der Wellenlänge des Lasers wird nun mittels Mikrometerschraube ein Spiegel im Michelson-Interfereometer verschoben. Dies führt nun dazu, dass sich das Interferenzmuster am Schirm ändert, da der Gangunterschied zwischen den beiden Teilstrahlen geändert wird. Die Wellenlänge des Lasers kann nun durch die Verschiebung des Spiegels bestimmt werden, indem man die Anzahl der Maxima/Minima beim verschieben um eine gewisse Distanz misst. Konkret wurde so lange an der Mikrometerschraube gedreht, bis am Schirm $n = \num{100(1)}$ neue Maxima/Minima zu sehen waren. Dabei verschiebt sich der Spiegel um eine Distanz von $d_\text{Spiegel-S} = \SI{26.4(10)}{\micro\meter}$, wobei hier schon die Übersetzung der Mikrometerschraube zur tatsächlichen Spiegelbewegung (Faktor $5,3$) berücksichtigt wurde. Die Unsicherheit der Mikrometerschraube beläuft sich hier auf $\SI{5}{\micro\meter}$ (nicht untersetzt!). Die Unsicherheit am Start und am Ende der Messung -- um eben möglichst die gleiche Intensität zu erreichen -- wird auf etwa $\SI{0.3}{\micro\meter}$ geschätzt.
+Zur Bestimmung der Wellenlänge des Lasers wird nun mittels Mikrometerschraube ein Spiegel im Michelson-Interfereometer verschoben. Dies führt nun dazu, dass sich das Interferenzmuster am Schirm ändert, da der Gangunterschied zwischen den beiden Teilstrahlen geändert wird. Die Wellenlänge des Lasers kann nun durch die Verschiebung des Spiegels bestimmt werden, indem man die Anzahl der Maxima/Minima beim verschieben um eine gewisse Distanz misst. Konkret wurde so lange an der Mikrometerschraube gedreht, bis am Schirm $n = \num{100(1)}$ neue Maxima/Minima zu sehen waren. Dabei verschiebt sich der Spiegel um eine Distanz von $d_\text{Spiegel-S} = \SI{26.4(10)}{\micro\meter}$, wobei hier schon die Übersetzung der Mikrometerschraube zur tatsächlichen Spiegelbewegung (Faktor \num{5.3}) berücksichtigt wurde. Die Unsicherheit der Mikrometerschraube beläuft sich hier auf $\SI{5}{\micro\meter}$ (nicht untersetzt!). Die Unsicherheit am Start und am Ende der Messung -- um eben möglichst die gleiche Intensität zu erreichen -- wird auf etwa $\SI{0.3}{\micro\meter}$ geschätzt.
 
-Nun wird statt der Sammellinse eine Zerstreuungslinse eingesetzt und die Interferenzmuster erneut beobachtet. Es ergeben sich nun mit der Zerstreuungslinse keine konzentrischen Kreise im Interferzbild, sondern Linien-Interferenzmuster, wie auch in \autoref{fig:michelson_linien_zerstreu} dargestellt. 
+Nun wird statt der Sammellinse eine Zerstreuungslinse eingesetzt und die Interferenzmuster erneut beobachtet. Es ergeben sich nun mit der Zerstreuungslinse keine konzentrischen Kreise im Interferzbild, sondern Linien-Interferenzmuster, wie auch in \autoref{fig:michelson_linien_zerstreu} dargestellt.
 %info Des is natürlich Bullshit - hab ma vergessen:
-Analog zum Versuch mit der eingesetzten Sammellinse werden nun auch 100 Wechsel zwischen Maxima und Minima gezählt. Es ergibt sich für eine Distanz von $d_\text{Spiegel-Z} = \SI{26.6(10)}{\micro\meter}$ für die $n = \num{100(1)}$ Wechsel zwischen Maxima und Minima. Die Unsicherheit dieser Messung wird ebenso analog zum vorherigen versuch mit der konzentrischen Linse angenommen. 
+Analog zum Versuch mit der eingesetzten Sammellinse werden nun auch 100 Wechsel zwischen Maxima und Minima gezählt. Es ergibt sich für eine Distanz von $d_\text{Spiegel-Z} = \SI{26.6(10)}{\micro\meter}$ für die $n = \num{100(1)}$ Wechsel zwischen Maxima und Minima. Die Unsicherheit dieser Messung wird ebenso analog zum vorherigen versuch mit der konzentrischen Linse angenommen.
 \begin{figure}[H]
     \centering
     \begin{samepage}
@@ -513,10 +534,10 @@ Analog zum Versuch mit der eingesetzten Sammellinse werden nun auch 100 Wechsel 
     \end{samepage}
 \end{figure}
 
-Nun werden noch externe Änderungen, wie etwa die Auswirkungen der Stellschrauben untersucht. Dabei verstellt eine Schraube die Dichte -- sprich die Anzahl an sichtbaren Maxima/Minima -- und die andere die Ausrichtung, es erfolgt quasi eine Drehung der Maxima/Minima um die Flächennormale. 
+Nun werden noch externe Änderungen, wie etwa die Auswirkungen der Stellschrauben untersucht. Dabei verstellt eine Schraube die Dichte -- sprich die Anzahl an sichtbaren Maxima/Minima -- und die andere die Ausrichtung, es erfolgt quasi eine Drehung der Maxima/Minima um die Flächennormale.
 Die Auswirkungen von Wärmeeinflüssen ist im \underline{\href{https://etschgi1.github.io/files/UNI_hosting/Misc/FP2/Interferometrie/Stoerungen.mp4}{Video}} zu sehen.
 
-Zudem wird noch untersucht, wie sich Polarisationsfilter im Strahlengang des Michelsoninterfereometer auf das Interferenzbild auswirken. 
+Zudem wird noch untersucht, wie sich Polarisationsfilter im Strahlengang des Michelsoninterfereometer auf das Interferenzbild auswirken.
 Dazu wird zuerst, wie in \autoref{fig:michelson_pol_vor} ersichtlich, nur ein Filter (\SI{45}{\degree} zur Senkrechten gedreht) vor dem Interferometer platziert. Anschließend wir ein Filter in horizontaler Anordnung in einem der beiden Arme platziert, wie in \autoref{fig:michelson_pol_1_horizontal} dargestellt. In \autoref{fig:michelson_pol_2_horizontal} ist ein Filter in horizontaler Anordnung in beiden Armen zu sehen und in \autoref{fig:michelson_pol_mixed} ein Filter in vertikaler und einer in horizontaler Anordnung pro Arm.
 \setcapindent{0pt}
 \begin{figure}[H]
@@ -561,20 +582,43 @@ Dazu wird zuerst, wie in \autoref{fig:michelson_pol_vor} ersichtlich, nur ein Fi
 \label{sec:auswertung}
 
 \subsection{Young'scher Doppelspalt}
-\label{sec:auswertung_doppelspalt}
+\label{subsec:auswertung_doppelspalt}
 
 
 
 \subsection{Shearing-Interferometer}
-\label{sec:auswertung_shearing}
+\label{subsec:auswertung_shearing}
+
+Die in \autoref{tab:messergebnisse_shearing} tabellierten Größen werden zur statistischen Auswertung gemittelt und deren Standardabweichung mit einem Student-t-Korrekturfaktor mit Signifikanzniveau $1\sigma$ versehen. Daraus ergeben sich die folgenden Werte:
+\begin{align*}
+    l      & = \SI{9.8(3)}{\milli\meter} \\
+    d      & = \SI{3.2(3)}{\milli\meter} \\
+    \theta & = \SI{22(2)}{\degree}
+\end{align*}
+Für die Wellenlänge des Lasers wird der in \autoref{subsec:auswertung_doppelspalt} berechnete Wert herangezogen. Nun lässt sich der Radius $r$ der Wellenfront nach \autoref{eq:radius_wellenfront} berechnen und ergibt sich zu:
+\[r=\SI{153(18)}{m}\]
+
 
 \subsection{Polarisation}
-\label{sec:auswertung_polarisation}
+\label{subsec:auswertung_polarisation}
+
+Die am Lichtintensitätsmesser abgelesenen Intensitätswerte beider Messreihen werden pro Winkel statistisch gemittelt und mit einem Student-t-Korrekturfaktor versehen. Die so erhaltenen Werte werden inklusive ihrer Unsicherheiten (in Form eine halbdurchsichtigen Bands um den Graph) in \autoref{fig:auswertung_polarisation} dargestellt. Ebenfalls auf dieser Abbildung ist der theoretische Verlauf der Intensitätskurve gezeichnet, welche mit einem initialen $I_0 = \SI{1144}{lx}$ errechnet wurde.
+
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=\linewidth]{../python/plots/polarisation.pdf}
+        \caption[Messkurve Polarisation]{Statistische Intensitätswerte am Lichtintensitätsmesser für die Messreihen des Laserdurchgangs durch zwei Polarisator. Die Messwerte sind mit einem Student-t-Korrekturfaktor versehen. Die Unsicherheit wird in Form des halbdurchsichtigen Bands dargestellt. Zusätzlich der errechnete theoretische Verlauf der Kurve.}
+        \label{fig:auswertung_polarisation}
+    \end{samepage}
+\end{figure}
+
 
 \subsection{Michelson-Interferometer}
-\label{sec:auswertung_michelson}
+\label{subsec:auswertung_michelson}
 
-
+Mithilfe der Anzahl der generierten bzw. vernichteten Interferenzstreifen für sowohl Sammel- als auch Streulinse und der währenddessen notieren Weglängenunterschiedsänderung der Interferometerarme kann schließlich nach \autoref{eq:wegunterschied_anzahl} die Wellenlänge des Lasers berechnet werden. Diese ergibt sich sowohl aus den Messdaten der Sammellinse (Interferenzringe) als auch der Streulinse (Interferenzstreifen) zu:
+\[\lambda_{\text{Sammellinse}} = \lambda_{\text{Sammellinse}} = \SI{530(30)}{nm}\]
 
 
 \section{Diskussion}
