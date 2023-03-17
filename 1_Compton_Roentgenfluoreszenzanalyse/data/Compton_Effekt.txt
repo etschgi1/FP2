@@ -1,0 +1,48 @@
+Aufnahme des Primärspektrums. 
+
+Zuerst 0-Punktsbestimmung: 
+Dazu wird der Arm auf gewisse Winkel eingestellt und die Messung gestartet siehe unten.
+
+
+Messungen mit 10 Sekunden Torzeit. 
+deg;counts
+-1.1;258
+-1.2;361
+-1.3;502
+-1.4;649
+-1.5;675
+-1.6;799
+-1.7;816
+-1.8;678
+
+Messungen mit 60 Sekunden Torzeit.
+deg;counts
+-1.5;4570
+-1.6;4923
+-1.7;4845
+-1.8;4124
+
+Mit Messungen mit Torzeit 10 Sekunden wird nun der Emissionsstrom auf 0.14 mA eingestellt, sodass es zu ca. 200 counts pro Sekunde kommt. 
+----> Somit wird Nullpunkt bestimmt zu - 1.6° mit einer Spannung von 30 kV und Emissionsstrom von 0.14 mA. 
+
+-> Messungen mit negative Pulse und Faktor -4.00 sowie 512 Kanälen wie in Beschreibung. 
+
+Nach der Nullpunktbestimmung wird das Primärspektrum aufgenommen. Dazu mit 300 Sekuden Torzeit und 0.14 mA Emissionsstrom / 30 kV gemessenen. 
+
+Nun wird die Energie kallibriert. Dazu werden die K-alpha und L-alpha Linien von Molybdän und Gold benutzt. x-Achse wird dazu angepasst. 
+
+-----
+Spektren in Streuanordnung: 
+Targettisch wie in Beschreibung auf 20° eingestellt. Messarm auf 28.4° eingestellt (weil -1.6° offset). Emissionsstrom von 1 mA (keine Abschwächblende mehr) 30kV unverändert. 
+Nun werden die Messungen mit 300 Sekuden Torzeit durchgeführt. 
+Messungen: 
+deg_target;deg_arm;data_name
+20;28.4;Plexi_20_28.4.csv
+20;43.4;Plexi_20_43.4.csv
+20;58.4;Plexi_20_58.4.csv
+20;73.4;Plexi_20_73.4.csv
+20;88.4;Plexi_20_88.4.csv
+20;103.4;Plexi_20_103.4.csv
+20;118.4;Plexi_20_118.4.csv
+20;133.4;Plexi_20_133.4.csv
+20;148.4;Plexi_20_148.4.csv
