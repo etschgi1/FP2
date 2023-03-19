@@ -51,18 +51,21 @@ def main() -> None:
     angle_rad = lt.np.linspace(0, 2 * lt.np.pi, 37)
 
     lt.plt_latex()
-    lt.plt_uplot(angle_shifted, data, label="Messwerte")
-    lt.plt.plot(angle_shifted, I_0 * lt.np.cos(angle_rad) ** 2, label="Theorie")
-    lt.plt.xticks(angle_shifted[::2], rotation=45)
-    lt.plt.xlabel(r"$\alpha$ / °")
-    lt.plt.ylabel(r"$I$ / lx")
-    lt.plt.title(
+    cm = 1 / 2.54  # conversion factor inch to cm
+    fig, ax = lt.plt.subplots(figsize=(15 * cm, 8 * cm))
+
+    lt.plt_uplot(angle_shifted, data, label="Messwerte")  # type: ignore
+    ax.plot(angle_shifted, I_0 * lt.np.cos(angle_rad) ** 2, label="Theorie")
+    ax.set_xticks(angle_shifted[::2], rotation=45)
+    ax.set_xlabel(r"$\alpha$ / °")
+    ax.set_ylabel(r"$I$ / lx")
+    ax.set_title(
         "Intensitätsverlauf des Lasers beim Durchgang durch zwei\nPolarisationsfilter in Abhängigkeit von der Winkelverschiebung "
         + r"$\alpha$"
     )
-    lt.plt.legend()
-    lt.plt.grid()
-    lt.plt.savefig("./2_Interferometrie/python/plots/polarisation.pdf")
+    ax.legend()
+    ax.grid()
+    fig.savefig("./2_Interferometrie/python/plots/polarisation.pdf")
 
 
 if __name__ == "__main__":

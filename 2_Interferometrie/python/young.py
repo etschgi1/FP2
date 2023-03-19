@@ -109,6 +109,9 @@ def main() -> None:
             lt.plt.close(fig)
             print(f"-> DS{i+1} done\n")
 
+    wavelength_total = lt.Student([531, 532, 630, 534])
+    print(wavelength_total)
+
     ## difraction grating --------------------------------------------------------------------
     grating_data_imagej = lt.pd.read_csv(f"{path}grating.csv", names=["px", "I"], skiprows=1)
     grating_data_ruler = lt.np.array([0, 11, 21, 32, 43, 53, 64, 75, 86, 97, 108, 118, 128, 139, 151]) * 1e-3  # m
@@ -130,7 +133,7 @@ def main() -> None:
     # configure plot
     ax.set_xlabel("$x$ / m")
     ax.set_ylabel("$I$ / a.u.")
-    ax.set_title("Theoretischer Intensitätsverlauf und Messkurve des Gitters $g=8$ '/mm")
+    ax.set_title(r"Theoretischer Intensitätsverlauf und Messkurve des Gitters $\tilde{g}=8$ '/mm")
     ax.grid()
     ax.legend(loc="upper right")
     fig.tight_layout()
