@@ -73,15 +73,15 @@ Der folgende Laborversuch besteht aus vier separaten Teilversuchen, welche sich 
           \begin{itemize}
               \item Darstellen der winkelabhängigen Transmission zusammen mit dem theoretischen Verlauf % check
               \item Verifizieren des Gesetzes von Malus % check
-              \item Untersuchen des Einflusses des Durchlasswinkels eines weiteren Polarisators zwischen zwei gekreuzten Polarisatoren % TODO: Hamma da irgendwas dokumentiert?
+              \item Untersuchen des Einflusses des Durchlasswinkels eines weiteren Polarisators zwischen zwei gekreuzten Polarisatoren % check
           \end{itemize}
     \item \textbf{Michelson Interferometer}
           \begin{itemize}
               \item Justieren und generieren von konzentrischen Interferenzmustern % check
               \item Bestimmen der Wellenlänge des Lasers durch Weglängenänderung % check
-              \item Untersuchen des absoluten Weglängenunterschieds in den beiden Interferometerarmen sowie Auflösung und Stabilität des Interferometers % TODO
+              \item Untersuchen des absoluten Weglängenunterschieds in den beiden Interferometerarmen sowie Auflösung und Stabilität des Interferometers % check
               \item Justieren und generieren von streifenförmigen Interferenzmustern % check
-              \item Untersuchen der Rolle der Polarisation auf die Interfenzfähigkeit des Laserlichts % TODO
+              \item Untersuchen der Rolle der Polarisation auf die Interfenzfähigkeit des Laserlichts % check
           \end{itemize}
 \end{itemize}
 
@@ -405,16 +405,16 @@ Neben der fotografischen Dokumentation werden auch die Abstände der Maxima mitt
             $i$ & $l_{1,i}$ / \unit{\milli\meter} & $l_{2,i}$ / \unit{\milli\meter} & $l_{3,i}$ / \unit{\milli\meter} & $l_{4,i}$ / \unit{\milli\meter} \\
             0   & 0.0                             & 0.0                             & 0.0                             & 0.0                             \\
             1   & 5.0                             & 5.0                             & 2.5                             & 1.5                             \\
-            2   & 11.0                            & 11.0                            & 8.0                             & 2.5                             \\
-            3   & 16.0                            & 16.0                            & 10.5                            & 4.0                             \\
-            4   & 21.0                            & 22.0                            & 13.0                            & 5.5                             \\
-            5   & 27.0                            & 27.0                            & 16.0                            & 6.5                             \\
-            6   & 33.0                            & 32.0                            & 18.5                            & 8.0                             \\
-            7   & 38.0                            & 38.0                            & 21.0                            & 9.5                             \\
-            8   & 43.0                            & 43.0                            & 24.0                            & 10.5                            \\
-            9   & 49.0                            & 48.0                            & 26.5                            & 12.0                            \\
-            10  & 55.0                            & 54.0                            & 29.0                            & 13.5                            \\
-            11  & 58.0                            & {{{-}}}                         & {{{-}}}                         & 15.0                            \\
+            2   & 11.0                            & 11.0                            & 5.0                             & 2.5                             \\
+            3   & 16.0                            & 16.0                            & 8.0                             & 4.0                             \\
+            4   & 21.0                            & 22.0                            & 10.5                            & 5.5                             \\
+            5   & 27.0                            & 27.0                            & 13.0                            & 6.5                             \\
+            6   & 33.0                            & 32.0                            & 16.0                            & 8.0                             \\
+            7   & 38.0                            & 38.0                            & 18.5                            & 9.5                             \\
+            8   & 43.0                            & 43.0                            & 21.0                            & 10.5                            \\
+            9   & 49.0                            & 48.0                            & 24.0                            & 12.0                            \\
+            10  & 55.0                            & 54.0                            & 26.5                            & 13.5                            \\
+            11  & 58.0                            & {{{-}}}                         & 29.0                            & 15.0                            \\
         \end{tblr}
     \end{samepage}
 \end{table}
@@ -662,14 +662,14 @@ Nach \autoref{eq:konstruktive_interferenz_approx} und den per Lineal gemessenen 
             $i$ / 1 & $\lambda_i$ / \si{\nano\meter} & $\Delta \lambda_i$ / \si{\nano\meter} \\
             1       & 531                            & 7                                     \\
             2       & 532                            & 7                                     \\
-            3       & 630                            & 40                                    \\
+            3       & 517                            & 7                                     \\
             4       & 534                            & 12                                    \\
         \end{tblr}
     \end{samepage}
 \end{table}
 %
 Mittelt man diese Tabelle erneut und korrigiert sie mit einem Student-t-Korrekturfaktor mit Signifikanzniveau $1\sigma$, so ergibt sich eine berechnete Wellenlänge von:
-\[\lambda = \SI{560(30)}{\nano\meter}\]
+\[\lambda = \SI{528(5)}{\nano\meter}\]
 
 Derselbe Prozess wie für die vier Doppelspalte wird nun abermals für das Gitter wiederholt. Ein Plot der Messdaten auf Basis der Auswertung durch die Software \textit{ImageJ} findet sich auf \autoref{fig:intensitaet_gitter}. Auf die Darstellung des theoretischen Verlaufs wird verzichtet.
 %
@@ -729,7 +729,7 @@ Mithilfe der Anzahl der generierten bzw. vernichteten Interferenzstreifen für s
 \label{subsec:diskussion_doppelspalt_gitter_gitter}
 
 %! Nur schwafeln, wir werden wahrscheinlich einfach pfuscht haben, don't know
-Betrachtet man die Abbildungen \ref{fig:intensitaet_DS_1} bis \ref{fig:intensitaet_DS_4}, so lässt sich erkennen, dass sich die Theorie wider Erwarten nicht mit den gemessenen Daten deckt. Die gemessenen Intensitätsmaxima weichen teils signifikant von den theoretischen peaks ab. Dies kann auf mehrere Faktor zurückgeführt werden: Einerseits wurden die Bilder mit einer Smartphonekamera in einem lichtverschmutzten Raum aufgenommen. Es konnte nicht gewährleistet werden, dass die Aufnahme sowohl immer im selben Abstand, als auch parallel zur Flächennormale der Projektionsebene aufgenommen wurden. Weiters war der Hintergrund, auf den die grünen Lichtpunkte projiziert wurden, nicht homogen gefärbt und aufgrund der weißen Färbung auch leicht reflektierend. Andererseits könnte der Fehler auch am anderen Ende des Projektionswegs beheimatet sein: Falls die Doppelspalten nicht genau parallel zur Normalebene getroffen werden, beeinflusst dies selbstverständlich die an der Wand anlangende Projektion. Was darüberhinaus auffallend ist: Die von \textit{ImageJ} ausgewerteten Intensitätskurven haben ihre lokalen Maxima nicht immer an denselben Stellen wie die von Hand vermessenen Werte darauf schließen lassen würden. Einerseits lässt sich ein additiver Fehler erkennen, der etwa daher führen kann, dass das Lineal nicht perfekt parallel zur Geraden, auf welcher die Intensitätsmaxima ersichtlich waren, gehalten wurde. Sowohl ein initialer Winkel, als auch ein zeitabhängiges Verrutschen ist denkbar. Darüberhinaus war es durchaus kein Leichtes, die exakte Mitte des Interferenzspots zu eruieren und zu vermessen, da die Spots eine Ausdehnung haben, die etwa auch aus Reflexionen von der Projektionsfläche stammt. Alles in allem sind so an mehreren Stellen die Daten nicht ganz stimmig, wohingegen die Berechnung der Wellenlänge des Lasers aus diesen Daten wieder erwartbare Werte liefert. Betrachtet man \autoref{tab:auswertung_wellenlaenge_doppelspalt}, so wird ersichtlich, dass bis auf den Doppelspalt 3 alle Messdaten innerhalb ihres Unsicherheitsintervalls auf die spezifizierte Wellenlänge von $\lambda_{\text{lit}}=\SI{532}{nm}$ führen. Dies spricht wieder für korrekte Messergebnisse, wobei die starke Abweichung beim Doppelspalt 3 dadurch erklärt werden kann, dass bei der Messung mit dem Lineal Maxima aufgrund ihrer geringen Intensität übersehen wurden und somit falsch nummeriert tabelliert worden sind. Dies lässt etwa auch \autoref{fig:intensitaet_DS_3} vermuten.
+Betrachtet man die Abbildungen \ref{fig:intensitaet_DS_1} bis \ref{fig:intensitaet_DS_4}, so lässt sich erkennen, dass sich die Theorie wider Erwarten nicht mit den gemessenen Daten deckt. Die gemessenen Intensitätsmaxima weichen teils signifikant von den theoretischen peaks ab. Dies kann auf mehrere Faktor zurückgeführt werden: Einerseits wurden die Bilder mit einer Smartphonekamera in einem lichtverschmutzten Raum aufgenommen. Es konnte nicht gewährleistet werden, dass die Aufnahme sowohl immer im selben Abstand, als auch parallel zur Flächennormale der Projektionsebene aufgenommen wurden. Weiters war der Hintergrund, auf den die grünen Lichtpunkte projiziert wurden, nicht homogen gefärbt und aufgrund der weißen Färbung auch leicht reflektierend. Andererseits könnte der Fehler auch am anderen Ende des Projektionswegs beheimatet sein: Falls die Doppelspalten nicht genau parallel zur Normalebene getroffen werden, beeinflusst dies selbstverständlich die an der Wand anlangende Projektion. Was darüberhinaus auffallend ist: Die von \textit{ImageJ} ausgewerteten Intensitätskurven haben ihre lokalen Maxima nicht immer an denselben Stellen wie die von Hand vermessenen Werte darauf schließen lassen würden. Einerseits lässt sich ein additiver Fehler erkennen, der etwa daher führen kann, dass das Lineal nicht perfekt parallel zur Geraden, auf welcher die Intensitätsmaxima ersichtlich waren, gehalten wurde. Sowohl ein initialer Winkel, als auch ein zeitabhängiges Verrutschen ist denkbar. Darüberhinaus war es durchaus kein Leichtes, die exakte Mitte des Interferenzspots zu eruieren und zu vermessen, da die Spots eine Ausdehnung haben, die etwa auch aus Reflexionen von der Projektionsfläche stammt. Alles in allem sind so an mehreren Stellen die Daten nicht ganz stimmig, wohingegen die Berechnung der Wellenlänge des Lasers aus diesen Daten wieder erwartbare Werte liefert. Betrachtet man \autoref{tab:auswertung_wellenlaenge_doppelspalt}, so wird ersichtlich, dass alle Messdaten berechnete Wellenlängen innerhalb ihres Unsicherheitsintervalls liefern, die mit der spezifizierten Wellenlänge von $\lambda_{\text{lit}}=\SI{532}{nm}$ übereinstimmen. Dies spricht wieder für korrekte Messergebnisse.
 
 Das im letzten Subteil verwendete Gitter wies laut Beschriftung eine Gitterkonstante von
 \[\tilde{g}_{\text{lit}}=\SI{8}{'/mm}\]
@@ -749,7 +749,7 @@ Beim Versuch zum Shearing-Interferometer sei abschließend nur noch einmal erwä
 
 Da die genaue Polarisationsrichtung der Polarisatoren aufgrund bereits abenutzter Stellschrauben nicht gezwungenermaßen mit der Beschriftung der Schrauben übereinstimmen muss, wurde diese Ausgangsstellung über das Maximum der transmittierten Intensität am Lichtintensitätsmesser eruiert. Die in \autoref{tab:messwerte_polarisation} tabellierten Messwerte sprechen dafür, dass die beiden Stellungen von $\alpha_1 = \SI{70}{\degree}$ beim Polarisator 1 und $\alpha_2 = \SI{330}{\degree}$ beim Polarisator 2 tatsächlich die maximale Intensität erzeugen, da bei den Stellungen $\alpha = \SI{60}{\degree} \mathcomma \SI{240}{\degree}$ keine messbare Intensität mehr beim Lichtintensitätsmesser angelangt, wonach darauf zu schließen ist, dass sich diese Stellung beider Polarisatoren tatsächlich auf eine Winkeldifferenz von \SI{90}{\degree} beläuft. Vergleicht man nun die gemessenen Werte mit den theoretisch berechneten in \autoref{fig:auswertung_polarisation}, so decken sich die gemessenen Werte beinahe immer mit der Theorie. Gerade im Bereich der lokalen Maxima weichen die Messwerte signifikant von der Theorie ab und liegen absolut stets unter der theoretischen Kurve. Dieser zusätzliche Intensitätsverlust kann etwa durch Reflexionen oder Inhomogenitäten in den Polarisatoren erklärt werden. Im Großen und Ganzen stimmen die Werte jedoch überein, vor allem die generelle Form der Kurve -- ergo der Trend -- stimmt definitiv überein, wonach das Gesetz von Malus (\autoref{eq:malus}) verifiziert wurde.
 
-% TODO zusätzlicher Polarisator
+Um die Gesetze von Fresnel und Arago zu überprüfen, wurde anschließend ein dritter Polarisator in den Strahlengang gebracht. Die einhüllenden Polarisatoren sind dabei nach wie vor gekreuzt, also um \SI{90}{\degree} zueinander verdreht. Bringt man nun den dritten Polarisator parallel ein, also um \SI{0}{\degree} zum zweiten versetzt, so ändert dies nichts an der transmittierten Intensität, die Anordnung lässt keine Intensität hindurch. Es zeigt sich jedoch, dass selbst bei gekreuzten einhüllenden Polarisatoren transmittierte Intensität am Lichtintensitätsmesser angelangt, sofern man den dritten Polarisator um \SI{45}{\degree} oder \SI{135}{\degree} gegen den Polarisator 2 verdreht. Hierbei sind zwischen je zwei Polarisatoren wieder gemeinsame Komponenten vorhanden und das Licht kann hindurchgelangen. Dies wird durch die Gesetze von Fresnel und Arago vorausgesagt.
 
 
 \subsection{Michelson-Interferometer}
@@ -759,10 +759,12 @@ Mit dem Versuchsaufbau zum Michelson-Interferometer wurde abermals die Wellenlä
 
 Besonders heikel war der Umgang mit dem Interferometer bezüglich Erschütterungen und Temperaturänderungen. Bereits zu Beginn des Experiments fiel sofort auf, dass das Interferometer extrem sensibel auf bereits kleinste Erschütterungen reagiert. Auch das bloße Berühren der Spiegelhalterung verschiebt diese insofern als dass es auf der Projektion klar ersichtlich ist. Auch aufgewirbelte Luft destabilisiert das Bild, weswegen darauf Augenmerk während des Experimentierens gelegt wurde. Der Aufbau befand sich jedoch dankenswerterweise hinter einer geöffneten Tür, sodass diese gewissen Schutz gegen Luftzüge bot.
 
-Anschließend wurden Polarisationsfolien in die Interferometerarme eingebracht und die Reaktion der Projektion darauf untersucht. Bringt man zuerst nur einen Filter, der das Licht \SI{45}{\degree} zur Senkrechten polarisiert, verändert sich die Projektion nicht merkbar (\autoref{fig:michelson_pol_vor}), da sich der Lichstrahl am Strahlenteiler weiterhin wie gewohnt aufteilen kann. Wird darauffolgend ein Filter in horizontaler Anordnung in einem der beiden Arme platziert, verzerrt die Projektion deutlich (\autoref{fig:michelson_pol_2_horizontal}), da der
-vertikale Teil eines Strahls nun nicht mehr transmittiert wird. Bringt man auch noch einen zweiten horizontalen Polarisator in den zweiten Arm, ändert sich das Bild relativ zum vorangegangenen nur geringfügig (\autoref{fig:michelson_pol_1_horizontal}), beide Teilstrahlen besitzen nun nur mehr eine horizontale Komponente. Als letzter Versuch wurde nun eine der beiden eingebrachten Polarisationsfolien um \SI{90}{\degree} gedreht (\autoref{fig:michelson_pol_mixed}), wonach kein Interferenzmuster mehr auf der Projektionsebene erkennbar ist, da die beiden Teilstrahlen keine gleich polarisierten Anteile mehr aufweisen.
+Zusätzlich zur Projektion auf der Bildfläche des Interferometers (\autoref{fig:michelson_konz_sammel}) wird auch eine Projektion zum Eingang -- dem Teil des Interferometers, bei dem der Laserstrahl eintritt -- (\autoref{fig:michelson_konz_sammel_tuer}) zurückgeworfen.
+Das zum Eingang zurückgeworfene Muster ist genau komplementär zum gewünscht projizierten.
 
-% TODO: Hamma da vergessen, noch einen Filter einzubringen?
+Die Position des Spiegels bei möglichst exakt gleich langen Armen des Interferometers beläuft sich laut Messung auf \SI{2470(10)}{\micro\meter} (untersetzungsfaktorbereinigt).
+
+Anschließend wurden Polarisationsfolien in die Interferometerarme eingebracht und die Reaktion der Projektion darauf untersucht. Bringt man zuerst nur einen Filter, der das Licht \SI{45}{\degree} zur Senkrechten polarisiert, verändert sich die Projektion nicht merkbar (\autoref{fig:michelson_pol_vor}), da sich der Lichstrahl am Strahlenteiler weiterhin wie gewohnt aufteilen kann. Wird darauffolgend ein Filter in horizontaler Anordnung in einem der beiden Arme platziert, verzerrt die Projektion deutlich (\autoref{fig:michelson_pol_2_horizontal}), da der vertikale Teil eines Strahls nun nicht mehr transmittiert wird. Bringt man auch noch einen zweiten horizontalen Polarisator in den zweiten Arm, ändert sich das Bild relativ zum vorangegangenen nur geringfügig (\autoref{fig:michelson_pol_1_horizontal}), beide Teilstrahlen besitzen nun nur mehr eine horizontale Komponente. Als vorletzter Versuch wurde nun eine der beiden eingebrachten Polarisationsfolien um \SI{90}{\degree} gedreht (\autoref{fig:michelson_pol_mixed}), wonach kein Interferenzmuster mehr auf der Projektionsebene erkennbar ist, da die beiden Teilstrahlen keine gleich polarisierten Anteile mehr aufweisen. Bringt man nun als letzten Versuch noch eine dritte Polarisationsfolie P3 ins Ende des Strahlengangs ein und dreht diese um \SI{45}{\degree}, so ist wieder ein Interferenzmuster erkennbar, was auch durch die Gesetze von Fresnel und Arago vorausgesagt wird.
 
 Es wurde darüberhinaus beobachtet, dass der Wechsel zwischen Maximum und Minimum bei der Änderung des Interferometerarmes bei der halben Wellenlänge $\nicefrac{\lambda}{2}$ erfolgt, was theoretisch belegbar ist.
 
@@ -773,24 +775,7 @@ Es wurde darüberhinaus beobachtet, dass der Wechsel zwischen Maximum und Minimu
 
 Im vorliegenden Laborversuch zur Interferometrie wurden vier separate Teilversuche behandelt.
 
-Beim Versuch zum Young'schen Doppelspalt inklusive Liniengitter wurde die Auswertung von Spaltbreite sowie -abstand auf das Interferenzmuster grünen Laserlichts untersucht. Aus den vermessenen Positionen der Interferenzmaxima wurde je Doppelspalt die Wellenlänge des Lasers berechnet und seien hier in \autoref{tab:zusammenfassung_wellenlaengen_young} zusammengefasst.
-%
-\begin{table}[H]
-    \centering
-    \begin{samepage}
-        \caption[Berechnete Werte der Wellenlängen je Doppelspalt -- Zusammenfassung]{Berechnete Werte der Wellenlängen $\lambda_i$ je Doppelspalt $i\in[1;4]$.}
-        \label{tab:zusammenfassung_wellenlaengen_young}
-        \begin{tblr}{colspec={Q S[table-format=3] S[table-format=2]}, row{1}={guard}}
-            $i$ / 1 & $\lambda_i$ / \si{\nano\meter} & $\Delta \lambda_i$ / \si{\nano\meter} \\
-            1       & 531                            & 7                                     \\
-            2       & 532                            & 7                                     \\
-            3       & 630                            & 40                                    \\
-            4       & 534                            & 12                                    \\
-        \end{tblr}
-    \end{samepage}
-\end{table}
-%
-Mit Ausnahme von Doppelspalt 3 stimmen die berechneten Werte mit dem Literaturwert $\lambda_{\text{lit}}=\SI{532}{nm}$ überein. Weiters wurde die Gitterkonstante des verwendeten Gitters mit \(g = \SI{96(9)}{\micro\meter}\) beziffert.
+Beim Versuch zum Young'schen Doppelspalt inklusive Liniengitter wurde die Auswertung von Spaltbreite sowie -abstand auf das Interferenzmuster grünen Laserlichts untersucht. Aus den vermessenen Positionen der Interferenzmaxima wurde je Doppelspalt die Wellenlänge des Lasers berechnet. Diese wurden abermals über die vier Doppelspalte hinweg gemittelt, sodass sich ergibt die resultierende experimentell bestimmte Wellenlänge aus dem Versuch zum Young'schen Doppelspalt zu \(\lambda = \SI{528(5)}{\nano\meter}\) ergibt. Dieser Wert stimmt mit dem Literaturwert $\lambda_{\text{lit}}=\SI{532}{nm}$ überein. Weiters wurde die Gitterkonstante des verwendeten Gitters mit \(g = \SI{96(9)}{\micro\meter}\) beziffert.
 
 Beim zweiten Versuch zum Shearing-Interferometer wurde der Radius der Wellenfront experimentell bestimmt und mit \(r=\SI{153(18)}{m}\) berechnet.
 

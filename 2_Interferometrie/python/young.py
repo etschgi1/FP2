@@ -8,7 +8,7 @@ PIXEL_TO_DISTANCE_CONVERTERS = [
     lambda px: (px - 2337 + 1e-100) * 2.5e-3 / -(2337 - 2403),
     lambda px: (px - 3193 + 1e-100) * 1.5e-3 / -(3193 - 3248),
 ]  # px to m, added 1e-100 to avoid division by zero error
-CALC_DOUBLE_SLITS = False
+CALC_DOUBLE_SLITS = True
 
 
 class DoubleSlit:
@@ -38,7 +38,7 @@ def get_grating_constant_from_nth_maximum(x, n):
 
 
 def main() -> None:
-    lt.plt_latex()
+    # lt.plt_latex()
     path = "./2_Interferometrie/data/double_slits/"
 
     if CALC_DOUBLE_SLITS:
@@ -51,7 +51,7 @@ def main() -> None:
         experimental_data_ruler = [
             lt.np.array([0, 5, 11, 16, 21, 27, 33, 38, 43]) * 1e-3,  # , 49, 55, 58]),  # m
             lt.np.array([0, 5, 11, 16, 22, 27, 32, 38, 43, 48, 54]) * 1e-3,  # m
-            lt.np.array([0, 2.5, 8, 10.5, 13, 16, 18.5, 21, 24, 26.5, 29]) * 1e-3,  # m
+            lt.np.array([0, 2.5, 5, 8, 10.5, 13, 16, 18.5, 21, 24, 26.5, 29]) * 1e-3,  # m
             lt.np.array([0, 1.5, 2.5, 4, 5.5, 6.5, 8, 9.5, 10.5, 12, 13.5, 15]) * 1e-3,  # m
         ]
 
@@ -61,6 +61,8 @@ def main() -> None:
             lt.pd.read_csv(f"{path}DS3.csv", names=["px", "I"], skiprows=1),
             lt.pd.read_csv(f"{path}DS4.csv", names=["px", "I"], skiprows=1),
         ]
+
+        wavelengths_total = []
 
         for i, (slit, data_ruler, data_imagej, converter) in enumerate(
             zip(slits, experimental_data_ruler, experimental_data_imagej, PIXEL_TO_DISTANCE_CONVERTERS)
@@ -101,16 +103,15 @@ def main() -> None:
             fig.savefig(f"{path_plot}ng")
 
             # calc wavelengths from maxima
-            grating_constants = [
-                get_wavelength_from_nth_maximum(slit.distance_d, data_ruler[n], n).n for n in range(1, 9)
-            ]
-            grating_constants_student = lt.Student(grating_constants)
-            print(f"DS{i+1}:\n{grating_constants_student}")
+            wavelengths = [get_wavelength_from_nth_maximum(slit.distance_d, data_ruler[n], n).n for n in range(1, 9)]
+            wavelengths_student = lt.Student(wavelengths)
+            print(f"DS{i+1}:\n{wavelengths_student}")
+            wavelengths_total.append(wavelengths_student.n)
             lt.plt.close(fig)
             print(f"-> DS{i+1} done\n")
 
-    wavelength_total = lt.Student([531, 532, 630, 534])
-    print(wavelength_total)
+        wavelength_mean = lt.Student(wavelengths_total)
+        print(f"{wavelength_mean}\n-> Wavelength done\n")
 
     ## difraction grating --------------------------------------------------------------------
     grating_data_imagej = lt.pd.read_csv(f"{path}grating.csv", names=["px", "I"], skiprows=1)
@@ -149,8 +150,6 @@ def main() -> None:
     print(f"Grating:\n{grating_constants_student}")
     lt.plt.close(fig)
     print("-> Grating done\n")
-
-    lt.plt.show()
 
 
 if __name__ == "__main__":
