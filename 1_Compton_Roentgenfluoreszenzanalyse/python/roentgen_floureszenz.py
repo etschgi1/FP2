@@ -175,6 +175,7 @@ def plot_Ordnungszahl_against_mod_energy(energy_peaks):
             transform=ax.transAxes, va="top")
     ax.text(0.7, 0.05, lab_b,
             transform=ax.transAxes, va="top")
+    plt.title("Moseleysches Gesetz für K-alpha- und K-beta-Übergänge")
     plt.savefig(
         "1_Compton_Roentgenfluoreszenzanalyse/plots/roentgen_data_Z_vs_E.pdf")
     plt.savefig(
