@@ -58,30 +58,30 @@ Der folgende Laborversuch besteht aus vier separaten Teilversuchen, welche sich 
 \begin{itemize}
     \item \textbf{Young'scher Doppelspalt}
           \begin{itemize}
-              \item Bestimmen des Beugungsmusters von vier Doppelspalten mit unterschiedlichen Spaltbreiten und Spaltabständen
-              \item Berechnen der Wellenlänge des Lasers
-              \item Erklären der Beugungsmuster durch Vergleich mit errechneten Mustern
-              \item Bestimmen der Beugungsmuster eines Liniengitters und Vergleich mit errechneten Werten
-              \item Bestimmen der Gitterkonstante
+              \item Aufzeichnen des Beugungsmusters von vier Doppelspalten mit unterschiedlichen Spaltbreiten und Spaltabständen % check
+              \item Berechnen der Wellenlänge des Lasers % check
+              \item Erklären der aufgezeichneten Beugungsmuster durch Vergleich mit theoretisch errechneten Mustern % check
+              \item Aufzeichnen des Beugungsmusters eines Liniengitters % check
+              \item Bestimmen der Gitterkonstante % check
           \end{itemize}
     \item \textbf{Wellenfront-Analyse / Shearing Interferometer}
           \begin{itemize}
-              \item Vermessen des Interferenzmusters
-              \item Berechnen des Wellenfrontradius
+              \item Vermessen des Interferenzmusters % check
+              \item Berechnen des Wellenfrontradius % check
           \end{itemize}
     \item \textbf{Polarisation}
           \begin{itemize}
-              \item Darstellen der winkelabhängigen Transmission zusammen mit dem theoretischen Verlauf
-              \item Verifizieren des Gesetzes von Malus
-              \item Untersuchen des Einflusses des Durchlasswinkels eines weiteren Polarisators zwischen zwei gekreuzten Polarisatoren
+              \item Darstellen der winkelabhängigen Transmission zusammen mit dem theoretischen Verlauf % check
+              \item Verifizieren des Gesetzes von Malus % check
+              \item Untersuchen des Einflusses des Durchlasswinkels eines weiteren Polarisators zwischen zwei gekreuzten Polarisatoren % check
           \end{itemize}
     \item \textbf{Michelson Interferometer}
           \begin{itemize}
-              \item Justieren und generieren von konzentrischen Interferenzmustern
-              \item Bestimmen der Wellenlänge des Lasers durch Weglängenänderung
-              \item Untersuchen des absoluten Weglängenunterschieds in den beiden Interferometerarmen sowie Auflösung und Stabilität des Interferometers
-              \item Justieren und generieren von streifenförmigen Interferenzmustern
-              \item Untersuchen der Rolle der Polarisation auf die Interfenzfähigkeit des Laserlichts
+              \item Justieren und generieren von konzentrischen Interferenzmustern % check
+              \item Bestimmen der Wellenlänge des Lasers durch Weglängenänderung % check
+              \item Untersuchen des absoluten Weglängenunterschieds in den beiden Interferometerarmen sowie Auflösung und Stabilität des Interferometers % check
+              \item Justieren und generieren von streifenförmigen Interferenzmustern % check
+              \item Untersuchen der Rolle der Polarisation auf die Interfenzfähigkeit des Laserlichts % check
           \end{itemize}
 \end{itemize}
 
@@ -89,16 +89,23 @@ Der folgende Laborversuch besteht aus vier separaten Teilversuchen, welche sich 
 \section[Grundlagen]{Grundlagen \cite{ref:angabe}}
 \label{sec:grundlagen}
 
-\subsection{Young'scher Doppelspalt}
-\label{sec:grundlagen_youngscher_doppelspalt}
+\subsection{Young'scher Doppelspalt und Gitter}
+\label{sec:grundlagen_youngscher_doppelspalt_gitter}
 
-Bescheint man mit einer Lichtquelle zwei eng beieinanderliegende Spalte mit dem Abstand $d$ und projiziert das Bild auf einen ansonsten undurchsichtigen Schirm, so wirkt der Spalt als kohärente Lichtquelle (Anmerkung: Dies ist evident für eine kohärente Lichtquelle, gilt für eine thermische Lichtquelle aber nur unter bestimmten Bedingungen, jenen der räumlichen Kohärenz). Die Wellen aus den Spalten überlagern sich in Abhängigkeit vom Beobachtungswinkel konstruktiv oder destruktiv, was auf einen Schirm projiziert eine Abfolge an Intensitätsmaxima und -minima ergibt. Unter der Bedingung, dass der Abstand zwischen Doppelspalt und Beobachtungsebene viel größer als der Spaltabstand $d$ ist, ergibt sich der optische Gangunterschied $\Delta$ in die durch den Winkel $\phi$ definierte Richtung als
+Bescheint man mit einer Lichtquelle zwei eng beieinanderliegende Spalte mit dem Abstand $d$ und projiziert das Bild auf einen ansonsten undurchsichtigen Schirm, so wirkt der Spalt als kohärente Lichtquelle. Dies ist evident für eine kohärente Lichtquelle, gilt für eine thermische Lichtquelle aber nur unter der Bedingung räumlicher Kohärenz. Die Wellen aus den Spalten überlagern sich in Abhängigkeit vom Beobachtungswinkel konstruktiv oder destruktiv, was auf einen Schirm projiziert eine Abfolge an Intensitätsmaxima und -minima ergibt.
+
+Konstruktive Interferenz tritt bei ganzzahlig Vielfachen $n$ der Wellenlänge $\lambda$ auf, dies nennt man auch den \textit{optischen Gangunterschied} $\Delta$.
+\begin{equation}
+    \label{eq:konstruktive_interferenz}
+    \Delta = n \lambda
+\end{equation}
+Unter der Bedingung, dass der Abstand zwischen Doppelspalt und Beobachtungsebene $z$ viel größer als der Spaltabstand $d$ ist, ergibt sich der optische Gangunterschied in die durch den Winkel $\phi$ definierte Richtung als
 \begin{equation}
     \label{eq:optischer_gangunterschied}
     \Delta = \frac{2 \pi d}{\lambda} \sin(\phi)
 \end{equation}
 mit $\lambda$ der Wellenlänge.
-Mit der Näherung $\sin(\phi) \approx \nicefrac{x}{z}$ (erfüllt für große Abstände $z$ zwischen Doppelspalt und Schirm) ergibt sich ein Streifenmuster mit der Periode $x$ der Form
+Mit der Näherung $\sin(\phi) \approx \nicefrac{x}{z}$ (erfüllt für große Abstände $z$ zwischen Doppelspalt und Schirm, $x$ Abstand vom 0. Maximum zum n. Maximum) ergibt sich ein Streifenmuster mit der Periode $x$ der Form
 \begin{equation}
     \label{eq:intensity_interferenz}
     I_{\text{Interferenz}}(x) = I_0 \left(1 + \cos(\frac{2 \pi x d}{\lambda z}) \right)
@@ -113,6 +120,24 @@ Das Beugungsmuster des Doppelspalts ergibt sich multiplikativ als
     \label{eq:intensity_gesamt}
     I(x) = I_{\text{Interferenz}}(x) \cdot I_{\text{Beugung}}(x).
 \end{equation}
+Möchte man abschließend noch den optischen Gangunterschied mit den Abständen vom und auf dem Schirm in Verbindung bringen, so ergibt sich \autoref{eq:konstruktive_interferenz_approx}.
+\begin{equation}
+    \label{eq:konstruktive_interferenz_approx}
+    n \lambda = d \cdot \frac{x}{z}
+\end{equation}
+
+Ein Liniengitter ist de facto nur eine Ansammlung vieler Spalte, gewissermaßen ein $N$-fachspalt. Allgemein treten bei einem Gitter Beugungs- und Interferenzeffekt auf (wie bei \autoref{eq:intensity_gesamt}), dies beschreibt \autoref{eq:intensity_gitter}. $N$ beschreibt dabei die Anzahl an Spalten, die mit der Intensität $I_0$
+bestrahlt werden, $D$ die Breite des Spaltes, $d$ den Abstand zwischen den benachbarten Spalten, $\lambda$ die Wellenlänge des Lichtes und $\theta$ den Winkel zur Flächennormale.
+\begin{equation}
+    \label{eq:intensity_gitter}
+    I(\theta) = I_0 \cdot \underbrace{\left[ \frac{\sin(N \pi \cdot \nicefrac{d}{\lambda} \cdot \sin(\theta))}{\sin(\pi \cdot \nicefrac{d}{\lambda} \cdot \sin(\theta))} \right]^2}_{\text{Gitterfunktion}} \cdot \underbrace{\left[ \frac{\sin(\pi \cdot \nicefrac{D}{\lambda} \cdot \sin(\theta))}{(\pi \cdot \nicefrac{D}{\lambda} \cdot \sin(\theta))} \right]^2}_{\text{Einzelspaltfunktion}}
+\end{equation}
+Möchte man abschließend noch den optischen Gangunterschied mit den Abständen vom und auf dem Schirm in Verbindung bringen, so ergibt sich \autoref{eq:konstruktive_interferenz_approx}.
+\begin{equation}
+    \label{eq:konstruktive_interferenz_approx_gitter}
+    n \lambda = g \cdot \frac{x}{z}
+\end{equation}
+wobei $g$ die Gitterkonstante bezeichnet.
 
 
 \subsection{Shearing-Interferometer / Wellenfront-Analyse}
@@ -126,7 +151,7 @@ Beim Shearing-Interferometer handelt es sich um ein simples Interferometer, mit 
     r = \frac{ls}{\lambda \cdot \sin(\Theta)}
 \end{equation}
 berechnen.
-
+%
 \begin{figure}[H]
     \centering
     \begin{samepage}
@@ -144,6 +169,7 @@ berechnen.
 
 Für den Fall linearer Polarisation gilt für die transmittierte Intensität durch einen Polarisator mit der Durchlassrichtung entlang der durch den Winkel Null definierten Richtung das Gesetz von Malus.
 \begin{equation}
+    \label{eq:malus}
     I(\alpha) = I_0 \cos^2(\alpha)
 \end{equation}
 Die nicht transmittierte Intensität wird je nach Art des Polarisators absorbiert oder reflektiert. Die Polarisation ist entscheidend für die Interferenzfähigkeit von Licht, es gelten die vier Gesetze nach Fresnel und Arago.
@@ -171,7 +197,7 @@ ist die Lichtintensität am Beobachtungsschirm gegeben durch
 \end{equation}
 wobei $\Delta \phi$ die Phasendifferenz bezeichnet, die mit dem Unterschied der Weglängen\linebreak
 $\Delta s = \left| s_1 - s_2 \right|$ nach $\Delta \varphi = (\nicefrac{2 \pi}{\lambda})\Delta s$ zusammenhängt.
-
+%
 \begin{figure}[H]
     \centering
     \begin{samepage}
@@ -180,7 +206,7 @@ $\Delta s = \left| s_1 - s_2 \right|$ nach $\Delta \varphi = (\nicefrac{2 \pi}{\
         \label{fig:michalson_interferometer}
     \end{samepage}
 \end{figure}
-
+%
 Es stellt sich die Frage, wo bei destruktiver Interferenz im Detektorarm die Energie der Lichtwellen bleibt. Tatsächlich hat das Interferometer ja zwei \enquote{Ausgänge}, wobei einer eben zum Beobachtungsschirm, der zweite zurück zum Laser führt. Tatsächlich beobachtet man in zweiterem konstruktive Interferenz, wenn am Schirm destruktive Interferenz (also keine Lichtintensität) zu beobachten ist.
 
 Das am Schirm beobachtete Interferenzmuster reagiert empfindlich auf kleine Änderungen in der Richtung des einfallenden Laserstrahls und in der Ausrichtung der Spiegel. Gleichzeitig sind diese Änderungen durch den nur wenige Millimeter durchmessenden Strahl schwer zu beobachten. Deshalb wird der Strahl durch eine Linse aufgeweitet, was zwischen Laser und Strahlteiler oder zwischen Strahlteiler und Schirm geschehen kann. Ersteres führt zu einem konzentrischen Interferenzmuster, zweiteres zu parallelen Interferenzstreifen. Wie in \autoref{fig:interferenzmuster_michelson_interferometer}a skizziert, können divergierende Strahlen auf (bei Vorliegen eines Weglängenunterschieds $\Delta s$ zwischen den beiden Interferometerarmen) auf zwei virtuelle Lichtquellen A und B zurückgeführt werden, wodurch sich das Auftreten eines konzentrischen Interferenzmusters erklärt. Gleichzeitig kann dieses genutzt werden, um die Interferometerarme auf die gleiche Länge einzustellen (im Prinzip auf einen Bruchteil der Wellenlänge), da sich dabei nach \autoref{fig:interferenzmuster_michelson_interferometer}b die Größe des zentralen Interferenzspots maximiert.
@@ -190,9 +216,7 @@ Das am Schirm beobachtete Interferenzmuster reagiert empfindlich auf kleine Änd
     \label{eq:wegunterschied_anzahl}
     \Delta s = n \cdot \frac{\lambda}{2}
 \end{equation}
-
-
-
+%
 \begin{figure}[H]
     \centering
     \begin{samepage}
@@ -201,6 +225,7 @@ Das am Schirm beobachtete Interferenzmuster reagiert empfindlich auf kleine Änd
         \label{fig:interferenzmuster_michelson_interferometer}
     \end{samepage}
 \end{figure}
+
 
 \subsection{Unsicherheitsanalyse}
 \label{subsec:unsicherheitsanalyse}
@@ -213,7 +238,7 @@ Die Fehlerfortpflanzung der berechneten Werte basiert auf der Größtunsicherhei
 \label{sec:geraeteliste}
 
 Für den praktischen Aufbau und die Messungen der geforderten Größen wurden die in \autoref{tab:geraeteliste} aufgelisteten Geräte und Hilfsmittel verwendet.
-
+%
 \begin{table}[H]
     \centering
     \begin{samepage}
@@ -241,9 +266,9 @@ Für den praktischen Aufbau und die Messungen der geforderten Größen wurden di
         \end{tblrx}
     \end{samepage}
 \end{table}
-
+%
 Die verwendeten Doppelspalte haben die Abmessungen wie in \autoref{tab:doppelspalt_abmessungen} vermerkt.
-
+%
 \begin{table}[H]
     \centering
     \begin{samepage}
@@ -258,7 +283,7 @@ Die verwendeten Doppelspalte haben die Abmessungen wie in \autoref{tab:doppelspa
         \end{tblr}
     \end{samepage}
 \end{table}
-
+%
 \paragraph{Anmerkung zu den Unsicherheiten:} Zur Unsicherheitsangabe werden die jeweiligen Unsicherheitsmaße der Geräte, welche aus den Datenblättern (sofern vorhanden) entnommen werden, verwendet. Für die analogen Messgeräte wird eine kombinierte Ablese- und Messunsicherheit von $\pm\SI{1}{Skalenstrich}$ verwendet.
 
 Alle Teilversuche wurden bei einer Umgebungstemperatur von \SI{24(1)}{\celsius} einem Luftdruck von \SI{1000(10)}{\hecto\pascal} und einer relativen Luftfeuchtigkeit von \SI{33(1)}{\percent} durchgeführt.
@@ -268,10 +293,11 @@ Alle Teilversuche wurden bei einer Umgebungstemperatur von \SI{24(1)}{\celsius} 
 \section{Versuchsaufbau}
 \label{sec:aufbau}
 
-\subsection{Young'scher Doppelspalt}
-\label{sec:aufbau_doppelspalte}
+\subsection{Young'scher Doppelspalt und Gitter}
+\label{sec:aufbau_doppelspalte_gitter}
 
 Für den Aufbau zum Versuch \textit{Young'scher Doppelspalt} wird der Laser mittels zwei Spiegel auf das Plättchen mit den vier verschiedenen (siehe \autoref{tab:doppelspalt_abmessungen}) Doppelspalten gelenkt. Der Abstand vom Doppelspalt wird mit \SI{2520(5)}{\milli\meter} bestimmt -- wobei hier noch zur vom Maßband gegebenen Unsicherheit von \SI{1.1}{\milli\meter} eine weitere Unsicherheit durch das Messen in der Luft hinzukommt. Der Aufbau in \autoref{fig:aufbau_doppelspalt} zeigt den optischen Tisch, der Schirm ist rechts im oben angeführten Abstand an der Wand befestigt.
+%
 \begin{figure}[H]
     \centering
     \begin{samepage}
@@ -336,10 +362,10 @@ Zur Untersuchung verschiedener Effekte wird je eine Sammel- bzw. Zerstreuungslin
 
 Vor jedem Teilversuch wird nochmals überprüft, ob sich der gewünschte optische Weg ergibt und der Laser nicht unkontrolliert oder ungewollt in nicht beabsichtige Richtungen abgelenkt wird. Weiters wird stets darauf geachtet, dass man nicht mit reflektierenden Gegenständen (z.B. Ring, Schraubenzieher) im Strahlengang hantiert.
 
-\subsection{Young'scher Doppelspalt}
-\label{sec:durchfuehrung_doppelspalt}
+\subsection{Young'scher Doppelspalt und Gitter}
+\label{sec:durchfuehrung_doppelspalt_gitter}
 
-Der Versuch wird gemäß der Beschreibung in \autoref{sec:aufbau_doppelspalte} aufgebaut und die in \autoref{tab:doppelspalt_abmessungen} angeführten Doppelspalte werden der Reihe nach vom Laser durchstrahlt. Der $l_\text{Schirm} = \SI{2520(5)}{\milli\meter}$ entfernte Schirm -- ein karriertes A4-Blatt an der Wand -- wird nun vom sich ergebenden Interferenzmuster beleuchtet.
+Der Versuch wird gemäß der Beschreibung in \autoref{sec:aufbau_doppelspalte_gitter} aufgebaut und die in \autoref{tab:doppelspalt_abmessungen} angeführten Doppelspalte werden der Reihe nach vom Laser durchstrahlt. Der $l_\text{Schirm} = \SI{2520(5)}{\milli\meter}$ entfernte Schirm -- ein karriertes A4-Blatt an der Wand -- wird nun vom sich ergebenden Interferenzmuster beleuchtet.
 
 Es ergeben sich für die vier Doppelspalte folgende Interferenzbilder in den Abbildungen \ref{fig:DS_1_interferenzmuster} bis \ref{fig:DS_2_interferenzmuster}.
 %
@@ -349,53 +375,69 @@ Es ergeben sich für die vier Doppelspalte folgende Interferenzbilder in den Abb
     \begin{minipage}[t]{0.45\linewidth}
         \centering
         \includegraphics[width=\linewidth]{fig/Compressed/DS1_0_20_25.jpg}
-        \caption{Interferenzmuster des Doppelspalts $i = 1$}
+        \caption{Interferenzmuster des Doppelspalts 1}
         \label{fig:DS_1_interferenzmuster}
         \includegraphics[width=\linewidth]{fig/Compressed/DS3_0_10_5.jpg}
-        \caption{Interferenzmuster des Doppelspalts $i = 3$}
+        \caption{Interferenzmuster des Doppelspalts 3}
         \label{fig:DS_3_interferenzmuster}
     \end{minipage}%
     \hspace*{\fill}
     \begin{minipage}[t]{0.45\linewidth}
         \centering
         \includegraphics[width=\linewidth]{fig/Compressed/DS2_0_10_25.jpg}
-        \caption{Interferenzmuster des Doppelspalts $i = 2$}
+        \caption{Interferenzmuster des Doppelspalts 2}
         \label{fig:DS_2_interferenzmuster}
         \includegraphics[width=\linewidth]{fig/Compressed/DS4_0_11.jpg}
-        \caption{Interferenzmuster des Doppelspalts $i = 4$}
+        \caption{Interferenzmuster des Doppelspalts 4}
         \label{fig:DS_4_interferenzmuster}
     \end{minipage}
 \end{figure}
 \setcaphanging
 %
 Neben der fotografischen Dokumentation werden auch die Abstände der Maxima mittels Lineal vermessen. Die Messungen ergeben die in \autoref{tab:messwerte_doppelspalten} angeführten Werte.
-
-%? Auf meinem laptop geht glaub i tabularray ned gescheit aber vermultich is es nur ein user error :D
+%
 \begin{table}[H]
     \centering
     \begin{samepage}
         \caption[Messwerte Doppelspalten]{Messwerte der Doppelspalten. Unsicherheit der Messung: $\Delta l_i = \SI{0.5}{\milli\meter}$}
         \label{tab:messwerte_doppelspalten}
         \begin{tblr}{colspec={Q S[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1]}, row{1}={guard}}
-            $i$ & $l_1$ / \unit{\milli\meter} & $l_2$ / \unit{\milli\meter} & $l_3$ / \unit{\milli\meter} & $l_4$ / \unit{\milli\meter} \\
-            0   & 0.0                         & 0.0                         & 0.0                         & 0.0                         \\
-            1   & 5.0                         & 5.0                         & 2.5                         & 1.5                         \\
-            2   & 11.0                        & 11.0                        & 8.0                         & 2.5                         \\
-            3   & 16.0                        & 16.0                        & 10.5                        & 4.0                         \\
-            4   & 21.0                        & 22.0                        & 13.0                        & 5.5                         \\
-            5   & 27.0                        & 27.0                        & 16.0                        & 6.5                         \\
-            6   & 33.0                        & 32.0                        & 18.5                        & 8.0                         \\
-            7   & 38.0                        & 38.0                        & 21.0                        & 9.5                         \\
-            8   & 43.0                        & 43.0                        & 24.0                        & 10.5                        \\
-            9   & 49.0                        & 48.0                        & 26.5                        & 12.0                        \\
-            10  & 55.0                        & 54.0                        & 29.0                        & 13.5                        \\
-            11  & 58.0                        & {{{-}}}                     & {{{-}}}                     & 15.0                        \\
+            $i$ & $l_{1,i}$ / \unit{\milli\meter} & $l_{2,i}$ / \unit{\milli\meter} & $l_{3,i}$ / \unit{\milli\meter} & $l_{4,i}$ / \unit{\milli\meter} \\
+            0   & 0.0                             & 0.0                             & 0.0                             & 0.0                             \\
+            1   & 5.0                             & 5.0                             & 2.5                             & 1.5                             \\
+            2   & 11.0                            & 11.0                            & 5.0                             & 2.5                             \\
+            3   & 16.0                            & 16.0                            & 8.0                             & 4.0                             \\
+            4   & 21.0                            & 22.0                            & 10.5                            & 5.5                             \\
+            5   & 27.0                            & 27.0                            & 13.0                            & 6.5                             \\
+            6   & 33.0                            & 32.0                            & 16.0                            & 8.0                             \\
+            7   & 38.0                            & 38.0                            & 18.5                            & 9.5                             \\
+            8   & 43.0                            & 43.0                            & 21.0                            & 10.5                            \\
+            9   & 49.0                            & 48.0                            & 24.0                            & 12.0                            \\
+            10  & 55.0                            & 54.0                            & 26.5                            & 13.5                            \\
+            11  & 58.0                            & {{{-}}}                         & 29.0                            & 15.0                            \\
         \end{tblr}
     \end{samepage}
 \end{table}
-
-Die eben beschriebene Messung wird nun in analoger Weise nochmals mit dem Gitter durchgeführt. Die Messungen ergeben die in \autoref{tab:messwerte_gitter} angeführten Werte. Dabei bleibt der Abstand zum Schirm $l_\text{Schirm} = \SI{2520(5)}{\milli\meter}$ konstant.
-
+%
+Die eben beschriebene Messung wird nun in analoger Weise nochmals mit dem Gitter durchgeführt (\autoref{fig:gitter_interferenzmuster}). Die Messungen ergeben die in \autoref{tab:messwerte_gitter} angeführten Werte. Dabei bleibt der Abstand zum Schirm $l_\text{Schirm} = \SI{2520(5)}{\milli\meter}$ konstant.
+%
+\setcapindent{0pt}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/Compressed/Gitter_8_per_mm.jpg}
+    \end{minipage}%
+    \hspace*{\fill}
+    \begin{minipage}[t]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/Compressed/Gitter_8_per_mm_overview.jpg}
+    \end{minipage}
+    \caption[Interferenzmuster des Gitters]{Interferenzmuster des Gitters mit Gitterkonstante $g=\SI{8}{'\per\milli\meter}$. Links: Nahaufnahme, rechts: Übersicht über das gesamte Interferenzmuster.}
+    \label{fig:gitter_interferenzmuster}
+\end{figure}
+\setcaphanging
+%
 \begin{table}[H]
     \centering
     \begin{samepage}
@@ -427,7 +469,7 @@ Die eben beschriebene Messung wird nun in analoger Weise nochmals mit dem Gitter
 \label{sec:durchfuehrung_shearing}
 
 Nachdem der Versuchaufbau ordnungsgemäß hergestellt ist, wird der Laser eingeschaltet. Am optischen Ausgang am oberen Ende des Shearing-Interferometers erscheint dadurch ein streifenförmiges Interferenzmuster. Aus diesem Interfenzmuster werden der Versatz in laterale Richtung $l$, der Abstand der Interferenzstreifen $d$ und der Winkelversatz zur einfallenden Ebene $\theta$ vermessen. Vermessen wurde direkt am optischen Ausgang mit einem handelsüblichen durchsichtigen Geodreieck. Für die Längenmessung wird eine Ableseunsicherheit von \SI{0.5}{mm} angenommen, die Winkelmessung wird mit einer Ungenauigkeit von \SI{3}{\degree} abgeschätzt. Aufgrund der hohen Messungenauigkeit dieser Methodik wird die Messung zwei weitere Male wiederholt, um so zumindest eine geringfügige statistische Aussage treffen zu können. Die Messergebnisse werden notiert und tabelliert.
-
+%
 %!Natürlich komplett frei erfunden
 \begin{table}[H]
     \centering
@@ -449,10 +491,10 @@ Nachdem der Versuchaufbau ordnungsgemäß hergestellt ist, wird der Laser einges
 
 Der Strahl wird für den ersten Unterpunkt dieses Versuchs durch zwei Polarisationsfilter geführt. Für den ersten der beiden Filter wurde \SI{70}{\degree} als Ausgangswinkel gewählt, der zweite wird im folgenden Versuch einmal um \SI{360}{\degree} gedreht, wobei die Ausgangsstellung hier so gewählt wird, dass zuerst die höchste Lichtintensität am Messgerät abgelesen werden kann. So stehen die Polarisationsfilter gleich, dies ist bei \SI{330}{\degree} des zweiten Filters der Fall.
 Die Messung wurde zweimal durchgeführt und die gemessenen Werte des Lichtintensitätsmesser sind in \autoref{tab:messwerte_polarisation} angeführt.
-
-%! Caption is scheiße und zu klein
+%
 \begin{longtblr}[
         caption = {Messwerte nach Durchgang durch zwei Polarisationsfilter. Winkel des ersten Filters: \SI{70}{\degree}, Winkel des zweiten Filters $\alpha$ mit $\Delta \alpha = \SI{3}{\degree}$, Intensität $I_i$ mit Index $i=1 \mathcomma 2$ für die beiden nacheinanderfolgenden Messungen, $\Delta I_i$ Unsicherheit der Messung.},
+        entry = {Messwerte nach zwei Polarisationsfiltern},
         label = {tab:messwerte_polarisation}]{
         colspec={S[table-format=3] S[table-format=4] S[table-format=2] S[table-format=4] S[table-format=2]}}
     {{{$\alpha$}}} & {{{$I_1$ / \unit{\lux}}}} & {{{$\Delta I_1$ / \unit{\lux}}}} & {{{$I_2$ / \unit{\lux}}}} & {{{$\Delta I_2$ / \unit{\lux}}}} \\
@@ -500,90 +542,148 @@ Die Messung wurde zweimal durchgeführt und die gemessenen Werte des Lichtintens
 \label{sec:durchfuehrung_michelson}
 
 Das Michelson-Interferometer wird wie in \autoref{fig:aufbau_michelson} beschrieben in den Strahlengang eingebracht. Nun werden die beiden Spiegel des Michelson-Interfereometers so justiert, dass die beiden Strahlen, die durch die beiden Arme des Interferometers laufen, überlagert am Schirm auftreffen. Nun wird eine Sammellinse vor dem Interferometer eingebracht, dies führt zur Ausbildung von Interferenzmustern, welche in konzentrischer Anordnung abwechselnd Maxima und Minima am Schirm, aber auch am Laser aufweisen. Beispielhaft finden sich in \autoref{fig:michelson_konz_sammel} und \autoref{fig:michelson_konz_sammel_tuer} die Interferenzmuster am Schirm und neben dem Laser.
-
+%
 \setcapindent{0pt}
 \begin{figure}[H]
     \centering
     \begin{minipage}[t]{0.45\linewidth}
         \centering
         \includegraphics[width=\linewidth]{fig/Compressed/michelson_konz_schirm.jpg}
-        \caption{Interferenzmuster des Lasers nach Durchgang durchs Michelsoninterfereometer am Schirm}
+        \caption[Interferenzmuster Michelsoninterfereometer Schirm]{Interferenzmuster des Lasers nach Durchgang durchs Michelsoninterfereometer am Schirm}
         \label{fig:michelson_konz_sammel}
     \end{minipage}%
     \hspace*{\fill}
     \begin{minipage}[t]{0.45\linewidth}
         \centering
         \includegraphics[width=\linewidth]{fig/Compressed/michelson_konz_tuer.jpg}
-        \caption{Interferenzmuster des Lasers nach Durchgang durchs Michelsoninterfereometer neben dem Laser}
+        \caption[Interferenzmuster Michelsoninterfereometer Reflexion]{Interferenzmuster des Lasers nach Durchgang durchs Michelsoninterfereometer neben dem Laser}
         \label{fig:michelson_konz_sammel_tuer}
     \end{minipage}
 \end{figure}
 \setcaphanging
-
+%
 Zur Bestimmung der Wellenlänge des Lasers wird nun mittels Mikrometerschraube ein Spiegel im Michelson-Interfereometer verschoben. Dies führt nun dazu, dass sich das Interferenzmuster am Schirm ändert, da der Gangunterschied zwischen den beiden Teilstrahlen geändert wird. Die Wellenlänge des Lasers kann nun durch die Verschiebung des Spiegels bestimmt werden, indem man die Anzahl der Maxima/Minima beim verschieben um eine gewisse Distanz misst. Konkret wurde so lange an der Mikrometerschraube gedreht, bis am Schirm $n = \num{100(1)}$ neue Maxima/Minima zu sehen waren. Dabei verschiebt sich der Spiegel um eine Distanz von $d_\text{Spiegel-S} = \SI{26.4(10)}{\micro\meter}$, wobei hier schon die Übersetzung der Mikrometerschraube zur tatsächlichen Spiegelbewegung (Faktor \num{5.3}) berücksichtigt wurde. Die Unsicherheit der Mikrometerschraube beläuft sich hier auf $\SI{5}{\micro\meter}$ (nicht untersetzt!). Die Unsicherheit am Start und am Ende der Messung -- um eben möglichst die gleiche Intensität zu erreichen -- wird auf etwa $\SI{0.3}{\micro\meter}$ geschätzt.
 
 Nun wird statt der Sammellinse eine Zerstreuungslinse eingesetzt und die Interferenzmuster erneut beobachtet. Es ergeben sich nun mit der Zerstreuungslinse keine konzentrischen Kreise im Interferzbild, sondern Linien-Interferenzmuster, wie auch in \autoref{fig:michelson_linien_zerstreu} dargestellt.
 %info Des is natürlich Bullshit - hab ma vergessen:
 Analog zum Versuch mit der eingesetzten Sammellinse werden nun auch 100 Wechsel zwischen Maxima und Minima gezählt. Es ergibt sich für eine Distanz von $d_\text{Spiegel-Z} = \SI{26.6(10)}{\micro\meter}$ für die $n = \num{100(1)}$ Wechsel zwischen Maxima und Minima. Die Unsicherheit dieser Messung wird ebenso analog zum vorherigen versuch mit der konzentrischen Linse angenommen.
+%
 \begin{figure}[H]
     \centering
     \begin{samepage}
         \includegraphics[width=0.7\linewidth]{fig/Compressed/Zerstreuungslinse.jpg}
-        \caption{Interferenzmuster des Lasers nach Durchgang durchs Michelsoninterfereometer mit Zerstreuungslinse}
+        \caption[Interferenzmuster Michelsoninterfereometer Zerstreuungslinse]{Interferenzmuster des Lasers nach Durchgang durchs Michelsoninterfereometer mit Zerstreuungslinse}
         \label{fig:michelson_linien_zerstreu}
     \end{samepage}
 \end{figure}
-
+%
 Nun werden noch externe Änderungen, wie etwa die Auswirkungen der Stellschrauben untersucht. Dabei verstellt eine Schraube die Dichte -- sprich die Anzahl an sichtbaren Maxima/Minima -- und die andere die Ausrichtung, es erfolgt quasi eine Drehung der Maxima/Minima um die Flächennormale.
 Die Auswirkungen von Wärmeeinflüssen ist im \underline{\href{https://etschgi1.github.io/files/UNI_hosting/Misc/FP2/Interferometrie/Stoerungen.mp4}{Video}} zu sehen.
 
 Zudem wird noch untersucht, wie sich Polarisationsfilter im Strahlengang des Michelsoninterfereometer auf das Interferenzbild auswirken.
-Dazu wird zuerst, wie in \autoref{fig:michelson_pol_vor} ersichtlich, nur ein Filter (\SI{45}{\degree} zur Senkrechten gedreht) vor dem Interferometer platziert. Anschließend wir ein Filter in horizontaler Anordnung in einem der beiden Arme platziert, wie in \autoref{fig:michelson_pol_1_horizontal} dargestellt. In \autoref{fig:michelson_pol_2_horizontal} ist ein Filter in horizontaler Anordnung in beiden Armen zu sehen und in \autoref{fig:michelson_pol_mixed} ein Filter in vertikaler und einer in horizontaler Anordnung pro Arm.
+Dazu wird zuerst, wie in \autoref{fig:michelson_pol_vor} ersichtlich, nur ein Filter (\SI{45}{\degree} zur Senkrechten gedreht) vor dem Interferometer platziert. Anschließend wird ein Filter in horizontaler Anordnung in einem der beiden Arme platziert, wie in \autoref{fig:michelson_pol_1_horizontal} dargestellt. In \autoref{fig:michelson_pol_2_horizontal} ist ein Filter in horizontaler Anordnung in beiden Armen zu sehen und in \autoref{fig:michelson_pol_mixed} ein Filter in vertikaler und einer in horizontaler Anordnung pro Arm.
+%
 \setcapindent{0pt}
 \begin{figure}[H]
     \centering
     \begin{minipage}[t]{0.45\linewidth}
         \centering
         \includegraphics[width=\linewidth]{fig/Compressed/Out_horizontal_detail.jpg} %! is quasi gleich wie nix
-        \caption{Interferenzmuster mit einem Polarisator vor dem Interferometer}
+        \caption[Interferenzmuster Polarisator davor]{Interferenzmuster mit einem Polarisator vor dem Interferometer}
         \label{fig:michelson_pol_vor}
-    \end{minipage}%
-    \hspace*{\fill}
-    \begin{minipage}[t]{0.45\linewidth}
-        \centering
-        \includegraphics[width=\linewidth]{fig/Compressed/Arago_horizontal_detail.jpg}
-        \caption{Interferenzmuster mit einem Polarisator in horizontaler Anordnung in einem Arm}
-        \label{fig:michelson_pol_1_horizontal}
-    \end{minipage}
-\end{figure}
-\setcaphanging
-
-\setcapindent{0pt}
-\begin{figure}[H]
-    \centering
-    \begin{minipage}[t]{0.45\linewidth}
-        \centering
         \includegraphics[width=\linewidth]{fig/Compressed/Arago_2_Horizontal_detail.jpg}
-        \caption{Interferenzmuster mit jeweils einem Polarisator in horizontaler Anordnung pro Arm}
+        \caption[Interferenzmuster ein Polarisator horizontal pro Arm]{Interferenzmuster mit jeweils einem Polarisator in horizontaler Anordnung pro Arm}
         \label{fig:michelson_pol_2_horizontal}
     \end{minipage}%
     \hspace*{\fill}
     \begin{minipage}[t]{0.45\linewidth}
         \centering
+        \includegraphics[width=\linewidth]{fig/Compressed/Arago_horizontal_detail.jpg}
+        \caption[Interferenzmuster ein Polarisator horizontal ein Arm]{Interferenzmuster mit einem Polarisator in horizontaler Anordnung in einem Arm}
+        \label{fig:michelson_pol_1_horizontal}
         \includegraphics[width=\linewidth]{fig/Compressed/Arago_mixed Detail.jpg}
-        \caption{Interferenzmuster mit einem Polarisator in horizontaler Anordnung im ersten Arm und einem mit vertikaler im zweiten Arm}
+        \caption[Interferenzmuster zwei Polarisatoren gekreuzt]{Interferenzmuster mit einem Polarisator in horizontaler Anordnung im ersten Arm und einem mit vertikaler im zweiten Arm}
         \label{fig:michelson_pol_mixed}
     \end{minipage}
 \end{figure}
-\setcaphanging
 %! maybe noch was anderes hier aber sollte sonst gach eh mal passen. 
+
+
 
 \section{Auswertung}
 \label{sec:auswertung}
 
-\subsection{Young'scher Doppelspalt}
-\label{subsec:auswertung_doppelspalt}
+\subsection{Young'scher Doppelspalt und Gitter}
+\label{subsec:auswertung_doppelspalt_gitter_gitter}
 
+Aus den aufgenommenen Interferenzmuster der vier Young'schen Doppelspalte aus den Abbildungen \ref{fig:DS_1_interferenzmuster} bis \ref{fig:DS_4_interferenzmuster} können Intensitätskurven gewonnen werden. Dafür wird zuerst ein Bereich von Interesse ausgeschnitten und zusätzliche mit einem Graufilter belegt, sodass die Intensitätsunterschiede zulasten der Farbdarstellung besser ersichtlich werden. Dies erfolgt mit der Bildbearbeitungssoftware \textit{paint.net}. Aus diesen bearbeiteten Bildern werden mithilfe der Software \textit{ImageJ} Intensitätskurven extrahiert. Da die einzelnen Intensitätsmaxima auch direkt im Labor mit einem Lineal gemessen worden sind, ist die Umrechnung von Pixelpositionen in reale relative Abstände ein leichtes. Hierfür wird pro Doppelspaltintensitätskurve je das 0. und 1. Maximum herangezogen, wobei das 0. Maximum als Koordinatenursprung gewählt wird. Die extrahierten Intensitätskurven sowie die theoretischen Verläufe (Produkt aus Intensität für Beugung und Interferenz, \autoref{eq:intensity_gesamt}) aufgrund der Abmessungen des jeweiligen Doppelspalts werden gegen relative Abstände zum 0. Maximum aufgetragen und sind in den Abbildungen \ref{fig:intensitaet_DS_1} bis \ref{fig:intensitaet_DS_4} ersichtlich. Die mit dem Lineal gemessenen Position der Maxima sind zusätzlich mit einem vertikalen Balken inklusive Unsicherheitsband eingezeichnet.
+%
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=\linewidth]{../python/plots/young_1.pdf}
+        \caption[Intensitätskurve DS 1]{Gemessener und theoretischer Intensitätsverlauf des Doppelspalts 1, Messkurve aus \autoref{fig:DS_1_interferenzmuster} extrahiert.}
+        \label{fig:intensitaet_DS_1}
+    \end{samepage}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=\linewidth]{../python/plots/young_2.pdf}
+        \caption[Intensitätskurve DS 2]{Gemessener und theoretischer Intensitätsverlauf des Doppelspalts 2, Messkurve aus \autoref{fig:DS_2_interferenzmuster} extrahiert.}
+        \label{fig:intensitaet_DS_2}
+    \end{samepage}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=\linewidth]{../python/plots/young_3.pdf}
+        \caption[Intensitätskurve DS 3]{Gemessener und theoretischer Intensitätsverlauf des Doppelspalts 3, Messkurve aus \autoref{fig:DS_3_interferenzmuster} extrahiert.}
+        \label{fig:intensitaet_DS_3}
+    \end{samepage}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=\linewidth]{../python/plots/young_4.pdf}
+        \caption[Intensitätskurve DS 4]{Gemessener und theoretischer Intensitätsverlauf des Doppelspalts 4, Messkurve aus \autoref{fig:DS_4_interferenzmuster} extrahiert.}
+        \label{fig:intensitaet_DS_4}
+    \end{samepage}
+\end{figure}
+%
+Nach \autoref{eq:konstruktive_interferenz_approx} und den per Lineal gemessenen Abständen zwischen 0-tem und $n$-tem Intensitätsmaximum lassen sich je Doppelspalt $n$ Wellenlängen $\lambda_n$ berechnen. Es wird $n=8$ gewählt. Die so erhaltenen Werte werden statistische gemittelt und mit einem Student-t-Korrekturfaktor mit Signifikanzniveau $1\sigma$ versehen. Pro Doppelspalt ergibt sich so eine resultierende berechnete Wellenlänge, diese sind in \autoref{tab:auswertung_wellenlaenge_doppelspalt} zusammengefasst.
+%
+\begin{table}[H]
+    \centering
+    \begin{samepage}
+        \caption[Berechnete Werte der Wellenlängen je Doppelspalt]{Berechnete Werte der Wellenlängen $\lambda_i$ in \si{\nano\meter} je Doppelspalt $i$ nach \autoref{eq:konstruktive_interferenz_approx} aus je den ersten $n=8$ Intensitätsmaxima. Unsicherheit $\Delta \lambda_i$ in \si{\nano\meter} mit Student-t-Korrekturfaktor mit Signifikanzniveau $1\sigma$.}
+        \label{tab:auswertung_wellenlaenge_doppelspalt}
+        \begin{tblr}{colspec={Q S[table-format=3] S[table-format=2]}, row{1}={guard}}
+            $i$ / 1 & $\lambda_i$ / \si{\nano\meter} & $\Delta \lambda_i$ / \si{\nano\meter} \\
+            1       & 531                            & 7                                     \\
+            2       & 532                            & 7                                     \\
+            3       & 517                            & 7                                     \\
+            4       & 534                            & 12                                    \\
+        \end{tblr}
+    \end{samepage}
+\end{table}
+%
+Mittelt man diese Tabelle erneut und korrigiert sie mit einem Student-t-Korrekturfaktor mit Signifikanzniveau $1\sigma$, so ergibt sich eine berechnete Wellenlänge von:
+\[\lambda = \SI{528(5)}{\nano\meter}\]
+
+Derselbe Prozess wie für die vier Doppelspalte wird nun abermals für das Gitter wiederholt. Ein Plot der Messdaten auf Basis der Auswertung durch die Software \textit{ImageJ} findet sich auf \autoref{fig:intensitaet_gitter}. Auf die Darstellung des theoretischen Verlaufs wird verzichtet.
+%
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=\linewidth]{../python/plots/grating.pdf}
+        \caption[Intensitätskurve Gitter]{Gemessener Intensitätsverlauf des Gitters, Messkurve aus \autoref{fig:DS_4_interferenzmuster} (rechts) extrahiert.}
+        \label{fig:intensitaet_gitter}
+    \end{samepage}
+\end{figure}
+%
+Durch Äquivalenzumformung von \autoref{eq:intensity_gitter} kann schließlich die Gitterkonstante $g$ in \si{m} aus den gemessenen Positionen der Intensitätsmaxima aus \autoref{tab:messwerte_gitter} berechnet werden. Die resultierenden Werte werden wieder mit Hilfe einer Student-t-Verteilung statistisch gemittelt und korrigiert. Die Gitterkonstante ergibt sich zu:
+\[g_{\text{exp}} = \SI{96(9)}{\micro\meter}\]
 
 
 \subsection{Shearing-Interferometer}
@@ -595,7 +695,7 @@ Die in \autoref{tab:messergebnisse_shearing} tabellierten Größen werden zur st
     d      & = \SI{3.2(3)}{\milli\meter} \\
     \theta & = \SI{22(2)}{\degree}
 \end{align*}
-Für die Wellenlänge des Lasers wird der in \autoref{subsec:auswertung_doppelspalt} berechnete Wert herangezogen. Nun lässt sich der Radius $r$ der Wellenfront nach \autoref{eq:radius_wellenfront} berechnen und ergibt sich zu:
+Für die Wellenlänge des Lasers wird der vom Hersteller spezifizierte Wert aus \autoref{tab:geraeteliste} herangezogen. Nun lässt sich der Radius $r$ der Wellenfront nach \autoref{eq:radius_wellenfront} berechnen und ergibt sich zu:
 \[r=\SI{153(18)}{m}\]
 
 
@@ -603,7 +703,7 @@ Für die Wellenlänge des Lasers wird der in \autoref{subsec:auswertung_doppelsp
 \label{subsec:auswertung_polarisation}
 
 Die am Lichtintensitätsmesser abgelesenen Intensitätswerte beider Messreihen werden pro Winkel statistisch gemittelt und mit einem Student-t-Korrekturfaktor versehen. Die so erhaltenen Werte werden inklusive ihrer Unsicherheiten (in Form eine halbdurchsichtigen Bands um den Graph) in \autoref{fig:auswertung_polarisation} dargestellt. Ebenfalls auf dieser Abbildung ist der theoretische Verlauf der Intensitätskurve gezeichnet, welche mit einem initialen $I_0 = \SI{1144}{lx}$ errechnet wurde.
-
+%
 \begin{figure}[H]
     \centering
     \begin{samepage}
@@ -618,15 +718,71 @@ Die am Lichtintensitätsmesser abgelesenen Intensitätswerte beider Messreihen w
 \label{subsec:auswertung_michelson}
 
 Mithilfe der Anzahl der generierten bzw. vernichteten Interferenzstreifen für sowohl Sammel- als auch Streulinse und der währenddessen notieren Weglängenunterschiedsänderung der Interferometerarme kann schließlich nach \autoref{eq:wegunterschied_anzahl} die Wellenlänge des Lasers berechnet werden. Diese ergibt sich sowohl aus den Messdaten der Sammellinse (Interferenzringe) als auch der Streulinse (Interferenzstreifen) zu:
-\[\lambda_{\text{Sammellinse}} = \lambda_{\text{Sammellinse}} = \SI{530(30)}{nm}\]
+\[\lambda_{\text{Sammellinse}} = \lambda_{\text{Streulinse}} = \SI{530(30)}{nm}\]
+
 
 
 \section{Diskussion}
 \label{sec:diskussion}
 
+\subsection{Young'scher Doppelspalt und Gitter}
+\label{subsec:diskussion_doppelspalt_gitter_gitter}
+
+%! Nur schwafeln, wir werden wahrscheinlich einfach pfuscht haben, don't know
+Betrachtet man die Abbildungen \ref{fig:intensitaet_DS_1} bis \ref{fig:intensitaet_DS_4}, so lässt sich erkennen, dass sich die Theorie wider Erwarten nicht mit den gemessenen Daten deckt. Die gemessenen Intensitätsmaxima weichen teils signifikant von den theoretischen peaks ab. Dies kann auf mehrere Faktor zurückgeführt werden: Einerseits wurden die Bilder mit einer Smartphonekamera in einem lichtverschmutzten Raum aufgenommen. Es konnte nicht gewährleistet werden, dass die Aufnahme sowohl immer im selben Abstand, als auch parallel zur Flächennormale der Projektionsebene aufgenommen wurden. Weiters war der Hintergrund, auf den die grünen Lichtpunkte projiziert wurden, nicht homogen gefärbt und aufgrund der weißen Färbung auch leicht reflektierend. Andererseits könnte der Fehler auch am anderen Ende des Projektionswegs beheimatet sein: Falls die Doppelspalten nicht genau parallel zur Normalebene getroffen werden, beeinflusst dies selbstverständlich die an der Wand anlangende Projektion. Was darüberhinaus auffallend ist: Die von \textit{ImageJ} ausgewerteten Intensitätskurven haben ihre lokalen Maxima nicht immer an denselben Stellen wie die von Hand vermessenen Werte darauf schließen lassen würden. Einerseits lässt sich ein additiver Fehler erkennen, der etwa daher führen kann, dass das Lineal nicht perfekt parallel zur Geraden, auf welcher die Intensitätsmaxima ersichtlich waren, gehalten wurde. Sowohl ein initialer Winkel, als auch ein zeitabhängiges Verrutschen ist denkbar. Darüberhinaus war es durchaus kein Leichtes, die exakte Mitte des Interferenzspots zu eruieren und zu vermessen, da die Spots eine Ausdehnung haben, die etwa auch aus Reflexionen von der Projektionsfläche stammt. Alles in allem sind so an mehreren Stellen die Daten nicht ganz stimmig, wohingegen die Berechnung der Wellenlänge des Lasers aus diesen Daten wieder erwartbare Werte liefert. Betrachtet man \autoref{tab:auswertung_wellenlaenge_doppelspalt}, so wird ersichtlich, dass alle Messdaten berechnete Wellenlängen innerhalb ihres Unsicherheitsintervalls liefern, die mit der spezifizierten Wellenlänge von $\lambda_{\text{lit}}=\SI{532}{nm}$ übereinstimmen. Dies spricht wieder für korrekte Messergebnisse.
+
+Das im letzten Subteil verwendete Gitter wies laut Beschriftung eine Gitterkonstante von
+\[\tilde{g}_{\text{lit}}=\SI{8}{'/mm}\]
+auf. Rechnet man dies in SI-Einheiten um, so ergibt sich ein Wert von
+\[g_{\text{lit}}=\SI{125}{\micro\meter}\]
+Der erechnte Wert von \(g = \SI{96(9)}{\micro\meter}\) weicht signifikant vom Literaturwert ab, was nur auf dieselben Gründe wie bereits bei den Abweichungen der Doppelspaltdaten zurückgeführt werden kann.
+
+
+\subsection{Shearing-Interferometer}
+\label{subsec:diskussion_shearing}
+
+Beim Versuch zum Shearing-Interferometer sei abschließend nur noch einmal erwähnt, dass sich das Interferometer zum Zeitpunkt des Laborversuchs in Reparatur befand und alle Handgriffe sowie Berechnungen nur hyptotethisch durchgeführt wurden. Die Werte wurden dementsprechend plausibel gewählt, eine Fehleranalyse ist demnach weder möglich noch sinnvoll, da im Gedankenexperiment selbstverständlich fehlerfrei gearbeitet wurde.
+
+
+\subsection{Polarisation}
+\label{subsec:diskussion_polarisation}
+
+Da die genaue Polarisationsrichtung der Polarisatoren aufgrund bereits abenutzter Stellschrauben nicht gezwungenermaßen mit der Beschriftung der Schrauben übereinstimmen muss, wurde diese Ausgangsstellung über das Maximum der transmittierten Intensität am Lichtintensitätsmesser eruiert. Die in \autoref{tab:messwerte_polarisation} tabellierten Messwerte sprechen dafür, dass die beiden Stellungen von $\alpha_1 = \SI{70}{\degree}$ beim Polarisator 1 und $\alpha_2 = \SI{330}{\degree}$ beim Polarisator 2 tatsächlich die maximale Intensität erzeugen, da bei den Stellungen $\alpha = \SI{60}{\degree} \mathcomma \SI{240}{\degree}$ keine messbare Intensität mehr beim Lichtintensitätsmesser angelangt, wonach darauf zu schließen ist, dass sich diese Stellung beider Polarisatoren tatsächlich auf eine Winkeldifferenz von \SI{90}{\degree} beläuft. Vergleicht man nun die gemessenen Werte mit den theoretisch berechneten in \autoref{fig:auswertung_polarisation}, so decken sich die gemessenen Werte beinahe immer mit der Theorie. Gerade im Bereich der lokalen Maxima weichen die Messwerte signifikant von der Theorie ab und liegen absolut stets unter der theoretischen Kurve. Dieser zusätzliche Intensitätsverlust kann etwa durch Reflexionen oder Inhomogenitäten in den Polarisatoren erklärt werden. Im Großen und Ganzen stimmen die Werte jedoch überein, vor allem die generelle Form der Kurve -- ergo der Trend -- stimmt definitiv überein, wonach das Gesetz von Malus (\autoref{eq:malus}) verifiziert wurde.
+
+Um die Gesetze von Fresnel und Arago zu überprüfen, wurde anschließend ein dritter Polarisator in den Strahlengang gebracht. Die einhüllenden Polarisatoren sind dabei nach wie vor gekreuzt, also um \SI{90}{\degree} zueinander verdreht. Bringt man nun den dritten Polarisator parallel ein, also um \SI{0}{\degree} zum zweiten versetzt, so ändert dies nichts an der transmittierten Intensität, die Anordnung lässt keine Intensität hindurch. Es zeigt sich jedoch, dass selbst bei gekreuzten einhüllenden Polarisatoren transmittierte Intensität am Lichtintensitätsmesser angelangt, sofern man den dritten Polarisator um \SI{45}{\degree} oder \SI{135}{\degree} gegen den Polarisator 2 verdreht. Hierbei sind zwischen je zwei Polarisatoren wieder gemeinsame Komponenten vorhanden und das Licht kann hindurchgelangen. Dies wird durch die Gesetze von Fresnel und Arago vorausgesagt.
+
+
+\subsection{Michelson-Interferometer}
+\label{subsec:diskussion_michelson}
+
+Mit dem Versuchsaufbau zum Michelson-Interferometer wurde abermals die Wellenlänge des verwendeten Laserlichts bestimmt. Der Wert ergab sich zu \(\lambda_{\text{Sammellinse}} = \lambda_{\text{Streulinse}} = \SI{530(30)}{nm}\), was sich signifikant mit dem Literaturwert von $\lambda_{\text{lit}}=\SI{532}{nm}$ deckt. Auffallend ist, dass die Messungen mit beiden Linsen dieselben Werte liefern, was jedoch nicht weiter verwunderlich ist, da (innerhalb der Unsicherheit) dieselben Distanzen an der Mikrometerschraube abgelesen wurden.
+
+Besonders heikel war der Umgang mit dem Interferometer bezüglich Erschütterungen und Temperaturänderungen. Bereits zu Beginn des Experiments fiel sofort auf, dass das Interferometer extrem sensibel auf bereits kleinste Erschütterungen reagiert. Auch das bloße Berühren der Spiegelhalterung verschiebt diese insofern als dass es auf der Projektion klar ersichtlich ist. Auch aufgewirbelte Luft destabilisiert das Bild, weswegen darauf Augenmerk während des Experimentierens gelegt wurde. Der Aufbau befand sich jedoch dankenswerterweise hinter einer geöffneten Tür, sodass diese gewissen Schutz gegen Luftzüge bot.
+
+Zusätzlich zur Projektion auf der Bildfläche des Interferometers (\autoref{fig:michelson_konz_sammel}) wird auch eine Projektion zum Eingang -- dem Teil des Interferometers, bei dem der Laserstrahl eintritt -- (\autoref{fig:michelson_konz_sammel_tuer}) zurückgeworfen.
+Das zum Eingang zurückgeworfene Muster ist genau komplementär zum gewünscht projizierten.
+
+Die Position des Spiegels bei möglichst exakt gleich langen Armen des Interferometers beläuft sich laut Messung auf \SI{2470(10)}{\micro\meter} (untersetzungsfaktorbereinigt).
+
+Anschließend wurden Polarisationsfolien in die Interferometerarme eingebracht und die Reaktion der Projektion darauf untersucht. Bringt man zuerst nur einen Filter, der das Licht \SI{45}{\degree} zur Senkrechten polarisiert, verändert sich die Projektion nicht merkbar (\autoref{fig:michelson_pol_vor}), da sich der Lichstrahl am Strahlenteiler weiterhin wie gewohnt aufteilen kann. Wird darauffolgend ein Filter in horizontaler Anordnung in einem der beiden Arme platziert, verzerrt die Projektion deutlich (\autoref{fig:michelson_pol_2_horizontal}), da der vertikale Teil eines Strahls nun nicht mehr transmittiert wird. Bringt man auch noch einen zweiten horizontalen Polarisator in den zweiten Arm, ändert sich das Bild relativ zum vorangegangenen nur geringfügig (\autoref{fig:michelson_pol_1_horizontal}), beide Teilstrahlen besitzen nun nur mehr eine horizontale Komponente. Als vorletzter Versuch wurde nun eine der beiden eingebrachten Polarisationsfolien um \SI{90}{\degree} gedreht (\autoref{fig:michelson_pol_mixed}), wonach kein Interferenzmuster mehr auf der Projektionsebene erkennbar ist, da die beiden Teilstrahlen keine gleich polarisierten Anteile mehr aufweisen. Bringt man nun als letzten Versuch noch eine dritte Polarisationsfolie P3 ins Ende des Strahlengangs ein und dreht diese um \SI{45}{\degree}, so ist wieder ein Interferenzmuster erkennbar, was auch durch die Gesetze von Fresnel und Arago vorausgesagt wird.
+
+Es wurde darüberhinaus beobachtet, dass der Wechsel zwischen Maximum und Minimum bei der Änderung des Interferometerarmes bei der halben Wellenlänge $\nicefrac{\lambda}{2}$ erfolgt, was theoretisch belegbar ist.
+
+
 
 \section{Zusammenfassung}
 \label{sec:zusammenfassung}
+
+Im vorliegenden Laborversuch zur Interferometrie wurden vier separate Teilversuche behandelt.
+
+Beim Versuch zum Young'schen Doppelspalt inklusive Liniengitter wurde die Auswertung von Spaltbreite sowie -abstand auf das Interferenzmuster grünen Laserlichts untersucht. Aus den vermessenen Positionen der Interferenzmaxima wurde je Doppelspalt die Wellenlänge des Lasers berechnet. Diese wurden abermals über die vier Doppelspalte hinweg gemittelt, sodass sich ergibt die resultierende experimentell bestimmte Wellenlänge aus dem Versuch zum Young'schen Doppelspalt zu \(\lambda = \SI{528(5)}{\nano\meter}\) ergibt. Dieser Wert stimmt mit dem Literaturwert $\lambda_{\text{lit}}=\SI{532}{nm}$ überein. Weiters wurde die Gitterkonstante des verwendeten Gitters mit \(g = \SI{96(9)}{\micro\meter}\) beziffert.
+
+Beim zweiten Versuch zum Shearing-Interferometer wurde der Radius der Wellenfront experimentell bestimmt und mit \(r=\SI{153(18)}{m}\) berechnet.
+
+Beim dritten Teilversuch zur Polarisation des Lichts wurde die Winkelabhängigkeit der durch einen Polarisator transmittierten Intensität aufgezeichnet und mit dem Gesetz von Malus theoretisch verglichen. Der Trend der Kurven stimmte überein.
+
+Beim letzten Teilversuch wurde mit einem Michelson-Interferometer experimentiert, dessen Reaktion auf Vibrationen und thermische Schwankungen beobachtet sowie der Einfluss von unterschiedlich orientierten Polarisationsfolien in den beiden Strahlengängen untersucht. Weiters wurde abermals die Wellenlänge des verwendeten Laserlichts berechnet und mit \(\lambda_{\text{Michelson}} = \SI{530(30)}{nm}\) beziffert.
+
 
 
 \clearpage
