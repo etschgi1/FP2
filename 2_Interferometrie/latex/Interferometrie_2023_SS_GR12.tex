@@ -58,30 +58,30 @@ Der folgende Laborversuch besteht aus vier separaten Teilversuchen, welche sich 
 \begin{itemize}
     \item \textbf{Young'scher Doppelspalt}
           \begin{itemize}
-              \item Bestimmen des Beugungsmusters von vier Doppelspalten mit unterschiedlichen Spaltbreiten und Spaltabständen
-              \item Berechnen der Wellenlänge des Lasers
-              \item Erklären der Beugungsmuster durch Vergleich mit errechneten Mustern
-              \item Bestimmen der Beugungsmuster eines Liniengitters und Vergleich mit errechneten Werten
-              \item Bestimmen der Gitterkonstante
+              \item Aufzeichnen des Beugungsmusters von vier Doppelspalten mit unterschiedlichen Spaltbreiten und Spaltabständen % check
+              \item Berechnen der Wellenlänge des Lasers % check
+              \item Erklären der aufgezeichneten Beugungsmuster durch Vergleich mit theoretisch errechneten Mustern % TODO
+              \item Aufzeichnen des Beugungsmusters eines Liniengitters % check
+              \item Bestimmen der Gitterkonstante % check
           \end{itemize}
     \item \textbf{Wellenfront-Analyse / Shearing Interferometer}
           \begin{itemize}
-              \item Vermessen des Interferenzmusters
-              \item Berechnen des Wellenfrontradius
+              \item Vermessen des Interferenzmusters % check
+              \item Berechnen des Wellenfrontradius % check
           \end{itemize}
     \item \textbf{Polarisation}
           \begin{itemize}
-              \item Darstellen der winkelabhängigen Transmission zusammen mit dem theoretischen Verlauf
-              \item Verifizieren des Gesetzes von Malus
-              \item Untersuchen des Einflusses des Durchlasswinkels eines weiteren Polarisators zwischen zwei gekreuzten Polarisatoren
+              \item Darstellen der winkelabhängigen Transmission zusammen mit dem theoretischen Verlauf % check
+              \item Verifizieren des Gesetzes von Malus % TODO
+              \item Untersuchen des Einflusses des Durchlasswinkels eines weiteren Polarisators zwischen zwei gekreuzten Polarisatoren % TODO
           \end{itemize}
     \item \textbf{Michelson Interferometer}
           \begin{itemize}
-              \item Justieren und generieren von konzentrischen Interferenzmustern
-              \item Bestimmen der Wellenlänge des Lasers durch Weglängenänderung
-              \item Untersuchen des absoluten Weglängenunterschieds in den beiden Interferometerarmen sowie Auflösung und Stabilität des Interferometers
-              \item Justieren und generieren von streifenförmigen Interferenzmustern
-              \item Untersuchen der Rolle der Polarisation auf die Interfenzfähigkeit des Laserlichts
+              \item Justieren und generieren von konzentrischen Interferenzmustern % check
+              \item Bestimmen der Wellenlänge des Lasers durch Weglängenänderung % check
+              \item Untersuchen des absoluten Weglängenunterschieds in den beiden Interferometerarmen sowie Auflösung und Stabilität des Interferometers % TODO
+              \item Justieren und generieren von streifenförmigen Interferenzmustern % check
+              \item Untersuchen der Rolle der Polarisation auf die Interfenzfähigkeit des Laserlichts % TODO
           \end{itemize}
 \end{itemize}
 
@@ -92,13 +92,20 @@ Der folgende Laborversuch besteht aus vier separaten Teilversuchen, welche sich 
 \subsection{Young'scher Doppelspalt}
 \label{sec:grundlagen_youngscher_doppelspalt}
 
-Bescheint man mit einer Lichtquelle zwei eng beieinanderliegende Spalte mit dem Abstand $d$ und projiziert das Bild auf einen ansonsten undurchsichtigen Schirm, so wirkt der Spalt als kohärente Lichtquelle (Anmerkung: Dies ist evident für eine kohärente Lichtquelle, gilt für eine thermische Lichtquelle aber nur unter bestimmten Bedingungen, jenen der räumlichen Kohärenz). Die Wellen aus den Spalten überlagern sich in Abhängigkeit vom Beobachtungswinkel konstruktiv oder destruktiv, was auf einen Schirm projiziert eine Abfolge an Intensitätsmaxima und -minima ergibt. Unter der Bedingung, dass der Abstand zwischen Doppelspalt und Beobachtungsebene viel größer als der Spaltabstand $d$ ist, ergibt sich der optische Gangunterschied $\Delta$ in die durch den Winkel $\phi$ definierte Richtung als
+Bescheint man mit einer Lichtquelle zwei eng beieinanderliegende Spalte mit dem Abstand $d$ und projiziert das Bild auf einen ansonsten undurchsichtigen Schirm, so wirkt der Spalt als kohärente Lichtquelle. Dies ist evident für eine kohärente Lichtquelle, gilt für eine thermische Lichtquelle aber nur unter der Bedingung räumlicher Kohärenz. Die Wellen aus den Spalten überlagern sich in Abhängigkeit vom Beobachtungswinkel konstruktiv oder destruktiv, was auf einen Schirm projiziert eine Abfolge an Intensitätsmaxima und -minima ergibt.
+
+Konstruktive Interferenz tritt bei ganzzahlig Vielfachen $n$ der Wellenlänge $\lambda$ auf, dies nennt man auch den \textit{optischen Gangunterschied} $\Delta$.
+\begin{equation}
+    \label{eq:konstruktive_interferenz}
+    \Delta = n \lambda
+\end{equation}
+Unter der Bedingung, dass der Abstand zwischen Doppelspalt und Beobachtungsebene $z$ viel größer als der Spaltabstand $d$ ist, ergibt sich der optische Gangunterschied in die durch den Winkel $\phi$ definierte Richtung als
 \begin{equation}
     \label{eq:optischer_gangunterschied}
     \Delta = \frac{2 \pi d}{\lambda} \sin(\phi)
 \end{equation}
 mit $\lambda$ der Wellenlänge.
-Mit der Näherung $\sin(\phi) \approx \nicefrac{x}{z}$ (erfüllt für große Abstände $z$ zwischen Doppelspalt und Schirm) ergibt sich ein Streifenmuster mit der Periode $x$ der Form
+Mit der Näherung $\sin(\phi) \approx \nicefrac{x}{z}$ (erfüllt für große Abstände $z$ zwischen Doppelspalt und Schirm, $x$ Abstand vom 0. Maximum zum n. Maximum) ergibt sich ein Streifenmuster mit der Periode $x$ der Form
 \begin{equation}
     \label{eq:intensity_interferenz}
     I_{\text{Interferenz}}(x) = I_0 \left(1 + \cos(\frac{2 \pi x d}{\lambda z}) \right)
@@ -113,6 +120,24 @@ Das Beugungsmuster des Doppelspalts ergibt sich multiplikativ als
     \label{eq:intensity_gesamt}
     I(x) = I_{\text{Interferenz}}(x) \cdot I_{\text{Beugung}}(x).
 \end{equation}
+Möchte man abschließend noch den optischen Gangunterschied mit den Abständen vom und auf dem Schirm in Verbindung bringen, so ergibt sich \autoref{eq:konstruktive_interferenz_approx}.
+\begin{equation}
+    \label{eq:konstruktive_interferenz_approx}
+    n \lambda = d \cdot \frac{x}{z}
+\end{equation}
+
+Ein Liniengitter ist de facto nur eine Ansammlung vieler Spalte, gewissermaßen ein $N$-fachspalt. Allgemein treten bei einem Gitter Beugungs- und Interferenzeffekt auf (wie bei \autoref{eq:intensity_gesamt}), dies beschreibt \autoref{eq:intensity_gitter}. $N$ beschreibt dabei die Anzahl an Spalten, die mit der Intensität $I_0$
+bestrahlt werden, $D$ die Breite des Spaltes, $d$ den Abstand zwischen den benachbarten Spalten, $\lambda$ die Wellenlänge des Lichtes und $\theta$ den Winkel zur Flächennormale.
+\begin{equation}
+    \label{eq:intensity_gitter}
+    I(\theta) = I_0 \cdot \underbrace{\left[ \frac{\sin(N \pi \cdot \nicefrac{d}{\lambda} \cdot \sin(\theta))}{\sin(\pi \cdot \nicefrac{d}{\lambda} \cdot \sin(\theta))} \right]^2}_{\text{Gitterfunktion}} \cdot \underbrace{\left[ \frac{\sin(\pi \cdot \nicefrac{D}{\lambda} \cdot \sin(\theta))}{(\pi \cdot \nicefrac{D}{\lambda} \cdot \sin(\theta))} \right]^2}_{\text{Einzelspaltfunktion}}
+\end{equation}
+Möchte man abschließend noch den optischen Gangunterschied mit den Abständen vom und auf dem Schirm in Verbindung bringen, so ergibt sich \autoref{eq:konstruktive_interferenz_approx}.
+\begin{equation}
+    \label{eq:konstruktive_interferenz_approx_gitter}
+    n \lambda = g \cdot \frac{x}{z}
+\end{equation}
+wobei $g$ die Gitterkonstante bezeichnet.
 
 
 \subsection{Shearing-Interferometer / Wellenfront-Analyse}
@@ -349,20 +374,20 @@ Es ergeben sich für die vier Doppelspalte folgende Interferenzbilder in den Abb
     \begin{minipage}[t]{0.45\linewidth}
         \centering
         \includegraphics[width=\linewidth]{fig/Compressed/DS1_0_20_25.jpg}
-        \caption{Interferenzmuster des Doppelspalts $i = 1$}
+        \caption{Interferenzmuster des Doppelspalts 1}
         \label{fig:DS_1_interferenzmuster}
         \includegraphics[width=\linewidth]{fig/Compressed/DS3_0_10_5.jpg}
-        \caption{Interferenzmuster des Doppelspalts $i = 3$}
+        \caption{Interferenzmuster des Doppelspalts 3}
         \label{fig:DS_3_interferenzmuster}
     \end{minipage}%
     \hspace*{\fill}
     \begin{minipage}[t]{0.45\linewidth}
         \centering
         \includegraphics[width=\linewidth]{fig/Compressed/DS2_0_10_25.jpg}
-        \caption{Interferenzmuster des Doppelspalts $i = 2$}
+        \caption{Interferenzmuster des Doppelspalts 2}
         \label{fig:DS_2_interferenzmuster}
         \includegraphics[width=\linewidth]{fig/Compressed/DS4_0_11.jpg}
-        \caption{Interferenzmuster des Doppelspalts $i = 4$}
+        \caption{Interferenzmuster des Doppelspalts 4}
         \label{fig:DS_4_interferenzmuster}
     \end{minipage}
 \end{figure}
@@ -377,24 +402,41 @@ Neben der fotografischen Dokumentation werden auch die Abstände der Maxima mitt
         \caption[Messwerte Doppelspalten]{Messwerte der Doppelspalten. Unsicherheit der Messung: $\Delta l_i = \SI{0.5}{\milli\meter}$}
         \label{tab:messwerte_doppelspalten}
         \begin{tblr}{colspec={Q S[table-format=2.1] S[table-format=2.1] S[table-format=2.1] S[table-format=2.1]}, row{1}={guard}}
-            $i$ & $l_1$ / \unit{\milli\meter} & $l_2$ / \unit{\milli\meter} & $l_3$ / \unit{\milli\meter} & $l_4$ / \unit{\milli\meter} \\
-            0   & 0.0                         & 0.0                         & 0.0                         & 0.0                         \\
-            1   & 5.0                         & 5.0                         & 2.5                         & 1.5                         \\
-            2   & 11.0                        & 11.0                        & 8.0                         & 2.5                         \\
-            3   & 16.0                        & 16.0                        & 10.5                        & 4.0                         \\
-            4   & 21.0                        & 22.0                        & 13.0                        & 5.5                         \\
-            5   & 27.0                        & 27.0                        & 16.0                        & 6.5                         \\
-            6   & 33.0                        & 32.0                        & 18.5                        & 8.0                         \\
-            7   & 38.0                        & 38.0                        & 21.0                        & 9.5                         \\
-            8   & 43.0                        & 43.0                        & 24.0                        & 10.5                        \\
-            9   & 49.0                        & 48.0                        & 26.5                        & 12.0                        \\
-            10  & 55.0                        & 54.0                        & 29.0                        & 13.5                        \\
-            11  & 58.0                        & {{{-}}}                     & {{{-}}}                     & 15.0                        \\
+            $i$ & $l_{1,i}$ / \unit{\milli\meter} & $l_{2,i}$ / \unit{\milli\meter} & $l_{3,i}$ / \unit{\milli\meter} & $l_{4,i}$ / \unit{\milli\meter} \\
+            0   & 0.0                             & 0.0                             & 0.0                             & 0.0                             \\
+            1   & 5.0                             & 5.0                             & 2.5                             & 1.5                             \\
+            2   & 11.0                            & 11.0                            & 8.0                             & 2.5                             \\
+            3   & 16.0                            & 16.0                            & 10.5                            & 4.0                             \\
+            4   & 21.0                            & 22.0                            & 13.0                            & 5.5                             \\
+            5   & 27.0                            & 27.0                            & 16.0                            & 6.5                             \\
+            6   & 33.0                            & 32.0                            & 18.5                            & 8.0                             \\
+            7   & 38.0                            & 38.0                            & 21.0                            & 9.5                             \\
+            8   & 43.0                            & 43.0                            & 24.0                            & 10.5                            \\
+            9   & 49.0                            & 48.0                            & 26.5                            & 12.0                            \\
+            10  & 55.0                            & 54.0                            & 29.0                            & 13.5                            \\
+            11  & 58.0                            & {{{-}}}                         & {{{-}}}                         & 15.0                            \\
         \end{tblr}
     \end{samepage}
 \end{table}
 
-Die eben beschriebene Messung wird nun in analoger Weise nochmals mit dem Gitter durchgeführt. Die Messungen ergeben die in \autoref{tab:messwerte_gitter} angeführten Werte. Dabei bleibt der Abstand zum Schirm $l_\text{Schirm} = \SI{2520(5)}{\milli\meter}$ konstant.
+Die eben beschriebene Messung wird nun in analoger Weise nochmals mit dem Gitter durchgeführt (\autoref{fig:gitter_interferenzmuster}). Die Messungen ergeben die in \autoref{tab:messwerte_gitter} angeführten Werte. Dabei bleibt der Abstand zum Schirm $l_\text{Schirm} = \SI{2520(5)}{\milli\meter}$ konstant.
+
+\setcapindent{0pt}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/Compressed/Gitter_8_per_mm.jpg}
+    \end{minipage}%
+    \hspace*{\fill}
+    \begin{minipage}[t]{0.45\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/Compressed/Gitter_8_per_mm_overview.jpg}
+    \end{minipage}
+    \caption[Interferenzmuster des Gitters]{Interferenzmuster des Gitters mit Gitterkonstante $g=\SI{8}{'\per\milli\meter}$. Links: Nahaufnahme, rechts: Übersicht über das gesamte Interferenzmuster.}
+    \label{fig:gitter_interferenzmuster}
+\end{figure}
+\setcaphanging
 
 \begin{table}[H]
     \centering
@@ -578,11 +620,79 @@ Dazu wird zuerst, wie in \autoref{fig:michelson_pol_vor} ersichtlich, nur ein Fi
 \setcaphanging
 %! maybe noch was anderes hier aber sollte sonst gach eh mal passen. 
 
+
+
 \section{Auswertung}
 \label{sec:auswertung}
 
 \subsection{Young'scher Doppelspalt}
 \label{subsec:auswertung_doppelspalt}
+
+Aus den aufgenommenen Interferenzmuster der vier Young'schen Doppelspalte aus den Abbildungen \ref{fig:DS_1_interferenzmuster} bis \ref{fig:DS_4_interferenzmuster} können Intensitätskurven gewonnen werden. Dafür wird zuerst ein Bereich von Interesse ausgeschnitten und zusätzliche mit einem Graufilter belegt, sodass die Intensitätsunterschiede zulasten der Farbdarstellung besser ersichtlich werden. Dies erfolgt mit der Bildbearbeitungssoftware \textit{paint.net}. Aus diesen bearbeiteten Bildern werden mithilfe der Software \textit{ImageJ} Intensitätskurven extrahiert. Da die einzelnen Intensitätsmaxima auch direkt im Labor mit einem Lineal gemessen worden sind, ist die Umrechnung von Pixelpositionen in reale relative Abstände ein leichtes. Hierfür wird pro Doppelspaltintensitätskurve je das 0. und 1. Maximum herangezogen, wobei das 0. Maximum als Koordinatenursprung gewählt wird. Die extrahierten Intensitätskurven sowie die theoretischen Verläufe (Produkt aus Intensität für Beugung und Interferenz, \autoref{eq:intensity_gesamt}) aufgrund der Abmessungen des jeweiligen Doppelspalts werden gegen relative Abstände zum 0. Maximum aufgetragen und sind in den Abbildungen \ref{fig:intensitaet_DS_1} bis \ref{fig:intensitaet_DS_4} ersichtlich. Die mit dem Lineal gemessenen Position der Maxima sind zusätzlich mit einem vertikalen Balken inklusive Unsicherheitsband eingezeichnet.
+%
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=\linewidth]{../python/plots/young_1.pdf}
+        \caption[Intensitätskurve DS 1]{Gemessener und theoretischer Intensitätsverlauf des Doppelspalts 1, Messkurve aus \autoref{fig:DS_1_interferenzmuster} extrahiert.}
+        \label{fig:intensitaet_DS_1}
+    \end{samepage}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=\linewidth]{../python/plots/young_2.pdf}
+        \caption[Intensitätskurve DS 2]{Gemessener und theoretischer Intensitätsverlauf des Doppelspalts 2, Messkurve aus \autoref{fig:DS_2_interferenzmuster} extrahiert.}
+        \label{fig:intensitaet_DS_2}
+    \end{samepage}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=\linewidth]{../python/plots/young_3.pdf}
+        \caption[Intensitätskurve DS 3]{Gemessener und theoretischer Intensitätsverlauf des Doppelspalts 3, Messkurve aus \autoref{fig:DS_3_interferenzmuster} extrahiert.}
+        \label{fig:intensitaet_DS_3}
+    \end{samepage}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=\linewidth]{../python/plots/young_4.pdf}
+        \caption[Intensitätskurve DS 4]{Gemessener und theoretischer Intensitätsverlauf des Doppelspalts 4, Messkurve aus \autoref{fig:DS_4_interferenzmuster} extrahiert.}
+        \label{fig:intensitaet_DS_4}
+    \end{samepage}
+\end{figure}
+%
+Nach \autoref{eq:konstruktive_interferenz_approx} und den per Lineal gemessenen Abständen zwischen 0-tem und $n$-tem Intensitätsmaximum lassen sich je Doppelspalt $n$ Wellenlängen $\lambda_n$ berechnen. Es wird $n=8$ gewählt. Die so erhaltenen Werte werden statistische gemittelt und mit einem Student-t-Korrekturfaktor mit Signifikanzniveau $1\sigma$ versehen. Pro Doppelspalt ergibt sich so eine resultierende berechnete Wellenlänge, diese sind in \autoref{tab:auswertung_wellenlaenge_doppelspalt} zusammengefasst.
+%
+\begin{table}[H]
+    \centering
+    \begin{samepage}
+        \caption[]{Berechnete Werte der Wellenlängen $\lambda_i$ in \si{\nano\meter} je Doppelspalt $i$ nach \autoref{eq:konstruktive_interferenz_approx} aus je den ersten $n=8$ Intensitätsmaxima. Unsicherheit $\Delta \lambda_i$ in \si{\nano\meter} mit Student-t-Korrekturfaktor mit Signifikanzniveau $1\sigma$.}
+        \label{tab:auswertung_wellenlaenge_doppelspalt}
+        \begin{tblr}{colspec={Q S[table-format=3] S[table-format=2]}, row{1}={guard}}
+            $i$ / 1 & $\lambda_i$ / \si{\nano\meter} & $\Delta \lambda_i$ / \si{\nano\meter} \\
+            1       & 531                            & 7                                     \\
+            2       & 532                            & 7                                     \\
+            3       & 630                            & 40                                    \\
+            4       & 534                            & 12                                    \\
+        \end{tblr}
+    \end{samepage}
+\end{table}
+%
+Derselbe Prozess wie für die vier Doppelspalte wird nun abermals für das Gitter wiederholt. Ein Plot der Messdaten auf Basis der Auswertung durch die Software \textit{ImageJ} findet sich auf \autoref{fig:intensitaet_gitter}. Auf die Darstellung des theoretischen Verlaufs wird verzichtet.
+%
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=\linewidth]{../python/plots/grating.pdf}
+        \caption[Intensitätskurve Gitter]{Gemessener Intensitätsverlauf des Gitters, Messkurve aus \autoref{fig:DS_4_interferenzmuster} (rechts) extrahiert.}
+        \label{fig:intensitaet_gitter}
+    \end{samepage}
+\end{figure}
+%
+Durch Äquivalenzumformung von \autoref{eq:intensity_gitter} kann schließlich die Gitterkonstante $g$ in \si{m} aus den gemessenen Positionen der Intensitätsmaxima aus \autoref{tab:messwerte_gitter} berechnet werden. Die resultierenden Werte werden wieder mit Hilfe einer Student-t-Verteilung statistisch gemittelt und korrigiert. Die Gitterkonstante ergibt sich zu:
+\[g = \SI{96(9)}{\micro\meter}\]
 
 
 
