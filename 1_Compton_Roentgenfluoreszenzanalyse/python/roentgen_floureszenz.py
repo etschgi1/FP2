@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 from matplotlib import rcParams
 import scipy as sp
+from math import ceil
 import labtool as lt
 
 
@@ -42,39 +43,69 @@ def find_highest_peak(counts):
     return max_index, max_value
 
 
+font_size = 16
+
+
+def latex_print(peaksdict):
+    for key, value in peaksdict.items():
+        if len(value) == 1:
+            print(f"{key} & {value[0]:.2f} &  \\\\")
+        else:
+            print(f"{key} & {value[0]:.2f} & {value[1]:.2f} \\\\")
+
+
 def plot_all_counts_over_engergy(data):
-    fig, ax = plt.subplots(3, 4, figsize=(18.5, 10.5))
+    split_plot = True
+    fig, ax = plt.subplots() if split_plot else plt.subplots(3, 4, figsize=(18.5, 10.5))
     peaks_found = {}
+    c = 0
     for i, d in enumerate(data):
+        c += 1
         energy_numpy = np.array(d["Energie E_A / keV"])
         counts_numpy = np.array(d["Ereignisse N_A"])
         idx, val = find_highest_peak(counts_numpy)
         peaks_found[filenames[i]] = [
             energy_numpy[idx]]  # energy, counts
-        ax[i // 4, i %
-            4].plot(energy_numpy, counts_numpy)
-        ax[i // 4, i % 4].set_title(filenames[i])
-        ax[i // 4, i % 4].set_xlabel("Energie / keV")
-        ax[i // 4, i % 4].set_ylabel("Ereignisse / 1")
-        ax[i // 4, i % 4].grid()
-        ax[i // 4, i % 4].axvline(energy_numpy[idx],
-                                  color="black", linestyle="--")
-        ax[i // 4, i % 4].text(energy_numpy[idx] * 1.08, max(counts_numpy) * 0.9,
-                               f"K-alpha: {energy_numpy[idx]:.2f} keV")
+        pos = ax if split_plot else ax[i // 4, i % 4]
+        pos.plot(energy_numpy, counts_numpy)
+        pos.set_title(filenames[i], fontsize=font_size)
+        pos.set_xlabel(r"$\sqrt{\frac{E}{R_y}}$ / 1", fontsize=font_size)
+        pos.set_ylabel(r"counts / 1", fontsize=font_size)
+        pos.tick_params(labelsize=font_size)
+        pos.grid()
+        pos.axvline(energy_numpy[idx],
+                    color="black", linestyle="--")
+        pos.text(energy_numpy[idx] * 1.08, max(counts_numpy) * 0.9,
+                 f"K-alpha: {energy_numpy[idx]:.2f} keV", fontsize=font_size)
         if filenames[i] in k_beta_peak_hints:
             peaks_found[filenames[i]] += [k_beta_peak_hints[filenames[i]]]
-            ax[i // 4, i %
-                4].axvline(k_beta_peak_hints[filenames[i]], color="gray", linestyle="--")
-            ax[i // 4, i % 4].text(k_beta_peak_hints[filenames[i]] * 1.08, max(counts_numpy) * 0.7,
-                                   f"K-beta: {k_beta_peak_hints[filenames[i]]:.2f} keV", color="gray")
+            pos.axvline(k_beta_peak_hints[filenames[i]],
+                        color="gray", linestyle="--")
+            pos.text(k_beta_peak_hints[filenames[i]] * 1.08, max(counts_numpy) * 0.7,
+                     f"K-beta: {k_beta_peak_hints[filenames[i]]:.2f} keV", color="gray", fontsize=font_size)
+        if split_plot:
+            plt.tight_layout()
+            # set aspect ratio
+            fig.set_size_inches(5, 3.0)
+            plt.savefig(
+                "1_Compton_Roentgenfluoreszenzanalyse/plots/roentgen_data_{}.pdf".format(c))
+            plt.savefig(
+                "1_Compton_Roentgenfluoreszenzanalyse/plots/roentgen_data_{}.png".format(c))
+            plt.close()
+            fig, ax = plt.subplots()
+            continue
 
     plt.tight_layout()
-    # delete empty axes
-    for a in ax.flat:
-        # check if something was plotted
-        if not bool(a.has_data()):
-            fig.delaxes(a)  # delete if nothing is plotted in the axes obj
+    try:
+        # delete empty axes
+        for a in ax.flat:
+            # check if something was plotted
+            if not bool(a.has_data()):
+                fig.delaxes(a)  # delete if nothing is plotted in the axes obj
+    except:
+        pass
     print(peaks_found)
+    latex_print(peaks_found)
     plt.savefig("1_Compton_Roentgenfluoreszenzanalyse/plots/roentgen_data.pdf")
     plt.savefig("1_Compton_Roentgenfluoreszenzanalyse/plots/roentgen_data.png")
     # plt.show()
@@ -169,11 +200,12 @@ def plot_Ordnungszahl_against_mod_energy(energy_peaks):
                          alpha=False) for i in range(len(scatter_x_beta))])
     print(f"Abschirmung alpha: {const_alpha:.6f}")
     print(f"Abschirmung beta: {const_beta:.6f}")
-    lab_a, lab_b = r"$\sigma_{2,1,exp}=$" + str(round(const_alpha.n, 2)) + r"$\pm$" + str(round(const_alpha.s, 2)), r"$\sigma_{2,1,exp} = $" + \
-        str(round(const_beta.n, 2)) + r"$\pm$" + str(round(const_beta.s, 2))
-    ax.text(0.7, 0.1, lab_a,
+    lab_a, lab_b = r"$\sigma_{2,1,exp}=$" + str(round(const_alpha.n, 2)) + r"$\pm$" + str(ceil(const_alpha.s * 100) / 100), r"$\sigma_{2,1,exp} = $" + \
+        str(round(const_beta.n, 2)) + r"$\pm$" + \
+        str(ceil(const_beta.s * 100) / 100)
+    ax.text(0.7, 0.15, lab_a,
             transform=ax.transAxes, va="top")
-    ax.text(0.7, 0.05, lab_b,
+    ax.text(0.7, 0.075, lab_b,
             transform=ax.transAxes, va="top")
     plt.title("Moseleysches Gesetz für K-alpha- und K-beta-Übergänge")
     plt.savefig(

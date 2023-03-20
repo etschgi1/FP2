@@ -164,16 +164,152 @@ Alle Teilversuche wurden bei einer Umgebungstemperatur von \SI{24(1)}{\celsius} 
 
 \section{Auswertung}
 \label{sec:auswertung}
+Die gegeben der Beschreibung in \ref{subsec:durchfuehrung_compton} erhaltenen Messwerte in \texttt{.csv} - Form werden nun für die jeweiligen Stellungen des Messarms in \autoref{fig:compton_uebersicht1} und \autoref{fig:compton_uebersicht2} dargestellt.
 
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{cc}
+      \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_1.pdf} &
+      \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_2.pdf} \\
+      \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_3.pdf} &
+      \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_4.pdf} \\
+      \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_5.pdf} &
+      \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_6.pdf} \\
+      \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_7.pdf} &
+      \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_8.pdf} \\
+    \end{tabular}
+    \caption{Messwerte bei gegebenem Winkel des Messarms \autoref{tab:compton_uebersicht1} (1)}
+    \label{fig:DS_interferenzmuster}
+  \end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=0.5\textwidth]{../plots/energie_spektren_9.pdf} 
+        \caption{Messwerte bei gegebenem Winkel des Messarms \autoref{tab:compton_uebersicht2} (2)}
+        \label{fig:DS_interferenzmuster_final}
+    \end{samepage}
+\end{figure}
+Anschließend werden jeweiligen Maxima in den Daten ausgewertet, diese ergeben sich zu folgenden Werten in \autoref{tab:energy_compton}. 
+%info Probenhalter wird ohne Winkelfehler angenommen, daher ist der erste Winkel zwischen Probe und Messgerät 10° 
+\begin{table}[H] 
+    \centering
+    \begin{samepage}
+        \caption[Messwerte Compton-Energiemaxima]{Energie $E_S$ der Countmaxima der Compton-Streuung (mit $\Delta E_S=\SI{0.2}{\kilo\electronvolt}$) für verschiedene Winkel $\varphi$ (mit $\Delta \varphi=\SI{0.1}{\degree}$) des Messarms. Zudem ist der Winkel zur Probenoberfläche $\vartheta$ (mit $\Delta \vartheta=\SI{0.1}{\degree}$) angegeben. Der Winkel des Probentisches mit $\varPsi$ wird bei \SI{20}{\degree} konstant gehalten.}
+        \label{tab:energy_compton}
+        \begin{tblr}{colspec={S[table-format=3.1] S[table-format=2.1]S[table-format=2.1]}, row{1}={guard}}
+            $\varphi$ / \unit{\degree} & $E_S$ / \unit{\kilo\electronvolt} &$\vartheta$ / \unit{\degree} \\
+            28.4 & 17.4 & 6.8 \\
+            43.4 & 17.3 & 21.8 \\
+            58.4 & 17.2 & 36.8 \\
+            73.4 & 17.1 & 51.8 \\
+            88.4 & 16.9 & 66.8 \\
+            103.4 & 16.7 & 81.8 \\
+            118.4 & 16.7 & 96.8 \\
+            133.4 & 16.6 & 111.8 \\
+            148.4 & 16.4 & 126.8 \\
+        \end{tblr}
+    \end{samepage}
+\end{table}
+Die so erhaltenen Daten werden nun mittels \autoref{eq:compton_energy} in \autoref{fig:compton_energy} gefittet um auf diesem Wege die Elektronenmasse zu bestimmen. So ergibt sich im vorliegenden Versuch die Elektronenmasse zu 
+\[m_e = \SI{1.07(11)E-30}{\kilogram}\]
 
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=0.95\textwidth]{../plots/energie_winkel.pdf} 
+        \caption{Gestreute Energie $E_S$ aus \autoref{tab:energy_compton} aufgetragen gegen den Winkel $\varphi$ des Messarms. Fitkurve mit 2-$\sigma$-Unsicherheitband.}
+        \label{fig:compton_energy}
+    \end{samepage}
+\end{figure}
+\newpage
+\subsection{Röntgenfloureszenzanalyse}
+\label{subsec:roentgenfloureszenzanalyse}
+Auch für den zweiten Teilversuch liegen die Daten in \texttt{.csv} - Form vor. Diese werden nun in \autoref{fig:roentgenfloureszenz1} und \autoref{fig:roentgenfloureszenz2} für die benutzten zu untersuchenden Materialien dargestellt. Zusätzlich sind die Energien der bestimmten $K_{\alpha}$- und $K_{\beta}$ - Linien ebenfalls in den beiden Abbildungen angeführt.
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{cc}
+      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_1.pdf} &
+      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_2.pdf} \\
+      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_3.pdf} &
+      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_4.pdf} \\
+      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_5.pdf} &
+      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_6.pdf} \\
+    \end{tabular}
+    \caption{Messwerte und $K_{\alpha}$- und $K_{\beta}$-Linien für die zu untersuchenden bekannten und unbekannten Materialien. (1)}
+    \label{fig:roentgenfloureszenz1}
+  \end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{cc}
+      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_7.pdf} &
+      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_8.pdf} \\
+      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_9.pdf} &
+      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_10.pdf} \\
+      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_11.pdf} &\\
+    \end{tabular}
+    \caption{Messwerte und $K_{\alpha}$- und $K_{\beta}$-Linien für die zu untersuchenden bekannten und unbekannten Materialien. (2)}
+    \label{fig:roentgenfloureszenz2}
+  \end{figure}
+Die ermittelten Werte für die $K_{\alpha}$- und $K_{\beta}$-Linien werden in \autoref{tab:roentgenfloureszenz} nochmals angeführt.
+\begin{table}[H] 
+    \centering
+    \begin{samepage}
+        \caption[Bestimmte $K_{\alpha}$- und $K_{\beta}$-Linien ]{Bestimmte  $K_{\alpha}$- und $K_{\beta}$-Linien aus \autoref{fig:roentgenfloureszenz1} und \autoref{fig:roentgenfloureszenz2}. Die Unsicherheit der bestimmten Energien in beiden Fällen $\Delta E = \SI{0.1}{\kilo\electronvolt}$.}
+        \label{tab:roentgenfloureszenz}
+        \begin{tblr}{colspec={S[table-format=1.0]Q S[table-format=2.2]S[table-format=2.2]}, row{1}={guard}}
+            Ordnungszahl & Elementformel & $E_{K_{\alpha}}$ / \si{\kilo\electronvolt} & $E_{K_{\beta}}$ / \si{\kilo\electronvolt} \\
+            47& Ag & 21.47 & 24.10 \\
+            29& Cu & 7.91 & 8.75 \\
+            26& Fe & 6.27 &  \\
+            42& Mo & 17.24 & 19.15 \\
+            28& Ni & 7.39 &  \\
+            22& Ti & 4.54 &  \\
+            30& Zn & 8.51 & 9.40 \\
+            40& Zr & 15.51 & 17.50 \\
+            & Probe1 & 7.91 &  \\
+            & Probe2 & 16.63 &  \\
+            & Ring & 6.18 &  \\
+        \end{tblr}
+    \end{samepage}
+\end{table}
+Trägt man nun die charakteristischen Übergangsenergien aus \autoref{tab:roentgenfloureszenz} -- leicht modifiziert  als $\sqrt{\nicefrac{E}{R_y}}$, $R_y$ meint dabei die Rydbergkonstante -- gegen die Ordnungszahl auf, so kann über die Steigung eines linearen Fits die Abschirmkonstante ermittelt werden. In \autoref{fig:roentgen_z_vs_e} ist dieser Fit für die $K_{\alpha}$-Linien und $K_{\beta}$-Linien dargestellt. Die Abschirmkonstanten für die $K_{\alpha}$-Linien und $K_{\beta}$-Linien wurden somit zu:
+\[\sigma_{\text{2,1,exp}} = \num{1.06(9)} \]
+\[\sigma_{\text{3,1,exp}} = \num{2.14(10)}\]
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=0.95\textwidth]{../plots/roentgen_data_Z_vs_E.pdf} 
+        \caption[Mosley-Gesetz für die $K_{\alpha}$- und $K_{\beta}$-Linien.]{Mosley-Gesetz für die $K_{\alpha}$- und $K_{\beta}$-Linien. $\sqrt{\nicefrac{E}{R_y}}$ gegen die Ordnungszahl aufgetragen. Die Abschirmkonstante wird aus der Steigung der beiden Fits ermittelt.}
+        \label{fig:roentgen_z_vs_e}
+    \end{samepage}
+\end{figure}
+\subsection{Unbekannte Proben}
+\label{sec:roentgen_unbekannt}
+\textbf{TODO}
 \section{Diskussion}
 \label{sec:diskussion}
+\subsection{Compton-Streuung}
+%! powered by GPT-4
+\label{sec:diskussion_compton}
+Die Ergebnisse des Compton-Streuungs-Teilversuchs zeigen, dass die gemessenen Energien der gestreuten Photonen in \autoref{tab:energy_compton} in guter Übereinstimmung mit den theoretischen Erwartungen des Compton-Effekts stehen. Die Abhängigkeit der gestreuten Energie von dem Winkel des Messarms wurde in \autoref{fig:compton_energy} dargestellt, und es zeigt sich eine klare Tendenz, die dem Compton-Effekt entspricht.
+\subsection{Röntgenfluoreszenzanalyse}
+\label{sec:diskussion_roentgen}
+%! powered by GPT-4 & Elias
+Die Ergebnisse der Röntgenfluoreszenzanalyse zeigen, dass die gemessenen Energien der $K_{\alpha}$- und $K_{\beta}$-Linien in guter Übereinstimmung mit den theoretischen Erwartungen stehen. Bei genauer Betrachtung der \autoref{fig:roentgen_z_vs_e} erkennt man, dass ein Fit der ersten paar Punkte -- mit Kernladungszahlen $<35$ -- zu einer Gerade mit höherer Steigung führen würde als einer, welcher lediglich durch die Elemente höherer Ordnungszahlen gegeben wäre. Hier spielt der Einfluss der äußeren Elektronen, welche sich mit steigender Schalenzahl immer weiter von dem Kern entfernen, eine Rolle. Die Abschirmkonstante für die $K_{\alpha}$-Linien und $K_{\beta}$-Linien ist eben nur eine Näherung, wie jedoch auch der Abbildung ersichtlich wird, für viele Fälle eine Gute. 
+
+\subsection{Unbekannte Proben}
+\label{sec:diskussion_unbekannt}
+\textbf{TODO unbekannte Proben}
 
 
 \section{Zusammenfassung}
 \label{sec:zusammenfassung}
+%! powered by GPT-4
+Im ersten Teilversuch, der Compton-Streuung, wurden die Energien der Compton-Streuung für verschiedene Winkel gemessen. Die Messwerte sind in \autoref{tab:energy_compton} dargestellt. Aus den Messwerten wurde mittels einer Fitkurve in \autoref{fig:compton_energy} die Elektronenmasse bestimmt: $m_e = \SI{1.07(11)E-30}{\kilogram}$. Der Literaturwert der Elektronenmasse beträgt etwa $\SI{9.11E-31}{\kilogram}$, was zeigt, dass der ermittelte Wert in der richtigen Größenordnung liegt. 
 
+Im zweiten Teilversuch, der Röntgenfluoreszenzanalyse, wurden die $K_{\alpha}$- und $K_{\beta}$-Linien für verschiedene Elemente und Proben untersucht. Die Messwerte und bestimmten Energien sind in \autoref{tab:roentgenfloureszenz} aufgeführt. Durch Auftragen von $\sqrt{\nicefrac{E}{R_y}}$ gegen die Ordnungszahl und Anpassung einer linearen Fitkurve in \autoref{fig:roentgen_z_vs_e} wurden die experimentellen Abschirmkonstanten für die $K_{\alpha}$-Linien und $K_{\beta}$-Linien ermittelt: $\sigma_{\text{2,1,exp}} = \num{1.06(9)}$ und $\sigma_{\text{3,1,exp}} = \num{2.14(10)}$. Die ermittelten Abschirmkonstanten zeigen eine gute Übereinstimmung mit den bekannten Literaturwerten, die in der Regel nahe bei 1 und 2 liegen.
 
+\textbf{TODO unbekannte Proben}
 \clearpage
 % Literaturverzeichnis
 \printbibliography
