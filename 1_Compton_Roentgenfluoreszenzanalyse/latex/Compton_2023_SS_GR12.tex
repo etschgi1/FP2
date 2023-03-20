@@ -4,12 +4,11 @@
 
 % input preamble
 \input{../../shared_preamble.tex}
-\usepackage{framed}
 
 % manual header
-\ihead{Interferometrie}  % inner (left) head
+\ihead{Compton Effekt \&\newline Röntgenfluoreszenzanalyse}  % inner (left) head
 \chead{\textsc{Wachmann} Elias (12004232)\\\textsc{Zach} Andreas (12004790)}  % center head
-\ohead{10.03.2023}  % outer (right) head
+\ohead{17.03.2023}  % outer (right) head
 
 \addbibresource{Compton.bib}
 
@@ -27,7 +26,7 @@
     {\scshape\Large{23S PHY.L02UB Fortgeschrittenenpraktikum 2}\par}
     678 Bachelorstudium Physik, UG2002/2021W\par
     \vspace{1.5cm}
-    {\huge\bfseries I. Compton Effekt \& Röntgenfloureszenzanalyse\par}
+    {\huge\bfseries I. Compton Effekt \& Röntgenfluoreszenzanalyse\par}
     \vspace{2cm}
     \begin{table}[H]
         \centering
@@ -50,55 +49,131 @@
 \tableofcontents
 \newpage
 
-\section[Aufgabenstellung]{Aufgabenstellung \cite{ref:angabe}}
+\section[Aufgabenstellung]{Aufgabenstellung \cite{ref:angabe_compton,ref:angabe_roentgen}}
 \label{sec:aufgabenstellung}
 
-Der folgende Laborversuch besteht aus vier separaten Teilversuchen, welche sich abermals wie folgt in Unterversuche gliedern:
+Die vorliegende Laboreinheit teilt sich in zwei Teilversuche:
 
 \begin{itemize}
-    \item \textbf{Young'scher Doppelspalt}
+    \item \textbf{Compton-Effekt}
           \begin{itemize}
-              \item Aufzeichnen des Beugungsmusters von vier Doppelspalten mit unterschiedlichen Spaltbreiten und Spaltabständen % check
-              \item Berechnen der Wellenlänge des Lasers % check
-              \item Erklären der aufgezeichneten Beugungsmuster durch Vergleich mit theoretisch errechneten Mustern % check
-              \item Aufzeichnen des Beugungsmusters eines Liniengitters % check
-              \item Bestimmen der Gitterkonstante % check
+              \item Aufnahme des Primärspektrums und Energiekalibrierung des Detektors
+              \item Bestimmung der Energie als Funktion des Streuwinkels
           \end{itemize}
-    \item \textbf{Wellenfront-Analyse / Shearing Interferometer}
+    \item \textbf{Röntgenfluoreszenzanalyse}
           \begin{itemize}
-              \item Vermessen des Interferenzmusters % check
-              \item Berechnen des Wellenfrontradius % check
-          \end{itemize}
-    \item \textbf{Polarisation}
-          \begin{itemize}
-              \item Darstellen der winkelabhängigen Transmission zusammen mit dem theoretischen Verlauf % check
-              \item Verifizieren des Gesetzes von Malus % check
-              \item Untersuchen des Einflusses des Durchlasswinkels eines weiteren Polarisators zwischen zwei gekreuzten Polarisatoren % check
-          \end{itemize}
-    \item \textbf{Michelson Interferometer}
-          \begin{itemize}
-              \item Justieren und generieren von konzentrischen Interferenzmustern % check
-              \item Bestimmen der Wellenlänge des Lasers durch Weglängenänderung % check
-              \item Untersuchen des absoluten Weglängenunterschieds in den beiden Interferometerarmen sowie Auflösung und Stabilität des Interferometers % check
-              \item Justieren und generieren von streifenförmigen Interferenzmustern % check
-              \item Untersuchen der Rolle der Polarisation auf die Interfenzfähigkeit des Laserlichts % check
+              \item Aufnahme und Kalibrierung eines Röntgenenergiespektrums
+              \item Zeigen der Gültigkeit des Moseley'schen Gesetzes Ermitteln der jeweiligen Abschirmkonstanten der K-Linien
+              \item Analyse der Zusammensetzung mehrerer unbekannter Proben
           \end{itemize}
 \end{itemize}
 
 
-\section[Grundlagen]{Grundlagen \cite{ref:angabe}}
+\section{Grundlagen}
 \label{sec:grundlagen}
 
+\subsection[Compton-Effekt]{Compton-Effekt \cite{ref:angabe_compton}}
+\label{sub:grundlagen_compton}
 
-% \begin{figure}[H]
-%     \centering
-%     \begin{samepage}
-%         \includegraphics[width=0.6\linewidth]{fig/Compressed/Angabe_Abb8.png}
-%         \caption[Michelson-Interferometer]{Michelson-Interferometer. Strahlengang im Michelson-Interferometer. Ein Laserstrahl aus der Quelle (1) wird am Strahlteiler (2) aufgeteilt, die beiden Teilstrahlen durchlaufen die beiden Interferometerarme der Länge s1 und s2. Nach ihrer Reflexion an den Spiegeln (3,4) werden die Teilstrahlen am Strahlteiler wieder überlagert und interferieren am Beobachtungsschirm (4). \copyright{} Thorlabs, Quelle: \cite{ref:angabe}}
-%         \label{fig:michalson_interferometer}
-%     \end{samepage}
-% \end{figure}
+Der Compton-Effekt beschreibt die Streuung von Photonen an freien Elektronen und ist ein wichtiger Prozess in der Wechselwirkung von Licht und Materie. Er wurde erstmals von Arthur Compton im Jahr 1923 entdeckt.
+%
+\begin{figure}[!h]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=0.8\linewidth]{fig/compton_complete.pdf}
+        \caption[Compton-Effekt]{Comptoneffekt: \textbf{(a)} Experiment; \textbf{(b)} Schema; \textbf{(c)} Vektordiagramm; \textbf{(d)} Wellenlängen $\lambda_S$ als Funktion des Streuwinkels für die Streuung der K$_\alpha$-Strahlung
+            von \ch{Mo} in Graphit gemessen 1923 von \textit{Compton}. Quelle: \cite{ref:demtroeder}}
+        \label{fig:compton_effekt_demtroeder}
+    \end{samepage}
+\end{figure}
+%
+Bestrahlt man beliebiges Material mit Röntgenstrahlung der Wellenlänge $\lambda_0$, so findet man in der Streustrahlung außer der erwarteten Wellenlänge $\lambda_0$ (aufgrund elastischer Streuung) auch Anteile mit größerer Wellenlänge $\lambda_S > \lambda_0$ (aufgrund elastischer Stöße). Dies lässt sich wie folgt erklären (siehe auch \autoref{fig:compton_effekt_demtroeder}):
 
+Wenn ein Photon auf ein Elektron trifft, kann es idealisiert gesehen elastisch gestreut oder gestoßen werden. Im Falle des Stoßprozesses gibt es einen Teil seiner Energie und Impuls an das Elektron ab. Durch diesen Impulstransfer ändert sich die Richtung und kinetische Energie des Photons.
+Aufgrund des Zusammenhangs der Energie $E$ eines quantenmechanischen Teilchens mit seiner Frequenz $\nu$ (bzw. Wellenlänge $\lambda$)
+\begin{equation}
+    \label{eq:energie_frequenz_wellenlaenge}
+    E = h \nu = h \frac{c}{\lambda}
+\end{equation}
+über das Planck'sche Wirkungsquantum $h$ wird ersichtlich, dass sich beim Verlust von Energie auch die Frequenz verringern bzw. die Wellenlänge des Teilchens erhöhen muss. Der Impuls des Photons genügt folgenden Zusammenhängen:
+\begin{align}
+    \vb*{p}     & = \hbar \vb*{k} \label{eq:impuls}            \\
+    ||\vb*{p}|| & = \frac{h}{\lambda} \label{eq:impuls_betrag}
+\end{align}
+wobei $\vb*{k}$ der Wellenvektor des Photons ist und $\hbar$ das reduzierte Planck'sche Wirkungsquantum.
+In relativistischer Betrachtung lautet der Energiesatz somit:
+\begin{equation}
+    \label{eq:energiesatz_relativistisch}
+    E_{\text{kin}} = \frac{m_0c^2}{\sqrt{1-\frac{v^2}{c^2}}} - m_0 c^2
+\end{equation}
+Für den Impuls folgt:
+\begin{equation}
+    \label{eq:impuls}
+    \hbar \vb*{k}_0 = \hbar \vb*{k}_S + \frac{m_0 \vb*{v}}{\sqrt{1-\frac{v^2}{c^2}}}
+\end{equation}
+Daraus folgt:
+\begin{equation}
+    \label{eq:Delta_nu}
+    \Delta \nu = \nu_0 - \nu_S = \frac{h}{m_0 c^2} \nu_0 \nu_S (1-\cos(\varphi))
+\end{equation}
+Und die Compton-Streuformel:
+\begin{equation}
+    \label{eq:}
+    \lambda_S - \lambda_0 = 2 \underbrace{\frac{h}{m_0 c}}_{\mathclap{\text{Compton-Wellenlänge}}} \sin^2\left(\frac{\varphi}{2}\right)
+\end{equation}
+Führt man diese Formeln zusammen, erhält man die Energie der gestreuten Strahlung $E_S$
+\begin{equation}
+    \label{eq:energie_gestreute_strahlung}
+    E_S = \frac{E_0}{1 + \frac{E_0}{m_0 c^2} (1-\cos(\varphi))}
+\end{equation}
+
+Die Wellenlängenänderung des Photons hängt also vom Streuwinkel und der Energie des Photons ab. Je größer der Streuwinkel, desto größer ist die Wellenlängenverschiebung des Photons. Die Energie des Photons ist proportional zur Frequenz und umgekehrt proportional zur Wellenlänge. Daher führt der Compton-Effekt zu einer Abnahme der Energie des Photons und einer Zunahme seiner Wellenlänge.
+
+
+\subsection[Röntgenfluoreszenzanalyse]{Röntgenfluoreszenzanalyse \cite{ref:angabe_roentgen}}
+\label{sub:grundlagen_roentgen}
+
+Werden Atome mit hochenergetischer Röntgenstrahlung bestrahlt, so können durch die zugeführte
+Energie Elektronen aus den inneren Schalen herausgeschlagen werden. Die Lücken in den inneren
+Schalen füllen sich dann durch Elektronen aus äußeren Schalen auf. Dabei verlieren diese Elektronen
+Energie, die wiederum in Form von Röntgenstrahlung emittiert wird. Dieses Phänomen wird als
+\textit{Röntgenfluoreszenz} bezeichnet. Werden Elektronen aus der innersten Schale (K-Schale)
+herausgeschlagen, so entsteht das sogenannte K-Spektrum (die K-Spektralserie). Der griechiesche Buchstabe
+einer Übergangslinie codiert aus einer wie viel energetisch höheren Schale das auffüllende Elektron stammt.
+Springt das Elektron nur eine Schale nach unten (also in diesem Fall von L nach K), so schreibt man ein $\alpha$.
+Bei einem Sprung von der zweithöheren Schale (M nach K) schreibt man ein $\beta$ usw.
+Analog entsteht das L-Spektrum,
+wenn Elektronen auf die 2. Schale (L-Schale) zurückfallen. Die Energie der emittierten Strahlung einer
+Schale ist abhängig von der Kernladungszahl (Moseley'sches Gesetz).
+\begin{equation}
+    \label{eq:moseley}
+    \sqrt{\frac{E}{R_y}} = (Z-\sigma_{2,1})\sqrt{n_1^{-2}-n_2^{-2}}
+\end{equation}
+Dabei beschreiben $n_1$ und $n_2$ die Hauptquantenzahlen der Schalen beim Übergang von $n_2$ nach $n_1$, $\sigma_{2,1}$ die mittlere Abschirmkonstante bei diesem Übergang, $Z$ die Kernladungszahl, $R_y=\SI{13,6}{eV}$ die angepasste Rydberg-Frequenz und $E$ die Energie der Röntgenstrahlung. Für die K$_\alpha$-Linien leichterer Elemente ($Z<30$) ist die Abschirmkonstante $\sigma_{2,1}=1$ und somit
+\begin{equation}
+    \label{eq:moseley_einfach}
+    \sqrt{\frac{E}{R_y}} = (Z-1)\sqrt{\frac{3}{4}}
+\end{equation}
+Dies ermöglicht die eindeutige
+Bestimmung der Kernladungszahl eines Elements und war historisch ein wichtiger Bestandteil für die
+Vervollständigung des Periodensystems. Jedes Element (mit jeweils einer anderen Kernladungszahl)
+emittiert Röntgenstrahlung mit einer charakteristischen Energie. Die Energie ist dabei praktisch
+unabhängig von der Bindungsform des Elements, weil die inneren Elektronen nicht zur
+chemischen Bindung beitragen. So kann durch Röntgenfluoreszenzanalyse die Zusammensetzung von
+Materialien bestimmt werden, auch wenn diese in chemisch verschiedenen Formen vorliegen. Das
+Röntgenfluoreszenzspektrum einer homogenen Probe mit mehreren Komponenten ist in erster
+Näherung eine Addition der Einzelspektren. Deshalb kann mit dieser Methode die Zusammensetzung
+von beliebigen Proben qualitativ bestimmt werden. Dafür werden zunächst alle im
+Fluoreszenzspektrum vorhandenen Signale den Elementen zugeordnet. Dies geschieht mit Hilfe von
+Tabellenwerten für die Energien der charakteristischen Linien. Für die Zuordnung wird auch das
+Muster jeder Spektralserie berücksichtigt: Zu jeder K$_\alpha$-Linie gehört eine K$_\beta$-Linie mit ca. fünf- bis zehnfach
+geringerer Intensität.
+
+
+\subsection{Unsicherheitsanalyse}
+\label{subsec:unsicherheitsanalyse}
+
+Die Fehlerfortpflanzung der berechneten Werte basiert auf der Größtunsicherheitsmethode nach Gauß. Um diese Berechnungen zeiteffizient durchführen zu können, wird für jeden Unterpunkt der Laborübung ein Skript in \verb!Python! implementiert. Kernstück dessen ist das package \verb!uncertainties! \cite{ref:uncertainties}, das intern die Fehlerfortpflanzung berechnet. Gerundet wird nach den Angaben des Skriptums der Lehrveranstaltung \enquote{Einführung in die physikalischen Messmethoden} \cite{ref:messmethoden}.
 
 
 
@@ -113,7 +188,7 @@ Für den praktischen Aufbau und die Messungen der geforderten Größen wurden di
         \caption[Geräteliste]{Verwendete Geräte und wichtige Materialien}
         \label{tab:geraeteliste}
         \begin{tblrx}{cells={font=\footnotesize}}
-            Gerät                     & Hersteller              & Modell               & Messsbereich / Unsicherheit                                                           & Inventar-Nr. \\
+            Gerät                     & Hersteller              & Modell               & Messbereich / Unsicherheit                                                            & Inventar-Nr. \\
             Laser                     & Thorlabs                & CPS532               & $\lambda = \SI{532}{nm}$                                                              & 22442-S01    \\
             diverse Spiegel           & Thorlabs                & KM100                & -                                                                                     & -            \\
             Graufilter                & Thorlabs                & NX1N/M               & -                                                                                     & -            \\
@@ -169,54 +244,54 @@ Die gegeben der Beschreibung in \ref{subsec:durchfuehrung_compton} erhaltenen Me
 \begin{figure}[H]
     \centering
     \begin{tabular}{cc}
-      \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_1.pdf} &
-      \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_2.pdf} \\
-      \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_3.pdf} &
-      \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_4.pdf} \\
-      \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_5.pdf} &
-      \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_6.pdf} \\
-      \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_7.pdf} &
-      \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_8.pdf} \\
+        \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_1.pdf} &
+        \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_2.pdf}   \\
+        \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_3.pdf} &
+        \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_4.pdf}   \\
+        \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_5.pdf} &
+        \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_6.pdf}   \\
+        \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_7.pdf} &
+        \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_8.pdf}   \\
     \end{tabular}
     \caption{Messwerte bei gegebenem Winkel des Messarms \autoref{tab:compton_uebersicht1} (1)}
     \label{fig:DS_interferenzmuster}
-  \end{figure}
+\end{figure}
 \begin{figure}[H]
     \centering
     \begin{samepage}
-        \includegraphics[width=0.5\textwidth]{../plots/energie_spektren_9.pdf} 
+        \includegraphics[width=0.5\textwidth]{../plots/energie_spektren_9.pdf}
         \caption{Messwerte bei gegebenem Winkel des Messarms \autoref{tab:compton_uebersicht2} (2)}
         \label{fig:DS_interferenzmuster_final}
     \end{samepage}
 \end{figure}
-Anschließend werden jeweiligen Maxima in den Daten ausgewertet, diese ergeben sich zu folgenden Werten in \autoref{tab:energy_compton}. 
+Anschließend werden jeweiligen Maxima in den Daten ausgewertet, diese ergeben sich zu folgenden Werten in \autoref{tab:energy_compton}.
 %info Probenhalter wird ohne Winkelfehler angenommen, daher ist der erste Winkel zwischen Probe und Messgerät 10° 
-\begin{table}[H] 
+\begin{table}[H]
     \centering
     \begin{samepage}
         \caption[Messwerte Compton-Energiemaxima]{Energie $E_S$ der Countmaxima der Compton-Streuung (mit $\Delta E_S=\SI{0.2}{\kilo\electronvolt}$) für verschiedene Winkel $\varphi$ (mit $\Delta \varphi=\SI{0.1}{\degree}$) des Messarms. Zudem ist der Winkel zur Probenoberfläche $\vartheta$ (mit $\Delta \vartheta=\SI{0.1}{\degree}$) angegeben. Der Winkel des Probentisches mit $\varPsi$ wird bei \SI{20}{\degree} konstant gehalten.}
         \label{tab:energy_compton}
         \begin{tblr}{colspec={S[table-format=3.1] S[table-format=2.1]S[table-format=2.1]}, row{1}={guard}}
-            $\varphi$ / \unit{\degree} & $E_S$ / \unit{\kilo\electronvolt} &$\vartheta$ / \unit{\degree} \\
-            28.4 & 17.4 & 6.8 \\
-            43.4 & 17.3 & 21.8 \\
-            58.4 & 17.2 & 36.8 \\
-            73.4 & 17.1 & 51.8 \\
-            88.4 & 16.9 & 66.8 \\
-            103.4 & 16.7 & 81.8 \\
-            118.4 & 16.7 & 96.8 \\
-            133.4 & 16.6 & 111.8 \\
-            148.4 & 16.4 & 126.8 \\
+            $\varphi$ / \unit{\degree} & $E_S$ / \unit{\kilo\electronvolt} & $\vartheta$ / \unit{\degree} \\
+            28.4                       & 17.4                              & 6.8                          \\
+            43.4                       & 17.3                              & 21.8                         \\
+            58.4                       & 17.2                              & 36.8                         \\
+            73.4                       & 17.1                              & 51.8                         \\
+            88.4                       & 16.9                              & 66.8                         \\
+            103.4                      & 16.7                              & 81.8                         \\
+            118.4                      & 16.7                              & 96.8                         \\
+            133.4                      & 16.6                              & 111.8                        \\
+            148.4                      & 16.4                              & 126.8                        \\
         \end{tblr}
     \end{samepage}
 \end{table}
-Die so erhaltenen Daten werden nun mittels \autoref{eq:compton_energy} in \autoref{fig:compton_energy} gefittet um auf diesem Wege die Elektronenmasse zu bestimmen. So ergibt sich im vorliegenden Versuch die Elektronenmasse zu 
+Die so erhaltenen Daten werden nun mittels \autoref{eq:compton_energy} in \autoref{fig:compton_energy} gefittet um auf diesem Wege die Elektronenmasse zu bestimmen. So ergibt sich im vorliegenden Versuch die Elektronenmasse zu
 \[m_e = \SI{1.07(11)E-30}{\kilogram}\]
 
 \begin{figure}[H]
     \centering
     \begin{samepage}
-        \includegraphics[width=0.95\textwidth]{../plots/energie_winkel.pdf} 
+        \includegraphics[width=0.95\textwidth]{../plots/energie_winkel.pdf}
         \caption{Gestreute Energie $E_S$ aus \autoref{tab:energy_compton} aufgetragen gegen den Winkel $\varphi$ des Messarms. Fitkurve mit 2-$\sigma$-Unsicherheitband.}
         \label{fig:compton_energy}
     \end{samepage}
@@ -228,47 +303,47 @@ Auch für den zweiten Teilversuch liegen die Daten in \texttt{.csv} - Form vor. 
 \begin{figure}[H]
     \centering
     \begin{tabular}{cc}
-      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_1.pdf} &
-      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_2.pdf} \\
-      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_3.pdf} &
-      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_4.pdf} \\
-      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_5.pdf} &
-      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_6.pdf} \\
+        \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_1.pdf} &
+        \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_2.pdf}   \\
+        \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_3.pdf} &
+        \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_4.pdf}   \\
+        \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_5.pdf} &
+        \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_6.pdf}   \\
     \end{tabular}
     \caption{Messwerte und $K_{\alpha}$- und $K_{\beta}$-Linien für die zu untersuchenden bekannten und unbekannten Materialien. (1)}
     \label{fig:roentgenfloureszenz1}
-  \end{figure}
+\end{figure}
 \begin{figure}[H]
     \centering
     \begin{tabular}{cc}
-      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_7.pdf} &
-      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_8.pdf} \\
-      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_9.pdf} &
-      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_10.pdf} \\
-      \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_11.pdf} &\\
+        \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_7.pdf}  &
+        \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_8.pdf}    \\
+        \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_9.pdf}  &
+        \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_10.pdf}   \\
+        \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_11.pdf} & \\
     \end{tabular}
     \caption{Messwerte und $K_{\alpha}$- und $K_{\beta}$-Linien für die zu untersuchenden bekannten und unbekannten Materialien. (2)}
     \label{fig:roentgenfloureszenz2}
-  \end{figure}
+\end{figure}
 Die ermittelten Werte für die $K_{\alpha}$- und $K_{\beta}$-Linien werden in \autoref{tab:roentgenfloureszenz} nochmals angeführt.
-\begin{table}[H] 
+\begin{table}[H]
     \centering
     \begin{samepage}
         \caption[Bestimmte $K_{\alpha}$- und $K_{\beta}$-Linien ]{Bestimmte  $K_{\alpha}$- und $K_{\beta}$-Linien aus \autoref{fig:roentgenfloureszenz1} und \autoref{fig:roentgenfloureszenz2}. Die Unsicherheit der bestimmten Energien in beiden Fällen $\Delta E = \SI{0.1}{\kilo\electronvolt}$.}
         \label{tab:roentgenfloureszenz}
         \begin{tblr}{colspec={S[table-format=1.0]Q S[table-format=2.2]S[table-format=2.2]}, row{1}={guard}}
             Ordnungszahl & Elementformel & $E_{K_{\alpha}}$ / \si{\kilo\electronvolt} & $E_{K_{\beta}}$ / \si{\kilo\electronvolt} \\
-            47& Ag & 21.47 & 24.10 \\
-            29& Cu & 7.91 & 8.75 \\
-            26& Fe & 6.27 &  \\
-            42& Mo & 17.24 & 19.15 \\
-            28& Ni & 7.39 &  \\
-            22& Ti & 4.54 &  \\
-            30& Zn & 8.51 & 9.40 \\
-            40& Zr & 15.51 & 17.50 \\
-            & Probe1 & 7.91 &  \\
-            & Probe2 & 16.63 &  \\
-            & Ring & 6.18 &  \\
+            47           & Ag            & 21.47                                      & 24.10                                     \\
+            29           & Cu            & 7.91                                       & 8.75                                      \\
+            26           & Fe            & 6.27                                       &                                           \\
+            42           & Mo            & 17.24                                      & 19.15                                     \\
+            28           & Ni            & 7.39                                       &                                           \\
+            22           & Ti            & 4.54                                       &                                           \\
+            30           & Zn            & 8.51                                       & 9.40                                      \\
+            40           & Zr            & 15.51                                      & 17.50                                     \\
+                         & Probe1        & 7.91                                       &                                           \\
+                         & Probe2        & 16.63                                      &                                           \\
+                         & Ring          & 6.18                                       &                                           \\
         \end{tblr}
     \end{samepage}
 \end{table}
@@ -278,7 +353,7 @@ Trägt man nun die charakteristischen Übergangsenergien aus \autoref{tab:roentg
 \begin{figure}[H]
     \centering
     \begin{samepage}
-        \includegraphics[width=0.95\textwidth]{../plots/roentgen_data_Z_vs_E.pdf} 
+        \includegraphics[width=0.95\textwidth]{../plots/roentgen_data_Z_vs_E.pdf}
         \caption[Mosley-Gesetz für die $K_{\alpha}$- und $K_{\beta}$-Linien.]{Mosley-Gesetz für die $K_{\alpha}$- und $K_{\beta}$-Linien. $\sqrt{\nicefrac{E}{R_y}}$ gegen die Ordnungszahl aufgetragen. Die Abschirmkonstante wird aus der Steigung der beiden Fits ermittelt.}
         \label{fig:roentgen_z_vs_e}
     \end{samepage}
@@ -295,7 +370,7 @@ Die Ergebnisse des Compton-Streuungs-Teilversuchs zeigen, dass die gemessenen En
 \subsection{Röntgenfluoreszenzanalyse}
 \label{sec:diskussion_roentgen}
 %! powered by GPT-4 & Elias
-Die Ergebnisse der Röntgenfluoreszenzanalyse zeigen, dass die gemessenen Energien der $K_{\alpha}$- und $K_{\beta}$-Linien in guter Übereinstimmung mit den theoretischen Erwartungen stehen. Bei genauer Betrachtung der \autoref{fig:roentgen_z_vs_e} erkennt man, dass ein Fit der ersten paar Punkte -- mit Kernladungszahlen $<35$ -- zu einer Gerade mit höherer Steigung führen würde als einer, welcher lediglich durch die Elemente höherer Ordnungszahlen gegeben wäre. Hier spielt der Einfluss der äußeren Elektronen, welche sich mit steigender Schalenzahl immer weiter von dem Kern entfernen, eine Rolle. Die Abschirmkonstante für die $K_{\alpha}$-Linien und $K_{\beta}$-Linien ist eben nur eine Näherung, wie jedoch auch der Abbildung ersichtlich wird, für viele Fälle eine Gute. 
+Die Ergebnisse der Röntgenfluoreszenzanalyse zeigen, dass die gemessenen Energien der $K_{\alpha}$- und $K_{\beta}$-Linien in guter Übereinstimmung mit den theoretischen Erwartungen stehen. Bei genauer Betrachtung der \autoref{fig:roentgen_z_vs_e} erkennt man, dass ein Fit der ersten paar Punkte -- mit Kernladungszahlen $<35$ -- zu einer Gerade mit höherer Steigung führen würde als einer, welcher lediglich durch die Elemente höherer Ordnungszahlen gegeben wäre. Hier spielt der Einfluss der äußeren Elektronen, welche sich mit steigender Schalenzahl immer weiter von dem Kern entfernen, eine Rolle. Die Abschirmkonstante für die $K_{\alpha}$-Linien und $K_{\beta}$-Linien ist eben nur eine Näherung, wie jedoch auch der Abbildung ersichtlich wird, für viele Fälle eine Gute.
 
 \subsection{Unbekannte Proben}
 \label{sec:diskussion_unbekannt}
@@ -305,7 +380,7 @@ Die Ergebnisse der Röntgenfluoreszenzanalyse zeigen, dass die gemessenen Energi
 \section{Zusammenfassung}
 \label{sec:zusammenfassung}
 %! powered by GPT-4
-Im ersten Teilversuch, der Compton-Streuung, wurden die Energien der Compton-Streuung für verschiedene Winkel gemessen. Die Messwerte sind in \autoref{tab:energy_compton} dargestellt. Aus den Messwerten wurde mittels einer Fitkurve in \autoref{fig:compton_energy} die Elektronenmasse bestimmt: $m_e = \SI{1.07(11)E-30}{\kilogram}$. Der Literaturwert der Elektronenmasse beträgt etwa $\SI{9.11E-31}{\kilogram}$, was zeigt, dass der ermittelte Wert in der richtigen Größenordnung liegt. 
+Im ersten Teilversuch, der Compton-Streuung, wurden die Energien der Compton-Streuung für verschiedene Winkel gemessen. Die Messwerte sind in \autoref{tab:energy_compton} dargestellt. Aus den Messwerten wurde mittels einer Fitkurve in \autoref{fig:compton_energy} die Elektronenmasse bestimmt: $m_e = \SI{1.07(11)E-30}{\kilogram}$. Der Literaturwert der Elektronenmasse beträgt etwa $\SI{9.11E-31}{\kilogram}$, was zeigt, dass der ermittelte Wert in der richtigen Größenordnung liegt.
 
 Im zweiten Teilversuch, der Röntgenfluoreszenzanalyse, wurden die $K_{\alpha}$- und $K_{\beta}$-Linien für verschiedene Elemente und Proben untersucht. Die Messwerte und bestimmten Energien sind in \autoref{tab:roentgenfloureszenz} aufgeführt. Durch Auftragen von $\sqrt{\nicefrac{E}{R_y}}$ gegen die Ordnungszahl und Anpassung einer linearen Fitkurve in \autoref{fig:roentgen_z_vs_e} wurden die experimentellen Abschirmkonstanten für die $K_{\alpha}$-Linien und $K_{\beta}$-Linien ermittelt: $\sigma_{\text{2,1,exp}} = \num{1.06(9)}$ und $\sigma_{\text{3,1,exp}} = \num{2.14(10)}$. Die ermittelten Abschirmkonstanten zeigen eine gute Übereinstimmung mit den bekannten Literaturwerten, die in der Regel nahe bei 1 und 2 liegen.
 
