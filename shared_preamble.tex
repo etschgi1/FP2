@@ -46,6 +46,7 @@
 \counterwithin{table}{section}
 \usepackage{float}  % for [H] (forced here) specifier
 \usepackage{tabularray}  % better tables
+\usepackage{caption}  % better captions
 
 
 % graphical input
@@ -289,3 +290,8 @@
         },
     measure=vbox,
 }
+
+% longtblr - to adjust width of caption 
+\DefTblrTemplate{firsthead}{default}{\addtocounter{table}{-1}\captionof{table}[\InsertTblrText{entry}]{\InsertTblrText{caption}}}
+\DefTblrTemplate{middlehead,lasthead}{default}{\addtocounter{table}{-1}\captionof{table}[]{\InsertTblrText{caption}~(Fortsetzung)}}
+%info ADD this to a local environment around the longtblr: \captionsetup{format=plain,labelfont=bf,font=small,  width=\linewidth}

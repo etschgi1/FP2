@@ -21,7 +21,8 @@ class DoubleSlit:
 
 
 def get_intensity_from_interference(x, d, lam=WAVELENGTH_LASER, z=DISTANCE_DOUBLE_SLIT_SCREEN) -> lt.np.ndarray:
-    return 0.5 * (1 + lt.unp.cos(2 * lt.np.pi * x * d / (lam * z)))  # type: ignore
+    # type: ignore
+    return 0.5 * (1 + lt.unp.cos(2 * lt.np.pi * x * d / (lam * z)))
 
 
 def get_intensity_from_diffraction(x, D, lam=WAVELENGTH_LASER, z=DISTANCE_DOUBLE_SLIT_SCREEN) -> lt.np.ndarray:
@@ -49,10 +50,14 @@ def main() -> None:
             DoubleSlit(0.1e-3, 1e-3),  # m
         ]
         experimental_data_ruler = [
-            lt.np.array([0, 5, 11, 16, 21, 27, 33, 38, 43]) * 1e-3,  # , 49, 55, 58]),  # m
-            lt.np.array([0, 5, 11, 16, 22, 27, 32, 38, 43, 48, 54]) * 1e-3,  # m
-            lt.np.array([0, 2.5, 5, 8, 10.5, 13, 16, 18.5, 21, 24, 26.5, 29]) * 1e-3,  # m
-            lt.np.array([0, 1.5, 2.5, 4, 5.5, 6.5, 8, 9.5, 10.5, 12, 13.5, 15]) * 1e-3,  # m
+            lt.np.array([0, 5, 11, 16, 21, 27, 33, 38, 43]) *
+            1e-3,  # , 49, 55, 58]),  # m
+            lt.np.array([0, 5, 11, 16, 22, 27, 32,
+                        38, 43, 48, 54]) * 1e-3,  # m
+            lt.np.array([0, 2.5, 5, 8, 10.5, 13, 16, 18.5,
+                        21, 24, 26.5, 29]) * 1e-3,  # m
+            lt.np.array([0, 1.5, 2.5, 4, 5.5, 6.5, 8, 9.5,
+                        10.5, 12, 13.5, 15]) * 1e-3,  # m
         ]
 
         experimental_data_imagej = [
@@ -65,7 +70,8 @@ def main() -> None:
         wavelengths_total = []
 
         for i, (slit, data_ruler, data_imagej, converter) in enumerate(
-            zip(slits, experimental_data_ruler, experimental_data_imagej, PIXEL_TO_DISTANCE_CONVERTERS)
+            zip(slits, experimental_data_ruler,
+                experimental_data_imagej, PIXEL_TO_DISTANCE_CONVERTERS)
         ):
             # create figure
             fig, ax = lt.plt.subplots(figsize=(9, 3))
@@ -73,7 +79,8 @@ def main() -> None:
             # plot imagej data
             data_imagej["m"] = converter(data_imagej["px"])
             data_imagej["I"] /= lt.np.max(data_imagej["I"])
-            ax.plot(data_imagej["m"], data_imagej["I"], label="Messdaten")
+            ax.plot(data_imagej["m"] * 100,
+                    data_imagej["I"], label="Messdaten")
 
             # plot ruler data
             for point in data_ruler:
@@ -81,15 +88,18 @@ def main() -> None:
                 ax.axvspan(point - 5e-4, point + 5e-4, color="grey", alpha=0.2)
 
             # plot theoretical data
-            interference = get_intensity_from_interference(data_imagej["m"], slit.distance_d)
-            diffraction = get_intensity_from_diffraction(data_imagej["m"], slit.width_D)
+            interference = get_intensity_from_interference(
+                data_imagej["m"], slit.distance_d)
+            diffraction = get_intensity_from_diffraction(
+                data_imagej["m"], slit.width_D)
             total = interference * diffraction
 
             # ax.plot(data_imagej["m"], total_n, label="Theoretischer Verlauf")
-            lt.plt_uplot(data_imagej["m"], total, label="Theoretischer Verlauf")
+            lt.plt_uplot(data_imagej["m"] * 100, total,
+                         label="Theoretischer Verlauf")
 
             # configure plot
-            ax.set_xlabel("$x$ / m")
+            ax.set_xlabel("$x$ / cm")
             ax.set_ylabel("$I$ / a.u.")
             ax.set_title(
                 "Theoretischer Intensitätsverlauf und Messkurve des Doppelspalts "
@@ -103,7 +113,8 @@ def main() -> None:
             fig.savefig(f"{path_plot}ng")
 
             # calc wavelengths from maxima
-            wavelengths = [get_wavelength_from_nth_maximum(slit.distance_d, data_ruler[n], n).n for n in range(1, 9)]
+            wavelengths = [get_wavelength_from_nth_maximum(
+                slit.distance_d, data_ruler[n], n).n for n in range(1, 9)]
             wavelengths_student = lt.Student(wavelengths)
             print(f"DS{i+1}:\n{wavelengths_student}")
             wavelengths_total.append(wavelengths_student.n)
@@ -113,18 +124,21 @@ def main() -> None:
         wavelength_mean = lt.Student(wavelengths_total)
         print(f"{wavelength_mean}\n-> Wavelength done\n")
 
-    ## difraction grating --------------------------------------------------------------------
-    grating_data_imagej = lt.pd.read_csv(f"{path}grating.csv", names=["px", "I"], skiprows=1)
-    grating_data_ruler = lt.np.array([0, 11, 21, 32, 43, 53, 64, 75, 86, 97, 108, 118, 128, 139, 151]) * 1e-3  # m
+    # difraction grating --------------------------------------------------------------------
+    grating_data_imagej = lt.pd.read_csv(
+        f"{path}grating.csv", names=["px", "I"], skiprows=1)
+    grating_data_ruler = lt.np.array(
+        [0, 11, 21, 32, 43, 53, 64, 75, 86, 97, 108, 118, 128, 139, 151]) * 1e-3  # m
 
     # create figure
     fig, ax = lt.plt.subplots(figsize=(9, 3))
 
     # plot imagej data
-    converter = lambda px: (px - 3726 + 1e-100) * 11e-3 / -(3726 - 3880)
+    def converter(px): return (px - 3726 + 1e-100) * 11e-3 / -(3726 - 3880)
     grating_data_imagej["m"] = converter(grating_data_imagej["px"])
     grating_data_imagej["I"] /= lt.np.max(grating_data_imagej["I"])
-    ax.plot(grating_data_imagej["m"], grating_data_imagej["I"], label="Messdaten")
+    ax.plot(grating_data_imagej["m"] * 100,
+            grating_data_imagej["I"], label="Messdaten")
 
     # plot ruler data
     for point in grating_data_ruler:
@@ -132,9 +146,10 @@ def main() -> None:
         ax.axvspan(point - 5e-4, point + 5e-4, color="grey", alpha=0.2)
 
     # configure plot
-    ax.set_xlabel("$x$ / m")
+    ax.set_xlabel("$x$ / cm")
     ax.set_ylabel("$I$ / a.u.")
-    ax.set_title(r"Theoretischer Intensitätsverlauf und Messkurve des Gitters $\tilde{g}=8$ '/mm")
+    ax.set_title(
+        r"Theoretischer Intensitätsverlauf und Messkurve des Gitters $\tilde{g}=8$ '/mm")
     ax.grid()
     ax.legend(loc="upper right")
     fig.tight_layout()

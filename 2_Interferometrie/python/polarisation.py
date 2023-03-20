@@ -44,7 +44,7 @@ def main() -> None:
                 [1020, 1070],
                 [1060, 1100],
             ]
-        ).T
+        ).T, sigma=2
     )
 
     angle_shifted = lt.np.arange(-30, 331, 10)
