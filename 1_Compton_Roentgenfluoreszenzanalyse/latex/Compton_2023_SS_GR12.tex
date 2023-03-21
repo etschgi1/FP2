@@ -1,4 +1,4 @@
-% !TEX Program = lualatex
+% LTeX: language=de-AT
 % class
 \documentclass[ngerman]{scrartcl}
 
@@ -73,7 +73,7 @@ Die vorliegende Laboreinheit teilt sich in zwei Teilversuche:
 \label{sec:grundlagen}
 
 \subsection[Compton-Effekt]{Compton-Effekt \cite{ref:angabe_compton}}
-\label{sub:grundlagen_compton}
+\label{subsec:grundlagen_compton}
 
 Der Compton-Effekt beschreibt die Streuung von Photonen an freien Elektronen und ist ein wichtiger Prozess in der Wechselwirkung von Licht und Materie. Er wurde erstmals von Arthur Compton im Jahr 1923 entdeckt.
 %
@@ -108,7 +108,7 @@ In relativistischer Betrachtung lautet der Energiesatz somit:
 \end{equation}
 Für den Impuls folgt:
 \begin{equation}
-    \label{eq:impuls}
+    \label{eq:impuls_beziehung}
     \hbar \vb*{k}_0 = \hbar \vb*{k}_S + \frac{m_0 \vb*{v}}{\sqrt{1-\frac{v^2}{c^2}}}
 \end{equation}
 Daraus folgt:
@@ -131,14 +131,14 @@ Die Wellenlängenänderung des Photons hängt also vom Streuwinkel und der Energ
 
 
 \subsection[Röntgenfluoreszenzanalyse]{Röntgenfluoreszenzanalyse \cite{ref:angabe_roentgen}}
-\label{sub:grundlagen_roentgen}
+\label{subsec:grundlagen_roentgen}
 
 Werden Atome mit hochenergetischer Röntgenstrahlung bestrahlt, so können durch die zugeführte
 Energie Elektronen aus den inneren Schalen herausgeschlagen werden. Die Lücken in den inneren
 Schalen füllen sich dann durch Elektronen aus äußeren Schalen auf. Dabei verlieren diese Elektronen
 Energie, die wiederum in Form von Röntgenstrahlung emittiert wird. Dieses Phänomen wird als
 \textit{Röntgenfluoreszenz} bezeichnet. Werden Elektronen aus der innersten Schale (K-Schale)
-herausgeschlagen, so entsteht das sogenannte K-Spektrum (die K-Spektralserie). Der griechiesche Buchstabe
+herausgeschlagen, so entsteht das sogenannte K-Spektrum (die K-Spektralserie). Der griechische Buchstabe
 einer Übergangslinie codiert aus einer wie viel energetisch höheren Schale das auffüllende Elektron stammt.
 Springt das Elektron nur eine Schale nach unten (also in diesem Fall von L nach K), so schreibt man ein $\alpha$.
 Bei einem Sprung von der zweithöheren Schale (M nach K) schreibt man ein $\beta$ usw.
@@ -173,7 +173,7 @@ geringerer Intensität.
 \subsection{Unsicherheitsanalyse}
 \label{subsec:unsicherheitsanalyse}
 
-Die Fehlerfortpflanzung der berechneten Werte basiert auf der Größtunsicherheitsmethode nach Gauß. Um diese Berechnungen zeiteffizient durchführen zu können, wird für jeden Unterpunkt der Laborübung ein Skript in \verb!Python! implementiert. Kernstück dessen ist das package \verb!uncertainties! \cite{ref:uncertainties}, das intern die Fehlerfortpflanzung berechnet. Gerundet wird nach den Angaben des Skriptums der Lehrveranstaltung \enquote{Einführung in die physikalischen Messmethoden} \cite{ref:messmethoden}.
+Die Fehlerfortpflanzung der berechneten Werte basiert auf der Größtunsicherheitsmethode nach Gauß. Um diese Berechnungen zeiteffizient durchführen zu können, wird für jeden Unterpunkt der Laborübung ein Skript in \texttt{Python} implementiert. Kernstück dessen ist das package \texttt{uncertainties} \cite{ref:uncertainties}, das intern die Fehlerfortpflanzung berechnet. Gerundet wird nach den Angaben des Skriptums der Lehrveranstaltung \enquote{Einführung in die physikalischen Messmethoden} \cite{ref:messmethoden}.
 
 
 
@@ -188,29 +188,15 @@ Für den praktischen Aufbau und die Messungen der geforderten Größen wurden di
         \caption[Geräteliste]{Verwendete Geräte und wichtige Materialien}
         \label{tab:geraeteliste}
         \begin{tblrx}{cells={font=\footnotesize}}
-            Gerät                     & Hersteller              & Modell               & Messbereich / Unsicherheit                                                            & Inventar-Nr. \\
-            Laser                     & Thorlabs                & CPS532               & $\lambda = \SI{532}{nm}$                                                              & 22442-S01    \\
-            diverse Spiegel           & Thorlabs                & KM100                & -                                                                                     & -            \\
-            Graufilter                & Thorlabs                & NX1N/M               & -                                                                                     & -            \\
-            Doppelspalte              & Phywe                   & 0852300              & -                                                                                     & -            \\
-            Gitter                    & Phywe                   & 0852400              & -                                                                                     & -            \\
-            Optischer Tisch           & -                       & -                    & -                                                                                     & -            \\
-            diverse Halterungen       & Thorlabs                & -                    & -                                                                                     & -            \\
-            Sammellinse               & Thorlabs                & FMP1/M               & $f = \SI{40}{mm}$                                                                     & -            \\
-            Zerstreuungslinse         & Thorlabs                & FMP1/M               & $f = \SI{-16}{mm}$                                                                    & -            \\
-            Shearing-Interferometer   & Thorlabs                & nicht vorhanden      & -                                                                                     & -            \\
-            Lichtintensitätsmesser    & Sauter                  & SO 200k              & $\Delta I = (\pm \SI{3}{\percent}\text{rdg} \pm \SI{0.5}{\percent}\text{fs}) \cdot I$ & 51152203     \\
-            Polarisationsfolie        & Nitto denko             & -                    & -                                                                                     & -            \\
-            Maßband                   & Schuller Eh klar        & Power Tape \SI{3}{m} & Klasse II                                                                             & -            \\
-            Michelson Interferometer  & -                       & -                    & -                                                                                     & -            \\
-            Rohr                      & -                       & -                    & -                                                                                     & -            \\
-            diverse Abbildungsschirme & Wand, Papier, Tür, etc. & -                    & -                                                                                     & -            \\
-            Mobiltelefon              & OnePlus                 & 8 Pro                & -                                                                                     & -            \\
+            Gerät                      & Hersteller & Modell                   & Inventar-Nr. \\
+            Röntgengerät               & Leybold    & 554 800                  & 310082130000 \\
+            Messwerterfassungsmodul    & Leybold    & (Sensor-CASSY 2) 524 013 & -            \\
+            Proben                     & -          & -                        & -            \\
+            Messwerterfassungssoftware & Leybold    & CASSY Lab 2              & -            \\
         \end{tblrx}
     \end{samepage}
 \end{table}
 %
-
 \paragraph{Anmerkung zu den Unsicherheiten:} Zur Unsicherheitsangabe werden die jeweiligen Unsicherheitsmaße der Geräte, welche aus den Datenblättern (sofern vorhanden) entnommen werden, verwendet. Für die analogen Messgeräte wird eine kombinierte Ablese- und Messunsicherheit von $\pm\SI{1}{Skalenstrich}$ verwendet.
 
 Alle Teilversuche wurden bei einer Umgebungstemperatur von \SI{24(1)}{\celsius} einem Luftdruck von \SI{1000(10)}{\hecto\pascal} und einer relativen Luftfeuchtigkeit von \SI{33(1)}{\percent} durchgeführt.
@@ -220,27 +206,101 @@ Alle Teilversuche wurden bei einer Umgebungstemperatur von \SI{24(1)}{\celsius} 
 \section{Versuchsaufbau}
 \label{sec:aufbau}
 
-% \subsection{Young'scher Doppelspalt und Gitter}
-% \label{sec:aufbau_doppelspalte_gitter}
+Beide Teilversuche benötigen beinahe den identen Aufbau aus Röntgengerät, Messwerterfassungsmodul (Sensor-CASSY) und PC. Die minimalen Unterschiede werden in den nachfolgenden Unterabschnitten erläutert. Ansonsten folgen beide Aufbauten der folgenden Beschreibung:
 
-% Für den Aufbau zum Versuch \textit{Young'scher Doppelspalt} wird der Laser mittels zwei Spiegel auf das Plättchen mit den vier verschiedenen (siehe \autoref{tab:doppelspalt_abmessungen}) Doppelspalten gelenkt. Der Abstand vom Doppelspalt wird mit \SI{2520(5)}{\milli\meter} bestimmt -- wobei hier noch zur vom Maßband gegebenen Unsicherheit von \SI{1.1}{\milli\meter} eine weitere Unsicherheit durch das Messen in der Luft hinzukommt. Der Aufbau in \autoref{fig:aufbau_doppelspalt} zeigt den optischen Tisch, der Schirm ist rechts im oben angeführten Abstand an der Wand befestigt.
-% %
-% \begin{figure}[H]
-%     \centering
-%     \begin{samepage}
-%         \includegraphics[width=0.7\linewidth]{fig/Compressed/aufbau_doppelspalt.jpg}
-%         \caption{Aufbau Young'scher Doppelspalt}
-%         \label{fig:aufbau_doppelspalt}
-%     \end{samepage}
-% \end{figure}
+Das Röntgengerät ist an seinem SIGNAL-OUT-Ausgang mittels eines Koaxialkabels mit dem INPUT-Eingang des Messwerterfassungsmoduls verbunden. Das Messwerterfassungsmoduls ist mit einem USB-B-Kabel mit dem PC verbunden, welcher über die Software CASSY Lab das Modul steuert. Das Röntgengerät selbst weist zwei Räume auf, die jeweils mit einer Bleiglasscheibe verschlossen sind: den Röntgenraum und den Experimentierraum. Diese Räume sind durch eine kreisrunde Öffnung miteinander verbunden. In diese Öffnung wird ist ein kreisrunder Kollimator eingeführt. Im Experimentierraum befindet sich ein Röntgenenergiedetektor. Die Position dessen ist manuell so gewählt, dass der Sensor bei einer Drehung um \SI{150}{\degree} zur Nullstellung nicht mit dem Röntgenstrahl -- geschweige denn mit dem Kollimatorrohr -- kollidiert.
+
+Relevante Parameter für den Messvorgang sind folgendermaßen eingestellt: Für die Glühkathode des Röntgengeräts ist an jenem eine Spannung von \SI{30}{kV} eingestellt, die Emissionsstromstärke beträgt generell \SI{1}{mA}. In der PC-Software CASSY Lab ist der Parameter \textit{Vielkanalmessung} auf 512 Kanäle eingestellt und negative Pulse sind aktiviert, gemessen wird mit einer Torzeit von \SI{300}{s}.
+
+
+\subsection{Compton-Effekt}
+\label{subsec:aufbau_compton}
+
+Für den Teilversuch zum Compton-Effekt ist in der Software CASSY Lab der Verstärkungsfaktor auf -4 gestellt. Zusätzlich ist auf das zum Röntgenraum zeigende Ende des Kollimators ein \ch{Zr}-Filter gesteckt.
+
+
+\subsection{Röntgenfluoreszenzanalyse}
+\label{subsec:aufbau_fluoreszenz}
+
+Für den Teilversuch zur Röntgenfluoreszenzanalyse ist in der Software CASSY Lab der Verstärkungsfaktor auf \num{-2.5} gestellt.
+
+
 
 \section{Versuchsdurchführung}
 \label{sec:durchfuehrung}
 
+\subsection{Compton-Effekt}
+\label{subsec:durchfuehrung_compton}
+
+Der Aufbau zum Teilversuch Compton-Effekt wird ordnungsgemäß, wie in \autoref{sec:aufbau} beschrieben, hergestellt.
+
+\paragraph{Primärspektrum und Energiekalibrierung}
+Zuallererst muss der Röntgenenergiedetektor mithilfe eines bereits bekannten Spektrums kalibriert werden. Dazu wird auf das zum Experimentierraum zeigende Ende des Kollimators zusätzlich eine Abschwächblende gesteckt. Für die Energiekalibrierung wird darüberhinaus die Stromstärke von \SI{1}{mA} auf (vorläufig) \SI{0.05}{mA} reduziert. Der Sensorarm soll in Nullstellung gebracht werden, der Motor des Arms ist jedoch nicht präzise auf einen tatsächlichen Winkel von \SI{0}{\degree} zur Röntgenstrahlaustrittsöffnung kalibriert, daher muss der tatsächliche Nullpunkt manuell gefunden werden. Bei direkter Einstrahlung (Winkel von \SI{0}{\degree}) muss der Sensor die höchste Aktivität detektieren, deswegen wird in \SI{0.1}{\degree} Schritten vom voreingestellten (tatsächlich jedoch verschobenen) Nullpunkt weg mit einer Torzeit von \SI{10}{s} nach der höchsten Zerfallsanzahl gesucht. Die Messwerte lassen auf einen Offset von \SI{-1.6}{\degree} schließen, eine erneute Messreihe mit einer erhöhten Torzeit auf \SI{60}{s} um diese Sensorstellung herum bestätigt die Vermutung. Somit ist die tatsächlich ermittelte Nullstellung
+\[\varphi_0 = \SI{-1.6}{\degree}.\]
+Nun wird mit einer verringerten Torzeit von \SI{10}{s} eine passende Emissionsstromstärke gewählt, sodass die Zerfallsrate etwas über \SI{200}{\per\second} liegt. Dies ist bei einer Stromstärke von
+\[I_0=\SI{0.14}{mA}\]
+der Fall.
+
+Nachdem nun die Ausgangsstellung mit $\varphi_0 = \SI{-1.6}{\degree}$ und $I_0=\SI{0.14}{mA}$ ermittelt worden ist, wird das Primärspektrum der Röntgenröhre aufgenommen. Gemessen wird mit der ursprünglich beschriebenen Torzeit von \SI{300}{s}. Nachdem das Spektrum von der Software erfasst worden ist, dienen die L$_\alpha$-Linie von \ch{Au} (bei \SI{9.71}{keV}) und die K$_\alpha$-Linie von \ch{Mo} (bei \SI{17.44}{keV}) als Referenz zur Kalibrierung der Energieskala. Dabei werden die Positionen der Peakschwerpunkte des Primärspektrums diesen Energien zugeordnet.
+
+\paragraph{Streuspektren}
+Nach das Messgerät nun kalibriert worden ist, wird die Abhängigkeit des Streuspektrums vom Winkel untersucht. Hierfür wird die Abschwächblende wieder vom Kollimator genommen und der Targethalter samt Targettsich am Goniometer im Experimentierraum montiert. Als Target kommt eine Plexiglas-Probe zum Einsatz. Der Emissionsstrom wird nun wieder, wie ursprünglich angegeben, auf \SI{1}{mA} erhöht. Der Winkel des Targethalters (Targetwinkel) wird auf \SI{20}{\degree} gestellt, während der Sensorwinkel im Zuge des Experiments laufend verstellt wird. Begonnen wird mit \SI{28.4}{\degree} ($\SI{30}{\degree} - \SI{1.6}{\degree}$), das emittierte Spektrum wird aufgenommen. Dieser Vorgang wird für die folgenden Winkel wiederholt:
+\begin{itemize}
+    \item \SI{43.4}{\degree}
+    \item \SI{58.4}{\degree}
+    \item \SI{73.4}{\degree}
+    \item \SI{88.4}{\degree}
+    \item \SI{103.4}{\degree}
+    \item \SI{118.4}{\degree}
+    \item \SI{133.4}{\degree}
+    \item \SI{148.4}{\degree}
+\end{itemize}
+Jede Messreihe wird als \texttt{.csv}-Datei abgespeichert.
+
+
+\subsection{Röntgenfluoreszenzanalyse}
+\label{subsec:durchfuehrung_fluoreszenz}
+
+\paragraph{Kalibrierung}
+Zuerst wird das Gerät wieder kalibriert. Dazu werden zuerst manuell im Experimentierraum die Abstände zwischen Spaltblende des Kollimators und Drehachse sowie zwischen Drehachse und Eintrittsöffnung des Röntgenenergiedetektors jeweils auf \SIrange{5}{6}{cm} eingestellt. Zur Kalibrierung sollte ein verzinktes Eisenblech verwendet werden, dieses ist jedoch nicht auffindbar gewesen. Stattdessen haben sich jedoch Elementarproben von \ch{Fe} und \ch{Zn} im Probenvorrat befunden, sodass diese nacheinander anstelle des verzinktes Eisenblechs verwendet worden sind. Der Sensorwinkel wird auf \SI{88.4}{\degree} (Offset-bereinigt) gestellt, der Targetwinkel auf \SI{45}{\degree}. In der Software CASSY Lab gelten nun die Parameter aus \autoref{subsec:aufbau_fluoreszenz}.
+
+Nachdem beide Spektren gemessen worden sind, wird die Energieskala diesmal mithilfe der K$_\alpha$-Linien von \ch{Fe} (\SI{6,40}{keV}) und \ch{Zn} (\ch{8,64}{keV}) kalibriert.
+
+\paragraph{Moseley'sches Gesetz}
+Zur anschließenden Verifizierung des Moseley'schen Gesetzes werden nun die Spektren folgender Elementarproben aufgenommen und anschließenden als \texttt{.csv}-Datei abgespeichert:
+\begin{itemize}
+    \item Titan (\ch{Ti})
+    \item Eisen (\ch{Fe})
+    \item Nickel (\ch{Ni})
+    \item Kupfer (\ch{Cu})
+    \item Zink (\ch{Zn})
+    \item Zirconium (\ch{Zr})
+    \item Molybdän (\ch{Mo})
+    \item Silber (\ch{Ag})
+\end{itemize}
+
+\paragraph{Unbekannte Proben}
+Abschließend werden drei unbekannte Proben (siehe \autoref{fig:unbekannte_proben}) am Targethalter platziert. Deren Spektren werden wieder aufgenommen, für die unbekannte Probe 1 (eine goldgelbe Platte mit Beschriftung \enquote{3}) nach wie vor mit einer Messzeit von \SI{300}{s}, für die unbekannte Probe 2 (eine schwarze unbeschriebene Platte) und die unbekannte Probe 3 (ein gold-silberner Ring eines Experimentierenden) wird die Messzeit auf \SI{10}{s} reduziert. Die Spektren werden als \texttt{.csv}-Datei abgespeichert. Die dritte Probe gestaltet sich schwieriger korrekt zu platzieren, da der Ring keine plane Oberfläche aufweist, von welcher im richtigen Winkel zum Sensor reflektiert würde. Deswegen wird, um möglichst dem Setting der Probenplatten gleich zu kommen, der Targetwinkel auf \SI{15.3}{\degree} verstellt.
+%
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=\linewidth]{fig/unbekannt.png}
+        \caption[Unbekannte Proben]{Unbekannte Proben verwendet zur Röntgenfluoreszenzanalyse.}
+        \label{fig:unbekannte_proben}
+    \end{samepage}
+\end{figure}
+
+
+
 \section{Auswertung}
 \label{sec:auswertung}
-Die gegeben der Beschreibung in \ref{subsec:durchfuehrung_compton} erhaltenen Messwerte in \texttt{.csv} - Form werden nun für die jeweiligen Stellungen des Messarms in \autoref{fig:compton_uebersicht1} und \autoref{fig:compton_uebersicht2} dargestellt.
 
+\subsection{Compton-Effekt}
+\label{subsec:auswertung_compton}
+
+Die gegeben der Beschreibung in \ref{subsec:durchfuehrung_compton} erhaltenen Messwerte in \texttt{.csv}-Form werden nun für die jeweiligen Stellungen des Messarms in \autoref{fig:compton_uebersicht1} und \autoref{fig:compton_uebersicht2} dargestellt.
+%
 \begin{figure}[H]
     \centering
     \begin{tabular}{cc}
@@ -253,18 +313,20 @@ Die gegeben der Beschreibung in \ref{subsec:durchfuehrung_compton} erhaltenen Me
         \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_7.pdf} &
         \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_8.pdf}   \\
     \end{tabular}
-    \caption{Messwerte bei gegebenem Winkel des Messarms \autoref{tab:compton_uebersicht1} (1)}
-    \label{fig:DS_interferenzmuster}
+    \caption{Messwerte bei gegebenem Winkel des Messarms \autoref{tab:compton_uebersicht1} (1)} % wohin soll diese Referenz gehen?
+    \label{fig:compton_uebersicht1}
 \end{figure}
+%
 \begin{figure}[H]
     \centering
     \begin{samepage}
         \includegraphics[width=0.5\textwidth]{../plots/energie_spektren_9.pdf}
-        \caption{Messwerte bei gegebenem Winkel des Messarms \autoref{tab:compton_uebersicht2} (2)}
-        \label{fig:DS_interferenzmuster_final}
+        \caption{Messwerte bei gegebenem Winkel des Messarms \autoref{tab:compton_uebersicht2} (2)} % wohin soll diese Referenz gehen?
+        \label{fig:compton_uebersicht2}
     \end{samepage}
 \end{figure}
-Anschließend werden jeweiligen Maxima in den Daten ausgewertet, diese ergeben sich zu folgenden Werten in \autoref{tab:energy_compton}.
+%
+Anschließend werden die jeweiligen Maxima in den Daten ausgewertet, diese ergeben sich zu den nachfolgenden Werten in \autoref{tab:energy_compton}.
 %info Probenhalter wird ohne Winkelfehler angenommen, daher ist der erste Winkel zwischen Probe und Messgerät 10° 
 \begin{table}[H]
     \centering
@@ -285,21 +347,25 @@ Anschließend werden jeweiligen Maxima in den Daten ausgewertet, diese ergeben s
         \end{tblr}
     \end{samepage}
 \end{table}
-Die so erhaltenen Daten werden nun mittels \autoref{eq:compton_energy} in \autoref{fig:compton_energy} gefittet um auf diesem Wege die Elektronenmasse zu bestimmen. So ergibt sich im vorliegenden Versuch die Elektronenmasse zu
+%
+Die so erhaltenen Daten werden nun mittels \autoref{eq:energie_gestreute_strahlung} in \autoref{fig:compton_energy} gefittet um auf diesem Wege die Elektronenmasse zu bestimmen. So ergibt sich im vorliegenden Versuch die Elektronenmasse zu
 \[m_e = \SI{1.07(11)E-30}{\kilogram}\]
-
+%
 \begin{figure}[H]
     \centering
     \begin{samepage}
         \includegraphics[width=0.95\textwidth]{../plots/energie_winkel.pdf}
-        \caption{Gestreute Energie $E_S$ aus \autoref{tab:energy_compton} aufgetragen gegen den Winkel $\varphi$ des Messarms. Fitkurve mit 2-$\sigma$-Unsicherheitband.}
+        \caption[Gestreute Energie $E_S$ gegen Winkel $\varphi$]{Gestreute Energie $E_S$ aus \autoref{tab:energy_compton} aufgetragen gegen den Winkel $\varphi$ des Messarms. Fitkurve mit $2\sigma$-Unsicherheitband.}
         \label{fig:compton_energy}
     \end{samepage}
 \end{figure}
-\newpage
-\subsection{Röntgenfloureszenzanalyse}
-\label{subsec:roentgenfloureszenzanalyse}
-Auch für den zweiten Teilversuch liegen die Daten in \texttt{.csv} - Form vor. Diese werden nun in \autoref{fig:roentgenfloureszenz1} und \autoref{fig:roentgenfloureszenz2} für die benutzten zu untersuchenden Materialien dargestellt. Zusätzlich sind die Energien der bestimmten $K_{\alpha}$- und $K_{\beta}$ - Linien ebenfalls in den beiden Abbildungen angeführt.
+
+
+\subsection{Röntgenfluoreszenzanalyse}
+\label{subsec:auswertung_fluoreszenz}
+
+Auch für den zweiten Teilversuch liegen die Daten in \texttt{.csv}-Form vor. Diese werden nun in \autoref{fig:roentgenfluoreszenz1} und \autoref{fig:roentgenfluoreszenz2} für die zu untersuchenden Materialien dargestellt. Zusätzlich sind die Energien der bestimmten K$_{\alpha}$- und K$_{\beta}$-Linien ebenfalls in den beiden Abbildungen angeführt.
+%
 \begin{figure}[H]
     \centering
     \begin{tabular}{cc}
@@ -310,9 +376,10 @@ Auch für den zweiten Teilversuch liegen die Daten in \texttt{.csv} - Form vor. 
         \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_5.pdf} &
         \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_6.pdf}   \\
     \end{tabular}
-    \caption{Messwerte und $K_{\alpha}$- und $K_{\beta}$-Linien für die zu untersuchenden bekannten und unbekannten Materialien. (1)}
-    \label{fig:roentgenfloureszenz1}
+    \caption[Messwerte unbekannter Proben (1)]{Messwerte und K$_{\alpha}$- und K$_{\beta}$-Linien für die zu untersuchenden bekannten und unbekannten Materialien. (1)}
+    \label{fig:roentgenfluoreszenz1}
 \end{figure}
+%
 \begin{figure}[H]
     \centering
     \begin{tabular}{cc}
@@ -322,15 +389,17 @@ Auch für den zweiten Teilversuch liegen die Daten in \texttt{.csv} - Form vor. 
         \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_10.pdf}   \\
         \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_11.pdf} & \\
     \end{tabular}
-    \caption{Messwerte und $K_{\alpha}$- und $K_{\beta}$-Linien für die zu untersuchenden bekannten und unbekannten Materialien. (2)}
-    \label{fig:roentgenfloureszenz2}
+    \caption[Messwerte unbekannter Proben (2)]{Messwerte und K$_{\alpha}$- und K$_{\beta}$-Linien für die zu untersuchenden bekannten und unbekannten Materialien. (2)}
+    \label{fig:roentgenfluoreszenz2}
 \end{figure}
-Die ermittelten Werte für die $K_{\alpha}$- und $K_{\beta}$-Linien werden in \autoref{tab:roentgenfloureszenz} nochmals angeführt.
+%
+Die ermittelten Werte für die K$_{\alpha}$- und K$_{\beta}$-Linien werden in \autoref{tab:roentgenfluoreszenz} nochmals angeführt.
+%
 \begin{table}[H]
     \centering
     \begin{samepage}
-        \caption[Bestimmte $K_{\alpha}$- und $K_{\beta}$-Linien ]{Bestimmte  $K_{\alpha}$- und $K_{\beta}$-Linien aus \autoref{fig:roentgenfloureszenz1} und \autoref{fig:roentgenfloureszenz2}. Die Unsicherheit der bestimmten Energien in beiden Fällen $\Delta E = \SI{0.1}{\kilo\electronvolt}$.}
-        \label{tab:roentgenfloureszenz}
+        \caption[Bestimmte K$_{\alpha}$- und K$_{\beta}$-Linien]{Bestimmte K$_{\alpha}$- und K$_{\beta}$-Linien aus \autoref{fig:roentgenfluoreszenz1} und \autoref{fig:roentgenfluoreszenz2}. Die Unsicherheit der bestimmten Energien ist in beiden Fällen $\Delta E = \SI{0.1}{\kilo\electronvolt}$.}
+        \label{tab:roentgenfluoreszenz}
         \begin{tblr}{colspec={S[table-format=1.0]Q S[table-format=2.2]S[table-format=2.2]}, row{1}={guard}}
             Ordnungszahl & Elementformel & $E_{K_{\alpha}}$ / \si{\kilo\electronvolt} & $E_{K_{\beta}}$ / \si{\kilo\electronvolt} \\
             47           & Ag            & 21.47                                      & 24.10                                     \\
@@ -347,44 +416,63 @@ Die ermittelten Werte für die $K_{\alpha}$- und $K_{\beta}$-Linien werden in \a
         \end{tblr}
     \end{samepage}
 \end{table}
-Trägt man nun die charakteristischen Übergangsenergien aus \autoref{tab:roentgenfloureszenz} -- leicht modifiziert  als $\sqrt{\nicefrac{E}{R_y}}$, $R_y$ meint dabei die Rydbergkonstante -- gegen die Ordnungszahl auf, so kann über die Steigung eines linearen Fits die Abschirmkonstante ermittelt werden. In \autoref{fig:roentgen_z_vs_e} ist dieser Fit für die $K_{\alpha}$-Linien und $K_{\beta}$-Linien dargestellt. Die Abschirmkonstanten für die $K_{\alpha}$-Linien und $K_{\beta}$-Linien wurden somit zu:
+%
+Trägt man nun die charakteristischen Übergangsenergien aus \autoref{tab:roentgenfluoreszenz} -- leicht modifiziert als $\sqrt{\nicefrac{E}{R_y}}$ -- gegen die Ordnungszahl auf, so kann über die Steigung eines linearen Fits die Abschirmkonstante ermittelt werden. In \autoref{fig:roentgen_z_vs_e} ist dieser Fit für die K$_{\alpha}$-Linien und K$_{\beta}$-Linien dargestellt. Die Abschirmkonstanten für die K$_{\alpha}$-Linien und K$_{\beta}$-Linien wurden somit mit
 \[\sigma_{\text{2,1,exp}} = \num{1.06(9)} \]
 \[\sigma_{\text{3,1,exp}} = \num{2.14(10)}\]
+beziffert.
+%
 \begin{figure}[H]
     \centering
     \begin{samepage}
         \includegraphics[width=0.95\textwidth]{../plots/roentgen_data_Z_vs_E.pdf}
-        \caption[Mosley-Gesetz für die $K_{\alpha}$- und $K_{\beta}$-Linien.]{Mosley-Gesetz für die $K_{\alpha}$- und $K_{\beta}$-Linien. $\sqrt{\nicefrac{E}{R_y}}$ gegen die Ordnungszahl aufgetragen. Die Abschirmkonstante wird aus der Steigung der beiden Fits ermittelt.}
+        \caption[Mosley-Gesetz für die K$_{\alpha}$- und K$_{\beta}$-Linien.]{Mosley-Gesetz für die K$_{\alpha}$- und K$_{\beta}$-Linien. $\sqrt{\nicefrac{E}{R_y}}$ gegen die Ordnungszahl aufgetragen. Die Abschirmkonstante wird aus der Steigung der beiden Fits ermittelt.}
         \label{fig:roentgen_z_vs_e}
     \end{samepage}
 \end{figure}
+
+
 \subsection{Unbekannte Proben}
 \label{sec:roentgen_unbekannt}
+
 \textbf{TODO}
+
+
+
 \section{Diskussion}
 \label{sec:diskussion}
+
 \subsection{Compton-Streuung}
-%! powered by GPT-4
 \label{sec:diskussion_compton}
+
+%! powered by GPT-4
 Die Ergebnisse des Compton-Streuungs-Teilversuchs zeigen, dass die gemessenen Energien der gestreuten Photonen in \autoref{tab:energy_compton} in guter Übereinstimmung mit den theoretischen Erwartungen des Compton-Effekts stehen. Die Abhängigkeit der gestreuten Energie von dem Winkel des Messarms wurde in \autoref{fig:compton_energy} dargestellt, und es zeigt sich eine klare Tendenz, die dem Compton-Effekt entspricht.
+
+
 \subsection{Röntgenfluoreszenzanalyse}
 \label{sec:diskussion_roentgen}
 %! powered by GPT-4 & Elias
-Die Ergebnisse der Röntgenfluoreszenzanalyse zeigen, dass die gemessenen Energien der $K_{\alpha}$- und $K_{\beta}$-Linien in guter Übereinstimmung mit den theoretischen Erwartungen stehen. Bei genauer Betrachtung der \autoref{fig:roentgen_z_vs_e} erkennt man, dass ein Fit der ersten paar Punkte -- mit Kernladungszahlen $<35$ -- zu einer Gerade mit höherer Steigung führen würde als einer, welcher lediglich durch die Elemente höherer Ordnungszahlen gegeben wäre. Hier spielt der Einfluss der äußeren Elektronen, welche sich mit steigender Schalenzahl immer weiter von dem Kern entfernen, eine Rolle. Die Abschirmkonstante für die $K_{\alpha}$-Linien und $K_{\beta}$-Linien ist eben nur eine Näherung, wie jedoch auch der Abbildung ersichtlich wird, für viele Fälle eine Gute.
+Die Ergebnisse der Röntgenfluoreszenzanalyse zeigen, dass die gemessenen Energien der K$_{\alpha}$- und K$_{\beta}$-Linien in guter Übereinstimmung mit den theoretischen Erwartungen stehen. Bei genauer Betrachtung der \autoref{fig:roentgen_z_vs_e} erkennt man, dass ein Fit der ersten paar Punkte -- mit Kernladungszahlen $<35$ -- zu einer Gerade mit höherer Steigung führen würde als einer, welcher lediglich durch die Elemente höherer Ordnungszahlen gegeben wäre. Hier spielt der Einfluss der äußeren Elektronen, welche sich mit steigender Schalenzahl immer weiter von dem Kern entfernen, eine Rolle. Die Abschirmkonstante für die K$_{\alpha}$-Linien und K$_{\beta}$-Linien ist eben nur eine Näherung, wie jedoch auch aus der Abbildung ersichtlich wird, für viele Fälle eine gute.
 
 \subsection{Unbekannte Proben}
 \label{sec:diskussion_unbekannt}
+
 \textbf{TODO unbekannte Proben}
+
 
 
 \section{Zusammenfassung}
 \label{sec:zusammenfassung}
+
 %! powered by GPT-4
 Im ersten Teilversuch, der Compton-Streuung, wurden die Energien der Compton-Streuung für verschiedene Winkel gemessen. Die Messwerte sind in \autoref{tab:energy_compton} dargestellt. Aus den Messwerten wurde mittels einer Fitkurve in \autoref{fig:compton_energy} die Elektronenmasse bestimmt: $m_e = \SI{1.07(11)E-30}{\kilogram}$. Der Literaturwert der Elektronenmasse beträgt etwa $\SI{9.11E-31}{\kilogram}$, was zeigt, dass der ermittelte Wert in der richtigen Größenordnung liegt.
 
-Im zweiten Teilversuch, der Röntgenfluoreszenzanalyse, wurden die $K_{\alpha}$- und $K_{\beta}$-Linien für verschiedene Elemente und Proben untersucht. Die Messwerte und bestimmten Energien sind in \autoref{tab:roentgenfloureszenz} aufgeführt. Durch Auftragen von $\sqrt{\nicefrac{E}{R_y}}$ gegen die Ordnungszahl und Anpassung einer linearen Fitkurve in \autoref{fig:roentgen_z_vs_e} wurden die experimentellen Abschirmkonstanten für die $K_{\alpha}$-Linien und $K_{\beta}$-Linien ermittelt: $\sigma_{\text{2,1,exp}} = \num{1.06(9)}$ und $\sigma_{\text{3,1,exp}} = \num{2.14(10)}$. Die ermittelten Abschirmkonstanten zeigen eine gute Übereinstimmung mit den bekannten Literaturwerten, die in der Regel nahe bei 1 und 2 liegen.
+Im zweiten Teilversuch, der Röntgenfluoreszenzanalyse, wurden die K$_{\alpha}$- und K$_{\beta}$-Linien für verschiedene Elemente und Proben untersucht. Die Messwerte und bestimmten Energien sind in \autoref{tab:roentgenfluoreszenz} aufgeführt. Durch Auftragen von $\sqrt{\nicefrac{E}{R_y}}$ gegen die Ordnungszahl und Anpassung einer linearen Fitkurve in \autoref{fig:roentgen_z_vs_e} wurden die experimentellen Abschirmkonstanten für die K$_{\alpha}$-Linien und K$_{\beta}$-Linien ermittelt: $\sigma_{\text{2,1,exp}} = \num{1.06(9)}$ und $\sigma_{\text{3,1,exp}} = \num{2.14(10)}$. Die ermittelten Abschirmkonstanten zeigen eine gute Übereinstimmung mit den bekannten Literaturwerten, die in der Regel nahe bei 1 und 2 liegen.
 
 \textbf{TODO unbekannte Proben}
+
+
+
 \clearpage
 % Literaturverzeichnis
 \printbibliography
