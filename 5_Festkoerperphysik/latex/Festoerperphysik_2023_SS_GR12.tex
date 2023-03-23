@@ -1,0 +1,212 @@
+% class
+\documentclass[ngerman]{scrartcl}
+
+% input preamble
+\input{../../shared_preamble.tex}
+
+% biblatex
+\addbibresource{festkoerperphysik.bib}
+
+
+% manual header
+\ihead{Festkörperphysik}  % inner (left) head
+\chead{\textsc{Wachmann} Elias (12004232)\\\textsc{Zach} Andreas (12004790)}  % center head
+\ohead{24.03.2023}  % outer (right) head
+
+
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.5\textwidth]{../../99_Misc/Logo_KF.pdf}\par\vspace{0.8cm}
+    {\scshape\LARGE{Karl-Franzens-Universität Graz}\par}
+    {\scshape\LARGE{Institut für Physik}\par}
+    \vspace{1cm}
+    {\scshape\Large{23S PHY.L02UB Fortgeschrittenenpraktikum 2}\par}
+    678 Bachelorstudium Physik, UG2002/2021W\par
+    \vspace{1.5cm}
+    {\huge\bfseries V. Festkörperphysik\par}
+    \vspace{2cm}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c c c}
+            \Large Wachmann Elias &  & \Large Zach Andreas \\
+            \Large 12004232       &  & \Large 12004790     \\
+            \multicolumn{3}{c}{Gruppe 12}
+        \end{tabular}
+    \end{table}
+    \vfill
+    \Large Betreut von\par
+    Thomas Georg \textsc{Boné}, BSc MSc
+    \vfill
+    {\large 24.03.2023\par}
+\end{titlepage}
+
+\clearpage
+\tableofcontents
+\newpage
+
+\section[Aufgabenstellung]{Aufgabenstellung \cite{ref:angabe}}
+\label{sec:aufgabenstellung}
+
+Die im vorliegenden Protokoll beschriebene Laboreinheit zum Thema \textit{Festkörperphysik} gliedert sich in die drei folgenden Teilversuche:
+%
+\begin{itemize}
+    \item \textbf{Elektronenbeugung an einer polykristalinen Graphitprobe}
+          \begin{itemize}
+              \item Berechnung der Wellenlänge der Elektronen in Abhängigkeit der Anodenspannung
+              \item Bestimmung des Gitterabstands von Graphit aus den ersten beiden Beugungsringen
+          \end{itemize}
+    \item \textbf{Elektronen im Magnetfeld}
+          \begin{itemize}
+              \item Messung der Auslenkung des Elektronenstrahls in Abhängigkeit der Stromstärke bei zwei unterschiedlichen Anodenspannungen
+              \item Berechnung des Krümmungsradius der Elektronenbahn aus der Auslenkung
+              \item Berechnung der magnetischen Induktion aus dem Spulenstrom
+              \item Grafische Darstellung von $\nicefrac{1}{r}$ in Abhängigkeit von $B$
+              \item Bestimmung der spezifischen Ladung des Elektrons durch lineare Regression
+          \end{itemize}
+    \item \textbf{Elektronen-Spin-Resonanz}
+          \begin{itemize}
+              \item Bestimmung des Resonanzmagnetfeldes $B_0$ in Abhängigkeit von der gewählten Resonanzfrequenz
+              \item Bestimmung des Landé-Faktors von 1,1-Diphenyl-2-Pikryl-Hydrazyl (DPPH)
+          \end{itemize}
+
+\end{itemize}
+
+
+
+\section[Voraussetzungen und Grundlagen]{Voraussetzungen und Grundlagen \cite{ref:angabe}}
+\label{sec:voraussetzungen_grundlagen}
+
+\subsection{Elektronenbeugung}
+\label{subsec:grundlagen_elektronenbeugung}
+
+\paragraph{Berechnung der Elektronenwellenlänge}
+%
+Um die im Versuch auftretenden Interferenzerscheinungen zu erklären wird den Elektronen, die beim Auftreffen auf die polykristalline Graphitprobe den Impuls $p$
+besitzen, eine Wellenlänge $\lambda$ zugeordnet. Dieser Zusammenhang wird mit der Gleichung von de Broglie beschrieben:
+%
+\begin{equation}
+    \label{eq:de_broglie}
+    \lambda = \frac{h}{p}
+\end{equation}
+%
+wobei $h=\SI{6.62607015e-34}{Js}$ das Plank'sche Wirkungsquantum beschreibt.
+
+Der Impuls kann aus der Geschwindigkeit $v$ bestimmt werden, die die Elektronen nach durchlaufen einer Beschleunigungsspannung $U_B$ erreicht haben:
+%
+\begin{equation}
+    \label{eq:kinetische_energie}
+    \frac{1}{2} m_e v^2 = \frac{p^2}{2 m} = q_e U_B
+\end{equation}
+%
+Dabei beschreiben $q_e = \SI{1.602e-19}{As}$ die Elementarladung ($\equiv$ negative Elektronenladung) und $m_e = \SI{9.109e-31}{kg}$ die Ruhemasse des Elektrons.
+
+Die Wellenlänge der Elektronen ergibt sich somit zu:
+%
+\begin{equation}
+    \label{eq:wellenlaenge_elektronen}
+    \lambda = \frac{h}{\sqrt{2 m e U_B}}
+\end{equation}
+
+\paragraph{Beugung von Elektronen an Kristallgittern}
+%
+In unserem Versuch trifft ein Elektronenstrahl auf eine polykristalline Graphitprobe und wird gemäß der Bragg-Bedingung gestreut:
+%
+\begin{equation}
+    \label{eq:bragg}
+    2 d \sin(\theta) = n \lambda \qq{mit} n \in \mathbb{N}\setminus\{0\}
+\end{equation}
+%
+Dabei ist $d$ der Abstand zwischen den einzelnen Netzebenen im Graphitgitter, $n$ die Beugungsordnung und $\theta$ der Bragg-winkel (Winkel zwischen Elektronenstrahl und Gitterebenen).
+
+In einer polykristallinen Graphitprobe sind die Bindungen zwischen den einzelnen Lagen gebrochen, wodurch ihre Orientierung zufällig ist. D.h. man findet immer wieder
+Microkristallite mit der richtigen Orientierung zum Elektronenstrahl, sodass die Bragg-Bedingung erfüllt ist. Der gebeugte Elektronenstrahl ist daher in Form eines Konuses aufgefächert, wodurch die Interferenzringe am Schirm entstehen.
+
+Der Bragg-Winkel kann aus dem Radius $r$ des am Schirm sichtbaren Interferenzringes berechnet werden, wobei beachtet werden muss, dass der Ablenkungswinkel $\alpha = 2\theta$ doppelt so groß ist. Aus Fig. 3.2.4 sieht man direkt: % TODO: figure einfügen
+%
+\begin{equation}
+    \label{eq:ablenkwinkel_radius}
+    \sin(2\alpha) = \frac{r}{R}
+\end{equation}
+%
+mit $R$, dem Radius der Glaskugel und $r$ ist der Radius des Interferenzringes. Für kleine Winkel $\alpha$ gilt:
+%
+\[\sin(2\alpha) \approx 2\sin(\alpha)\]
+%
+Dadurch erhält man für kleine Winkel $\theta$:
+%
+\[\sin(\alpha)=\sin(2\theta)\approx2\sin(\theta)\]
+%
+Mit dieser Näherung erhält man:
+%
+\begin{equation}
+    \label{eq:radius_wellenlaenge}
+    r=\frac{2R}{d}n\lambda
+\end{equation}
+%
+Die Radii der zwei inneren Interferenzringe stammen von den Netzebenen $d_1$ und $d_2$ des Graphits für $n=1$.
+
+
+\subsection{Unsicherheitsanalyse}
+\label{subsec:unsicherheitsanalyse}
+
+Die explizit angegebenen Unsicherheiten der ermittelten Messgrößen basieren auf Berechnungen durch die Unsicherheitsangabe nach den Datenblättern der verwendeten Messgeräte. Diese sind in \autoref{tab:geraeteliste} vermerkt beziehungsweise referenziert.
+
+Die Fehlerfortpflanzung der berechneten Werte basiert auf der Größtunsicherheitsmethode nach Gauß. Um diese Berechnungen zeiteffizient durchführen zu können, wird für jeden Unterpunkt der Laborübung ein Skript in \verb!Python! implementiert. Kernstück dessen ist das package \verb!uncertainties! \cite{ref:uncertainties}, das intern die Fehlerfortpflanzung berechnet. Gerundet wird nach den Angaben des Skriptums der Lehrveranstaltung \enquote{Einführung in die physikalischen Messmethoden} \cite{ref:messmethoden}.
+
+
+
+\section{Versuchsanordnung}
+\label{sec:versuchsanordnung}
+
+
+
+\section{Geräteliste}
+\label{sec:geraeteliste}
+
+\begin{table}[H]
+    \centering
+    \begin{samepage}  % caption and table on same page
+        \caption[Geräteliste]{Verwendete Geräte und wichtige Materialien}  % optional argument for List of Tables, mandatory argument for caption
+        \label{tab:geraeteliste}
+        \begin{tblrx}{colspec={}, row{1}={guard}}
+
+        \end{tblrx}
+    \end{samepage}
+\end{table}
+
+
+
+\section{Versuchsdurchführung und Messergebnisse}
+\label{sec:versuchsdurchfuehrung_messergebnisse}
+
+
+
+\section{Auswertung}
+\label{sec:auswertung}
+
+
+
+\section{Diskussion}
+\label{sec:diskussion}
+
+
+
+\section{Zusammenfassung}
+\label{sec:zusammenfassung}
+
+
+
+\clearpage
+% Literaturverzeichnis
+\printbibliography
+
+% Abbildungsverzeichnis
+\listoffigures
+
+% Tabellenverzeichnis
+\listoftables
+
+\end{document}
