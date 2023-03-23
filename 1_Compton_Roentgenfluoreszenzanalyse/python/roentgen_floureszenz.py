@@ -129,7 +129,7 @@ def calculate_covariance_of_two_lists(list1, list2):
 energy_peaks = plot_all_counts_over_engergy(exp_data)
 Ordnungszahlen_der_Elemente = {
     "Ag": 47, "Cu": 29, "Fe": 26, "Mo": 42, "Ni": 28, "Ti": 22, "Zn": 30, "Zr": 40}
-R_y = 13.6  # Rydberg constant in keV
+R_y = 13.6  # Rydberg constant in eV
 
 
 def mod_energy(E):
