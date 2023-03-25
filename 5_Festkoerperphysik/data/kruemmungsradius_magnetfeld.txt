@@ -1,0 +1,25 @@
+selber Aufbau wie bei Elektronenwellenlänge
+
+Zusätzlich wir das Multimeter verwendet. Für zwei gewählte Anodenspannungen (1.8 kV und 4 kV) wird die Spannung am Netzgerät verändert (dadurch auch die Stromstärke). Die Stromstärke am Messgerät wird notiert gegen den relativen Abstand des 0. Maximums zur Position bei keiner zusätzlich angelegten Spannung
+
+1.8 kV:
+rel.Abstand/mm;I/mA;I/mA;
+0;0.5;0.5
+5;40;49
+10;75;78
+15;100;108
+20;131;149
+25;164;180
+30;195;208
+35;228;240
+
+4 kV:
+rel.Abstand/mm;I/mA;I/mA;
+0;0.5;0.5
+5;76;60
+10;122;100
+15;165;139
+20;216;190
+25;261;245
+30;314;290
+35;360;340

@@ -1,0 +1,15 @@
+Messgeräte in Betrieb nehmen.
+
+Hochspannung anlegen, auf der Glasbirne erscheinen konzentrische grüne Kreise. Wir messen den Radius der beiden Kreise um daraus über das Bragg'sche Gesetz schließlich unter Verwendung des Radius und der Beschleunigungsspannung die Wellenlänge der Elektronen errechnen können. 
+
+Unsicherheit nachschauen auf Datenblatt
+gemessen: äußerer Rand des Zentrums zu Innenradius der Ringe
+
+Abwechselnde Messung 
+Beschleunigungsspannung/kV;1.Maxima/mm;1.Maxima/mm;2.Maxima/mm;2.Maxima/mm
+2;17;17;31;30;
+2.5;15;15;27;26;
+3;13;13;24;24;
+3.5;12;13;21;24;
+4;11;12;20;22;
+
