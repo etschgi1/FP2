@@ -148,13 +148,161 @@ Mit dieser Näherung erhält man:
 %
 Die Radii der zwei inneren Interferenzringe stammen von den Netzebenen $d_1$ und $d_2$ des Graphits für $n=1$.
 
-\paragraph{Elektronen im Magnetfeld}
+\subsection{Elektronen im Magnetfeld}
+\label{subsec:grundlagen_elektronen_im_magnetfeld}
 %
 Bewegt sich ein Elektron im Magnetfeld $\vb*{B}$, so wirkt auf dieses die Lorentzkraft:
 \[\vb*{F}_L = - q_e \left(\vb*{v} \times \vb*{B} \right)\]
-Wenn man davon ausgeht, dass Geschwindigkeitsvektor $\vec{v}$ und der Vektor der magnetischen Flussdichte $\vec{B}$ senkrecht aufeinander stehen, so gilt:
+Wenn man davon ausgeht, dass Geschwindigkeitsvektor $\vb*{v}$ und der Vektor der magnetischen Flussdichte $\vb*{B}$ senkrecht aufeinander stehen, so gilt:
 \[F_L = -q_e \cdot v \cdot B\]
 Die Lorentzkraft wirkt als Zentripetalkraft und zwingt das Elektron auf eine Kreisbahn mit dem Radius $r$, so dass folgende Beziehung gilt:
+\[-e \cdot v \cdot B = \frac{m_e \cdot v^2}{r}\]
+Die spezifische Ladung ergibt sich dann zu:
+\[e_{\text{spez}} = - \frac{e}{m_e} = \frac{v}{rB}\]
+Die kinetische Energie gewinnt das Elektron aus einem elektrischen Feld, in dem es beschleunigt wird:
+\[-e \cdot U_A = \frac{m_e \cdot v^2}{2} \]
+Aus den beiden Gleichungen folgt nun:
+\[e_{\text{spez}} = - \frac{e}{m_e} = \frac{2 U_A}{B^2 \cdot r^2}\]
+Der Radius $r$ der Kreisbahn lässt sich nicht direkt messen. Stattdessen wird diese Größe aus der Ablenkung $s$ im Magnetfeld und aus dem Kolbendurchmesser $d$ ermittelt. Man betrachte dazu \autoref{fig:kolben_skizze}. 
+
+% \centering
+\setcapindent{0pt}
+\begin{minipage}[t]{0.35\linewidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\linewidth]{fig/Kolben_skizze.png}
+        \caption[Kolben Skizze]{Schematische Skizze des Kolbens}
+        \label{fig:kolben_skizze}
+    \end{figure}
+    \end{minipage}%
+    \hspace*{\fill}
+    \begin{minipage}[t]{0.6\linewidth}
+        \vspace{1cm}
+        $d$ = 135 mm\\ \\
+        Die magnetische Flussdichte $\vb*{B}$ ist:\\
+        $\vb*{B}$ = $\mu_0$ $\vb*{H}$ (T = Tesla)\\
+        $\mu_0$ = 4$\pi$ $\cdot$ 10$^{-7}$ H/m (Permeabilitätskonstante)\\
+        $\vb*{H}$ -- die Feldstärke\\ \\
+        Die Feldstärke des nahezu homogenen Magnetfeldes des Helmholzspulenpaars ist: \\ 
+        \begin{equation}
+            {H} = \frac{{B}}{\mu_0} = \frac{n R^2 I}{\left(R^2 + a^2\right)^{\nicefrac{3}{2}}} = \SI{33.8e2}{\ampere\per\meter}
+        \end{equation}
+        $n$ -- Windungszahl je Spule ($n =320$)\\
+        $R$ -- Radius der Spulen ($R = \SI{6.8}{\centi\meter}$)\\
+        $a$ -- halber Spulenabstand ($a = \SI{3.4}{\centi\meter}$)\\
+        $I$ -- Stromstärke je Spule\\ \\
+    \end{minipage}
+\setcaphanging
+
+
+\subsection{Elektronenspinresonanz}
+\label{subsec:grundlagen_elektronenspinresonanz}
+%
+Seit ihrer Entdeckung durch E. K. Zavoisky (1945) hat sich die Elektronenspinresonanz (ESR) zu einer wichtigen Methode zur Untersuchungen von Molekül- und Kristallstrukturen, von chemischen Reaktionen und anderen Problemstellungen in Physik, Chemie, Biologie und Medizin entwickelt. Sie beruht auf der Absorption hochfrequenter elektromagnetischer Strahlung durch paramagnetische Stoffe in einem äußeren Magnetfeld, in dem die Spinzustände der Elektronen aufspalten.
+%
+Elektronenspinresonanz ist auf paramagnetische Stoffe begrenzt, da hier die Bahndrehimpulse und Spins der Elektronen zu einem von Null verschiedenen Gesamtdrehimpuls koppeln. Geeignet sind z. B. Verbindungen, in denen Atome mit nicht vollständig aufgefüllten inneren Schalen (Übergangsmetalle, seltene Erden) eingebaut sind, organische Moleküle (freie Radikale), die einzelne ungepaarte Elektronen enthalten, oder Kristalle mit Gitterfehlstellen in einem paramagnetischen Zustand.
+%
+Mit dem Gesamtdrehimpuls $\vec{J}$ verbunden ist das magnetische Moment
+\begin{equation}
+    \vec{\mu_J} = g_J \cdot \frac{\mu_B}{\hbar}\cdot \vec{J}
+\end{equation}
+In einem Magnetfeld $\vec{B}_0$ erhält das magnetische Moment $\vec{\mu}_J$ die potentielle Energie:
+\begin{equation}
+    E = - \vec{\mu}_J \cdot \vec{B}_0
+\end{equation}
+Sie ist gequantelt, da das magnetische Moment und der Gesamtdrehimpuls nur bestimmte diskrete Orientierungen zum Magnetfeld einnehmen können. Jeder Orientierung des Drehimpulses entspricht ein Zustand bestimmter potentieller Energie im Magnetfeld. Für die Komponente $J_z$ des Gesamtdrehimpulses parallel zum Magnetfeld gilt
+\begin{equation}
+    J_z = \hbar \cdot m_J \hspace{2mm} \text{mit} \hspace{2mm} m_J = -J, -\left(J-1\right), \dots, J-1, J
+\end{equation}
+wobei die Drehimpulsquantenzahl $J$ ganz- oder halbzahlig ist, d.h. die potentielle Energie spaltet auf in die diskreten Zeeman-Niveaus.
+\begin{equation}
+    E = g_J \cdot \mu_B \cdot B_0 \cdot m_J \hspace{2mm} \text{mit} \hspace{2mm} m_J = -J, -\left(J-1\right), \dots, J-1, J
+\end{equation}
+Mit der Methode der Elektronenspinresonanz kann die Energieaufspaltung direkt gemessen werden. Dazu wird senkrecht zum statischen Magnetfeld $\vec{B}_0$ ein hochfrequentes magnetisches Wechselfeld
+\begin{equation}
+    \vec{B}_1 = \vec{B}_{\text{HF}} \cdot \sin{\left(\omega t\right)} = \vec{B}_{\text{HF}} \cdot \sin{\left(2 \pi \nu t\right)}
+\end{equation}
+in die Probe eingestrahlt. Wenn die eingestrahlte Energie $h \cdot \nu$ dem Energieabstand $\Delta E$ zweier benachbarter Energieniveaus entspricht, d.h. wenn die Bedingungen
+\begin{equation}
+    \label{eq:V}
+    \Delta m_J = \pm 1 \hspace{2mm} \text{und} \hspace{2mm} \Delta E = h \cdot \nu = g_J \cdot \mu_B \cdot B_0 
+\end{equation}
+erfüllt sind, bewirkt das Wechselfeld ein \glqq Umklappen \grqq der magnetischen momente von einer Einstellmöglichkeit im Magnetfeld $B_0$ in die andere. Anders ausgedrückt werden Übergänge zwischen den benachbarten Niveaus induziert und es tritt ein Resonanzeffekt auf, der sich in der Absorption von Energie aus dem eingestrahlten magnetischen Wechselfeld durch die Probe zeigt. 
+%
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=0.65\linewidth]{fig/zeeman_grundlage.png}
+        \caption[Zeeman Effekt]{Energieaufspaltung des freien Elektrons im Magnetfeld
+        und Resonanzbedingung für die Elektronenspinresonanz.}
+        \label{fig:grundlage_zeeman}
+    \end{samepage}
+\end{figure}
+%
+In zahlreichen Verbindungen spielt der Bahndrehimpuls eine untergeordnete Rolle und die Betrachtungen können sich auf den Spin der Elektronen beschränken. In \autoref{fig:grundlage_zeeman} ist die Situation der Einfachheit halber für ein freies Elektron dargestellt: Hier besteht der Gesamtdrehimpuls aus dem Spin $\vec{s}$ des Elektrons. \\
+Die Drehimpulsquantenzahl ist
+\begin{equation*}
+    J = s = \frac{1}{2}
+\end{equation*}
+und der Landésche Faktor hat den Wert
+\begin{equation*}
+    g_J = g_s \approx 2,0023
+\end{equation*}
+Im magnetfeld spaltet die Energie des Elektrons auf in die beiden Niveaus
+\begin{equation}
+    E = g_S \cdot \mu_B \cdot B_0 \cdot m_s \hspace{2mm} \text{mit} \hspace{2mm} m_S = \pm \frac{1}{2}
+\end{equation}
+die einer Ausrichtung des Elektronenspins antiparallel und parallel zum Magnetfeld entsprechen. Bei einem Übergang zwischen den beiden Niveaus ist die Auswahlregel \ref{eq:V} automatisch erfüllt: Die Resonanzbedingung lautet analog zu \ref{eq:V}
+\begin{equation}
+    h \cdot \nu = g_S \cdot \mu_B \cdot B_0
+\end{equation}
+Misst man nun z.B. die aus dem eingestrahlten Wechselfeld absorbierte Energie bei fester Frequenz $\nu$ in Abhängigkeit om Magnetfeld $B_0$, so erhält man eine Absorptionslinie mit einer halbwertsbreite $\delta B_0$. Diese Linienbreite ist bei einem homogenen magnetfeld im einfachsten Fall Ausdruck der Unschärfe $\delta E$ des Übergangs. Es gilt die Unschärferelation
+\begin{equation}
+    \delta E \cdot T \geq \frac{h}{2} 
+\end{equation}
+wobei $T$ die Lebensdauer des Niveaus ist. Wegen \autoref{eq:V} gilt
+\begin{equation}
+    \delta E = g \cdot \mu_B \cdot \delta B_0
+\end{equation}
+damit ist unabhängig von der Resonanzfrequenz $\nu$ 
+\begin{equation}
+    \delta B_0 = \frac{\hbar}{2 \cdot g_J \cdot \mu_B \cdot T}
+\end{equation}
+Ausgewertet wird die Lage und die Breite der Absorptionslinien im ESR-Spektrum der untersuchten Proben: 
+%
+Aus der Lage bestimmt man gemäß \autoref{eq:V} den Landéschen Faktor $g_J \approx r Probe$. Er liegt bei einem freien Atom oder Ion zwischen dem Wert $g_J$ = 1, der bei reinem Bahnmagnetismus erreicht wird, und $g_J \approx 2,0023$ für reinen Spinmagnetismus. Tatsächlich sind die mit der Methode der Elektronenspinresonanz untersuchten paramagnetischen Zentren jedoch nicht frei. In ein Kristallgitter eingebaut oder in Lösung von einer Solvathülle umgeben, wirken starke elektrische und magnetische Felder auf sie, die von den Atomen der Umgebung erzeugt werden. Diese Felder bewirken eine Energieverschiebung und beeinflussen die \textit{Zeeman}-Aufspaltung der Elektronen. Dadurch ändert sich der Wert des g-Faktors, er wird häufig anisotrop, und in den ESR-Spektren tritt eine Feinstruktur auf. Es lassen sich also aus dem g-Faktor Rückschlüsse
+auf die Bindungsverhältnisse der Elektronen und den chemischen Aufbau der untersuchten Probe ziehen.
+%
+Aus der Linienbreite können Aussagen über die dynamischen Eigenschaften gewonnen werden. Die Linienbreite wird -- wenn man von nicht aufgelösten Feinstrukturen absieht -- bestimmt durch mehrere Prozesse, die der Ausrichtung der magnetischen Momente entgegenwirken. Als Spin-Spin-Relaxation bezeichnet man die Wechselwirkung der ausgerichteten magnetischen Momente untereinander und als Spin-Gitter-Relaxation die Wechselwirkung der magnetischen Momente mit den fluktuierenden elektrischen und magnetischen Feldern, die in Festkörpern durch die Gitterschwingungen oder in Flüssigkeiten durch die thermische Bewegung der Atome erzeugt werden. In einigen Fällen wird die Linienbreite durch sogenannte Austauschwechselwirkung beeinflusst und fällt erheblich kleiner aus, als bei reiner Dipol-Dipol-Wechselwirkung der Spins zu erwarten wäre.
+%
+Für praktische Anwendungen entwickelte ESR-Spektrometer arbeiten hauptsächlich bei Frequenzen von etwa $\SI{10}{\giga\hertz}$ (Mikrowellen, X-Band). Die Magnetfelder liegen entsprechend in der Größenordnung $\SIrange{0.1}{1}{\tesla}$. Im vorliegenden Versuch ist das Magnetfeld $B_0$ deutlich schwächer. Es wird mit Hilfe zweier Helmholtz-Spulen erzeugt und kann durch geeignete Wahl des Spulenstromes zwischen $\SIrange{0}{4}{\milli\tesla}$ eingestellt werden. Dem konstanten Spulenstrom wird ein mit $\SI{50}{\hertz}$ modulierter Strom überlagert. Also setzt sich das entsprechend modulierte Magnetfeld B zusammen aus einem Gleichfeld $B_0$ und einem $\SI{50}{\hertz}$-Feld $B_{\text{mod}}$ . Die Probe befindet sich in einer HF-Spule, die Teil eines elektrischen Schwingkreises hoher Güte ist. Der Schwingkreis wird durch einen frequenzvariablen HF-Oszillator zwischen $\SIrange{15}{130}{\mega\hertz}$ erregt.
+%
+Ist die Resonanzbedingung \ref{eq:V} erfüllt, absorbiert die Probe Energie und der Schwingkreis wird belastet. Als Folge ändert sich der Wechselstromwiderstand des Schwingkreises und die Spannung über der Spule nimmt ab. Diese Spannung wird durch Gleichrichtung und Verstärkung in das Messsignal gewandelt.
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{cc}
+        \includegraphics[width=0.48\textwidth]{fig/grund_a.png} &
+        \includegraphics[width=0.48\textwidth]{fig/grund_b.png}   \\
+        a & b \\
+        \includegraphics[width=0.48\textwidth]{fig/grund_c.png} &
+        \includegraphics[width=0.48\textwidth]{fig/grund_d.png}   \\
+        c & d \\
+    \end{tabular}
+    \caption[Oszilloskopbild des Messsignals]{Oszilloskopbild des Messsignals (Y bzw. I) und des modulierten Magnetfeldes (X bzw. II)\\links: Zweikanaldarstellung mit DC-gekoppeltem Kanal II\\rechts: XY-Darstellung mit AC-gekoppeltem Kanal II\\\\a) unkorrigierte Phasenverschiebung $\varphi$, zu niedriges Gleichfeld $B_0$\\b) korrigierte Phasenverschiebung $\varphi$, zu niedriges Gleichfeld $B_0$\\c) unkorrigierte Phasenverschiebung $\varphi$, passendes Gleichfeld $B_0$\\d) korrigierte Phasenverschiebung $\varphi$, passendes Gleichfeld $B_0$}
+    \label{fig:grundlagen_oszibilder}
+\end{figure}
+%
+Das Messsignal erscheint am Ausgang des Betriebsgerätes zeitverzögert gegenüber dem modulierten Magnetfeld. Die Zeitverzögerung kann als Phasenverschiebung im Betriebsgerät korrigiert werden. Ein Zweikanal-Oszilloskop stellt im X-Y-Betrieb das Messsignal zusammen mit einer zum Magnetfeld proportionalen Spannung als Resonanzsignal dar. Das Resonanzsignal ist symmetrisch, wenn das Gleichfeld $B_0$ die Resonanzbedingung erfüllt und die Phasenverschiebung $\varphi$ zwischen Messsignal und moduliertem Magnetfeld korrigiert ist (siehe \autoref{fig:grundlagen_oszibilder}).
+%
+Als Probensubstanz wird 1,1-Diphenyl-2-Pikryl-Hydrazyl (DPPH) verwendet. Diese organische Verbindung ist ein relativ stabiles freies Radikal, das an einem Atom der Stickstoffbrücke ein ungepaartes Valenzelektron aufweist (siehe \autoref{fig:dpph}). Dessen Bahnbewegung ist durch den Molekülaufbau praktisch ausgelöscht. Daher hat das Molekül einen g-Faktor, der fast dem eines freien Elektrons entspricht. Die Substanz ist in polykristalliner Form für die Demonstration der Elektronenspinresonanz sehr gut geeignet, da sie eine intensive ESR-Linie hat, die wegen der Austauschverschmälerung eine geringe Breite aufweist.
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=0.65\linewidth]{fig/dpph.png}
+        \caption{Chemische Struktur von 1,1-Diphenyl-2-Pikryl-Hydrazyl (DPPH)}
+        \label{fig:dpph}
+    \end{samepage}
+\end{figure}
 \subsection{Unsicherheitsanalyse}
 \label{subsec:unsicherheitsanalyse}
 
@@ -167,6 +315,35 @@ Die Fehlerfortpflanzung der berechneten Werte basiert auf der Größtunsicherhei
 \section{Versuchsanordnung}
 \label{sec:versuchsanordnung}
 
+\subsection{Elektronenbeugung und Elektronen im Magnetfeld}
+\label{subsec:anordnung_elektronen}
+
+Der Aufbau zu den beiden Teilversuchen \textit{Elektronenbeugung} und \textit{Elektronen im Magnetfeld} ist ident und in \autoref{fig:aufbau_elektronen} dargestellt.
+%
+% \begin{figure}[H]
+%     \centering
+%     \begin{samepage}
+%         \includegraphics[width=\linewidth]{fig/Beugung_Aufbau_beschriftet.jpg}
+%         \caption[Aufbau Elektronenbeugung und Elektronen im Magnetfeld]{Versuchsaufbau der beiden Teilversuche \textit{Elektronenbeugung} und \textit{Elektronen im Magnetfeld}. \textbf{(a)} Glühkathode mit Graphitkristallgitter, \textbf{(b)} Elektronenbeugungsröhre, \textbf{(c)} Helmholtz-Spule, \textbf{(d)} Netzgerät, \textbf{(e)} Hochspannungsnetzgerät, \textbf{(f)} Digitalmultimeter.}
+%         \label{fig:aufbau_elektronen}
+%     \end{samepage}
+% \end{figure}
+
+
+
+\subsection{Elektronen-Spin-Resonanz}
+\label{subsec:anordnung_elektronen_spin}
+
+Der Aufbau des Teilversuchs \textit{Elektronen-Spin-Resonanz} ist in \autoref{fig:aufbau_esr} dargestellt.
+%
+% \begin{figure}[H]
+%     \centering
+%     \begin{samepage}
+%         \includegraphics[width=\linewidth]{fig/ESR_Aufbau_beschriftet.jpg}
+%         \caption[Aufbau Elektronen-Spin-Resonanz]{Versuchsaufbau zum Teilversuch \textit{Elektronen-Spin-Resonanz}. \textbf{(a)} Glühkathode mit Graphitkristallgitter, \textbf{(b)} Elektronenbeugungsröhre, \textbf{(c)} Helmholtz-Spule, \textbf{(d)} Netzgerät, \textbf{(e)} Hochspannungsnetzgerät, \textbf{(f)} Digitalmultimeter.}
+%         \label{fig:aufbau_esr}
+%     \end{samepage}
+% \end{figure}
 
 
 \section{Geräteliste}
@@ -177,8 +354,17 @@ Die Fehlerfortpflanzung der berechneten Werte basiert auf der Größtunsicherhei
     \begin{samepage}  % caption and table on same page
         \caption[Geräteliste]{Verwendete Geräte und wichtige Materialien}  % optional argument for List of Tables, mandatory argument for caption
         \label{tab:geraeteliste}
-        \begin{tblrx}{colspec={}, row{1}={guard}}
-
+        \begin{tblrx}{}
+            Gerät                      & Hersteller & Modell                   & Inventar-Nr.  & Anmerkung \\
+            Glühkathode & - & - & - &-\\
+            Graphitkristallgitter & - & - & - &- \\
+            Elektronenbeugungsröhre & - & - & - & -\\
+            Helmholtz-Spulenpaar & Leybold & 555 604  & - & 320 Windungen, max. \SI{2}{A} \\
+            Netzgerät & Phywe & 11704.93 & 003576 & \SI{220}{V~}/\SI{50}{Hz}, \SI{220}{VA} \\
+            Hochspannungsnetzgerät & Leybold & 522 37 & - & - \\
+            Digitalmultimeter & TTi & 1604 & - & - \\
+            ESR-Grundgerät & Leybold & 514 55 & 300025940001 & - \\
+            Helmholtz-Spulenpaar & Leybold & 555 06  & - & - \\
         \end{tblrx}
     \end{samepage}
 \end{table}
