@@ -5,7 +5,7 @@
 \input{../../shared_preamble.tex}
 
 % manual header
-\ihead{Compton Effekt \&\newline Röntgenfluoreszenzanalyse}  % inner (left) head
+\ihead{Compton-Effekt \&\newline Röntgenfluoreszenzanalyse}  % inner (left) head
 \chead{\textsc{Wachmann} Elias (12004232)\\\textsc{Zach} Andreas (12004790)}  % center head
 \ohead{17.03.2023}  % outer (right) head
 
@@ -25,7 +25,7 @@
     {\scshape\Large{23S PHY.L02UB Fortgeschrittenenpraktikum 2}\par}
     678 Bachelorstudium Physik, UG2002/2021W\par
     \vspace{1.5cm}
-    {\huge\bfseries I. Compton Effekt \& Röntgenfluoreszenzanalyse\par}
+    {\huge\bfseries I. Compton-Effekt \& Röntgenfluoreszenzanalyse\par}
     \vspace{2cm}
     \begin{table}[H]
         \centering
@@ -51,7 +51,7 @@
 \section[Aufgabenstellung]{Aufgabenstellung \cite{ref:angabe_compton,ref:angabe_roentgen}}
 \label{sec:aufgabenstellung}
 
-Die vorliegende Laboreinheit teilt sich in zwei Teilversuche:
+Die vorliegende Laboreinheit gliedert sich in zwei Teilversuche:
 
 \begin{itemize}
     \item \textbf{Compton-Effekt}
@@ -62,7 +62,8 @@ Die vorliegende Laboreinheit teilt sich in zwei Teilversuche:
     \item \textbf{Röntgenfluoreszenzanalyse}
           \begin{itemize}
               \item Aufnahme und Kalibrierung eines Röntgenenergiespektrums
-              \item Zeigen der Gültigkeit des Moseley'schen Gesetzes Ermitteln der jeweiligen Abschirmkonstanten der K-Linien
+              \item Zeigen der Gültigkeit des Moseley'schen Gesetzes
+              \item Ermitteln der jeweiligen Abschirmkonstanten der K-Linien
               \item Analyse der Zusammensetzung mehrerer unbekannter Proben
           \end{itemize}
 \end{itemize}
@@ -142,7 +143,7 @@ einer Übergangslinie codiert aus einer wie viel energetisch höheren Schale das
 Springt das Elektron nur eine Schale nach unten (also in diesem Fall von L nach K), so schreibt man ein $\alpha$.
 Bei einem Sprung von der zweithöheren Schale (M nach K) schreibt man ein $\beta$ usw.
 Analog entsteht das L-Spektrum,
-wenn Elektronen auf die 2. Schale (L-Schale) zurückfallen. Die Energie der emittierten Strahlung einer
+wenn Elektronen auf die zweite Schale (L-Schale) zurückfallen. Die Energie der emittierten Strahlung einer
 Schale ist abhängig von der Kernladungszahl (Moseley'sches Gesetz).
 \begin{equation}
     \label{eq:moseley}
@@ -211,7 +212,8 @@ Das Röntgengerät ist an seinem SIGNAL-OUT-Ausgang mittels eines Koaxialkabels 
 
 Relevante Parameter für den Messvorgang sind folgendermaßen eingestellt: Die Potentialdifferenz zwischen Glühkathode und Anode ist auf \SI{30}{kV} eingestellt, die Emissionsstromstärke beträgt generell \SI{1}{mA}. In der PC-Software CASSY Lab ist der Parameter \textit{Vielkanalmessung} auf 512 Kanäle eingestellt und negative Pulse sind aktiviert, gemessen wird mit einer Torzeit von \SI{300}{s}, sofern nicht anders erwähnt.
 
-Das verwendete Röntgengerät is in \autoref{fig:aufbau_roentgen} dargestellt. 
+Das verwendete Röntgengerät ist in \autoref{fig:aufbau_roentgen} dargestellt.
+%
 \begin{figure}[H]
     \centering
     \begin{samepage}
@@ -222,6 +224,7 @@ Das verwendete Röntgengerät is in \autoref{fig:aufbau_roentgen} dargestellt.
         \label{fig:aufbau_roentgen}
     \end{samepage}
 \end{figure}
+
 
 \subsection{Compton-Effekt}
 \label{subsec:aufbau_compton}
@@ -254,7 +257,7 @@ der Fall.
 Nachdem nun die Ausgangsstellung mit $\varphi_0 = \SI{-1.6}{\degree}$ und $I_0=\SI{0.14}{mA}$ ermittelt worden ist, wird das Primärspektrum der Röntgenröhre aufgenommen. Gemessen wird mit der ursprünglich beschriebenen Torzeit von \SI{300}{s}. Nachdem das Spektrum von der Software erfasst worden ist, dienen die L$_\alpha$-Linie von \ch{Au} (bei \SI{9.71}{keV}) und die K$_\alpha$-Linie von \ch{Mo} (bei \SI{17.44}{keV}) als Referenz zur Kalibrierung der Energieskala. Dabei werden die Positionen der Peakschwerpunkte des Primärspektrums diesen Energien zugeordnet.
 
 \paragraph{Streuspektren}
-Nach das Messgerät nun kalibriert worden ist, wird die Abhängigkeit des Streuspektrums vom Winkel untersucht. Hierfür wird die Abschwächblende wieder vom Kollimator genommen und der Targethalter samt Targettsich am Goniometer im Experimentierraum montiert. Als Target kommt eine Plexiglas-Probe zum Einsatz. Der Emissionsstrom wird nun wieder, wie ursprünglich angegeben, auf \SI{1}{mA} erhöht. Der Winkel des Targethalters (Targetwinkel) wird auf \SI{20}{\degree} gestellt, während der Sensorwinkel im Zuge des Experiments laufend verstellt wird. Begonnen wird mit \SI{28.4}{\degree} ($\SI{30}{\degree} - \SI{1.6}{\degree}$), das emittierte Spektrum wird aufgenommen. Dieser Vorgang wird für die folgenden Winkel wiederholt:
+Nachdem das Messgerät nun kalibriert worden ist, wird die Abhängigkeit des Streuspektrums vom Winkel untersucht. Hierfür wird die Abschwächblende wieder vom Kollimator genommen und der Targethalter samt Targettisch am Goniometer im Experimentierraum montiert. Als Target kommt eine Plexiglas-Probe zum Einsatz. Der Emissionsstrom wird nun wieder, wie ursprünglich angegeben, auf \SI{1}{mA} erhöht. Der Winkel des Targethalters (Targetwinkel) wird auf \SI{20}{\degree} gestellt, während der Sensorwinkel im Zuge des Experiments laufend verstellt wird. Begonnen wird mit \SI{28.4}{\degree} ($\SI{30}{\degree} - \SI{1.6}{\degree}$), das emittierte Spektrum wird aufgenommen. Dieser Vorgang wird für die folgenden Winkel wiederholt:
 \begin{itemize}
     \item \SI{43.4}{\degree}
     \item \SI{58.4}{\degree}
@@ -277,7 +280,7 @@ Zuerst wird das Gerät wieder kalibriert. Dazu werden zuerst manuell im Experime
 Nachdem beide Spektren gemessen worden sind, wird die Energieskala diesmal mithilfe der K$_\alpha$-Linien von \ch{Fe} (\SI{6,40}{keV}) und \ch{Zn} (\ch{8,64}{keV}) kalibriert.
 
 \paragraph{Moseley'sches Gesetz}
-Zur anschließenden Verifizierung des Moseley'schen Gesetzes werden nun die Spektren folgender Elementarproben aufgenommen und anschließenden als \texttt{.csv}-Datei abgespeichert:
+Zur anschließenden Verifizierung des Moseley'schen Gesetzes werden nun die Spektren folgender Elementarproben aufgenommen und anschließend als \texttt{.csv}-Datei abgespeichert:
 \begin{itemize}
     \item Titan (\ch{Ti})
     \item Eisen (\ch{Fe})
@@ -290,13 +293,13 @@ Zur anschließenden Verifizierung des Moseley'schen Gesetzes werden nun die Spek
 \end{itemize}
 
 \paragraph{Unbekannte Proben}
-Abschließend werden drei unbekannte Proben (siehe \autoref{fig:unbekannte_proben}) am Targethalter platziert. Deren Spektren werden wieder aufgenommen, für die unbekannte Probe 1 (eine goldgelbe Platte mit Beschriftung \enquote{3}) nach wie vor mit einer Messzeit von \SI{300}{s}, für die unbekannte Probe 2 (eine schwarze unbeschriebene Platte) wird mit \SI{600}{s} Torzeit gemessen und die unbekannte Probe 3 (ein gold-silberner Ring eines Experimentierenden) wird die Messzeit auf die ursprünglich \SI{300}{s} reduziert. Die Spektren werden als \texttt{.csv}-Datei abgespeichert. Die dritte Probe gestaltet sich schwieriger korrekt zu platzieren, da der Ring keine plane Oberfläche aufweist, von welcher im richtigen Winkel zum Sensor reflektiert würde. Deswegen wird, um möglichst dem Setting der Probenplatten gleichzukommen, der Targetwinkel auf \SI{15.3}{\degree} verstellt.
+Abschließend werden drei unbekannte Proben (siehe \autoref{fig:unbekannte_proben}) am Targethalter platziert. Deren Spektren werden wieder aufgenommen, für die unbekannte Probe 1 (eine goldgelbe Platte mit Beschriftung \enquote{3}) wird nach wie vor mit einer Messzeit von \SI{300}{s} gemessen, für die unbekannte Probe 2 (eine schwarze unbeschriebene Platte) und die unbekannte Probe 3 (ein gold-silberner Ring eines Experimentierenden) wird die Torzeit auf \SI{600}{s} erhöht. Die Spektren werden als \texttt{.csv}-Datei abgespeichert. Die dritte Probe gestaltet sich schwieriger korrekt zu platzieren, da der Ring keine plane Oberfläche aufweist, von welcher im richtigen Winkel zum Sensor reflektiert würde. Deswegen wird, um möglichst dem Setting der Probenplatten gleichzukommen, der Targetwinkel auf \SI{15.3}{\degree} verstellt.
 %
 \begin{figure}[H]
     \centering
     \begin{samepage}
         \includegraphics[width=\linewidth]{fig/unbekannt.png}
-        \caption[Unbekannte Proben]{Unbekannte Proben verwendet zur Röntgenfluoreszenzanalyse.}
+        \caption{Unbekannte Proben}
         \label{fig:unbekannte_proben}
     \end{samepage}
 \end{figure}
@@ -309,7 +312,7 @@ Abschließend werden drei unbekannte Proben (siehe \autoref{fig:unbekannte_probe
 \subsection{Compton-Effekt}
 \label{subsec:auswertung_compton}
 
-Die gegeben der Beschreibung in \ref{subsec:durchfuehrung_compton} erhaltenen Messwerte in \texttt{.csv}-Form werden nun für die jeweiligen Stellungen des Messarms in \autoref{fig:compton_uebersicht1} und \autoref{fig:compton_uebersicht2} dargestellt.
+Die nach der Beschreibung in \ref{subsec:durchfuehrung_compton} erhaltenen Messwerte in \texttt{csv}-Form werden nun für die jeweiligen Stellungen des Messarms in \autoref{fig:compton_uebersicht1} und \autoref{fig:compton_uebersicht2} dargestellt.
 %
 \begin{figure}[H]
     \centering
@@ -320,25 +323,17 @@ Die gegeben der Beschreibung in \ref{subsec:durchfuehrung_compton} erhaltenen Me
         \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_4.pdf}   \\
         \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_5.pdf} &
         \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_6.pdf}   \\
-        % \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_7.pdf} &
-        % \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_8.pdf}   \\
     \end{tabular}
-    \caption{Messwerte bei gegebenem Winkel des Messarms (1)} 
+    \caption{Messwerte bei gegebenem Winkel des Messarms (1)}
     \label{fig:compton_uebersicht1}
 \end{figure}
 \begin{figure}[H]
     \centering
     \begin{tabular}{cc}
-        % \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_1.pdf} &
-        % \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_2.pdf}   \\
-        % \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_3.pdf} &
-        % \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_4.pdf}   \\
-        % \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_5.pdf} &
-        % \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_6.pdf}   \\
         \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_7.pdf} &
         \includegraphics[width=0.48\textwidth]{../plots/energie_spektren_8.pdf}   \\
     \end{tabular}
-    \caption{Messwerte bei gegebenem Winkel des Messarms (2)} 
+    \caption{Messwerte bei gegebenem Winkel des Messarms (2)}
     \label{fig:compton_uebersicht2}
 \end{figure}
 %
@@ -380,7 +375,7 @@ Die so erhaltenen Daten werden nun mittels \autoref{eq:energie_gestreute_strahlu
 \subsection{Röntgenfluoreszenzanalyse}
 \label{subsec:auswertung_fluoreszenz}
 
-Auch für den zweiten Teilversuch liegen die Daten in \texttt{.csv}-Form vor. Diese werden nun in \autoref{fig:roentgenfluoreszenz1} und \autoref{fig:roentgenfluoreszenz2} für die zu untersuchenden Materialien dargestellt. Zusätzlich sind die Energien der bestimmten K$_{\alpha}$- und K$_{\beta}$-Linien ebenfalls in den beiden Abbildungen angeführt.
+Auch für den zweiten Teilversuch liegen die Daten in \texttt{csv}-Form vor. Diese werden nun in \autoref{fig:roentgenfluoreszenz1} und \autoref{fig:roentgenfluoreszenz2} für die zu untersuchenden bekannten und unbekannten Materialien dargestellt. Zusätzlich sind die Energien der bestimmten K$_{\alpha}$- und K$_{\beta}$-Linien ebenfalls in den beiden Abbildungen angeführt.
 %
 \begin{figure}[H]
     \centering
@@ -391,32 +386,21 @@ Auch für den zweiten Teilversuch liegen die Daten in \texttt{.csv}-Form vor. Di
         \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_4.pdf}   \\
         \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_5.pdf} &
         \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_6.pdf}   \\
-        \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_7.pdf}  &
-        \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_8.pdf}    \\
-        % \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_9.pdf}  &
-        % \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_10.pdf}   \\
-        % \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_11.pdf} & \\
+        \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_7.pdf} &
+        \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_8.pdf}   \\
     \end{tabular}
-    \caption[Messwerte unbekannter Proben (1)]{Messwerte und K$_{\alpha}$- und K$_{\beta}$-Linien für die zu untersuchenden bekannten und unbekannten Materialien. (1)}
+    \caption[Messwerte bekannter Proben]{Messwerte, K$_{\alpha}$- und K$_{\beta}$-Linien für die zu untersuchenden bekannten Materialien.}
     \label{fig:roentgenfluoreszenz1}
 \end{figure}
 %
 \begin{figure}[H]
     \centering
     \begin{tabular}{cc}
-        % \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_1.pdf} &
-        % \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_2.pdf}   \\
-        % \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_3.pdf} &
-        % \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_4.pdf}   \\
-        % \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_5.pdf} &
-        % \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_6.pdf}   \\
-        % \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_7.pdf}  &
-        % \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_8.pdf}    \\
         \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_9.pdf}  &
         \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_10.pdf}   \\
         \includegraphics[width=0.48\textwidth]{../plots/roentgen_data_11.pdf} & \\
     \end{tabular}
-    \caption[Messwerte unbekannter Proben (2)]{Messwerte und K$_{\alpha}$- und K$_{\beta}$-Linien für die zu untersuchenden bekannten und unbekannten Materialien. (2)}
+    \caption[Messwerte unbekannter Proben]{Messwerte, K$_{\alpha}$- und K$_{\beta}$-Linien für die zu untersuchenden unbekannten Materialien.}
     \label{fig:roentgenfluoreszenz2}
 \end{figure}
 %
@@ -427,8 +411,8 @@ Die ermittelten Werte für die K$_{\alpha}$- und K$_{\beta}$-Linien werden in \a
     \begin{samepage}
         \caption[Bestimmte K$_{\alpha}$- und K$_{\beta}$-Linien]{Bestimmte K$_{\alpha}$- und K$_{\beta}$-Linien aus \autoref{fig:roentgenfluoreszenz1} und \autoref{fig:roentgenfluoreszenz2}. Die Unsicherheit der bestimmten Energien ist in beiden Fällen $\Delta E = \SI{0.1}{\kilo\electronvolt}$.}
         \label{tab:roentgenfluoreszenz}
-        \begin{tblr}{colspec={S[table-format=1.0]Q S[table-format=2.2]S[table-format=2.2]}, row{1}={guard}}
-            Ordnungszahl & Elementformel & $E_{K_{\alpha}}$ / \si{\kilo\electronvolt} & $E_{K_{\beta}}$ / \si{\kilo\electronvolt} \\
+        \begin{tblr}{colspec={S[table-format=2]QS[table-format=2.1]S[table-format=2.1]}, row{1}={guard}}
+            Ordnungszahl & Elementsymbol & $E_{K_{\alpha}}$ / \si{\kilo\electronvolt} & $E_{K_{\beta}}$ / \si{\kilo\electronvolt} \\
             47           & Ag            & 21.5                                       & 24.1                                      \\
             29           & Cu            & 7.9                                        & 8.8                                       \\
             26           & Fe            & 6.3                                        & {{{-}}}                                   \\
@@ -437,8 +421,8 @@ Die ermittelten Werte für die K$_{\alpha}$- und K$_{\beta}$-Linien werden in \a
             22           & Ti            & 4.5                                        & {{{-}}}                                   \\
             30           & Zn            & 8.5                                        & 9.4                                       \\
             40           & Zr            & 15.5                                       & 17.5                                      \\
-            {{{-}}}      & Probe1        & 7.9                                        & {{{-}}}                                   \\
-            {{{-}}}      & Probe2        & 16.6                                       & {{{-}}}                                   \\
+            {{{-}}}      & Probe 1       & 7.9                                        & {{{-}}}                                   \\
+            {{{-}}}      & Probe 2       & 16.6                                       & {{{-}}}                                   \\
             {{{-}}}      & Ring          & 6.2                                        & {{{-}}}                                   \\
         \end{tblr}
     \end{samepage}
@@ -464,8 +448,8 @@ bestimmt.
 
 Nun werden die drei verbleibenden unbekannten Proben untersucht. Die Messungen werden wie in \autoref{subsec:durchfuehrung_compton} durchgeführt und die Ergebnisse der Messungen sind in \autoref{fig:roentgenfluoreszenz2} abgebildet.
 
-Es ergeben sich für die Proben folgenden Werte für die potentiellen K$_{\alpha}^*$-Linien in \autoref{tab:roentgenfluoreszenz_unbekannt}
-
+Es ergeben sich für die Proben folgenden Werte für die potentiellen K$_{\alpha}^*$-Linien in \autoref{tab:roentgenfluoreszenz_unbekannt}.
+%
 \begin{table}[H]
     \centering
     \begin{samepage}
@@ -473,12 +457,13 @@ Es ergeben sich für die Proben folgenden Werte für die potentiellen K$_{\alpha
         \label{tab:roentgenfluoreszenz_unbekannt}
         \begin{tblr}{colspec={Q S[table-format=2.2] Q S[table-format=2.2]}, row{1}={guard}}
             Probenname & $E_{K_{\alpha}^*}$ / \si{\kilo\electronvolt} & Potentielles Element & $E_{K_{\alpha}}$ / \si{\kilo\electronvolt} \\
-            Probe1     & 7.9                                          & Cu                   & 7.9                                        \\
-            Probe2     & 16.6                                         & Mo \footnotemark{}   & 17.2                                       \\
+            Probe 1    & 7.9                                          & Cu                   & 7.9                                        \\
+            Probe 2    & 16.6                                         & Mo\footnotemark{}    & 17.2                                       \\
             Ring       & 6.2                                          & Fe                   & 6.3                                        \\
         \end{tblr}
     \end{samepage}
 \end{table}
+%
 \footnotetext[1]{Molybdän ist zwar von der Energie her das passendste Element für den Peak, jedoch ist es fraglich, ob es sich bei der Probe tatsächlich um Molybdän handelt.}
 
 
@@ -489,32 +474,37 @@ Es ergeben sich für die Proben folgenden Werte für die potentiellen K$_{\alpha
 \label{sec:diskussion_compton}
 
 %! powered by GPT-4
-Die Ergebnisse des Compton-Streuungs-Teilversuchs zeigen, dass die gemessenen Energien der gestreuten Photonen in \autoref{tab:energy_compton} in guter Übereinstimmung mit den theoretischen Erwartungen des Compton-Effekts stehen. Die Abhängigkeit der gestreuten Energie von dem Winkel des Messarms wurde in \autoref{fig:compton_energy} dargestellt, und es zeigt sich eine klare Tendenz, die dem Compton-Effekt entspricht.
+Die Ergebnisse des Compton-Streuung-Teilversuchs zeigen, dass die gemessenen Energien der gestreuten Photonen in \autoref{tab:energy_compton} in guter Übereinstimmung mit den theoretischen Erwartungen des Compton-Effekts stehen. Die Abhängigkeit der gestreuten Energie vom Winkel des Messarms wurde in \autoref{fig:compton_energy} dargestellt und es zeigt sich eine klare Tendenz, die dem Compton-Effekt entspricht. Aus den Messwerten wurde mittels einer Fitkurve in \autoref{fig:compton_energy} die Elektronenmasse bestimmt:
+\[m_{e,\text{exp}} = \SI{1.07(11)E-30}{\kilogram}.\]
+Der Literaturwert der Elektronenmasse beträgt etwa
+\[m_{e,\text{lit}} = \SI{9.11E-31}{\kilogram},\]
+was zeigt, dass der ermittelte Wert in der richtigen Größenordnung liegt.
 
 
 \subsection{Röntgenfluoreszenzanalyse}
 \label{sec:diskussion_roentgen}
+
 %! powered by GPT-4 & Elias
-Die Ergebnisse der Röntgenfluoreszenzanalyse zeigen, dass die gemessenen Energien der K$_{\alpha}$- und K$_{\beta}$-Linien in guter Übereinstimmung mit den theoretischen Erwartungen stehen. Bei genauer Betrachtung der \autoref{fig:roentgen_z_vs_e} erkennt man, dass ein Fit der ersten paar Punkte -- mit Kernladungszahlen $<35$ -- zu einer Gerade mit höherer Steigung führen würde als einer, welcher lediglich durch die Elemente höherer Ordnungszahlen gegeben wäre. Hier spielt der Einfluss der äußeren Elektronen, welche sich mit steigender Schalenzahl immer weiter von dem Kern entfernen, eine Rolle. Die Abschirmkonstante für die K$_{\alpha}$-Linien und K$_{\beta}$-Linien ist eben nur eine Näherung, wie jedoch auch aus der Abbildung ersichtlich wird, für viele Fälle, eine gute.
+Die Ergebnisse der Röntgenfluoreszenzanalyse zeigen, dass die gemessenen Energien der K$_{\alpha}$- und K$_{\beta}$-Linien -- $\sigma_{\text{2,1,exp}} = \num{1.06(9)}$ und $\sigma_{\text{3,1,exp}} = \num{2.14(10)}$ -- in guter Übereinstimmung mit den theoretischen Erwartungen stehen, die in der Regel nahe am Bereich 1-2 liegen. Bei genauer Betrachtung der \autoref{fig:roentgen_z_vs_e} erkennt man, dass ein Fit der ersten paar Punkte -- mit Kernladungszahlen $Z<35$ -- zu einer Gerade mit höherer Steigung führen würde als zu einer, welche lediglich durch die Elemente höherer Ordnungszahlen gegeben wäre. Hier spielt der Einfluss der äußeren Elektronen, welche sich mit steigender Schalenzahl immer weiter vom Kern entfernen, eine Rolle. Die Abschirmkonstante für die K$_{\alpha}$-Linien und K$_{\beta}$-Linien ist eben nur eine Näherung, wie jedoch aus der Abbildung ersichtlich wird, für viele Fälle eine gute.
 
 \subsection{Unbekannte Proben}
 \label{sec:diskussion_unbekannt}
 
-Probe 1 zeigt eine K${_\alpha}^*$-Linie bei \SI{7.9}{\kilo\electronvolt}, was auf Kupfer (Cu) als potenzielles Element hindeutet, da die Energie der K${_\alpha}$-Linie von Kupfer ebenfalls \SI{7.9}{\kilo\electronvolt} beträgt.
+Probe 1 zeigt eine K$_{\alpha}^*$-Linie bei \SI{7.9}{\kilo\electronvolt}, was auf Kupfer (Cu) als potenzielles Element hindeutet, da die Energie der K${_\alpha}$-Linie von Kupfer ebenfalls \SI{7.9}{\kilo\electronvolt} beträgt.
 
-Probe 2 hat eine K$_{\alpha}^*$-Linie bei 16,6 keV, was auf Molybdän (Mo) als mögliches Element hindeutet. Die Energie der K$_{\alpha}$-Linie von Molybdän ist dagegen mit 17,2 keV etwas höher. Jedoch ist diese Messung eher weniger aussagekräftig, da die Probe über das ganze Energiespektrum weniger Energie streut. Die vorliegende Methode ist somit eher schlechter für die Bestimmung der Zusammensetzung der 2. Probe geeignet. Zudem kann auch mit viel Fantasie kein grau metallisches -- eben für Molybdän typisches -- Aussehen der Probe festgestellt werden. Daher ist es eher unwahrscheinlich, dass es sich bei der Probe um Molybdän handelt.
+Probe 2 hat eine K$_{\alpha}^*$-Linie bei 16,6 keV, was auf Molybdän (Mo) als mögliches Element hindeutet. Die Energie der K$_{\alpha}$-Linie von Molybdän ist dagegen mit 17,2 keV etwas höher. Jedoch ist diese Messung eher weniger aussagekräftig, da die Probe über das ganze Energiespektrum hinweg nur wenig Strahlung freigab. Die vorliegende Methode ist somit eher schlechter für die Bestimmung der Zusammensetzung der Probe 2 geeignet. Zudem kann auch mit viel Fantasie kein grau metallisches -- eben für Molybdän typisches -- Aussehen der Probe festgestellt werden. Daher ist es eher unwahrscheinlich, dass es sich bei der Probe um Molybdän handelt.
 
-Der Ring weist eine K$_{\alpha}^*$-Linie bei 6,2 keV auf, was auf Eisen (Fe) als potenzielles Element hindeutet. Die Energie der K$_{\alpha}$-Linie von Eisen beträgt 6,3 keV, was nahe genug an der gemessenen Energie liegt, um Eisen als mögliches Element zu bestätigen. Nun ist zwar mit doch hoher Sicherheit nachgewiesen worden, dass es sich bei dem Ring nicht, wie vom Hersteller deklariert, um einen 24-karatigen Goldring handelt, sondern um einen Eisenring. Leider kann über unsere Analysen jedoch nicht nachgewiesen werden, weshalb der Hersteller den Ring als Goldring deklariert hat. Es ist jedoch anzunehmen, dass der Hersteller den Ring als Goldring deklariert hat, da er sich damit einen höheren Preis erzielen wollte. Dies ist jedoch nur eine Vermutung, die nicht bewiesen werden kann. 
+Der Ring weist eine K$_{\alpha}^*$-Linie bei 6,2 keV auf, was auf Eisen (Fe) als potenzielles Element hindeutet. Die Energie der K$_{\alpha}$-Linie von Eisen beträgt 6,3 keV, was nahe genug an der gemessenen Energie liegt, um Eisen als mögliches Element zu bestätigen. Nun ist zwar mit doch hoher Sicherheit nachgewiesen worden, dass es sich bei dem Ring nicht, wie vom Hersteller deklariert, um einen 24-karatigen Goldring handelt, sondern um einen Eisenring. Leider kann über unsere Analysen jedoch nicht nachgewiesen werden, weshalb der Hersteller den Ring als Goldring deklariert hat. Es ist jedoch anzunehmen, dass der Hersteller den Ring als Goldring deklariert hat, da er damit einen höheren Preis im Verkauf erzielen wollte. Dies ist jedoch nur eine Vermutung, die nicht bewiesen werden kann.
 
 \section{Zusammenfassung}
 \label{sec:zusammenfassung}
 
 %! powered by GPT-4
-Im ersten Teilversuch, der Compton-Streuung, wurden die Energien der Compton-Streuung für verschiedene Winkel gemessen. Die Messwerte sind in \autoref{tab:energy_compton} dargestellt. Aus den Messwerten wurde mittels einer Fitkurve in \autoref{fig:compton_energy} die Elektronenmasse bestimmt: $m_e = \SI{1.07(11)E-30}{\kilogram}$. Der Literaturwert der Elektronenmasse beträgt etwa $\SI{9.11E-31}{\kilogram}$, was zeigt, dass der ermittelte Wert in der richtigen Größenordnung liegt.
+Im ersten Teilversuch, der Compton-Streuung, wurden die Energien der Compton-Streuung für verschiedene Winkel gemessen. Aus den Messwerten wurde mittels einer Fitkurve die Elektronenmasse mit $m_e = \SI{1.07(11)E-30}{\kilogram}$ bestimmt, was in derselben Größenordnung wie der Literaturwert liegt.
 
-Im zweiten Teilversuch, der Röntgenfluoreszenzanalyse, wurden die K$_{\alpha}$- und K$_{\beta}$-Linien für verschiedene Elemente und Proben untersucht. Die Messwerte und bestimmten Energien sind in \autoref{tab:roentgenfluoreszenz} aufgeführt. Durch Auftragen von $\sqrt{\nicefrac{E}{R_y}}$ gegen die Ordnungszahl und Anpassung einer linearen Fitkurve in \autoref{fig:roentgen_z_vs_e} wurden die experimentellen Abschirmkonstanten für die K$_{\alpha}$-Linien und K$_{\beta}$-Linien ermittelt: $\sigma_{\text{2,1,exp}} = \num{1.06(9)}$ und $\sigma_{\text{3,1,exp}} = \num{2.14(10)}$. Die ermittelten Abschirmkonstanten zeigen eine gute Übereinstimmung mit den bekannten Literaturwerten, die in der Regel nahe bei 1 und 2 liegen.
+Im zweiten Teilversuch, der Röntgenfluoreszenzanalyse, wurden die K$_{\alpha}$- und K$_{\beta}$-Linien für verschiedene Elemente und Proben untersucht. Durch Auftragen von $\sqrt{\nicefrac{E}{R_y}}$ gegen die Ordnungszahl und Errechnung einer linearen Regression wurden die experimentellen Abschirmkonstanten für die K$_{\alpha}$-Linien und K$_{\beta}$-Linien ermittelt: $\sigma_{\text{2,1,exp}} = \num{1.06(9)}$ und $\sigma_{\text{3,1,exp}} = \num{2.14(10)}$.
 
-Für die drei unbekannten Proben konnten die Bestandteile der ersten (Kupfer) und dritten (Eisen) Probe zugeordnet werden. Die zweite Probe konnte nicht eindeutig zugeordnet werden, da die Messung für diese Art von Probe nicht gut geeignet ist. Offen bleibt die Frage, weshalb der Hersteller den Ring (3. Probe) als Goldring deklariert hat, obwohl er sich nicht wie ein Goldring anfühlt und auch nicht wie ein Goldring aussieht.
+Für die drei unbekannten Proben konnten die Bestandteile der ersten (Kupfer) und dritten Probe (Eisen) zugeordnet werden. Die zweite Probe konnte nicht eindeutig identifiziert werden, da die Messung für diese Art von Probe nicht gut geeignet ist. Offen bleibt die Frage, weshalb der Hersteller den Ring (Probe 3) als Goldring deklariert hat, obwohl er sich nicht wie ein Goldring anfühlt und auch nicht wie ein Goldring aussieht.
 
 
 
