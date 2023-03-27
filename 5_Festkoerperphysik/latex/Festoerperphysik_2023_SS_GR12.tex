@@ -527,7 +527,7 @@ Wie schon in \autoref{subsec:durchfuehrung_elektronenbeugung} beschrieben, wurde
         \caption[Elektronenwellenlängen für gegebene Beschleunigungsspannung]{Elektronenwellenlängen $\lambda_e$ in $\si{\pico\meter}$ bei gegebener Beschleunigungsspannung $U_{\text{B}}$ (in $\si{\kilo\volt}$).}
         \label{tab:auswertung_beugung_wellenlaenge}
         \begin{tblr}{colspec={S[table-format=1.2(1)]S[table-format=2.2(2)]}, row{1}={guard}}
-            $U_B$ / $\si{\kilo\volt}$ & $\lambda_e$ / $\si{\pico\meter}$ \\\\
+            $U_B$ / $\si{\kilo\volt}$ & $\lambda_e$ / $\si{\pico\meter}$ \\
             2.00(2)                   & 27.42(14)                        \\
             2.50(2)                   & 24.50(10)                        \\
             3.00(2)                   & 22.39(8)                         \\
@@ -604,7 +604,10 @@ Da nun zu bestimmten Auslenkungen respektive Stromstärken sowohl der Krümmungs
 \subsection{Elektronen-Spin-Resonanz}
 \label{subsec:auswertung_esr}
 Zu den gewählten Resonanzfrequenzen in \autoref{tab:messergebnisse_esr} fließt abhängig von diesen ein gewisser Strom durch die Helmholtzspulen. Dieser Strom kann durch den Zusammenhang:
-\[B = \mu_0 \cdot (\nicefrac{4}{5})^{\nicefrac{3}{2}}*\nicefrac{n}{r} \cdot I\]
+\begin{equation}
+    \label{eq:esr_b_feld}
+    B = \mu_0 \cdot (\nicefrac{4}{5})^{\nicefrac{3}{2}}*\frac{n}{r} \cdot I
+\end{equation}
 in eine magnetische Flussdichte umgerechnet werden, welcher in \autoref{tab:esr_b_feld} aufgelistet ist.
 
 
@@ -642,7 +645,7 @@ ergibt.
         \label{fig:auswertung_esr}
     \end{samepage}
 \end{figure}
-Laut Literatur würde man einen Wert von $\approx 2$ erwarten, dieser stellt sich jedoch nicht ein und würde sich beispielsweise lediglich bei einem abgeschwächten Magnetfeld einstellen. Dieses abgeschwächte Feld wird in \autoref{tab:esr_b_schwach_feld} aufgelistet, womit ein Landé-Faktor von $g = \num{2.006(8)}$ folgen würde.
+Laut Literatur würde man einen Wert von $\approx 2$ erwarten, dieser stellt sich jedoch nicht ein und würde sich beispielsweise lediglich bei einem abgeschwächten Magnetfeld einstellen. Dieses abgeschwächte Feld wird in \autoref{tab:esr_b_schwach_feld} aufgelistet, womit ein Landé-Faktor von $g_{\text{red}} = \num{2.006(8)}$ folgen würde.
 \begin{table}[H]
     \centering
     \begin{samepage}
@@ -669,8 +672,16 @@ Laut Literatur würde man einen Wert von $\approx 2$ erwarten, dieser stellt sic
 
 \section{Diskussion}
 \label{sec:diskussion}
+\subsection{Elektronenbeugung}
+Die bestimmten Werte von $ d_1 = \SI{2.28(19)e-10}{\meter}$ und $d_2 = \SI{1.3(1)e-10}{\meter}$ decken sich mit jenen aus der Theorie, welche mit $d_{1\text{, lit}} = \SI{213}{pm}$ und $d_{2\text{, lit}} = \SI{123}{pm}$ in \cite{ref:angabe_elektronen} angeführt sind. Die dabei eher höher ausfallenden Messunsicherheiten ergebn sich aus der, doch eher ungenauen Messmethode der Radien der beiden Beugungskreise. Die Messungen durch jeden der beiden Experimentatoren konnte hier sicherlich systematische Messfehler mindern. Eine weitere Verbesserung -- wenn auch mühsam mit dieser Methode -- kann eine noch größere Anzahl an Messungen erreicht werden. 
+\subsection{Elektronen im Magnetfeld}
 
-
+\subsection{Elektronen-Spin-Resonanz}
+Aus den bei gegebenen Resonsnzfrequenzen bestimmten Resonanzmagnetfeldern wurde für den Landé-Faktor ($g = \num{1.785(7)}$) ein um etwa $\SI{12}{\percent}$ niedriger Wert als der Literaturwert $g_{\text{lit}} = 2,0036$ \cite{ref:angabe_esr} ermittelt.
+Als plausible Erklärung, dieser doch nicht unsignifikanten Abweichung, kann die fehlende homogenität im $B$-Feld herangezogen werden. Da $B$ schließlich nicht direkt gemessen, sondern über den Strom $I_{\mathdirectcurrent{}}$ ermittelt wird, liegt nahe, dass der Strom nicht, entgegen des Zusammenhangs aus \autoref{eq:esr_b_feld}, vollständig in die theoretisch gegebene magnetische Flussdichte umgesetzt wird. \\
+Gründe hierfür sind unter anderem, die auf Grund der Anschlusskabel kaum wirklich planparallel anordenbaren Spulen, das nicht vollständig homogenen Magnetfeld der Spulen, sowie (vermutlich eher vernachlässigbar) thermische Effekt und die örtliche Ausdehnung der Spule (kein idealer Kreis). \\
+In \autoref{tab:esr_b_schwach_feld} sind jene Werte des $B$ Felds in Abhängigkeit der Resonanzfrequenz aufgelistet, welche zu einem Landé-Faktor von $g_{\text{red}} = \num{2.006(8)}$ führen. \\
+Zielführender wäre es, in zukünftigen Experimenten das $B$-Feld direkt -- etwa mit einem Hall-Sensor zu messen -- um die Messunsicherheit zu minimieren. 
 
 \section{Zusammenfassung}
 \label{sec:zusammenfassung}

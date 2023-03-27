@@ -66,10 +66,12 @@ lt.plt_uplot(x, y, label="Regression")
 
 lt.plt.xlabel(r"$f\:/\: \si{\mega\hertz}$")
 lt.plt.ylabel(r"$B\:/\: \si{\milli\tesla}$")
+lt.plt.xlim(right=5)
 lt.plt.tight_layout()
 lt.plt.grid()
 lt.plt.title("Resonsanzfrequenz in Abhängigkeit des Magnetfelds (DPPH)")
-lt.plt.text(0.66 * max(x), 0.5 * max(freq), (r"Fit: $f = " + f"{res:S}" + " \cdot B$"))
+lt.plt.text(0.66 * max(x), 0.5 * max(freq),
+            (r"Fit: $f = " + f"{res:S}" + " \cdot B$"))
 # lt.plt.show()
 # calc g
 h = 6.62607015e-34  # J*s
@@ -86,8 +88,10 @@ print(f"g = {g_:S}")
 if g_ > 1.95:
     print("B-mod:")
     print(b_field)
-    lt.plt.savefig("5_Festkoerperphysik/python/plots/esr_red_magnetic_field.pdf")
-    lt.plt.savefig("5_Festkoerperphysik/python/plots/esr_red_magnetic_field.png")
+    lt.plt.savefig(
+        "5_Festkoerperphysik/python/plots/esr_red_magnetic_field.pdf")
+    lt.plt.savefig(
+        "5_Festkoerperphysik/python/plots/esr_red_magnetic_field.png")
 else:
     lt.plt.savefig("5_Festkoerperphysik/python/plots/esr.pdf")
     lt.plt.savefig("5_Festkoerperphysik/python/plots/esr.png")
