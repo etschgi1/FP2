@@ -139,16 +139,25 @@ In unserem Versuch trifft ein Elektronenstrahl auf eine polykristalline Graphitp
 \end{equation}
 %
 Dabei ist $d$ der Abstand zwischen den einzelnen Netzebenen im Graphitgitter, $n$ die Beugungsordnung und $\theta$ der Bragg-winkel (Winkel zwischen Elektronenstrahl und Gitterebenen).
-
+%
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=0.4\linewidth]{fig/bragg-reflexion.pdf}
+        \caption{Bragg-Gesetz}
+        \label{fig:bragg_reflexion}
+    \end{samepage}
+\end{figure}
+%
 In einer polykristallinen Graphitprobe sind die Bindungen zwischen den einzelnen Lagen gebrochen, wodurch ihre Orientierung zufällig ist. D.h. man findet immer wieder
 Mikrokristalline mit der richtigen Orientierung zum Elektronenstrahl, sodass die Bragg-Bedingung erfüllt ist. Der gebeugte Elektronenstrahl ist daher in Form eines Konus aufgefächert, wodurch die Interferenzringe am Schirm entstehen.
 %
 \begin{figure}[H]
     \centering
     \begin{samepage}
-        \includegraphics[width=0.5\linewidth]{fig/bragg-reflexion.pdf}
-        \caption{Bragg-Gesetz}
-        \label{fig:bragg_reflexion}
+        \includegraphics[width=0.6\linewidth]{fig/graphitgitter.png}
+        \caption[Graphitkristallgitter]{Kristallgitter von Graphit. Die obere Abbildung zeigt die Gitterebenen von Graphit für die ersten beiden Interferenzringe. Quelle: \cite{ref:angabe_elektronen}}
+        \label{fig:graphitgitter}
     \end{samepage}
 \end{figure}
 %
@@ -201,7 +210,10 @@ Die spezifische Ladung ergibt sich dann zu:
     q_{\text{spez}} = - \frac{q_e}{m_e} = \frac{v}{rB}
 \end{equation}
 Die kinetische Energie gewinnt das Elektron aus einem elektrischen Feld, in dem es beschleunigt wird (\autoref{eq:kinetische_energie}). Aus den beiden Gleichungen folgt nun:
-\[q_{\text{spez}} = - \frac{q_e}{m_e} = \frac{2 U_A}{(rB)^2}\]
+\begin{equation}
+    \label{eq:spezifische_ladung_U}
+    q_{\text{spez}} = = \frac{2 U_A}{(rB)^2}
+\end{equation}
 Der Radius $r$ der Kreisbahn lässt sich nicht direkt messen. Stattdessen wird diese Größe aus der Ablenkung $s$ im Magnetfeld und aus dem Kolbendurchmesser $d$ ermittelt. Man betrachte dazu \autoref{fig:kolben_skizze}.
 
 % \centering
@@ -222,7 +234,7 @@ Der Radius $r$ der Kreisbahn lässt sich nicht direkt messen. Stattdessen wird d
     $\vb*{B}$ = $\mu_0$ $\vb*{H}$ (T = Tesla)\\
     $\mu_0$ = 4$\pi$ $\cdot$ 10$^{-7}$ \si{\henry\per\meter} (Permeabilitätskonstante)\\
     $\vb*{H}$ -- die Feldstärke\\ \\
-    Die Feldstärke des nahezu homogenen Magnetfeldes des Helmholzspulenpaars ist: \\
+    Die Feldstärke des nahezu homogenen Magnetfeldes des Helmholtz-Spulenpaars ist: \\
     \begin{equation}
         {H} = \frac{{B}}{\mu_0} = \frac{n R^2 I}{\left(R^2 + a^2\right)^{\nicefrac{3}{2}}} = \SI{33.8e2}{\ampere\per\meter}
     \end{equation}
@@ -239,7 +251,7 @@ Der Radius $r$ der Kreisbahn lässt sich nicht direkt messen. Stattdessen wird d
 %
 Seit ihrer Entdeckung durch E. K. Zavoisky (1945) hat sich die Elektronenspinresonanz (ESR) zu einer wichtigen Methode zur Untersuchung von Molekül- und Kristallstrukturen, von chemischen Reaktionen und anderen Problemstellungen in Physik, Chemie, Biologie und Medizin entwickelt. Sie beruht auf der Absorption hochfrequenter elektromagnetischer Strahlung durch paramagnetische Stoffe in einem äußeren Magnetfeld, in dem die Spinzustände der Elektronen aufspalten.
 
-Elektronenspinresonanz ist auf paramagnetische Stoffe begrenzt, da hier die Bahndrehimpulse und Spins der Elektronen zu einem von Null verschiedenen Gesamtdrehimpuls koppeln. Geeignet sind z. B. Verbindungen, in denen Atome mit nicht vollständig aufgefüllten inneren Schalen (Übergangsmetalle, seltene Erden) eingebaut sind, organische Moleküle (freie Radikale), die einzelne ungepaarte Elektronen enthalten, oder Kristalle mit Gitterfehlstellen in einem paramagnetischen Zustand.
+Elektronen-Spin-Resonanz ist auf paramagnetische Stoffe begrenzt, da hier die Bahndrehimpulse und Spins der Elektronen zu einem von Null verschiedenen Gesamtdrehimpuls koppeln. Geeignet sind z. B. Verbindungen, in denen Atome mit nicht vollständig aufgefüllten inneren Schalen (Übergangsmetalle, seltene Erden) eingebaut sind, organische Moleküle (freie Radikale), die einzelne ungepaarte Elektronen enthalten, oder Kristalle mit Gitterfehlstellen in einem paramagnetischen Zustand.
 
 Mit dem Gesamtdrehimpuls $\vb*{J}$ verbunden ist das magnetische Moment
 \begin{equation}
@@ -257,7 +269,7 @@ wobei die Drehimpulsquantenzahl $J$ ganz- oder halbzahlig ist, d.h. die potentie
 \begin{equation}
     E = g_J \cdot \mu_B \cdot B_0 \cdot m_J \qq{mit} m_J = -J, -\left(J-1\right), \dots, J-1, J
 \end{equation}
-Mit der Methode der Elektronenspinresonanz kann die Energieaufspaltung direkt gemessen werden. Dazu wird senkrecht zum statischen Magnetfeld $\vb*{B}_0$ ein hochfrequentes magnetisches Wechselfeld
+Mit der Methode der Elektronen-Spin-Resonanz kann die Energieaufspaltung direkt gemessen werden. Dazu wird senkrecht zum statischen Magnetfeld $\vb*{B}_0$ ein hochfrequentes magnetisches Wechselfeld
 \begin{equation}
     \vb*{B}_1 = \vb*{B}_{\text{HF}} \cdot \sin\left(\omega t\right) = \vb*{B}_{\text{HF}} \cdot \sin\left(2 \pi \nu t\right)
 \end{equation}
@@ -273,7 +285,7 @@ erfüllt sind, bewirkt das Wechselfeld ein \enquote{Umklappen} der magnetischen 
     \begin{samepage}
         \includegraphics[width=0.65\linewidth]{fig/zeeman_grundlage.png}
         \caption[Zeeman-Effekt]{Energieaufspaltung des freien Elektrons im Magnetfeld
-            und Resonanzbedingung für die Elektronenspinresonanz.}
+            und Resonanzbedingung für die Elektronen-Spin-Resonanz.}
         \label{fig:grundlage_zeeman}
     \end{samepage}
 \end{figure}
@@ -310,7 +322,7 @@ damit ist unabhängig von der Resonanzfrequenz $\nu$
 \end{equation}
 Ausgewertet wird die Lage und die Breite der Absorptionslinien im ESR-Spektrum der untersuchten Proben:
 
-Aus der Lage bestimmt man gemäß \autoref{eq:V} den Landé'schen Faktor $g_J \approx r_{\text{Probe}}$. Er liegt bei einem freien Atom oder Ion zwischen dem Wert $g_J = 1$, der bei reinem Bahnmagnetismus erreicht wird, und $g_J \approx \num{2.0023}$ für reinen Spinmagnetismus. Tatsächlich sind die mit der Methode der Elektronenspinresonanz untersuchten paramagnetischen Zentren jedoch nicht frei. In ein Kristallgitter eingebaut oder in Lösung von einer Solvathülle umgeben, wirken starke elektrische und magnetische Felder auf sie, die von den Atomen der Umgebung erzeugt werden. Diese Felder bewirken eine Energieverschiebung und beeinflussen die \textit{Zeeman}-Aufspaltung der Elektronen. Dadurch ändert sich der Wert des g-Faktors, er wird häufig anisotrop, und in den ESR-Spektren tritt eine Feinstruktur auf. Es lassen sich also aus dem g-Faktor Rückschlüsse
+Aus der Lage bestimmt man gemäß \autoref{eq:V} den Landé'schen Faktor $g_J \approx r_{\text{Probe}}$. Er liegt bei einem freien Atom oder Ion zwischen dem Wert $g_J = 1$, der bei reinem Bahnmagnetismus erreicht wird, und $g_J \approx \num{2.0023}$ für reinen Spinmagnetismus. Tatsächlich sind die mit der Methode der Elektronen-Spin-Resonanz untersuchten paramagnetischen Zentren jedoch nicht frei. In ein Kristallgitter eingebaut oder in Lösung von einer Solvathülle umgeben, wirken starke elektrische und magnetische Felder auf sie, die von den Atomen der Umgebung erzeugt werden. Diese Felder bewirken eine Energieverschiebung und beeinflussen die \textit{Zeeman}-Aufspaltung der Elektronen. Dadurch ändert sich der Wert des g-Faktors, er wird häufig anisotrop, und in den ESR-Spektren tritt eine Feinstruktur auf. Es lassen sich also aus dem g-Faktor Rückschlüsse
 auf die Bindungsverhältnisse der Elektronen und den chemischen Aufbau der untersuchten Probe ziehen.
 
 Aus der Linienbreite können Aussagen über die dynamischen Eigenschaften gewonnen werden. Die Linienbreite wird -- wenn man von nicht aufgelösten Feinstrukturen absieht -- bestimmt durch mehrere Prozesse, die der Ausrichtung der magnetischen Momente entgegenwirken. Als Spin-Spin-Relaxation bezeichnet man die Wechselwirkung der ausgerichteten magnetischen Momente untereinander und als Spin-Gitter-Relaxation die Wechselwirkung der magnetischen Momente mit den fluktuierenden elektrischen und magnetischen Feldern, die in Festkörpern durch die Gitterschwingungen oder in Flüssigkeiten durch die thermische Bewegung der Atome erzeugt werden. In einigen Fällen wird die Linienbreite durch sogenannte Austauschwechselwirkung beeinflusst und fällt erheblich kleiner aus, als bei reiner Dipol-Dipol-Wechselwirkung der Spins zu erwarten wäre.
@@ -527,27 +539,29 @@ Wie schon in \autoref{subsec:durchfuehrung_elektronenbeugung} beschrieben, wurde
         \caption[Elektronenwellenlängen für gegebene Beschleunigungsspannung]{Elektronenwellenlängen $\lambda_e$ in $\si{\pico\meter}$ bei gegebener Beschleunigungsspannung $U_{\text{B}}$ (in $\si{\kilo\volt}$).}
         \label{tab:auswertung_beugung_wellenlaenge}
         \begin{tblr}{colspec={S[table-format=1.2(1)]S[table-format=2.2(2)]}, row{1}={guard}}
-            $U_B$ / $\si{\kilo\volt}$ & $\lambda_e$ / $\si{\pico\meter}$ \\\\
-            2.00(2)                   & 27.42(14)                        \\
-            2.50(2)                   & 24.50(10)                        \\
-            3.00(2)                   & 22.39(8)                         \\
-            3.50(2)                   & 20.73(6)                         \\
-            4.00(2)                   & 19.39(5)                         \\
+            $U_B$ / \si{\kilo\volt} & $\lambda_e$ / \si{\pico\meter} \\
+            2.00(2)                 & 27.42(14)                      \\
+            2.50(2)                 & 24.50(10)                      \\
+            3.00(2)                 & 22.39(8)                       \\
+            3.50(2)                 & 20.73(6)                       \\
+            4.00(2)                 & 19.39(5)                       \\
         \end{tblr}
     \end{samepage}
 \end{table}
 %
 Weiter werden aus den gemessenen Abständen in \autoref{tab:messergebnisse_beugung} unter zuhilfenahme von \autoref{eq:bragg} die Abstände der Gitterebenen in Graphit bestimmt.
-Dabei werden die Messungen für die beiden Abstände $d_1$ und $d_2$ (siehe Fig. 3.2.3, \cite{ref:angabe_elektronen}) mittels Student-t Verteilung statistisch ausgewertet. Die Gitterabstände ergeben sich so zu:
-\[ d_1 = \SI{2.28(19)e-10}{\meter}\]
-\[ d_2 = \SI{1.3(1)e-10}{\meter}\]
+Dabei werden die Messungen für die beiden Abstände $d_1$ und $d_2$ (siehe \autoref{fig:graphitgitter}) mittels Student-t Verteilung statistisch ausgewertet. Die Gitterabstände ergeben sich so zu:
+\begin{align}
+    d_1 & = \SI{2.28(19)e-10}{\meter} \\
+    d_2 & = \SI{1.3(1)e-10}{\meter}
+\end{align}
 
 
 \subsection{Elektronen im Magnetfeld}
 \label{subsec:auswertung_elektronen_b_feld}
 
 Mithilfe der Messwerte aus \autoref{tab:messergebnisse_b_feld} und den Daten zu \autoref{fig:kolben_skizze} kann schließlich der Krümmungsradius $r$ der Elektronenbahn nach der folgenden Formel berechnet werden:
-\[r = \sqrt{d^2-s^2}\cdot{frac}{d}{s}\]
+\[r = \sqrt{d^2-s^2} \cdot \frac{d}{s}\]
 Hierbei beschreibt $d$ den Durchmesser des Glaskolbens und $s$ die (in \autoref{tab:messergebnisse_b_feld} mit \enquote{$d$} bezeichneten) Auslenkungen von der Nulllage.
 Die Krümmungsradien in Abhängigkeit ihrer Auslenkungen sind in \autoref{tab:radien_zu_auslenkungen} aufgelistet.
 %
@@ -569,12 +583,12 @@ Die Krümmungsradien in Abhängigkeit ihrer Auslenkungen sind in \autoref{tab:ra
     \end{samepage}
 \end{table}
 %
-Anschließend wurde die magnetischen Induktion aus dem Spulenstrom berechnet. Hierzu bediente man sich der Formel neben \autoref{fig:kolben_skizze} zur Berechnung des $B$-Felds eines Helmholzspulenpaars. Die magnetische Induktion zwischen dem Helmholzspulenpaar in Abhängigkeit von der diese durchfließende Stromstärke $I$ ist in \autoref{tab:b_feld_zu_stromstaerke} tabelliert.
+Anschließend wurde die magnetischen Induktion aus dem Spulenstrom berechnet. Hierzu bediente man sich der Formel neben \autoref{fig:kolben_skizze} zur Berechnung des $B$-Felds eines Helmholtzspulenpaars. Die magnetische Induktion zwischen dem Helmholzspulenpaar in Abhängigkeit von der diese durchfließende Stromstärke $I$ ist in \autoref{tab:b_feld_zu_stromstaerke} tabelliert.
 %
 \begin{table}[H]
     \centering
     \begin{samepage}
-        \caption[Magnetfeldstärken zu Stromstärken]{Zwischen dem Helmholzspulenpaar herrschende magnetische Induktion $B$ in $\si{\milli\tesla}$ zu den diese Spulen durchfließenden Stromstärken $I$ in $\si{\milli\ampere}$. Unterschieden wird zusätzlich zwischen den angelegten Beschleunigungsspannungen $U_{\text{HV}}=\{\SI{1.8}{kV}\mathcomma\SI{4}{kV}\}$. Unsicherheiten $\Delta U_{\text{HV}} = \SI{0.02}{kV}$, $\Delta I = \SI{3}{mA}$, ansonsten direkt in der Zelle angegeben.}
+        \caption[Magnetfeldstärken zu Stromstärken]{Zwischen dem Helmholtzspulenpaar herrschende magnetische Induktion $B$ in $\si{\milli\tesla}$ zu den diese Spulen durchfließenden Stromstärken $I$ in $\si{\milli\ampere}$. Unterschieden wird zusätzlich zwischen den angelegten Beschleunigungsspannungen $U_{\text{HV}}=\{\SI{1.8}{kV}\mathcomma\SI{4}{kV}\}$. Unsicherheiten $\Delta U_{\text{HV}} = \SI{0.02}{kV}$, $\Delta I = \SI{3}{mA}$, ansonsten direkt in der Zelle angegeben.}
         \label{tab:b_feld_zu_stromstaerke}
         \begin{tblr}{colspec={S[table-format=1.1]S[table-format=3(2)]S[table-format=1.2(1)]}, row{1}={guard}}
             $U_{\text{HV}}$ / \unit{kV} & $I$ / \unit{mA} & $B$ / \unit{mT} \\
@@ -596,13 +610,29 @@ Anschließend wurde die magnetischen Induktion aus dem Spulenstrom berechnet. Hi
     \end{samepage}
 \end{table}
 %
-Da nun zu bestimmten Auslenkungen respektive Stromstärken sowohl der Krümmungsradius als auch die mangetische Induktion bekannt sind, kann ein Plot von $\nicefrac{1}{r}$ gegen $B$ erstellt werden. Dieser ist auf \autoref{fig:1_over_r_gegen_B} ersichtlich.
+Da nun zu bestimmten Auslenkungen respektive Stromstärken sowohl der Krümmungsradius als auch die mangetische Induktion bekannt sind, kann ein Plot des inversen Krümmungsradius $\nicefrac{1}{r}$ gegen $B$ erstellt werden. Es wird wieder zwischen den beiden Beschleunigungsspannungen $U_{\text{HV}}=\{\SI{1.8}{kV}\mathcomma\SI{4}{kV}\}$ unterschieden. Dieser Plot ist auf \autoref{fig:1_over_r_gegen_B} ersichtlich.
 %
-
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=\linewidth]{../python/plots/kruemmungsradius.pdf}
+        \caption[Inverser Krümmungsradius gegen $B$-Feld]{Inverser Krümmungsradius $\nicefrac{1}{r}$ gegen magnetische Induktion $B$}
+        \label{fig:1_over_r_gegen_B}
+    \end{samepage}
+\end{figure}
+%
+Auf \autoref{fig:1_over_r_gegen_B} wurde darüberhinaus lineare Regressionen über die gezeichneten Kurven gerechnet. Nach \autoref{eq:spezifische_ladung_U} kann die Steigung der Funktion $\nicefrac{1}{r}$ bestimmt werden, indem man auf $\nicefrac{1}{r}$ umformt und nach $B$ ableitet.
+\[\pdv{\nicefrac{1}{r}}{B} = \sqrt{\frac{q_{\text{spez}}}{2U}}\]
+Formt man diese Steigung, die über die Regression errechnet wurde, wieder auf $q_{\text{spez}}$ um, so erhält man für die spezifische Ladung der Elektronen
+\begin{align}
+    q_{\text{spez},\SI{1.8}{kV}} & = \\
+    q_{\text{spez},\SI{4.0}{kV}} & =
+\end{align}
 
 
 \subsection{Elektronen-Spin-Resonanz}
 \label{subsec:auswertung_esr}
+
 Zu den gewählten Resonanzfrequenzen in \autoref{tab:messergebnisse_esr} fließt abhängig von diesen ein gewisser Strom durch die Helmholtzspulen. Dieser Strom kann durch den Zusammenhang:
 \[B = \mu_0 \cdot (\nicefrac{4}{5})^{\nicefrac{3}{2}}*\nicefrac{n}{r} \cdot I\]
 in eine magnetische Flussdichte umgerechnet werden, welcher in \autoref{tab:esr_b_feld} aufgelistet ist.
