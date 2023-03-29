@@ -41,6 +41,8 @@ for r in radius:
 
 # 3.5mm laut Angabe - 4.5mm ca laut bild
 # R = 6.8mm laut Angabe
+
+
 def get_magnetic_field(I, n=320, R=6.8e-2, a=4.5e-2):
     # equation 10
     mu_0 = 4 * np.pi * 1e-7  # H/m
@@ -68,7 +70,7 @@ def lin_func(x, k):
 
 
 inverse_radius_n, _ = lt.separate_uarray(inverse_radius)
-B_18_n, _ = lt.separate_uarray(B_18)
+B_18_n, err = lt.separate_uarray(B_18)
 B_40_n, _ = lt.separate_uarray(B_40)
 
 fit_18 = lt.CurveFit(lin_func, B_18_n, inverse_radius_n)
@@ -76,13 +78,16 @@ fit_40 = lt.CurveFit(lin_func, B_40_n, inverse_radius_n)
 print(f"Fit 18: {fit_18.p[0]}")
 print(f"Fit 40: {fit_40.p[0]}")
 
+# info vielleicht bekommen wir hier noch für die fit parameter eine uncertainty!?
+
 
 def calc_q_spez_from_slope(k, U):
     return 2 * U * k**2
 
 
-q_sp_18 = calc_q_spez_from_slope(fit_18.p[0], 1.8e3)
-q_sp_40 = calc_q_spez_from_slope(fit_40.p[0], 4.0e3)
+# 3% uncertainty in U laut Hersteller
+q_sp_18 = calc_q_spez_from_slope(fit_18.p[0], lt.u.ufloat(1.8e3, 1.8e3 * 0.03))
+q_sp_40 = calc_q_spez_from_slope(fit_40.p[0], lt.u.ufloat(4.0e3, 4.0e3 * 0.03))
 print(f"q_sp_18:  {q_sp_18:e}")
 print(f"q_sp_40:  {q_sp_40:e}")
 print(f"q_sp_lit: {q_e/m_e:e}")
@@ -99,11 +104,14 @@ if PLOT:
     lt.plt_latex()
     lt.plt_uplot(B_18 * 1000, inverse_radius, label=r"$\SI{1.8}{\kilo\volt}$")
     lt.plt_uplot(B_40 * 1000, inverse_radius, label=r"$\SI{4.0}{\kilo\volt}$")
-    lt.plt.plot(fit_18.x_out * 1000, fit_18.y_out, label=r"$\SI{1.8}{\kilo\volt}$: lineare Regression")
-    lt.plt.plot(fit_40.x_out * 1000, fit_40.y_out, label=r"$\SI{1.8}{\kilo\volt}$: lineare Regression")
+    lt.plt.plot(fit_18.x_out * 1000, fit_18.y_out,
+                label=r"$\SI{1.8}{\kilo\volt}$: lineare Regression")
+    lt.plt.plot(fit_40.x_out * 1000, fit_40.y_out,
+                label=r"$\SI{1.8}{\kilo\volt}$: lineare Regression")
     lt.plt.ylabel(r"$\frac{1}{r}$ / $\si{\per\meter}$")
     lt.plt.xlabel(r"$B$ / $\si{\milli\tesla}$")
-    lt.plt.title("Inverser Krümmungsradius des abgelenkten Elektronenstrahls\nin Abhängigkeit des Magnetfeldes")
+    lt.plt.title(
+        "Inverser Krümmungsradius des abgelenkten Elektronenstrahls\nin Abhängigkeit des Magnetfeldes")
     lt.plt.legend()
     lt.plt.grid()
     lt.plt.tight_layout()
