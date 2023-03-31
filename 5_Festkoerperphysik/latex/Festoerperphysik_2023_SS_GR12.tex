@@ -439,20 +439,20 @@ Für den praktischen Aufbau und die Messungen der geforderten Größen wurden di
 \subsection{Elektronenbeugung}
 \label{subsec:durchfuehrung_elektronenbeugung}
 
-Der Aufbau erfolgt wie in \autoref{subsec:anordnung_elektronen} gezeigt. Zu Beginn wird an der Glühkathode über das Hochspannungsnetzgerät eine initiale Beschleunigungsspannung von $U_B = \SI{2}{kV}$ angelegt. Auf der Kugelkalotte am milchtrüben Ende der Elektronenbeugungsröhre erscheinen konzentrische grüne Kreise um einen hellen grünen Punkt im Zentrum. Diese Interferenzmaxima (Punkt sowie Ringe) unterliegen der Bragg-Bedingung (\autoref{eq:bragg}). Mithilfe eines Messschiebers wird nun der Abstand (Radius) vom ersten und zweiten Interferenzmaximum (Ring) zum nullten Maximum (Zentrum) gemessen und zur angelegten Hochspannung notiert. Dieser Vorgang wird weitere viermal wiederholt, wobei die Beschleunigungsspannung jeweils um \SI{0.5}{kV} erhöht wird, dies ist die erste Messserie. Um eine minimale statistische Aussage tätigen zu können, wird diese Messserie ein zweites Mal wiederholt. Die erhaltenen Messwerte finden sich in \autoref{tab:messergebnisse_beugung}.
+Der Aufbau erfolgt wie in \autoref{subsec:anordnung_elektronen} gezeigt. Zu Beginn wird an der Glühkathode über das Hochspannungsnetzgerät eine initiale Beschleunigungsspannung von $U_B = \SI{2}{kV}$ angelegt. Auf der Kugelkalotte am milchtrüben Ende der Elektronenbeugungsröhre erscheinen konzentrische grüne Kreise um einen hellen grünen Punkt im Zentrum. Diese Interferenzmaxima (Punkt sowie Ringe) unterliegen der Bragg-Bedingung (\autoref{eq:bragg}). Mithilfe eines Messschiebers wird nun der Abstand (Radius) vom ersten und zweiten Interferenzmaximum (Ring) zum nullten Maximum (Zentrum) gemessen und zur angelegten Hochspannung notiert. Dieser Vorgang wird weitere viermal wiederholt, wobei die Beschleunigungsspannung jeweils um \SI{0.5}{kV} erhöht wird, dies ist die erste Messserie. Um eine systematische Fehler vom ersten Experimentator im Rahmen der zeitlichen Möglichkeiten minimal zu halten, wird diese Messserie ein zweites Mal vom zweiten Experimentator wiederholt. Die erhaltenen Messwerte finden sich in \autoref{tab:messergebnisse_beugung}.
 %
 \begin{table}[H]
     \centering
     \begin{samepage}
-        \caption[Messergebnisse Elektronenbeugung]{Radien des ersten und zweiten Interferenzmaximumrings $r_{1,i,j}$ und $r_{2,i,j}$ in \unit{mm} in Abhängigkeit von der angelegten Beschleunigungsspannung $U_B$ in \unit{kV}. Laufindex $i$ bezeichnet dabei den Index der Messung (korreliert mit der Spannung), Index $j=\{1\mathcomma2\}$ bezeichnet den Index der Messserie. Unsicherheiten $\Delta r = \SI{2}{mm}$, $\Delta U_B = \SI{0.02}{kV}$.}
+        \caption[Messergebnisse Elektronenbeugung]{Radien des ersten und zweiten Interferenzmaximumrings $r_{1,i,j}$ und $r_{2,i,j}$ in \unit{mm} in Abhängigkeit von der angelegten Beschleunigungsspannung $U_B$ in \unit{kV}. Der Laufindex $i$ bezeichnet dabei den Index der Messung (korreliert mit der Spannung), der Index $j=\{1\mathcomma2\}$ bezeichnet den Index der Messserie. Unsicherheiten $\Delta r = \SI{2}{mm}$}
         \label{tab:messergebnisse_beugung}
-        \begin{tblr}{colspec={S[table-format=1.1]S[table-format=2]S[table-format=2]S[table-format=2]S[table-format=2]}, row{1}={guard}}
+        \begin{tblr}{colspec={S[table-format=1.2(2)]S[table-format=2]S[table-format=2]S[table-format=2]S[table-format=2]}, row{1}={guard}}
             $U_B$ / \unit{kV} & $r_{1,i,1}$ / \unit{mm} & $r_{1,i,2}$ / \unit{mm} & $r_{2,i,1}$ / \unit{mm} & $r_{2,i,2}$ / \unit{mm} \\
-            2.0               & 17                      & 17                      & 31                      & 30                      \\
-            2.5               & 15                      & 15                      & 27                      & 26                      \\
-            3.0               & 13                      & 13                      & 24                      & 24                      \\
-            3.5               & 12                      & 13                      & 21                      & 24                      \\
-            4.0               & 11                      & 12                      & 20                      & 22                      \\
+            2.00(6)               & 17                      & 17                      & 31                      & 30                      \\
+            2.50(8)               & 15                      & 15                      & 27                      & 26                      \\
+            3.00(9)               & 13                      & 13                      & 24                      & 24                      \\
+            3.50(11)               & 12                      & 13                      & 21                      & 24                      \\
+            4.00(12)               & 11                      & 12                      & 20                      & 22                      \\
         \end{tblr}
     \end{samepage}
 \end{table}
@@ -468,24 +468,24 @@ durch das Helmholtz-Spulenpaar, so wird zwischen den Spulen ein Magnetfeld erzeu
     \centering
     \begin{samepage}
         \caption[Messergebnisse Elektronenstrahl im Magnetfeld]{Messergebnisse der vier Messserien zur Auswirkung der Lorentzkraft auf den Elektronenstrahl.
-            Gemessen wurde die benötigte Stromstärke $I_{i,j,k}$ zur Ablenkung des Elektronenstrahls um eine bestimmte Distanz $d$ bei gegebener angelegter Hochspannung an der Glühkathode. Index $i$ beschreibt die angelegte Hochspannung, Index $j$ die gegebene Distanz und Index $k$ die erste oder zweite Messserie. Die Messungen wurden je für die Hochspannungen $U_{\text{HV}}=\{\SI{1.8}{kV}\mathcomma\SI{4}{kV}\}$ zweimal durchgeführt. Unsicherheiten $\Delta U_{\text{HV}} = \SI{0.02}{kV}$, $\Delta I = \SI{3}{mA}$, $\Delta d = \SI{2}{mm}$.}
+            Gemessen wurde die benötigte Stromstärke $I_{i,j,k}$ zur Ablenkung des Elektronenstrahls um eine bestimmte Distanz $d$ bei gegebener angelegter Hochspannung an der Glühkathode. Index $i$ beschreibt die angelegte Hochspannung, Index $j$ die gegebene Distanz und Index $k$ die erste oder zweite Messserie. Die Messungen wurden je für die Hochspannungen $U_{\text{HV}}=\{\SI{1.8}{kV}\mathcomma\SI{4}{kV}\}$ zweimal durchgeführt. Unsicherheit: $\Delta d = \SI{2}{mm}$.}
         \label{tab:messergebnisse_b_feld}
-        \begin{tblr}{colspec={S[table-format=1.1]S[table-format=2]S[table-format=3]S[table-format=3]}, row{1}={guard}}
+        \begin{tblr}{colspec={S[table-format=1.2(2)]S[table-format=2]S[table-format=3.2(2)]S[table-format=3.2(2)]}, row{1}={guard}}
             $U_{\text{HV}}$ / \unit{kV} & $d$ / \unit{mm} & $I_{i,j,1}$ / \unit{mA} & $I_{i,j,2}$ / \unit{mA} \\
-            1.8                         & 5               & 40                      & 49                      \\
-            1.8                         & 10              & 75                      & 78                      \\
-            1.8                         & 15              & 100                     & 108                     \\
-            1.8                         & 20              & 131                     & 149                     \\
-            1.8                         & 25              & 164                     & 180                     \\
-            1.8                         & 30              & 195                     & 208                     \\
-            1.8                         & 35              & 228                     & 240                     \\
-            4.0                         & 5               & 76                      & 60                      \\
-            4.0                         & 10              & 122                     & 100                     \\
-            4.0                         & 15              & 165                     & 139                     \\
-            4.0                         & 20              & 216                     & 190                     \\
-            4.0                         & 25              & 261                     & 245                     \\
-            4.0                         & 30              & 314                     & 290                     \\
-            4.0                         & 35              & 360                     & 340                     \\
+            1.80(5)                          & 5               & 40.00 (8)                     & 49.00 (9)                     \\
+            1.80(5)                          & 10              & 75.00 (12)                    & 78.00 (12)                     \\
+            1.80(5)                          & 15              & 100.00 (14)                   & 108.00(15)                     \\
+            1.80(5)                          & 20              & 131.00 (17)                   & 149.00(19)                     \\
+            1.80(5)                          & 25              & 164.0 (2)                     & 180.0(2)                     \\
+            1.80(5)                          & 30              & 195.0 (2)                     & 208.0(2)                     \\
+            1.80(5)                          & 35              & 228.0 (2)                     & 240.0(2)                     \\
+            4.00(12)                         & 5               & 76.00 (12)                    & 60.00 (10)                     \\
+            4.00(12)                         & 10              & 122.00 (16)                   & 100.00 (14)                     \\
+            4.00(12)                         & 15              & 165.0 (2)                     & 139.00(18)                     \\
+            4.00(12)                         & 20              & 216.0 (2)                     & 190.0(2)                     \\
+            4.00(12)                         & 25              & 261.0 (3)                     & 245.0(2)                     \\
+            4.00(12)                         & 30              & 314.0 (3)                     & 290.0(3)                     \\
+            4.00(12)                         & 35              & 360.0 (4)                     & 340.0(3)                     \\
         \end{tblr}
     \end{samepage}
 \end{table}
@@ -496,26 +496,27 @@ durch das Helmholtz-Spulenpaar, so wird zwischen den Spulen ein Magnetfeld erzeu
 
 Der Aufbau erfolgt wie in \autoref{subsec:anordnung_esr} dargestellt. Initial wird die kleinste Steckspule -- jene mit geringster Windungszahl -- gewählt. Diese wird in die dafür vorgesehenen Kontakte am ESR-Grundgerät gesteckt. Die DPPH-Probe wird mittig in die Steckspule eingeführt. Am ESR-Betriebsgerät wird eine Frequenz eingestellt, bei welcher die Probe resoniert. Dies resultiert in einem der in \autoref{fig:grundlagen_oszibilder} dargestellten Bilder am Oszilloskop. Die Phasenverschiebung und die Amplitude der Modulationsspannung werden am ESR-Betriebsgerät derart angepasst, dass sie dem Unterbild (d) aus \autoref{fig:grundlagen_oszibilder} gleichen. Es wird darauf geachtet, dass sich das dargestellte Minimum genau horizontal zentriert im Bildraster des Oszilloskops befindet. Begonnen wird mit einer Resonanzfrequenz von \SI{120}{MHz}, diese wird nun in Zehnerschritten reduziert (bis \SI{20}{MHz}) und die jeweilige Gleichstromstärke, die nötig ist, um das eben beschriebene Bild am Oszilloskop zu erhalten, notiert. Diese wird direkt vom ESR-Betriebsgerät abgelesen. Gelangt man unter den Frequenzbereich der verwendeten Spule, in welchem noch Resonanzeffekte auftreten, so wird die Spule durch eine größere (mehr Windungen) ausgetauscht. Es stehen drei unterschiedliche Steckspulengrößen zur Auswahl. Die zur verwendeten Steckspule und eingestellten Resonanzfrequenz abgelesene Gleichstromstärke wird notiert. Diese Messergebnisse finde sich in \autoref{tab:messergebnisse_esr}
 %
+% info unsischerheiten hier einfach angenommen :)) idk if better this way 0,01 mA is doch a bissl wenig sonst
 \begin{table}[H]
     \centering
     \begin{samepage}
-        \caption[Messergebnisse ESR]{Messergebnisse zum Versuch zur Elektronen-Spin-Resonanz. Zur jeweiligen Steckspulengröße (klein/mittel/groß) und eingestellten Resonanzfrequenz $f_{\text{res}}$ (in \unit{MHz}) wird die abgelesene Gleichstromstärke $I_{\mathdirectcurrent{}}$ (in \unit{mA}) notiert. Unsicherheiten: $\Delta f = \SI{0.1}{MHz}$, $\Delta I_{\mathdirectcurrent{}} = \SI{0.01}{mA}$.}
+        \caption[Messergebnisse ESR]{Messergebnisse zum Versuch zur Elektronen-Spin-Resonanz. Zur jeweiligen Steckspulengröße (klein/mittel/groß) und eingestellten Resonanzfrequenz $f_{\text{res}}$ (in \unit{MHz}) wird die abgelesene Gleichstromstärke $I_{\mathdirectcurrent{}}$ (in \unit{mA}) notiert. Unsicherheiten: $\Delta f = \SI{0.1}{MHz}$.}
         \label{tab:messergebnisse_esr}
-        \begin{tblr}{colspec={QS[table-format=3.1]S[table-format=4]}, row{1}={guard}}
+        \begin{tblr}{colspec={QS[table-format=3.1]S[table-format=4(1)]}, row{1}={guard}}
             Spule  & $f_{\text{res}}$ / \unit{MHz} & $I_{\mathdirectcurrent{}}$ / \unit{mA} \\
-            klein  & 120.0                         & 1133                                   \\
-            klein  & 110                           & 1031                                   \\
-            klein  & 100                           & 951                                    \\
-            klein  & 90                            & 845                                    \\
-            klein  & 80.1                          & 757                                    \\
-            klein  & 70                            & 666                                    \\
-            klein  & 60                            & 567                                    \\
-            mittel & 50.1                          & 485                                    \\
-            mittel & 40.1                          & 386                                    \\
-            mittel & 35.1                          & 338                                    \\
-            mittel & 30                            & 290                                    \\
-            groß   & 25                            & 242                                    \\
-            groß   & 20                            & 168                                    \\
+            klein  & 120.0                         & 1133 (5)                                   \\
+            klein  & 110                           & 1031 (5)                                   \\
+            klein  & 100                           & 951  (5)                                    \\
+            klein  & 90                            & 845  (5)                                    \\
+            klein  & 80.1                          & 757  (5)                                    \\
+            klein  & 70                            & 666  (5)                                    \\
+            klein  & 60                            & 567  (5)                                    \\
+            mittel & 50.1                          & 485  (4)                                    \\
+            mittel & 40.1                          & 386  (4)                                    \\
+            mittel & 35.1                          & 338  (3)                                  \\
+            mittel & 30                            & 290  (3)                                    \\
+            groß   & 25                            & 242  (2)                                    \\
+            groß   & 20                            & 168  (2)                                    \\
         \end{tblr}
     \end{samepage}
 \end{table}
@@ -531,7 +532,7 @@ Anschließend wurde noch qualitativ die Auswirkung der genauen Position der DPPH
 \subsection{Elektronenbeugung}
 \label{subsec:auswertung_elektronenbeugung}
 
-Wie schon in \autoref{subsec:durchfuehrung_elektronenbeugung} beschrieben, wurde die Beugung von Elektronen an Graphit untersucht. Aus den Beschleunigungsspannungen in \autoref{tab:messergebnisse_beugung} lässt sich die Wellenlänge der Elektronen bestimmen. Die Wellenlänge der Elektronen wird durch mittels \autoref{eq:wellenlaenge_elektronen} aus der vorliegenden Beschleunigungsspannung ermittelt und ergibt sich zu den in \autoref{tab:auswertung_beugung_wellenlaenge} aufgelisteten Werten.
+Wie schon in \autoref{subsec:durchfuehrung_elektronenbeugung} beschrieben, wurde die Beugung von Elektronen an Graphit untersucht. Aus den Beschleunigungsspannungen in \autoref{tab:messergebnisse_beugung} lässt sich die Wellenlänge der Elektronen bestimmen. Die Wellenlänge der Elektronen wird mittels \autoref{eq:wellenlaenge_elektronen} aus der vorliegenden Beschleunigungsspannung ermittelt und ergibt sich zu den in \autoref{tab:auswertung_beugung_wellenlaenge} aufgelisteten Werten.
 %
 \begin{table}[H]
     \centering
@@ -549,7 +550,7 @@ Wie schon in \autoref{subsec:durchfuehrung_elektronenbeugung} beschrieben, wurde
     \end{samepage}
 \end{table}
 %
-Weiter werden aus den gemessenen Abständen in \autoref{tab:messergebnisse_beugung} unter zuhilfenahme von \autoref{eq:bragg} die Abstände der Gitterebenen in Graphit bestimmt.
+Weiter werden aus den gemessenen Abständen in \autoref{tab:messergebnisse_beugung} unter Zuhilfenahme von \autoref{eq:bragg} die Abstände der Gitterebenen in Graphit bestimmt.
 Dabei werden die Messungen für die beiden Abstände $d_1$ und $d_2$ (siehe \autoref{fig:graphitgitter}) mittels Student-t Verteilung statistisch ausgewertet. Die Gitterabstände ergeben sich so zu:
 \begin{align}
     d_1 & = \SI{2.28(19)e-10}{\meter} \\
@@ -570,9 +571,9 @@ Die Krümmungsradien in Abhängigkeit ihrer Auslenkungen sind in \autoref{tab:ra
     \begin{samepage}
         \caption[Krümmungsradien zu Auslenkungen]{Berechnete Krümmungsradien $r$ in $\si{\centi\meter}$ zu den Auslenkungen $s$ in $\si{\milli\meter}$ der Elektronen im homogenen Magnetfeld.}
         \label{tab:radien_zu_auslenkungen}
-        \begin{tblr}{colspec={S[table-format=2]S[table-format=2.1(2)e1]}, row{1}={guard}}
+        \begin{tblr}{colspec={S[table-format=2]S[table-format=3.1(2)]}, row{1}={guard}}
             $s$ / \unit{mm} & $r$ / \unit{cm} \\
-            5               & 1.8(8)e2        \\
+            5               & 180(80)        \\
             10              & 91(19)          \\
             15              & 60(9)           \\
             20              & 45(5)           \\
@@ -588,7 +589,7 @@ Anschließend wurde die magnetischen Induktion aus dem Spulenstrom berechnet. Hi
 \begin{table}[H]
     \centering
     \begin{samepage}
-        \caption[Magnetfeldstärken zu Stromstärken]{Zwischen dem Helmholtzspulenpaar herrschende magnetische Induktion $B$ in $\si{\milli\tesla}$ zu den diese Spulen durchfließenden Stromstärken $I$ in $\si{\milli\ampere}$. Unterschieden wird zusätzlich zwischen den angelegten Beschleunigungsspannungen $U_{\text{HV}}=\{\SI{1.8}{kV}\mathcomma\SI{4}{kV}\}$. Unsicherheiten $\Delta U_{\text{HV}} = \SI{0.02}{kV}$, $\Delta I = \SI{3}{mA}$, ansonsten direkt in der Zelle angegeben.}
+        \caption[Magnetfeldstärken zu Stromstärken]{Zwischen dem Helmholtzspulenpaar herrschende magnetische Induktion $B$ in $\si{\milli\tesla}$ zu den diese Spulen durchfließenden Stromstärken $I$ in $\si{\milli\ampere}$. Unterschieden wird zusätzlich zwischen den angelegten Beschleunigungsspannungen $U_{\text{HV}}=\{\SI{1.8}{kV}\mathcomma\SI{4}{kV}\}$. Unsicherheiten $\Delta U_{\text{HV}} = \SI{0.02}{kV}$.}
         \label{tab:b_feld_zu_stromstaerke}
         \begin{tblr}{colspec={S[table-format=1.1]S[table-format=3(2)]S[table-format=1.2(1)]}, row{1}={guard}}
             $U_{\text{HV}}$ / \unit{kV} & $I$ / \unit{mA} & $B$ / \unit{mT} \\
@@ -633,34 +634,34 @@ Formt man diese Steigung, die über die Regression errechnet wurde, wieder auf $
 \subsection{Elektronen-Spin-Resonanz}
 \label{subsec:auswertung_esr}
 
-Zu den gewählten Resonanzfrequenzen in \autoref{tab:messergebnisse_esr} fließt abhängig von diesen ein gewisser Strom durch die Helmholtzspulen. Dieser Strom kann durch den Zusammenhang:
+Zu den gewählten Resonanzfrequenzen in \autoref{tab:messergebnisse_esr} fließt, abhängig von diesen, ein gewisser Strom durch die Helmholtzspulen. Dieser Strom kann durch den Zusammenhang:
 \begin{equation}
     \label{eq:esr_b_feld}
     B = \mu_0 \cdot (\nicefrac{4}{5})^{\nicefrac{3}{2}}*\frac{n}{r} \cdot I
 \end{equation}
 in eine magnetische Flussdichte umgerechnet werden, welcher in \autoref{tab:esr_b_feld} aufgelistet ist.
 
-
+% info hier auf die gleichen Unsicherheiten wie oben :)
 \begin{table}[H]
     \centering
     \begin{samepage}
-        \caption[Magnetische Flussdichte durch Helmholzspulen]{Magnetische Flussdichte $B$ durch Helmholzspulen in Abhängigkeit der Resonanzfrequenz $f_{\text{res}}$.\\$\Delta f = \SI{0.1}{MHz}$, $\Delta I_{\mathdirectcurrent{}} = \SI{0.01}{mA}$, $\Delta B = \SI{0.1}{mT}$}
+        \caption[Magnetische Flussdichte durch Helmholzspulen]{Magnetische Flussdichte $B$ durch Helmholzspulen in Abhängigkeit der Resonanzfrequenz $f_{\text{res}}$.\\$\Delta f = \SI{0.1}{MHz}$, $\Delta B = \SI{0.1}{mT}$}
         \label{tab:esr_b_feld}
         \begin{tblr}{colspec={QS[table-format=3.1]S[table-format=4]S[table-format=1.1]}, row{1}={guard}}
             Spule  & $f_{\text{res}}$ / \unit{MHz} & $I_{\mathdirectcurrent{}}$ / \unit{mA} & $B$ / \unit{mT} \\
-            klein  & 120.0                         & 1133                                   & 4.8             \\
-            klein  & 110.0                         & 1031                                   & 4.4             \\
-            klein  & 100.0                         & 951                                    & 4.0             \\
-            klein  & 90.0                          & 845                                    & 3.6             \\
-            klein  & 80.1                          & 757                                    & 3.2             \\
-            klein  & 70.0                          & 666                                    & 2.8             \\
-            klein  & 60.0                          & 567                                    & 2.4             \\
-            mittel & 50.1                          & 485                                    & 2.1             \\
-            mittel & 40.1                          & 386                                    & 1.6             \\
-            mittel & 35.1                          & 338                                    & 1.4             \\
-            mittel & 30.0                          & 290                                    & 1.2             \\
-            groß   & 25.0                          & 242                                    & 1.0             \\
-            groß   & 20.0                          & 168                                    & 0.7             \\
+            klein  & 120.0                         & 1133 (5)                                  & 4.8             \\
+            klein  & 110.0                         & 1031 (5)                                  & 4.4             \\
+            klein  & 100.0                         & 951  (5)                                  & 4.0             \\
+            klein  & 90.0                          & 845  (5)                                  & 3.6             \\
+            klein  & 80.1                          & 757  (5)                                  & 3.2             \\
+            klein  & 70.0                          & 666  (5)                                  & 2.8             \\
+            klein  & 60.0                          & 567  (5)                                  & 2.4             \\
+            mittel & 50.1                          & 485  (4)                                  & 2.1             \\
+            mittel & 40.1                          & 386  (4)                                  & 1.6             \\
+            mittel & 35.1                          & 338  (3)                                  & 1.4             \\
+            mittel & 30.0                          & 290  (3)                                  & 1.2             \\
+            groß   & 25.0                          & 242  (2)                                  & 1.0             \\
+            groß   & 20.0                          & 168  (2)                                  & 0.7             \\
         \end{tblr}
     \end{samepage}
 \end{table}
@@ -703,13 +704,13 @@ Laut Literatur würde man einen Wert von $\approx 2$ erwarten, dieser stellt sic
 \section{Diskussion}
 \label{sec:diskussion}
 \subsection{Elektronenbeugung}
-Die bestimmten Werte von $ d_1 = \SI{2.28(19)e-10}{\meter}$ und $d_2 = \SI{1.3(1)e-10}{\meter}$ decken sich mit jenen aus der Theorie, welche mit $d_{1\text{, lit}} = \SI{213}{pm}$ und $d_{2\text{, lit}} = \SI{123}{pm}$ in \cite{ref:angabe_elektronen} angeführt sind. Die dabei eher höher ausfallenden Messunsicherheiten ergebn sich aus der, doch eher ungenauen Messmethode der Radien der beiden Beugungskreise. Die Messungen durch jeden der beiden Experimentatoren konnte hier sicherlich systematische Messfehler mindern. Eine weitere Verbesserung -- wenn auch mühsam mit dieser Methode -- kann eine noch größere Anzahl an Messungen erreicht werden. 
+Die bestimmten Werte von $ d_1 = \SI{2.28(19)e-10}{\meter}$ und $d_2 = \SI{1.3(1)e-10}{\meter}$ decken sich mit jenen aus der Theorie, welche mit $d_{1\text{, lit}} = \SI{213}{pm}$ und $d_{2\text{, lit}} = \SI{123}{pm}$ in \cite{ref:angabe_elektronen} angeführt sind. Die dabei eher höher ausfallenden Messunsicherheiten ergebn sich aus der, doch eher ungenauen Messmethode der Radien der beiden Beugungskreise. Die Messungen, durch jeden der beiden Experimentatoren, konnte hier sicherlich systematische Fehler mindern. Eine weitere Verbesserung -- wenn auch mühsam mit dieser Methode -- kann eine noch größere Anzahl an Messungen erreicht werden. 
 \subsection{Elektronen im Magnetfeld}
 
 \subsection{Elektronen-Spin-Resonanz}
 Aus den bei gegebenen Resonsnzfrequenzen bestimmten Resonanzmagnetfeldern wurde für den Landé-Faktor ($g = \num{1.785(7)}$) ein um etwa $\SI{12}{\percent}$ niedriger Wert als der Literaturwert $g_{\text{lit}} = 2,0036$ \cite{ref:angabe_esr} ermittelt.
-Als plausible Erklärung, dieser doch nicht unsignifikanten Abweichung, kann die fehlende homogenität im $B$-Feld herangezogen werden. Da $B$ schließlich nicht direkt gemessen, sondern über den Strom $I_{\mathdirectcurrent{}}$ ermittelt wird, liegt nahe, dass der Strom nicht, entgegen des Zusammenhangs aus \autoref{eq:esr_b_feld}, vollständig in die theoretisch gegebene magnetische Flussdichte umgesetzt wird. \\
-Gründe hierfür sind unter anderem, die auf Grund der Anschlusskabel kaum wirklich planparallel anordenbaren Spulen, das nicht vollständig homogenen Magnetfeld der Spulen, sowie (vermutlich eher vernachlässigbar) thermische Effekt und die örtliche Ausdehnung der Spule (kein idealer Kreis). \\
+Als plausible Erklärung, dieser doch nicht unsignifikanten Abweichung, kann die fehlende Homogenität im $B$-Feld herangezogen werden. Da $B$ schließlich nicht direkt gemessen, sondern über den Strom $I_{\mathdirectcurrent{}}$ ermittelt wird, liegt nahe, dass der Strom nicht, entgegen des Zusammenhangs aus \autoref{eq:esr_b_feld}, vollständig in die theoretisch gegebene magnetische Flussdichte umgesetzt wird. \\
+Gründe hierfür sind unter anderem, die nicht ganz planparallel anordenbaren Spulen, das nicht vollständig homogenen Magnetfeld der Spulen, sowie (vermutlich eher vernachlässigbar) thermische Effekt und die radiale Ausdehnung der Spule (kein idealer Kreis). \\
 In \autoref{tab:esr_b_schwach_feld} sind jene Werte des $B$ Felds in Abhängigkeit der Resonanzfrequenz aufgelistet, welche zu einem Landé-Faktor von $g_{\text{red}} = \num{2.006(8)}$ führen. \\
 Zielführender wäre es, in zukünftigen Experimenten das $B$-Feld direkt -- etwa mit einem Hall-Sensor zu messen -- um die Messunsicherheit zu minimieren. 
 
