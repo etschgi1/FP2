@@ -1,0 +1,19 @@
+Es ist äußerst wichtig, dass der Strahlengang möglichst geradlinig verläuft. 
+
+1)
+Dicke der Linse (13+-1) mm
+a) Bestimmung mittels Lupeneffekt: 
+Aufbau wie in Bild. Danach mit Linse etwas herumfahren bis Bild scharf. 
+Zuerst mit bekannter Brennweite -> dann unbekannte Brennweite bestimmen.
+Nun wird g gemessen: (20+-2) mm
+
+b) Über Gegenstand und Bildweite messen
+Erste Messung: g=(126+-3) mm, b=(35+-2) mm (Bild Brennweite 1)
+Zweite Messung: g=(44+-2) mm, b=(54+-2) mm (Bild Brennweite 2)
+
+c)
+Abstand Kamera - Target:
+l = b+g = (147+-3) mm
+Linsenpositionen:
+pos1 = (23+-2) mm (Gegenstandsweite) - (125+-3) mm (Bildweite)
+pos2 = (112+-3) mm (Gegenstandsweite) - (36+-3) mm (Bildweite)

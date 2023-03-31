@@ -1,0 +1,43 @@
+Allgemeine Anmerkung: Durch Stöße auf den Tisch verschiebt sich leider der Probenhalter leicht, weshalb immer wieder kleine Nachjustierungen nötig waren. 
+1) und 2)
+Messungen immer von vorne (Probenseitig)
+Objektivlinse (Dicke ca. 8+-2mm): 
+f_obj = 35 +-0,4 mm
+g_obj = (44 +-1) mm
+Abstand Objektiv - Okular: (170+-5mm)
+Brennweite Okular (50 +-?mm)
+Abstand Probe Okular: (210 +- 5 mm)
+Optische Tubuslänge - ausrechnen: 
+
+----
+3)
+i)
+Bild wird scharf gestellt mit Linse in ursprünglicher Position (Hellfeld_3_1_vorher), sprich Seite ohne Krümmung neben Probe. 
+Bild abspeichern ohne mit Feinregler nachzujustieren (Hellfeld_3_1_nachher)
+nach dem justieren ein weiteres Bild aufgenommen (Hellfeld_3_1_nachher_scharf)
+
+ii)
+Diffusor weg: Bild wird aufgenommen (Hellfeld_3_2_ohne_diffusor) nicht wirklich möglich schärfer zu stellen. 
+
+iii)
+Zuerst wird noch mit der Halogenlampe eine Referenzeinstellung gemacht Mikrometerschraube: 2,74
+Nun wird die blaue LED an die Position der Halogenlampe eingebracht und es wird erneut die Position mittels Mikrometerschraube geändert, bis wieder ein scharfes Bild zu sehen ist. 
+Positionen der LEDs (Mikrometerschraube)
+Blau bei 2,74 mm (Hellfeld_3_3_blau_unscharf) 
+Blau bei 0,89 mm (Hellfeld_3_3_blau_scharf)
+Rot bei 2,74 mm  (Hellfeld_3_3_rot_unscharf) - schon gar nicht so schlecht
+Rot bei 2,67 mm  (Hellfeld_3_3_rot_scharf)
+Rot bei 0,89 mm  (Hellfeld_3_3_rot_unscharf_89)
+
+4) Gesamtvergrößerung
+i)
+Aufnahme eines Referenzbildes mit 1:1 Abbildungsmaßstab (dabei gilt g=b=2f)
+Hellfeld_4_1_vergößert
+Hellfeld_4_1_referenz
+
+
+ii)
+Hellfeld_4_2_auflösungsvermögen
+5 in der innersten Gruppe ist noch unterscheidbar. 
+
+
