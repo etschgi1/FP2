@@ -54,7 +54,7 @@
 Der vorliegende Laborversuch teilt sich in Unterversuche, welche wie folgt gegeben sind:
 
 \begin{itemize}
-    \item Abbildung durch eine Sammellinse
+    \item Bestimmung der Brennweite einer Sammellinse
           \begin{itemize}
               \item Mittels Lupeneffekt
               \item Mittels Abbildungsgleichung
@@ -98,17 +98,18 @@ Der vorliegende Laborversuch teilt sich in Unterversuche, welche wie folgt gegeb
 
 Für den vorliegenden Versuch soll die Fokuslänge/Brennweite $f$ der Sammellinse bestimmt werden. Dazu werden drei verschiedene Methoden angewendet:
 
-\paragraph{1.}
+\paragraph{Methode 1.}
 Zuerst soll die Brennweite über den \enquote{Lupeneffekt} bestimmt werden, indem ein sehr weit entferntes Objekt (Abstand zur Linse $\gg f$) scharf abgebildet wird.
 
-\paragraph{2.} Die Brennweite kann auch aus der Linsengleichung
+\paragraph{Methode 2.}
+Die Brennweite kann auch aus der Linsengleichung
 %
 \begin{equation}
     \label{eq:linsengleichung}
     \frac{1}{f} = \frac{1}{g} + \frac{1}{b}
 \end{equation}
 %
-experimentell bestimmt werden ($g$ Gegenstandsweite, $b$ Bildweite, $G$ Genestandsgröße, $B$ Bildgröße; siehe auch \autoref{fig:sammellinse}). Als Beleuchtung wird eine Halogenlampe und als Objekte zur Verfügung
+experimentell bestimmt werden ($g$ Gegenstandsweite, $b$ Bildweite, $G$ Gegenstandsgröße, $B$ Bildgröße; siehe auch \autoref{fig:sammellinse}). Als Beleuchtung wird eine Halogenlampe und als Objekte zur Verfügung
 stehende Proben verwendet. Die entsprechenden Abstände $b$ und $g$ werden mittels Lineal und die Größen $B$ und $G$ mittels Kamera gemessen.
 %
 \begin{figure}[H]
@@ -120,7 +121,7 @@ stehende Proben verwendet. Die entsprechenden Abstände $b$ und $g$ werden mitte
     \end{samepage}
 \end{figure}
 
-\paragraph{3.}
+\paragraph{Methode 3.}
 Zuletzt wird zur Bestimmung der Brennweite das sogenannte \textit{Bessel-Verfahren} oder \textit{Bessel'sches Verschiebeverfahren} verwendet. Hierzu wird wieder ein Gegenstand im Versuchsaufbau mit der Linse scharf abgebildet (auf Mattscheibe oder Kamera). Bei festem Abstand $l$ von Gegenstand und Position des scharf abgebildeten Bildes ($l = b + g = \text{const.}$) lässt sich eine zweite Position der Linse finden, für die eine scharfe Abbildung möglich ist ($l = b_1 + g_1 = b_2 + g_2$). Aus dem Gesamtabstand $l$ und den Abstand $w$ zwischen beiden Linsenpositionen lässt sich letztendlich die Brennweite $f$ bestimmen. Dazu gilt folgende Gleichung unter der Annahme dünner Linsen:
 %
 \begin{equation}
@@ -138,7 +139,7 @@ Antonie van Leeuwenhoek (1632-1723) gilt als einer der ersten erfolgreichen Kons
     \centering
     \begin{samepage}
         \includegraphics[width=\linewidth]{fig/Leeuwenhoek.png}
-        \caption[Aufbau eines van Leeuwenhoek Mikroskops]{(a) Bild eines einfachen Mikroskops von van Leeuwenhoek mit Beschreibung der einzelnen Bauteile. (b) Einzelteile des        Selbstbau-1-Linsen-Mikroskops angelehnt an van Leeuwenhoek. Auf dem Bild zu sehen sind die 3D-gedruckten Bauteile zur Halterung von Probe, Linsen und Beleuchtung sowie weitere Elemente (Batterie, LED, Schraube, Klammer, Kugellinsen). (c) Fertiggestelltes Selbstbau-1-Linsen-Mikroskop.}
+        \caption[Aufbau eines van Leeuwenhoek Mikroskops]{(a) Bild eines einfachen Mikroskops von van Leeuwenhoek mit Beschreibung der einzelnen Bauteile. (b) Einzelteile des Selbstbau-1-Linsen-Mikroskops angelehnt an van Leeuwenhoek. Auf dem Bild zu sehen sind die 3D-gedruckten Bauteile zur Halterung von Probe, Linsen und Beleuchtung sowie weitere Elemente (Batterie, LED, Schraube, Klammer, Kugellinsen). (c) Fertiggestelltes Selbstbau-1-Linsen-Mikroskop.}
         \label{fig:leeuwenhoek}
     \end{samepage}
 \end{figure}
@@ -195,7 +196,7 @@ Die Bestimmung der Gesamtvergrößerung $G$ erfolgt über die Pixelgröße $P_A$
 \subsection{Dunkelfeldmikroskop}
 \label{subsec:dunkelfeldmikroskop_grundlagen}
 
-Wie im vorherigen Abschnitt bereits beschrieben spielt die Art der Beleuchtung eine große Rolle. Dabei sind die Wellenlänge oder auch die spektrale Breite, die Homogenität und der Winkelbereich der Beleuchtung von großer Wichtigkeit. Nun sollen diese Aspekte erneut in Bezug auf Dunkelfeld-Beleuchtung bzw. -Mikroskope aufgegriffen werden. Erste Ansätze in Richtung dieser Methode werden van Leeuwenhoek, Hooke und Huygens zugeschrieben. Im Vergleich zu einem Hellfeld-Mikroskop, bei dem die Strukturen einer Probe vor einem hellen Hintergrund erscheinen und sich vor allem durch Absorption und durch Streuung verloren gegangenes Licht von diesem abheben, wird beim Dunkelfeld-Prinzip nur dort Licht aufgesammelt, wo die Probe Licht in eine Aufsammeloptik (Linse/Objektiv) hineinstreut. Bereiche, in denen es zu keiner Streuung kommt, erscheinen im Bild also schwarz. Dies kann bei wenig absorbierenden Proben von großem Vorteil in Sachen Bildkontrast sein. In \autoref{fig:dunkelfeld_skizze} ist ein Vergleich aus Hellfeld- und Dunkelfeld-Beleuchtung gezeigt. Man sieht deutlich, wie im Falle einer Hellfeld-Beleuchtung (\autoref{fig:dunkelfeld_skizze}, links) die Probe ausgeleuchtet und das transmittierte Licht gemessen wird. Wird Licht vom Objekt reflektiert, absorbiert oder so gestreut, dass es die Aufsammeloptik nicht erreicht, so wird dort im Bild die Intensität geringer sein, als an Orten, an denen das Licht nahezu ungehindert die Probe durchlaufen konnte. Das Bild erscheint also als dunklerer Bereich auf hellem Hintergrund. Fand wenig Absorption, Streuung oder Reflexion statt, ist der Kontrast (Helligkeitsunterschied) sehr gering. Wenn hingegen \autoref{fig:dunkelfeld_skizze} (rechts) betrachtet wird, so sieht Man deutlich, dass die Dunkelfeld-Beleuchtung zu einer vollkommen anderen Bilderzeugung führt, deren Kontrastmechanismus auch stark von der Hellfeld-Methode abweicht. Das Licht, welches die Probe nahezu ungehindert durchläuft, liegt außerhalb des Winkelbereichs der Aufsammeloptik (streifender Einfall der Beleuchtung). Entsprechende Bereiche werden im Bild als Hintergrund also schwarz/dunkel erscheinen. Werden aber Teile des Lichts in Bereiche des Objekts gestreut und dabei so umgelenkt, dass sie aufgesammelt werden können, so zeichnen sich diese Bereiche also hell ab. Es entsteht ein entsprechender Kontrast. Die Absorption spielt hierbei eine untergeordnete Rolle.
+Wie im vorherigen Abschnitt bereits beschrieben spielt die Art der Beleuchtung eine große Rolle. Dabei sind die Wellenlänge oder auch die spektrale Breite, die Homogenität und der Winkelbereich der Beleuchtung von großer Wichtigkeit. Nun sollen diese Aspekte erneut in Bezug auf Dunkelfeld-Beleuchtung bzw. -Mikroskope aufgegriffen werden. Erste Ansätze in Richtung dieser Methode werden van Leeuwenhoek, Hooke und Huygens zugeschrieben. Im Vergleich zu einem Hellfeld-Mikroskop, bei dem die Strukturen einer Probe vor einem hellen Hintergrund erscheinen und sich vor allem durch Absorption und durch Streuung verloren gegangenes Licht von diesem abheben, wird beim Dunkelfeld-Prinzip nur dort Licht aufgesammelt, wo die Probe Licht in eine Aufsammeloptik (Linse/Objektiv) hineinstreut. Bereiche, in denen es zu keiner Streuung kommt, erscheinen im Bild also schwarz. Dies kann bei wenig absorbierenden Proben von großem Vorteil in Sachen Bildkontrast sein. In \autoref{fig:dunkelfeld_skizze} ist ein Vergleich aus Hellfeld- und Dunkelfeld-Beleuchtung gezeigt. Man sieht deutlich, wie im Falle einer Hellfeld-Beleuchtung (\autoref{fig:dunkelfeld_skizze}, links) die Probe ausgeleuchtet und das transmittierte Licht gemessen wird. Wird Licht vom Objekt reflektiert, absorbiert oder so gestreut, dass es die Aufsammeloptik nicht erreicht, so wird dort im Bild die Intensität geringer sein, als an Orten, an denen das Licht nahezu ungehindert die Probe durchlaufen konnte. Das Bild erscheint also als dunklerer Bereich auf hellem Hintergrund. Fand wenig Absorption, Streuung oder Reflexion statt, ist der Kontrast (Helligkeitsunterschied) sehr gering. Wenn hingegen \autoref{fig:dunkelfeld_skizze} (rechts) betrachtet wird, so sieht man deutlich, dass die Dunkelfeld-Beleuchtung zu einer vollkommen anderen Bilderzeugung führt, deren Kontrastmechanismus auch stark von der Hellfeld-Methode abweicht. Das Licht, welches die Probe nahezu ungehindert durchläuft, liegt außerhalb des Winkelbereichs der Aufsammeloptik (streifender Einfall der Beleuchtung). Entsprechende Bereiche werden im Bild als Hintergrund also schwarz/dunkel erscheinen. Werden aber Teile des Lichts in Bereiche des Objekts gestreut und dabei so umgelenkt, dass sie aufgesammelt werden können, so zeichnen sich diese Bereiche also hell ab. Es entsteht ein entsprechender Kontrast. Die Absorption spielt hierbei eine untergeordnete Rolle.
 %
 \begin{figure}[H]
     \centering
@@ -246,7 +247,7 @@ Das Van-Leeuwenhoek-Mikroskop wird nach den Beschreibungen in \cite{ref:angabe} 
 \subsection{Hellfeld-Transmissionsmikroskop}
 \label{subsec:versuchsanordnung_hellfeld}
 
-Der Versuchsaufbau aus \autoref{sec:versuchsanordnung_sammellinse} wird übernommen und anschließend wie folgt geändert: Zuerst wird die plankonvexe Linse gegen eine Linse mit $f = \SI{35}{mm}$ (objektivseitig) ausgetauscht. Diese Linse wird in einem Abstand $g_{\text{obj}}$ von $\SI{44(1)}{mm}$ eingesetzt. Das Okular mit Brennweite $f = \SI{50}{mm}$ wird im Abstand von $\SI{210(6)}{mm}$ von der Probe eingebaut. Die Kamera wird mit angeschraubter Linse mit $f = \SI{150}{mm}$ im Abstand von $\SI{200(5)}{mm}$ angebracht. % info den Abstand haben wir zuerst glaub ich ned gemessen, falls doch bitte korrigieren.
+Der Versuchsaufbau aus \autoref{subsec:versuchsanordnung_sammellinse} wird übernommen und anschließend wie folgt geändert: Zuerst wird die plankonvexe Linse gegen eine Linse mit $f = \SI{35}{mm}$ (objektivseitig) ausgetauscht. Diese Linse wird in einem Abstand $g_{\text{obj}}$ von $\SI{44(1)}{mm}$ eingesetzt. Das Okular mit Brennweite $f = \SI{50}{mm}$ wird im Abstand von $\SI{210(6)}{mm}$ von der Probe eingebaut. Die Kamera wird mit angeschraubter Linse mit $f = \SI{150}{mm}$ im Abstand von $\SI{200(5)}{mm}$ angebracht. % info den Abstand haben wir zuerst glaub ich ned gemessen, falls doch bitte korrigieren.
 Der Aufbau wird nochmals in \autoref{fig:versuchsaufbau_hellfeld} verdeutlicht.
 %
 \begin{figure}[H]
@@ -285,19 +286,20 @@ Nun wird der Diffusor aus dem Strahlengang genommen und ein spezielles Objektiv 
         \label{tab:geraeteliste}
         \begin{tblrx}{colspec={QQQQQ}, row{1}={guard}}
             Gerät                     & Hersteller & Modell & Inventar-Nr. & Anmerkung                                                     \\
-            QTH10/M                   & THORLABS   &        &              & inkl. Infrarot Filter                                         \\
-            LED $2\times$             & THORLABS   &        &              & rot \& blau                                                   \\
-            Diffusor                  &            &        &              &                                                               \\
-            Probenhalter XYF1         & THORLABS   &        &              &                                                               \\
-            Plankonvexe Sammellinsen  &            &        &              & unbekannte Brennweite                                         \\
-            Optischer Tisch           &            &        &              & inkl. Befestigungsschienen                                    \\
-            Van Leeuwenhoek Mikroskop & 3D-Drucker &        &              & inkl. Schraube, LED \& Batterie                               \\
-            Kamerasensor              & CS165MU/M  &        &              & $\SI{1,6}{\mega\px}$ -- Pixelgröße: $\SI{3,45}{\micro\meter}$ \\
-            Kameraobjektiv            &            &        &              & $f=\SI{150}{mm}$                                              \\
-            Objektiv                  &            &        &              & $f=\SI{35}{mm}$                                               \\
-            Okular                    &            &        &              & $f=\SI{50}{mm}$                                               \\
-            Mikroskopobjektiv         & Nikon      &        &              & Vergrößerung: $10 \times$                                     \\
-            Achromatische Linse       &            &        &              & $f=\SI{25}{mm}$, inkl. Irisblende                             \\
+            QTH10/M                   & THORLABS   & -      & -            & inkl. Infrarot Filter                                         \\
+            LED $2\times$             & THORLABS   & -      & -            & rot \& blau                                                   \\
+            Diffusor                  & -          & -      & -            & -                                                             \\
+            Probenhalter XYF1         & THORLABS   & -      & -            & -                                                             \\
+            Probe                     & THORLABS   & -      & -            & -                                                             \\
+            Plankonvexe Sammellinsen  & -          & -      & -            & unbekannte Brennweite                                         \\
+            Optischer Tisch           & -          & -      & -            & inkl. Befestigungsschienen                                    \\
+            Van Leeuwenhoek Mikroskop & 3D-Drucker & -      & -            & inkl. Schraube, LED \& Batterie                               \\
+            Kamerasensor              & CS165MU/M  & -      & -            & $\SI{1,6}{\mega\px}$ -- Pixelgröße: $\SI{3,45}{\micro\meter}$ \\
+            Kameraobjektiv            & -          & -      & -            & $f=\SI{150}{mm}$                                              \\
+            Objektiv                  & -          & -      & -            & $f=\SI{35}{mm}$                                               \\
+            Okular                    & -          & -      & -            & $f=\SI{50}{mm}$                                               \\
+            Mikroskopobjektiv         & Nikon      & -      & -            & Vergrößerung: $10 \times$                                     \\
+            Achromatische Linse       & -          & -      & -            & $f=\SI{25}{mm}$, inkl. Irisblende                             \\
         \end{tblrx}
     \end{samepage}
 \end{table}
@@ -307,6 +309,110 @@ Nun wird der Diffusor aus dem Strahlengang genommen und ein spezielles Objektiv 
 \section{Versuchsdurchführung und Messergebnisse}
 \label{sec:versuchsdurchfuehrung_messergebnisse}
 
+\subsection{Brennweite einer Sammellinse}
+\label{subsec:durchfuehrung_brennweite_sammellinse}
+
+Der Aufbau wird, wie auf \autoref{fig:versuchsaufbau_sammellinse} gezeigt, hergestellt.
+
+\paragraph{Lupeneffekt.}
+% Danach mit Linse etwas herumfahren bis Bild scharf. 
+% Zuerst mit bekannter Brennweite -> dann unbekannte Brennweite bestimmen.
+% Nun wird g gemessen: (20+-2) mm
+Um zuallererst die Brennweite mittels Lupeneffekt abzuschätzen, wird ein Blatt weißes Papier zu Hilfe genommen. Dieses fungiert als Schirm, auf welchem das reelle Bild entstehen soll. Der Abstand des Blatts zur Linse wird so lange verändert, bis ein scharfes Bild entsteht. Danach wird der Abstand
+
+\textbf{TODO}
+%? what?
+
+\paragraph{Abbildungsgleichung.}
+Als Nächstes wird die Brennweite der Linse über die Abbildungsgleichung (\autoref{eq:linsengleichung}) bestimmt. Hierzu wird der Abstand des Gegenstands, also der Probe, sowie der Abstand des entstehenden Bilds zur Linse gemessen. Diese Messung wird je zweimal wiederholt, allerdings mit unterschiedlichen Positionen der Linse, sodass zwei unabhängige Kombinationen von $g$ und $b$ ergeben. Die Messergebnisse finden sich in \autoref{tab:messergebnisse_brennweite_gleichung}.
+%
+\begin{table}[H]
+    \centering
+    \begin{samepage}
+        \caption[Messergebnisse Brennweite Abbildungsgleichung]{Messergebnisse des Teilversuchs zur Bestimmung der Brennweite einer Linse mittels Abbildungsgleichung. $g$ bezeichnet die Gegenstandsweite, $b$ die Bildweite, $i$ den Laufindex der Position der Linse. Unsicherheiten: $\Delta g$, $\Delta b$.}
+        \label{tab:messergebnisse_brennweite_gleichung}
+        \begin{tblr}{colspec={QS[table-format=3]S[table-format=1]S[table-format=2]S[table-format=1]}, row{1}={guard}}
+            $i$ / 1 & $g$ / \si{mm} & $\Delta g$ / \si{mm} & $b$ / \si{mm} & $\Delta b$ / \si{mm} \\
+            1       & 126           & 3                    & 35            & 2                    \\
+            2       & 44            & 2                    & 54            & 2                    \\
+        \end{tblr}
+    \end{samepage}
+\end{table}
+
+
+\paragraph{Bessel-Verfahren.}
+Zuletzt wird die Brennweite der Linse noch über das Bessel-Verfahren, wie in \autoref{subsec:abbildung_sammellinse_Grundlagen} beschrieben, vermessen. Es wird eine beliebige Position der Linse gewählt und sowohl die Gegenstandsweite $g$ als auch die Bildweite $b$ vermessen. Die Summe dieser beiden ergibt die Gesamtlänge $l$. Danach wird eine neue Position der Linse gewählt, sodass sich die Gesamtlänge nicht verändert. Die gemessenen Bildweiten und Gegenstandsweiten befinden sich in \autoref{tab:messergebnisse_brennweite_bessel}.
+%
+\begin{table}[H]
+    \centering
+    \begin{samepage}
+        \caption[Messergebnisse Brennweite Bessel]{Messergebnisse des Teilversuchs zur Bestimmung der Brennweite einer Linse mittels Bessel-Verfahren. $g$ bezeichnet die Gegenstandsweite, $b$ die Bildweite, $i$ den Laufindex der Position der Linse. Unsicherheiten: $\Delta g$, $\Delta b$.}
+        \label{tab:messergebnisse_brennweite_bessel}
+        \begin{tblr}{colspec={QS[table-format=3]S[table-format=1]S[table-format=3]S[table-format=1]}, row{1}={guard}}
+            $i$ / 1 & $g$ / \si{mm} & $\Delta g$ / \si{mm} & $b$ / \si{mm} & $\Delta b$ / \si{mm} \\
+            1       & 23            & 2                    & 125           & 3                    \\
+            2       & 112           & 3                    & 36            & 3                    \\
+        \end{tblr}
+    \end{samepage}
+\end{table}
+
+
+\subsection{Van-Leeuwenhoek-Mikroskop}
+\label{subsec:durchfuehrung_vanleeuwenhoek}
+
+Der Aufbau wird, wie in \autoref{subsec:versuchsanordnung_vanleeuwenhoek} beschrieben, hergestellt. Anschließend werden als zu untersuchende Proben eine Kugelschreiberspitze und ein Blatt Papier herangezogen. Durch die Kugellinse konnten dann tatsächlich vergrößerte Bilder der genannten Proben betrachtet werden, obgleich es nicht ganz einfach war, die richtige Position zu finden, bei der man dann tatsächlich ein Bild erkennen konnte. Mithilfe der Makro-Kamera des Smartphones eines Experimentierenden konnten sogar digitale Abbildungen der vergrößerten Bilder aufgenommen werden. Dies ist jedoch nur mit der größeren Kugellinse möglich, das Bild der kleineren lässt sich mit der Kamera nicht auflösen. Die Abbildungen der größeren Linse finden sich in den Abbildungen \ref{fig:vanleeuwenhoek_kugelschreiber} und \ref{fig:vanleeuwenhoek_papier}.
+%
+\setcapindent{0pt}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[b]{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/Kulli.jpeg}
+        \caption[Kugelschreiberspitze Van-Leeuwenhoek]{Durch die größere Linse des Van-Leeuwenhoek-Mikroskop vergrößerte Kugelschreiberspitze}
+        \label{fig:vanleeuwenhoek_kugelschreiber}
+    \end{minipage}%
+    \hspace*{\fill}
+    \begin{minipage}[t]{0.48\linewidth}
+        \centering
+        \includegraphics[width=0.8\linewidth]{fig/papier_gross.jpeg}
+        \caption[Blatt Papier Van-Leeuwenhoek]{Durch die größere Linse des Van-Leeuwenhoek-Mikroskop vergrößertes Blatt Papier}
+        \label{fig:vanleeuwenhoek_papier}
+    \end{minipage}
+\end{figure}
+\setcaphanging
+%
+Betrachtet man weiters den Unterschied der beiden am Mikroskoparm angebrachten Linsen so wird ersichtlich, dass die Kugellinse mit größerem Durchmesser eine stärkere Vergrößerung als die mit kleinerem Durchmesser aufweist. Gemein ist beiden Linsen jedoch eine deutlich erkennbare Bildfeldwölbung.
+
+\textbf{TODO}
+% Betrachten Sie ein geeignetes Objekt Ihrer Wahl nacheinander mit beiden Lin-
+% sen (nutzen Sie bitte NICHT die metallbeschichtete Probe, die bei den anderen
+% Versuchen zum Einsatz kommt, sondern z.B. das Dia, welches Ernst Abbe zeigt
+% oder Sie bauen sich selbst ein Probe). Beschreiben Sie Ihre Beobachtungen (in-
+% kl. vermeintlicher Linsenfehler etc.). Was erwarten Sie für die beiden Linsen
+% verschiedenen Durchmessers? Warum?
+% 3. Die effektive Fokuslänge (Mittelpunkt der Kugel bis zum Fokus) lässt sich wie
+% folgt berechnen: feff =
+% nd
+% 4(n−1) mit d dem Kugeldurchmesser und n dem Bre-
+% chungsindex des Glases. Daraus folgt die (Lupen-)Vergrößerung aus der allge-
+% meinen Gleichung M = 250mm
+% f
+% . Der Wert 250mm stellt dabei die kleinste Ent-
+% fernung zum Auge dar, bis zu der das Auge noch scharf abbilden kann (meist als
+% Bezugssehweite oder deutliche Sehweite bezeichnet).
+% Bestimmen Sie die Fokuslängen und Vergrößerungen im genutzten System?
+% 4. Ab welchem Brechungsindex liegt der Fokuspunkt nicht mehr außerhalb der Ku-
+% gellinse?
+% 5. Welche Vorteile haben konventionelle Sammellinsen gegenüber Kugellinsen im
+% Allgemeinen und Ihrer eben gewonnenen Erfahrung nach?
+
+
+\subsection{Hellfeld-Transmissionsmikroskop}
+\label{subsec:durchfuehrung_hellfeld}
+
+
+\subsection{Dunkelfeldmikroskop}
+\label{subsec:durchfuehrung_dunkelfeld}
 
 
 \section{Auswertung}
