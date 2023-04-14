@@ -5,7 +5,7 @@ Objektivlinse (Dicke ca. 8+-2mm):
 f_obj = 35 +-0,4 mm
 g_obj = (44 +-1) mm
 Abstand Objektiv - Okular: (170+-5mm)
-Brennweite Okular (50 +-?mm)
+Brennweite Okular (50 +-?mm) [sag ma +- 7% => +-0.4]
 Abstand Probe Okular: (210 +- 5 mm)
 Optische Tubuslänge - ausrechnen: 
 
@@ -37,7 +37,7 @@ Hellfeld_4_1_referenz
 
 
 ii)
-Hellfeld_4_2_auflösungsvermögen
+Hellfeld_4_2_aufloesungsvermoegen
 5 in der innersten Gruppe ist noch unterscheidbar. 
 
 
