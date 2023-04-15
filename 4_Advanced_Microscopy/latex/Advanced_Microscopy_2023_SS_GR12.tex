@@ -139,7 +139,7 @@ Antonie van Leeuwenhoek (1632-1723) gilt als einer der ersten erfolgreichen Kons
     \centering
     \begin{samepage}
         \includegraphics[width=\linewidth]{fig/Leeuwenhoek.png}
-        \caption[Aufbau eines van Leeuwenhoek Mikroskops]{(a) Bild eines einfachen Mikroskops von van Leeuwenhoek mit Beschreibung der einzelnen Bauteile. (b) Einzelteile des Selbstbau-1-Linsen-Mikroskops angelehnt an van Leeuwenhoek. Auf dem Bild zu sehen sind die 3D-gedruckten Bauteile zur Halterung von Probe, Linsen und Beleuchtung sowie weitere Elemente (Batterie, LED, Schraube, Klammer, Kugellinsen). (c) Fertiggestelltes Selbstbau-1-Linsen-Mikroskop.}
+        \caption[Aufbau eines Van-Leeuwenhoek-Mikroskops]{(a) Bild eines einfachen Mikroskops von van Leeuwenhoek mit Beschreibung der einzelnen Bauteile. (b) Einzelteile des Selbstbau-1-Linsen-Mikroskops angelehnt an van Leeuwenhoek. Auf dem Bild zu sehen sind die 3D-gedruckten Bauteile zur Halterung von Probe, Linsen und Beleuchtung sowie weitere Elemente (Batterie, LED, Schraube, Klammer, Kugellinsen). (c) Fertiggestelltes Selbstbau-1-Linsen-Mikroskop.}
         \label{fig:leeuwenhoek}
     \end{samepage}
 \end{figure}
@@ -174,45 +174,55 @@ Dabei steht $d$ für den Durchmesser der Kugellinse und $n$ bezeichnet die Brech
 \subsection{Hellfeld-Transmissionsmikroskop}
 \label{subsec:hellfeld_transmissionsmikroskop_grundlagen}
 
-Ein konventionelles Mikroskop (griechisch: \textit{mikros} = klein; \textit{skopein} = betrachten) besteht in der Regel aus mindestens zwei Linsen und erlaubt -- wie der Name schon vermuten lässt -- die Betrachtung bzw. Vergrößerung von Objekten, die sich mit dem bloßen Auge eben nicht erkennen/auflösen lassen. Im einfachsten Falle kommen also zwei Linsen zum Einsatz (siehe \autoref{fig:hellfeld_skizze}), wobei eine davon als Objektiv (nahe dem Objekt) und die andere als Okular (nahe dem Auge, lateinisch: Oculus) fungiert. Das Objektiv erzeugt dabei ein vergrößertes Zwischenbild des Objekts, welches seinerseits durch das Okular weiter vergrößert wird (wie durch eine zusätzliche Lupe). Es ergibt sich eine Gesamtvergrößerung des Objekts durch das System. Fallen die Position des Zwischenbildes und des vorderen Brennpunkts des Okulars zusammen, so entsteht ein Bild im Unendlichen (siehe \autoref{fig:hellfeld_skizze}), welches durch die entspannte Augenlinse auf der Netzhaut zu einem scharfen gesamtvergrößerten Bild wird. Befände sich das Zwischenbild näher am Okular, so entsteht ein virtuelles Zwischenbild, welches für das angespannte Auge in einer effektiven Bezugssehweite von etwa $\SI{25}{cm}$ liegt. Es gibt unzählige Arten von Mikroskopen, die alle Vor- und Nachteile mit sich bringen und die finale Wahl der Methode meist vom abzubildenden System abhängt.
+Ein konventionelles Mikroskop (griechisch: \textit{mikros} = klein; \textit{skopein} = betrachten) besteht in der Regel aus mindestens zwei Linsen und erlaubt -- wie der Name schon vermuten lässt -- die Betrachtung bzw. Vergrößerung von Objekten, die sich mit dem bloßen Auge eben nicht erkennen/auflösen lassen. Im einfachsten Falle kommen also zwei Linsen zum Einsatz (siehe \autoref{fig:hellfeld_skizze}), wobei eine davon als Objektiv (nahe dem Objekt) und die andere als Okular (nahe dem Auge, lateinisch: \textit{oculus}) fungiert. Das Objektiv erzeugt dabei ein vergrößertes Zwischenbild des Objekts, welches seinerseits durch das Okular weiter vergrößert wird (wie durch eine zusätzliche Lupe). Es ergibt sich eine Gesamtvergrößerung des Objekts durch das System. Fallen die Position des Zwischenbildes und des vorderen Brennpunkts des Okulars zusammen, so entsteht ein Bild im Unendlichen (siehe \autoref{fig:hellfeld_skizze}), welches durch die entspannte Augenlinse auf der Netzhaut zu einem scharfen gesamtvergrößerten Bild wird. Befände sich das Zwischenbild näher am Okular, so entsteht ein virtuelles Zwischenbild, welches für das angespannte Auge in einer effektiven Bezugssehweite von etwa $\SI{25}{cm}$ liegt. Es gibt unzählige Arten von Mikroskopen, die alle Vor- und Nachteile mit sich bringen und die finale Wahl der Methode hängt meist vom abzubildenden System ab.
 %
 \begin{figure}[H]
     \centering
     \begin{samepage}
         \includegraphics[width=\linewidth]{fig/Hellfeld.png}
-        \caption[Aufbau eines Hellfeld-Transmissionsmikroskops]{Schematischer Aufbau und Bildkonstruktion eines Mikroskops bestehend aus Gegenstand/Objekt, Objektiv-Linse und Okular-Linse. Die entsprechenden Brennweiten und weitere Parameter sind im Bild vermerkt. Das Okular ist hier so platziert, dass dessen Brennpunkt und die Position des Zwischenbildes (ZB) zusammenfallen. Dadurch entstünde ein Bild im Unendlichen. Mithilfe der (entspannten auf Unendlich akkommodierten) Augenlinse oder eben einer Kameralinse entsteht letztendlich ein scharfes, gesamtvergrößertes Bild (hier nicht eingezeichnet). Auch die Beleuchtung des Gegenstandes ist nicht eingezeichnet. Den Abstand zwischen hinterem Brennpunkt des Objektivs und vorderem Brennpunkt des Okulars nennt man optische Tubuslänge $t_0$.}
+        \caption[Aufbau eines Hellfeld-Transmissionsmikroskops]{Schematischer Aufbau und Bildkonstruktion eines Mikroskops bestehend aus Gegenstand/Objekt, Objektivlinse und Okularlinse. Die entsprechenden Brennweiten und weitere Parameter sind im Bild vermerkt. Das Okular ist hier so platziert, dass dessen Brennpunkt und die Position des Zwischenbildes (ZB) zusammenfallen. Dadurch entstünde ein Bild im Unendlichen. Mithilfe der (entspannten auf Unendlich akkommodierten) Augenlinse oder eben einer Kameralinse entsteht letztendlich ein scharfes, gesamtvergrößertes Bild (hier nicht eingezeichnet). Auch die Beleuchtung des Gegenstandes ist nicht eingezeichnet. Den Abstand zwischen hinterem Brennpunkt des Objektivs und vorderem Brennpunkt des Okulars nennt man optische Tubuslänge $t_o$.}
         \label{fig:hellfeld_skizze}
     \end{samepage}
 \end{figure}
 %
-Die Bestimmung der Gesamtvergrößerung $G$ erfolgt über die Pixelgröße $P_A$ und die Pixelanzahl $P_n$ sowie das Auflösungsvermögen nach \autoref{eq:gesamtvergroesserung_hellfeld}.
-%
-\begin{equation}
-    \label{eq:gesamtvergroesserung_hellfeld}
-    G = \frac{P_A P_n}{N}
-\end{equation}
-
-% Fallen Zwischenbild und vorderer Brennpunkt des Okulars zusammen, so ist die Vergrößerung $V_{\text{MIK}}$ des Systems definiert als das Produkt des Objektiv-Abbildungsmaßstabs $A_{\text{obj}}$ und der Okularvergrößerung $V_{\text{oku}}$.
+% Die Bestimmung der Gesamtvergrößerung $G$ erfolgt über die Pixelgröße $P_A$ und die Pixelanzahl $P_n$ sowie das Auflösungsvermögen nach \autoref{eq:gesamtvergroesserung_hellfeld}.
 % %
 % \begin{equation}
-%     \label{eq:objektivabbildungsmaszstab}
-%     A_{\text{obj}} = -\frac{t_0}{f_{\text{obj}}}
-% \end{equation}
-% \begin{equation}
-%     \label{eq:okularvergroeszerung}
-%     V_{\text{oku}} = \frac{\SI{25}{cm}}{f_{\text{oku}}}
-% \end{equation}
-% \begin{equation}
-%     \label{eq:gesamtvergroesserung}
-%     V_{\text{MIK}} = A_{\text{obj}} \cdot V_{\text{oku}} = -\frac{t_0}{f_{\text{obj}}} \cdot \frac{\SI{25}{cm}}{f_{\text{oku}}}
+%     \label{eq:gesamtvergroesserung_hellfeld}
+%     G = \frac{P_A P_n}{N}
 % \end{equation}
 
-Im zentralen Bereich der Probe befinden sich verschiedene Gruppen, welche jeweils aus mehreren Elementen aufgebaut sind. Jede Gruppe (Nummerierung jeweils oben) besteht aus sechs Elementen
-(Nummerierung seitlich). Jedes Element besteht dabei aus drei horizontalen und drei vertikalen Balken. Je höher die Nummerierung, desto kleiner die Balken. Die Balkenpaare pro Millimeter werden dabei wie folgt bestimmt:
+Fallen Zwischenbild und vorderer Brennpunkt des Okulars zusammen, so ist die Vergrößerung $V_{\text{MIK}}$ des Systems definiert als das Produkt des Objektiv-Abbildungsmaßstabs $A_{\text{obj}}$ und der Okularvergrößerung $V_{\text{oku}}$.
+%
+\begin{equation}
+    \label{eq:objektivabbildungsmaszstab}
+    A_{\text{obj}} = -\frac{t_o}{f_{\text{obj}}}
+\end{equation}
+\begin{equation}
+    \label{eq:okularvergroeszerung}
+    V_{\text{oku}} = \frac{\SI{25}{cm}}{f_{\text{oku}}}
+\end{equation}
+\begin{equation}
+    \label{eq:gesamtvergroesserung}
+    V_{\text{MIK}} = A_{\text{obj}} \cdot V_{\text{oku}}
+\end{equation}
+
+Eine wichtige Größe bei Mikroskopen ist deren \textit{Auflösungsvermögen} $x_\text{min}$. Es beschreibt den kleinsten Abstand, bei welchem zwei Objekte noch getrennt voneinander wahrgenommen werden können, dies ist das Ergebnis der Abbe'schen Abbildungstheorie.
+
+Im zentralen Bereich der Probe befinden sich verschiedene Gruppen ($G$), welche jeweils aus mehreren Elementen ($E$) aufgebaut sind. Jede Gruppe (Nummerierung jeweils oben) besteht aus sechs Elementen (Nummerierung seitlich). Jedes Element besteht dabei aus drei horizontalen und drei vertikalen Balken. Je höher die Nummerierung, desto kleiner die Balken.
+
+In diesem Experiment lässt sich das Auflösungsvermögen über die Balken- und Gruppennummer der Probe berechnen. Hierbei kann die \textit{Ortsfrequenz} $f_r$ folgendermaßen bestimmt werden:
+%
+\begin{equation}
+    \label{eq:ortsfrequenz}
+    f_r = 2^{G+\frac{E-1}{6}}
+\end{equation}
+%
+Die Einheit der Ortsfrequenz ist hierbei die Anzahl der Linienpaare pro Millimeter (\si{LP\per\milli\meter}). $G$ beschreibt die Gruppenummer und $E$ die Elementnummer. Das Auflösungsvermögen lässt sich schließlich über den Kehrwert der Ortsfrequenz berechnen:
 %
 \begin{equation}
     \label{eq:aufloesungsvermoegen}
-    \frac{\text{Balkenpaare}}{\si{mm}}=2^{\text{Gruppe}+\frac{\text{Element}-1}{6}}
+    x_\text{min} = \frac{1}{f_r}
 \end{equation}
 
 
@@ -286,7 +296,7 @@ Der Aufbau wird nochmals in \autoref{fig:versuchsaufbau_hellfeld} verdeutlicht.
 \subsection{Dunkelfeldmikroskop}
 \label{subsec:versuchsanordnung_dunkelfeld}
 
-Nun wird der Diffusor aus dem Strahlengang genommen und ein spezielles Objektiv eingesetzt, dieses hat bereits eine Blende integriert, welche nur einen peripheren Ring zur Beleuchtung der Probe offenlässt. Nach der Probe wird anstelle der in den vorherigen Versuchen benutzten Linsen eine achromatische Linse mit $f = \SI{25}{mm}$ eingebracht und die Kamera abermals ohne angeschraubt Linse befestigt. Die achromatische Linse verfügt zudem noch über eine Irisblende, um nur das Streulicht der Probe, nicht aber das direkte Licht in die Kamera zu lassen. Der Aufbau wird in \autoref{fig:versuchsaufbau_dunkelfeld} dargestellt.
+Für den Dunkelfeldaufbau wird der Diffusor aus dem Strahlengang genommen und ein spezielles Objektiv eingesetzt, dieses hat bereits eine Blende integriert, welche nur einen peripheren Ring zur Beleuchtung der Probe offenlässt. Nach der Probe wird anstelle der in den vorherigen Versuchen benutzten Linsen eine achromatische Linse mit $f = \SI{25}{mm}$ eingebracht und die Kamera abermals ohne angeschraubt Linse befestigt. Die achromatische Linse verfügt zudem noch über eine Irisblende, um nur das Streulicht der Probe, nicht aber das direkte Licht in die Kamera zu lassen. Der Aufbau wird in \autoref{fig:versuchsaufbau_dunkelfeld} dargestellt.
 %
 \begin{figure}[H]
     \centering
@@ -308,21 +318,22 @@ Nun wird der Diffusor aus dem Strahlengang genommen und ein spezielles Objektiv 
         \caption[Geräteliste]{Verwendete Geräte und wichtige Materialien}  % optional argument for List of Tables, mandatory argument for caption
         \label{tab:geraeteliste}
         \begin{tblrx}{colspec={QQQQQ}, row{1}={guard}}
-            Gerät                     & Hersteller & Modell & Inventar-Nr. & Anmerkung                                                     \\
-            QTH10/M                   & THORLABS   & -      & -            & inkl. Infrarot Filter                                         \\
-            LED $2\times$             & THORLABS   & -      & -            & rot \& blau                                                   \\
-            Diffusor                  & -          & -      & -            & -                                                             \\
-            Probenhalter XYF1         & THORLABS   & -      & -            & -                                                             \\
-            Probe                     & THORLABS   & -      & -            & -                                                             \\
-            Plankonvexe Sammellinsen  & -          & -      & -            & unbekannte Brennweite                                         \\
-            Optischer Tisch           & -          & -      & -            & inkl. Befestigungsschienen                                    \\
-            Van Leeuwenhoek Mikroskop & 3D-Drucker & -      & -            & inkl. Schraube, LED \& Batterie                               \\
-            Kamerasensor              & CS165MU/M  & -      & -            & $\SI{1,6}{\mega\px}$ -- Pixelgröße: $\SI{3,45}{\micro\meter}$ \\
-            Kameraobjektiv            & -          & -      & -            & $f=\SI{150}{mm}$                                              \\
-            Objektiv                  & -          & -      & -            & $f=\SI{35}{mm}$                                               \\
-            Okular                    & -          & -      & -            & $f=\SI{50}{mm}$                                               \\
-            Mikroskopobjektiv         & Nikon      & -      & -            & Vergrößerung: $10 \times$                                     \\
-            Achromatische Linse       & -          & -      & -            & $f=\SI{25}{mm}$, inkl. Irisblende                             \\
+            Gerät                     & Hersteller & Modell & Inventar-Nr.   & Anmerkung                                                     \\
+            QTH10/M                   & THORLABS   & -                       & -              & inkl. Infrarot Filter                                         \\
+            LED $2\times$             & THORLABS   & -                       & -              & rot \& blau                                                   \\
+            Diffusor                  & -          & -                       & -              & -                                                             \\
+            Probenhalter XYF1         & THORLABS   & -                       & -              & -                                                             \\
+            Probe                     & THORLABS   & -                       & -              & -                                                             \\
+            Plankonvexe Sammellinsen  & -          & -                       & -              & unbekannte Brennweite                                         \\
+            Optischer Tisch           & -          & -                       & -              & inkl. Befestigungsschienen                                    \\
+            Van Leeuwenhoek Mikroskop & 3D-Drucker & -                       & -              & inkl. Schraube, LED \& Batterie                               \\
+            Kamerasensor              & CS165MU/M  & -                       & -              & $\SI{1,6}{\mega\px}$ -- Pixelgröße: $\SI{3,45}{\micro\meter}$ \\
+            Kamerasoftware            & THORLABS   & ThorCam\texttrademark{} & -              & $\SI{1,6}{\mega\px}$ -- Pixelgröße: $\SI{3,45}{\micro\meter}$ \\
+            Kameraobjektiv            & -          & -                       & -              & $f=\SI{150}{mm}$                                              \\
+            Objektiv                  & -          & -                       & -              & $f=\SI{35}{mm}$                                               \\
+            Okular                    & -          & -                       & -              & $f=\SI{50}{mm}$                                               \\
+            Mikroskopobjektiv         & Nikon      & -                       & -              & Vergrößerung: $10 \times$                                     \\
+            Achromatische Linse       & -          & -                       & -              & $f=\SI{25}{mm}$, inkl. Irisblende                             \\
         \end{tblrx}
     \end{samepage}
 \end{table}
@@ -339,7 +350,7 @@ Der Aufbau wird, wie auf \autoref{fig:versuchsaufbau_sammellinse} gezeigt, herge
 
 
 \paragraph{Lupeneffekt.}
-Um zuallererst die Brennweite mittels Lupeneffekt abzuschätzen, gilt die Annahme, dass das Bild im Unendlichen entsteht. Als beweglicher Schirm für das relle Bild fungiert ein weißes Blatt Papier. In einem Zusammenspiel aus Veränderung der Linsenposition relativ zur optischen Probe und dem Schirm in Form des weißen Blatt Papiers wird eine Anordnung gefunden, bei welcher das Bild in großer Entfernung von der Linse scharf wirkt. Unter der Annahme, dass die Strahlen parallel verlaufen, ist dieses Bild auch im Unendlichen noch scharf. Bei dieser Konfiguration wird die Gegenstandsweite $g$ -- der Abstand von optischer Probe zur Linse -- vermessen und mit
+Um zuallererst die Brennweite mittels Lupeneffekt abzuschätzen, gilt die Annahme, dass das Bild im Unendlichen entsteht. Als beweglicher Schirm für das reelle Bild fungiert ein weißes Blatt Papier. In einem Zusammenspiel aus Veränderung der Linsenposition relativ zur optischen Probe und dem Schirm in Form des weißen Blatt Papiers wird eine Anordnung gefunden, bei welcher das Bild in großer Entfernung von der Linse scharf wirkt. Unter der Annahme, dass die Strahlen parallel verlaufen, ist dieses Bild auch im Unendlichen noch scharf. Bei dieser Konfiguration wird die Gegenstandsweite $g$ -- der Abstand von optischer Probe zur Linse -- vermessen und mit
 \[g=\SI{20(2)}{mm}\]
 beziffert.
 
@@ -389,14 +400,14 @@ Der Aufbau wird, wie in \autoref{subsec:versuchsanordnung_vanleeuwenhoek} beschr
     \begin{minipage}[b]{0.475\linewidth}
         \centering
         \includegraphics[width=\linewidth]{fig/Kulli.jpeg}
-        \caption[Kugelschreiberspitze Van-Leeuwenhoek]{Durch die größere Linse des Van-Leeuwenhoek-Mikroskop vergrößerte Kugelschreiberspitze}
+        \caption[Kugelschreiberspitze Van-Leeuwenhoek]{Durch die größere Linse des Van-Leeuwenhoek-Mikroskops vergrößerte Kugelschreiberspitze}
         \label{fig:vanleeuwenhoek_kugelschreiber}
     \end{minipage}%
     \hspace*{\fill}
     \begin{minipage}[t]{0.475\linewidth}
         \centering
         \includegraphics[width=0.75\linewidth]{fig/papier_gross.jpeg}
-        \caption[Blatt Papier Van-Leeuwenhoek]{Durch die größere Linse des Van-Leeuwenhoek-Mikroskop vergrößertes Blatt Papier}
+        \caption[Blatt Papier Van-Leeuwenhoek]{Durch die größere Linse des Van-Leeuwenhoek-Mikroskops vergrößertes Blatt Papier}
         \label{fig:vanleeuwenhoek_papier}
     \end{minipage}
 \end{figure}
@@ -404,36 +415,13 @@ Der Aufbau wird, wie in \autoref{subsec:versuchsanordnung_vanleeuwenhoek} beschr
 %
 Betrachtet man weiters den Unterschied der beiden am Mikroskoparm angebrachten Linsen so wird ersichtlich, dass die Kugellinse mit größerem Durchmesser eine stärkere Vergrößerung als die mit kleinerem Durchmesser aufweist. Gemein ist beiden Linsen jedoch eine deutlich erkennbare Bildfeldwölbung.
 
-\textbf{TODO}
-% Betrachten Sie ein geeignetes Objekt Ihrer Wahl nacheinander mit beiden Lin-
-% sen (nutzen Sie bitte NICHT die metallbeschichtete Probe, die bei den anderen
-% Versuchen zum Einsatz kommt, sondern z.B. das Dia, welches Ernst Abbe zeigt
-% oder Sie bauen sich selbst ein Probe). Beschreiben Sie Ihre Beobachtungen (in-
-% kl. vermeintlicher Linsenfehler etc.). Was erwarten Sie für die beiden Linsen
-% verschiedenen Durchmessers? Warum?
-% 3. Die effektive Fokuslänge (Mittelpunkt der Kugel bis zum Fokus) lässt sich wie
-% folgt berechnen: feff =
-% nd
-% 4(n-1) mit d dem Kugeldurchmesser und n dem Bre-
-% chungsindex des Glases. Daraus folgt die (Lupen-)Vergrößerung aus der allge-
-% meinen Gleichung M = 250mm
-% f
-% . Der Wert 250mm stellt dabei die kleinste Ent-
-% fernung zum Auge dar, bis zu der das Auge noch scharf abbilden kann (meist als
-% Bezugssehweite oder deutliche Sehweite bezeichnet).
-% Bestimmen Sie die Fokuslängen und Vergrößerungen im genutzten System?
-% 4. Ab welchem Brechungsindex liegt der Fokuspunkt nicht mehr außerhalb der Ku-
-% gellinse?
-% 5. Welche Vorteile haben konventionelle Sammellinsen gegenüber Kugellinsen im
-% Allgemeinen und Ihrer eben gewonnenen Erfahrung nach?
-
 
 \subsection{Hellfeld-Transmissionsmikroskop}
 \label{subsec:durchfuehrung_hellfeld}
 
 Der Aufbau wird, wie in \autoref{subsec:versuchsanordnung_hellfeld} beschrieben, hergestellt.
 
-Anschließend werden relevante Abstände der Aufbaut vermessen: Der Abstand der Objektivlinse (mit Brennweite $f_{\text{obj}}=\SI{35.0(4)}{mm}$) zur optischen Probe wird vermessen und mit $g_{\text{obj}}=\SI{44(1)}{mm}$ beziffert. Der Abstand zwischen Objektiv- und Okularlinse beträgt $d_{\text{obj-oku}}=\SI{50(1)}{mm}$ und die Brennweite der Okularlinse ist $f_{\text{oku}}=\SI{10.0(1)}{mm}$. Die Brennweite der verwendeten Okularlinse beträgt $f_{\text{oku}}=SI{50.0(4)}{mm}$ und deren Abstand zur Probe beträgt $d_{\text{prob-oku}}=\SI{210(5)}{mm}$.
+Anschließend werden relevante Abstände der Aufbaut vermessen: Der Abstand der Objektivlinse (mit Brennweite $f_{\text{obj}}=\SI{35.0(4)}{mm}$) zur optischen Probe wird vermessen und mit $g_{\text{obj}}=\SI{44(1)}{mm}$ beziffert. Der Abstand zwischen Objektiv- und Okularlinse beträgt $d_{\text{obj-oku}}=\SI{170(5)}{mm}$. Die Brennweite der verwendeten Okularlinse beträgt $f_{\text{oku}}=\SI{50.0(4)}{mm}$ und deren Abstand zur Probe beträgt $d_{\text{prob-oku}}=\SI{210(5)}{mm}$.
 
 Als Nächstes wird die Auswirkung von Aberationseffekten auf das Bild der Linse untersucht.
 
@@ -444,7 +432,7 @@ Nachdem bereits ein scharfes Bild zustande gebracht worden ist, wird dieses mitt
     \centering
     \begin{samepage}
         \includegraphics[width=0.475\linewidth]{fig/Versuch3/hellfeld_3.1_vorher.jpg}
-        \caption[Hellfeld Orientierung+sphärische Ab.]{Referenzbild des Teilversuchs zur Untersuchung der Auswirkung der Objektivlinsenorientierung und der sphärischen Aberration auf das entstehende reelle Bild.}
+        \caption[Hellfeld Orientierung und sphärische Aberration]{Referenzbild des Teilversuchs zur Untersuchung der Auswirkung der Objektivlinsenorientierung und der sphärischen Aberration auf das entstehende reelle Bild.}
         \label{fig:hellfeld_orientierung_sphaerische_ref}
     \end{samepage}
 \end{figure}
@@ -457,19 +445,18 @@ Anschließend wird die Objektiv-Linse mitsamt Halterung um \SI{180}{\degree} ged
     \begin{minipage}[t]{0.475\linewidth}
         \centering
         \includegraphics[width=\linewidth]{fig/Versuch3/hellfeld_3.1_nachher.jpg}
-        \caption[Hellfeld Orientierung+sphärische Ab. gedreht unscharf]{Unscharfe Abbildung bei um \SI{180}{\degree} gedrehter Objektiv-Linse (konvexe Seite zeigt zur Probe)}
+        \caption[Hellfeld Orientierung und sphärische Aberration gedreht unscharf]{Unscharfe Abbildung bei um \SI{180}{\degree} gedrehter Objektiv-Linse (konvexe Seite zeigt zur Probe)}
         \label{fig:hellfeld_orientierung_sphaerische_gedreht_unscharf}
     \end{minipage}%
     \hspace*{\fill}
     \begin{minipage}[t]{0.475\linewidth}
         \centering
         \includegraphics[width=\linewidth]{fig/Versuch3/hellfeld_3.1_vorher.jpg}
-        \caption[Hellfeld Orientierung+sphärische Ab. gedreht scharf]{Scharfe Abbildung bei um \SI{180}{\degree} gedrehter Objektiv-Linse (konvexe Seite zeigt zur Probe)}
+        \caption[Hellfeld Orientierung und sphärische Aberration gedreht scharf]{Scharfe Abbildung bei um \SI{180}{\degree} gedrehter Objektiv-Linse (konvexe Seite zeigt zur Probe)}
         \label{fig:hellfeld_orientierung_sphaerische_gedreht_scharf}
     \end{minipage}
 \end{figure}
 \setcaphanging
-
 
 \paragraph{Kohärenz.}
 Als Nächstes wird die Auswirkung der Kohärenz der Beleuchtung auf die Bildgebung untersucht. Hierzu wird der Diffusor zwischen Lichtquelle und Probe aus dem Aufbau entfernt. Die Position der restlichen Komponenten bleiben unverändert. Es ergibt sich abermals ein unscharfes Bild, welches diesmal jedoch nicht scharfgestellt werden konnte. Dieses Bild befindet sich auf \autoref{fig:hellfeld_ohne_diffusor}.
@@ -482,7 +469,6 @@ Als Nächstes wird die Auswirkung der Kohärenz der Beleuchtung auf die Bildgebu
         \label{fig:hellfeld_ohne_diffusor}
     \end{samepage}
 \end{figure}
-
 
 \paragraph{Wellenlängenabhängigkeit und chromatische Aberration.}
 Zu guter Letzt wird die Wellenlängenabhängigkeit des Bilds untersucht. Hierzu wird die Halogenlampe, die bis eben als Lichtquelle gedient hat, durch eine blaue LED ersetzt. Diese wird über einen USB-Port, welcher mit dem PC verbunden wird, mit Strom versorgt. Es wird wieder ein (unscharfes) Bild aufgenommen (\autoref{fig:Hellfeld_3_3_blau_unscharf}) und scharfgestellt (\autoref{fig:Hellfeld_3_3_blau_scharf}). Anschließend wird die blaue LED durch eine rote LED ersetzt. Auch hier wird wieder ein Bild aufgenommen und scharfgestellt. Die Bilder sind in \autoref{fig:Hellfeld_3_3_rot_unscharf} und \autoref{fig:Hellfeld_3_3_rot_scharf} dargestellt. Für beide LED-Lichtquellen wird darüber hinaus notiert, um welche Distanz die Probe mittels Mikrometerschraube verschoben werden musste, um ein scharfes Bild zu erhalten, relativ zum von derselben Position ausgehenden unscharfen Bild. Für die blaue LED ergibt sich eine Verschiebung von $d_{\text{blau}}=\SI{1.85(5)}{mm}$ und für die rote LED von $d_{\text{rot}}=\SI{1.78(5)}{mm}$.
@@ -512,7 +498,10 @@ Zu guter Letzt wird die Wellenlängenabhängigkeit des Bilds untersucht. Hierzu 
 \end{figure}
 \setcaphanging
 
-Als Abschluss wird noch die Gesamtvergrößerung und das Auflösungsvermögen des vorliegenden Aufbaus untersucht. Für die Gesamtvergrößerung wird zuerst ein (unvergrößertes) Referenzbild aufgenommen (Linse wird aus dem Strahlengang entfernt) und der Abstand zweier charakteristischer Punkte in \si{\px} mittels der am PC laufenden Software ausgemessen. Danach wird die Linse wieder eingesetzt und es entsteht ein reelles vergrößertes \emph{verkehrtes} Bild. Derselbe Abstand wird gemessen. Die beiden Bilder und die darin eingetragenen Abstände befinden sich auf den Abbildungen \ref{fig:hellfeld_gesamtvergroeszerung_referenz} und \ref{fig:hellfeld_gesamtvergroeszerung_vergroeszert}.
+Als Abschluss wird noch die Gesamtvergrößerung und das Auflösungsvermögen des vorliegenden Aufbaus untersucht.
+
+\paragraph{Gesamtvergrößerung.}
+Für die experimentelle Auswertung der Gesamtvergrößerung wird zuerst ein (unvergrößertes) Referenzbild mit Abbildungsmaßstab $A=1$ aufgenommen. Dazu wird die Linse aus dem Strahlengang entfernt, der Aufbau so konfiguriert, dass $b=g=2f$ gilt und der Abstand zweier charakteristischer Punkte in \si{\px} mit dem virtuellen Lineal der am PC laufenden Software \textit{ThorCam\texttrademark{}} aus dem aufgenommenen Bild ausgemessen. Danach wird die Linse wieder eingesetzt und es entsteht ein reelles vergrößertes \emph{verkehrtes} Bild. Derselbe Abstand wird gemessen. Die beiden Bilder und die darin eingetragenen Abstände befinden sich auf den Abbildungen \ref{fig:hellfeld_gesamtvergroeszerung_referenz} und \ref{fig:hellfeld_gesamtvergroeszerung_vergroeszert}.
 %
 \setcapindent{0pt}
 \begin{figure}[H]
@@ -533,7 +522,10 @@ Als Abschluss wird noch die Gesamtvergrößerung und das Auflösungsvermögen de
 \end{figure}
 \setcaphanging
 %
-Als Abschluss zum Teilversuch Hellfeldmikroskop wird noch das Auflösungsvermögen, das nach \autoref{eq:aufloesungsvermoegen} gegeben ist, bestimmt. Hierzu wird jener Bereich des Probenbilds gesucht, der gerade noch scharf aufgelöst werden kann. Das dafür zur Rate gezogene Bild ist \autoref{fig:hellfeld_aufloesungsvermoegen}.
+Die in den Abbildungen eingetragenen Abstände sind demnach $d_\text{unvergrößert}=\SI{128(7)}{\px}$ und $d_\text{vergrößert}=\SI{84(5)e1}{\px}$. Dabei wird eine Unsicherheit von \SI{5}{\percent} angenommen, die durch das sensible Auswählen der Eckpunkte begründet wird.
+
+\paragraph{Auflösungsvermögen.}
+Als Abschluss zum Teilversuch \textit{Hellfeldmikroskop} wird noch das Auflösungsvermögen $x_\text{min}$, das nach \autoref{eq:aufloesungsvermoegen} gegeben ist, bestimmt. Hierzu wird jener Bereich des Probenbilds gesucht, der gerade noch scharf aufgelöst werden kann. Das dafür zur Rate gezogene Bild ist \autoref{fig:hellfeld_aufloesungsvermoegen}.
 %
 \begin{figure}[H]
     \centering
@@ -543,7 +535,10 @@ Als Abschluss zum Teilversuch Hellfeldmikroskop wird noch das Auflösungsvermög
         \label{fig:hellfeld_aufloesungsvermoegen}
     \end{samepage}
 \end{figure}
-% 5 in der innersten Gruppe ist noch unterscheidbar. 
+% 5 in der innersten Gruppe ist noch unterscheidbar.
+Die kleinste horizontal und vertikal unterscheidbare Balkengruppe (charakterisiert durch Gruppe und Element) wird bestimmt als:
+\[G=6 \qquad\qquad E=\num{5.0(5)}\]
+Ein halbes Element wird als Unsicherheit angenommen, da die horizontalen Balken noch deutlich kleiner unterscheidbar sind, die vertikalen jedoch bei $G=6$ und $E=5$ an ihre Grenzen stoßen. Die Gruppennummer ist exakt.
 
 
 \subsection{Dunkelfeldmikroskop}
@@ -574,7 +569,7 @@ Im Folgendem werden die einzelnen Teilversuche ausgewertet und die Ergebnisse zu
 \label{subsec:auswertung_sammellinse}
 
 Wie oben beschrieben wurden zur Bestimmung der vorerst unbekannten Brennweite einer Sammellinse drei Methoden verwendet.
-Der Schätzwert für die unbekannte Brennweiter ergibt sich mittels der Lupeneffektabschätzung zu:
+Der Schätzwert für die unbekannte Brennweite ergibt sich mittels der Lupeneffektabschätzung zu:
 \[f_{\text{Schätzwert}} = \SI{20(2)}{mm}\]
 
 In weiterer Folge wird \autoref{eq:linsengleichung}, die Linsengleichung, zur Bestimmung der unbekannten Größe verwendet und es ergeben sich für die beiden Versuche die in \autoref{tab:auswertung_brennweite_gleichung} angegebenen Werte.
@@ -595,7 +590,7 @@ In weiterer Folge wird \autoref{eq:linsengleichung}, die Linsengleichung, zur Be
 Es folgt also für die über die Linsengleichung bestimmte Brennweite $f_\text{Linsengleichung}$ der Mittelwert:
 \[f_\text{Linsengleichung} = \SI{25.8(8)}{mm}\]
 
-Anschließend wurde noch das Besselverfahren benutzt welches analog zum gerade eben erwähnten Linsengleichungsverfahren -- diesmal aber unter Benutzung von \autoref{eq:bessel} -- für $f_\text{Bessel}$ folgendes Ergebnis liefert:
+Anschließend wurde noch das Bessel-Verfahren benutzt, welches analog zum gerade eben erwähnten Linsengleichungsverfahren -- diesmal aber unter Benutzung von \autoref{eq:bessel} -- für $f_\text{Bessel}$ folgendes Ergebnis liefert:
 \[f_\text{Bessel} = \SI{23.3(12)}{mm}\]
 
 
@@ -603,15 +598,39 @@ Anschließend wurde noch das Besselverfahren benutzt welches analog zum gerade e
 \label{subsec:auswertung_Leeuwenhoek}
 
 Die zu bestimmenden Größen ergeben sich aus \autoref{eq:vergroesserung_leeuwenhoek} und \autoref{eq:fokuslaenge_leeuwenhoek} zu:
-\[f_{eff-\text{klein}} = \SI{1.83(4)}{mm} \hspace{1cm} f_{eff-\text{groß}} = \SI{4.652(5)}{mm}\]
-
-\[M_\text{klein} = \num{136(3)} \hspace{1cm} M_\text{groß} = \num{53.75(6)}\]
-
-Dabei ist $n = \num{1.518}$ und die Durchmesser sind $d_\text{klein} = \SI{2.5}{mm}$ und $d_\text{groß} = \SI{6.35}{mm}$. Die Unsicherheiten wird dabei für alle drei Größen als implizit angenommen.
+%
+\begin{align*}
+    f_{\text{eff--klein}} = \SI{1.83(4)}{mm} \qquad & \qquad f_{\text{eff--groß}} = \SI{4.652(5)}{mm} \\
+    M_\text{klein} = \num{136(3)} \qquad            & \qquad M_\text{groß} = \num{53.75(6)}
+\end{align*}
+%
+Dabei ist $n = \num{1.518}$ und die Durchmesser sind $d_\text{klein} = \SI{2.5}{mm}$ und $d_\text{groß} = \SI{6.35}{mm}$. Die Unsicherheiten werden dabei für alle drei Größen als implizit angenommen.
 
 
 \subsection{Hellfeld-Transmissionsmikroskop}
 \label{subsec:auswertung_hellfeld}
+
+\paragraph{Gesamtvergrößerung.}
+Die theoretische Auswertung der Gesamtvergrößerung des Hellfeldmikroskopaufbaus erfolgt nach \autoref{eq:gesamtvergroesserung}. Hierzu wird zusätzlich zu den bereits bekannten Objektiv- und Okularbrennweiten noch die obtische Tubuslänge $t_o$ benötigt.
+%  Den Abstand zwischen hinterem Brennpunkt des Objektivs und vorderem Brennpunkt des Okulars nennt man optische Tubuslänge $t_o$.
+\begin{align*}
+    f_\text{obj}                                   & = \SI{35.0(4)}{mm} \\
+    f_\text{oku}                                   & = \SI{50.0(4)}{mm} \\
+    t_o=d_\text{obj-oku}-f_\text{obj}-f_\text{oku} & = \SI{85(6)}{mm}
+\end{align*}
+%
+Die theoretische Gesamtvergrößerung $V_\text{MIK,th}$ ergibt sich somit nach \autoref{eq:gesamtvergroesserung} zu:
+\[V_\text{MIK,th} = \num{-12.1(8)}\]
+
+Um diesen Wert experimentell zu ermitteln, müssen lediglich die mittels Software gemessenen Distanzen ins Verhältnis gesetzt werden.
+\[V_\text{MIK,ex}=\frac{d_\text{vergrößert}}{d_\text{unvergrößert}}=\num{6.6(6)}\]
+
+\paragraph{Auflösungsvermögen.}
+Das Auflösungsvermögen berechnet sich nach \autoref{eq:aufloesungsvermoegen} über den Kehrwert der Ortsfrequenz. Diese räumliche Frequenz ergibt sich zu
+\[f_r = \SI{102(6)}{LP\per\milli\meter},\]
+wonach das Auflösungsvermögen $x_\text{min}$
+\[x_\text{min} = \SI{9.8(6)}{\micro\meter}\]
+beträgt.
 
 
 \subsection{Dunkelfeldmikroskop}
@@ -627,9 +646,9 @@ Die Dunkelfeldmikroskopie erwies sich als äußerst schwierig in der Einrichtung
 \subsection{Brennweite einer Sammellinse}
 \label{subsec:diskussion_sammellinse}
 
-Die drei unterschiedlichen Verfahren führen grundsätzlich zu ähnlichen Ergebnissen. Dennoch gibt es zwischen den Methoden Abweichungen welche außerhalb der angegebenen Unsicherheitsbereiche liegen. Absolut gesehen ist die erste Abschätzung (mittels Lupeneffekt) zwar etwas weiter von den anderen Messwerten abgeschlagen; dies war aber erwartbar, da sich die präzisse Messung -- eines freihändig in den Strahlengang gehaltenen Objekts -- schwierig gestalltet.
+Die drei unterschiedlichen Verfahren führen grundsätzlich zu ähnlichen Ergebnissen. Dennoch gibt es zwischen den Methoden Abweichungen welche außerhalb der angegebenen Unsicherheitsbereiche liegen. Absolut gesehen ist die erste Abschätzung (mittels Lupeneffekt) zwar etwas weiter von den anderen Messwerten abgeschlagen; dies war aber erwartbar, da sich die präzise Messung -- eines freihändig in den Strahlengang gehaltenen Objekts -- schwierig gestaltet.
 
-Linsengleichung und Besselverfahren, wenn auch mit kleineren Unsicherheiten versehen stimmen auch nicht in ihren Unsicherheitsintervallen überein. Hier liegt vermutlich abermals die Krux in der ungenauen Messmethode: freihand mit Lineal. Bessere Ergebnisse liesen sich hierbei mit fix an der Schiene verbauten Messskalen und einer höherer Wiederholungsrate der Messungen erreichen um eine sinnhafte statistische Auswertung umsetzten zu können.
+Linsengleichung und Besselverfahren, wenn auch mit kleineren Unsicherheiten versehen stimmen auch nicht in ihren Unsicherheitsintervallen überein. Hier liegt vermutlich abermals die Krux in der ungenauen Messmethode: Freihand mit Lineal. Bessere Ergebnisse ließen sich hierbei mit fix an der Schiene verbauten Messskalen und einer höheren Wiederholungsrate der Messungen erreichen um eine sinnhafte statistische Auswertung umsetzten zu können.
 
 Letztendlich bleibt die genauere Bestimmung der Brennweite mittels dieser grundsätzlich für dünne Linsen geltenden Zusammenhänge für dickere als auch plankonvexe Linsen schwierig.
 
@@ -637,26 +656,83 @@ Letztendlich bleibt die genauere Bestimmung der Brennweite mittels dieser grunds
 \subsection{Van-Leeuwenhoek-Mikroskop}
 \label{subsec:diskussion_Leeuwenhoek}
 
-Das Van-Leeuwenhoek-Mikroskop, welches zur Zeit seiner Erfindung revolutionäre Vergrößerungen ermöglichte, ist heute praktisch kaum nutzbar. Starke Abbildungsfehler, wie etwa Bildfeldwölbung, der sphärischen Linsen machen den Gebrauch, sowie die Aufnahme von brauchbaren Bildern für das Laborprotokoll, den mit (oft) gut funktionierten Gerätschaften verwöhnten Physikern schwer. Dennoch amüssiert das Renaissance - 3D-Druck - Crossover.
+Das Van-Leeuwenhoek-Mikroskop, welches zur Zeit seiner Erfindung revolutionäre Vergrößerungen ermöglichte, ist heute praktisch kaum nutzbar. Starke Abbildungsfehler, wie etwa Bildfeldwölbung, der sphärischen Linsen machen den Gebrauch sowie die Aufnahme von brauchbaren Bildern für das Laborprotokoll den mit (oft) gut funktionierten Gerätschaften verwöhnten Physikern schwer. Dennoch amüsiert das Renaissance-3D-Druck-Crossover.
 
 
 \subsection{Hellfeld-Transmissionsmikroskop}
 \label{subsec:diskussion_hellfeld}
 
-\textbf{TODO}
+Die Zusammenhänge zwischen Gegenstandsweite $g$ und Brennweite $f$ lassen sich wie folgt zusammenfassen.
+Grundsätzlich lassen sich mit einer Sammellinse drei Arten von Bildern erreichen. Ist die Gegenstandsweite größer als die doppelte Brennweite ($g>2f$), so entsteht ein reelles, verkleinertes und verkehrtes Bild. Liegt die Gegenstandsweite dagegen zwischen Brennweite und doppelter Brennweite ($2f>g>f$), so ist das Bild reell, vergrößert und verkehrt. Verringert man die Gegenstandsweite dann bis unter die Brennweite ($f>g$), so entsteht ein virtuelles, vergrößertes und aufrechtes Bild (Lupenfall). Die Strahlen dieses \enquote{Bild} divergieren und werden allein im Gehirn zu einem theoretischen Gegenstand verlängert. Wenn man also im Unendlichen ein scharfes Bild erhalten möchte, so muss sich der Gegenstand genau im Brennpunkt befinden, für ein scharfes Bild in nur großer Entfernung, muss $g$ nur leicht größer sein als $f$.
+
+Dreht man die Objektivlinse um \SI{180}{\degree}, so ist das entstehende Bild ohne weitere Verschiebung unscharf. Dies hat damit zu tun, dass die Linse natürlich nicht (unendlich) dünn ist, wie in der geometrischen Optik angenommen wird, sondern eine endliche Ausdehnung (\SI{8(2)}{mm}) hat. Aufgrund dieser Dicke verschiebt sich auch der Brennpunkt beim Umdrehen der Linse und die Gegenstandsweite muss angepasst werden, um wieder ein scharfes Bild zu erhalten. Die sphärische Aberration wirkt sich dahingehend aus, dass achsenferne Strahlen stärker brechen als achsennahe, wodurch die Strahlen sich letztendlich nicht mehr in einem Punkt treffen. Die sphärische Aberration tritt jedoch bei allen
+Arten von Linsen auf und kann somit nur durch spezielle Kombination von Linsen vermieden werden.
+
+Durch Einbringen des Diffusors in den Strahlengang wird das Licht der Halogenlampe künstlich gestreut, wodurch gewährleistet ist, dass es nicht kohärent ist. Entfernt man den Diffusor, so wird das Auflicht dagegen kohärent. Dies führt zu Interferenzen der Lichtbündel untereinander, was einen positiven Effekt auf den Kontrast hat, sich jedoch negativ auf die erhaltene Bildschärfe auswirkt.
+
+Anschließend wurde die Halogenlampe durch LEDs der Farben Rot und Blau ersetzt. Da nun nicht mehr (annähernd) Weißlicht verwendet wird, kommen zusätzlich Effekte der chromatischen Aberration ins Spiel. Die Gegenstandsweite der Probe musste beim Rotlicht um einen geringeren Versatz korrigiert werden als beim Blaulicht. Im Vergleich der beiden scharfgestellten Bilder (Abbildungen \ref{fig:Hellfeld_3_3_blau_scharf} und \ref{fig:Hellfeld_3_3_rot_scharf}) wird ersichtlich, dass das Blaulichtbild eine deutlich höhere Gesamtschärfe aufweist. Dies ist darauf zurückzuführen, dass blaues Licht eine geringere Wellenlänge aufweist als rotes. Dadurch kann mit monochromatischem Blaulicht auch deutlich besser aufgelöst werden (vgl. z.B. Blu-ray Disc von Sony). Zusätzlich vermindert monochromatisches Licht die Effekt chromatischer Aberration im Vergleich zu weißem Licht, das eine hohe Anzahl verschiedener Wellenlängen aufweist, die alle unterschiedlich stark gebrochen werden.
+
+Über alle Abbildungen hinweg fällt darüber hinaus ins Auge, dass die vertikalen Balken geringer aufgelöst werden als
+die horizontalen. Dies kann durch einen Astigmatismus beschrieben werden, welcher
+durch das schiefe Einfallen der Lichtstrahlen durch die Komponenten hervorgerufen wird. Dieser Effekt lässt
+sich jedoch schwer vermeiden, beim vorliegenden Aufbau nicht überprüft werden kann, ob sich die Linse gerade in ihrer Halterung befinden, oder etwa verdreht sind.
+
+Vergleicht man die in \autoref{subsec:auswertung_hellfeld} ermittelten Gesamtvergrößerungen, einmal durch theoretische Deduktion, einmal durch experimentelle Messung erhalten, so decken sich diese keineswegs. Der Unterschied im Vorzeichen ist dadurch begründet, dass in \autoref{eq:gesamtvergroesserung} die Orientierung des erhaltenen Bilds berücksichtigt wird, wohingegen beim bloßen ins Verhältnis setzen die Orientierung nicht beachtet wurde. Das vergrößerte Bild steht jedoch in beiden Fällen auf dem Kopf.
+% TODO: is des falsch berechnet? Oder why um einen Faktor 2 um?
+\newline\textbf{TODO}
+
+Das in \autoref{subsec:auswertung_hellfeld} berechnete Auflösungsvermögen wirkt plausibel, kann jedoch nicht weiter überprüft oder verglichen werden.
 
 
 \subsection{Dunkelfeldmikroskop}
 \label{subsec:diskussion_dunkelfeldmikroskop}
 
-Die Dunkelfeldmikroskopie gestalltet sich äußert schwierig, vor allem die Ausrichtung des Strahles, welche für die Abbildung äußerst entscheident ist. Selbst nach mehrmaligen Aufbau und mehrmaliger sorgfältiger Einrichtung der Bauteile waren starke Lichthöfe im Bild vorhanden. Es gelang jedoch trotzdem zumindest eine Zahl und Teile eines Gittermusters abzubilden. Gründe neben dem extrem empfindlichen Strahlengang, für ein scheiteren eines besseren Abbilds, könnten unter anderem auch Verunreinigungen auf der Probe sein (auch schon bei der Hellfeld-Transmissionsmikroskopie zu beobachten), welche das Licht zusätzlich ungünstig streuen.
+Die Dunkelfeldmikroskopie gestaltet sich äußert schwierig, vor allem die Ausrichtung des Strahls, welche für die Abbildung entscheidend ist. Selbst nach mehrmaligem Aufbau und mehrmaliger sorgfältiger Einrichtung der Bauteile waren starke Lichthöfe im Bild vorhanden. Es gelang jedoch trotzdem zumindest eine Zahl und Teile eines Gittermusters abzubilden. Gründe neben dem extrem empfindlichen Strahlengang für ein Scheitern eines besseren Abbilds könnten unter anderem auch Verunreinigungen auf der Probe sein (auch schon bei der Hellfeld-Transmissionsmikroskopie zu beobachten), welche das Licht zusätzlich ungünstig streuen.
+
 
 
 
 \section{Zusammenfassung}
 \label{sec:zusammenfassung}
 
-Das umfassende Labor diente zum sammeln praktischer Erfahrung im Bereich optischer Mikroskopie. Nach einer Einführung, in welcher die Brennweite einer Sammellinse bestimmt wurde, reisten die Experimentierenden in die spät-Renaissance und bildeten Fasern und Kugelschreiberspitzen mittels Van-Leeuwenhoek-Mikroskop ab. \ Den zweiten Große Teil bildete der Aufbau eines Hell- und eines Dunkelfeldmikroskops. Für ersteres wurden zusätzlich Parameter, wie etwa das Auflösungsvermögen für rotes und blaues Licht, als auch die optische Vergrößerung bestimmt.
+Im vorliegenden Laborversuch wurden praktische Erfahrungem im Bereich optischer Mikroskopie gesammelt.
+
+Zu Beginn wurde die Brennweite einer Sammellinse auf drei unterschiedliche Arten bestimmt. Die Ergebnisse dieser Analysen seien noch einmal in \autoref{tab:zusammenfassung_brennweiten} zusammengefasst.
+%
+\begin{table}[H]
+    \centering
+    \begin{samepage}
+        \caption[Zusammenfassung Brennweiten]{Zusammenfassung der Ermittlung der Brennweite einer Sammellinse auf drei verschiedene Arten.}
+        \label{tab:zusammenfassung_brennweiten}
+        \begin{tblr}{colspec={QS[table-format=2.1]S[table-format=1.1]}, row{1}={guard}}
+            Art              & $f$ / \si{mm} & $\Delta f$ / \si{mm} \\
+            Lupeneffekt      & 20            & 2                    \\
+            Linsengleichung  & 25.8          & 0.8                  \\
+            Bessel-Verfahren & 23.3          & 1.2                  \\
+        \end{tblr}
+    \end{samepage}
+\end{table}
+
+Anschließend reisten die Experimentierenden in die Spät-Renaissance und bildeten Fasern und Kugelschreiberspitzen mittels eines Van-Leeuwenhoek-Mikroskops ab. Das Mikroskop hatte zwei unterschiedlich große Linsen, deren Brennweiten und Vergrößerungen anschließend eruiert wurden. Diese Ergebnisse seien noch einmal in \autoref{tab:zusammenfassung_van_leeuwenhoek} zusammengefasst.
+%
+\begin{table}[H]
+    \centering
+    \begin{samepage}
+        \caption[Zusammenfassung Van-Leeuwenhoek-Mikroskop]{Zusammenfassung der Daten der beiden Linsen des Van-Leeuwenhoek-Mikroskops. $f_\text{eff}$ beschreibt die effektive Brennweite der Linse, $M$ deren Lupenvergrößerung.}
+        \label{tab:zusammenfassung_van_leeuwenhoek}
+        \begin{tblr}{colspec={QS[table-format=1.3]S[table-format=1.3]S[table-format=3.2]S[table-format=1.2]}, row{1}={guard}}
+            Linse & $f_\text{eff}$ / \si{mm} & $\Delta f_\text{eff}$ / \si{mm} & $M$ / 1 & $\Delta M$ / 1 \\
+            klein & 1.83                     & 0.04                            & 136     & 3              \\
+            groß  & 4.652                    & 0.005                           & 53.75   & 0.06           \\
+        \end{tblr}
+    \end{samepage}
+\end{table}
+
+Den zweiten großen Teil bildete der Aufbau eines Hell- und eines Dunkelfeldmikroskops. Für ersteres wurden zusätzlich Parameter, wie etwa die Gesamtvergrößerung, die sich über theoretische und praktische Werte gemittelt zu
+\[V_\text{MIK} = \text{\textbf{TODO}}\]
+ergab, sowie das Auflösungsvermögen
+\[x_\text{min} = \SI{9.8(6)}{\micro\meter}\]
+bestimmt. Der Aufbau des Dunkelfeldmikroskops erwies sich als kaum funktionstüchtig.
 
 
 
