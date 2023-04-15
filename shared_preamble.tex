@@ -64,6 +64,9 @@
 \usepackage{enumitem}  % better enumerating with style options
 \usepackage{nicefrac}  % inline-fractions in n/d-style
 \usepackage{xcolor}  % custom colors
+%TU-Graz colors
+\definecolor{TUred}{HTML}{e4154b}
+\definecolor{TUgray}{HTML}{bcbcbc}
 \usepackage{listings, scrhack}  % code display; listings in combination with KOMA
 \ifluatex
     \IfFontExistsTF{Fira Code}{%
@@ -185,6 +188,7 @@
 % \newcommand can
 \newcommand*{\mup}[1]{\ensuremath{\text{\textup{#1}}}}  % math mode upright normal font
 \newcommand*{\inkgraphics}[3][\linewidth]{\def\svgwidth{#1}\import{#2}{#3}}
+\newcommand{\todo}[1]{\textbf{\textcolor{TUred}{#1\\}}}
 
 
 % custom tabularray environments
