@@ -1,0 +1,13 @@
+Aufbau Seriell eine Zelle verdeckt wie beschrieben. 
+Abstand Zelle - Lampe 30 cm
+UNSICHERHEIT: wird wesentlich größer für höhere I weil Widerstand kleiner wird und viel sensibler dadurch
+Vorgangsweise: Schiebewiderstand mit 1K Ohm bei 0.57 A wird auf max Widerstand eingestellt - dann in Schritten zu geringeren Widerständen. 
+Messungen: 
+I / mA; U / V
+0;10.1
+2.93;2.86
+2.95;1.82
+2.96;1.1
+2.97;0.62
+2.99;0.472
+2.97;0
