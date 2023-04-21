@@ -1,0 +1,6 @@
+Nun werden die Dimensionen der Geräte gemessen: 
+Solarzelle Fläche: 38(1)*17(1) mm
+Durchmesser Intensitätsmesser: 17.0(2) mm
+Nun wird die Intensität über den zylinderförmigen Intensitätsmesser gemessen. Dieser wird anstelle der Photovoltaikpanele unter den Sonnensimulator gehalten. Am hinteren Rand des Sonnensimulators wird die Intensität derart verstellt, dass am Spectra-Physics Leistungsmesser die gewünschte (zuvor berechnete) Leistung ankommt.
+400 W/m²: Messbereich .03 mit Wert etwas über 3 (untere Skala)
+1000 W/m²: Messbereich .1 mit Wert etwas über 2.2 (obere Skala)
