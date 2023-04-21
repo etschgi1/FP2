@@ -1,0 +1,9 @@
+UNSICHERHEIT: bei druck +-0.1bar
+Zeit/min;Druck(Blau)/bar;Druck(Rot)/bar
+0;3.7;5.4
+5;2.9;6.8
+10;2.4;8.0
+15;2.0;8.9
+20;1.9;9.8
+25;1.7;10.6
+30;1.9;11.3
