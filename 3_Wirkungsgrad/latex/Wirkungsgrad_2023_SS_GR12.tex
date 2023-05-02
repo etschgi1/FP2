@@ -48,19 +48,69 @@
 \tableofcontents
 \newpage
 
-\section[Aufgabenstellung]{Aufgabenstellung \cite{ref:angabe}}
+\section[Aufgabenstellung]{Aufgabenstellung \cite{ref:angabe_solar,ref:angabe_waerme}}
 \label{sec:aufgabenstellung}
 
+\begin{itemize}
+    \item Solarzelle
+    \begin{itemize}
+        \item Kennlinie und Kenndaten von Solarzellen in Parallel- und Serienschaltung bestimmen
+        \item Aufnahme der Dunkel- und Hellkennlinie mittels Sonnensimulator
+    \end{itemize}
+    \item Wärmepumpe
+    \begin{itemize}
+        \item Messung des Temperaturverlaufes in zwei Wasserbehältern, der von der Pumpe aufgenommenen Leistung und der Drücke nach Kompression bzw. Expansion im Kältemittelkreislauf über
+        30 min
+        \item Bestimmung der Leistungszahl und des Gütegrades als Funktion der Temperaturdifferenz.
+        \item Erstellung des p-H-Diagrammes des Kreisprozesses aufgrund der gemessenen Werte zu Beginn und am Ende der Messung.
+    \end{itemize}
+\end{itemize}
 
 
 
-\section[Voraussetzungen und Grundlagen]{Voraussetzungen und Grundlagen \cite{ref:angabe}}
+\section[Voraussetzungen und Grundlagen]{Voraussetzungen und Grundlagen \cite{ref:angabe_solar,ref:angabe_waerme}}
 
 \section{Versuchsanordnung}
 \label{sec:versuchsanordnung}
-
-
-
+Das vorliegende Labor teilt sich in zwei Teilversuche auf, welchen Aufbau in den folgenden Abschnitten beschrieben wird.
+\subsection{Solarzelle}
+\label{subsec:solarzelle}
+Der Versuch zur Solarzelle teilt sich nun weiter in zwei Aufbauten ein. Der erste der beiden ist in \autoref{fig:solar_aufbau} dargestellt. Dabei wird der Aufbau, wie in \cite{ref:angabe_solar} beschrieben realisiert. Die Lichtquelle, die Lampe rechts im Bild, wird hierzu \SI{30}{cm} von den beiden Solarzellen entfernt positioniert. Ein variabler Widerstand fungiert als Last und die Messung wird wie nachfolgend beschrieben mit zwei Multimeter, jeweils für eine serielle, als auch parallele Schaltung der beiden Solarmodule durchgeführt. 
+\begin{figure}
+    \centering
+    \begin{samepage}
+        \includegraphics[width=0.6\linewidth]{fig/Aufbau_solar.jpeg}
+        \caption{Aufbau des Versuchs zur Bestimmung der Kennlinie einer Solarzelle.}
+        \label{fig:solar_aufbau}
+    \end{samepage}
+\end{figure}
+Für den zweiten Aufgabenteil wird nun auf den zweiten Versuchsaufbau gewechselt. Hier steht ein Sonnensimulator (rechts in \autoref{fig:sonne_aufbau}) zur Verfügung.  Dieser ist in der Lage eine gewisse konstante Lichtintensität zu erzeugen, welche auf die Solarzelle trifft. Letztere ist an eine Sourcemeter angeschlossen, welches automatisiert die Kennlinienauffzeichnung durchführt. Die Lichtintensität wird vor der Aufzeichung noch mittels Powermeter gemessen.
+\begin{figure}
+    \centering
+    \begin{samepage}
+        \includegraphics[width=0.6\linewidth]{fig/Aufbau_Sonnensimulator.jpeg}
+        \caption{Aufbau des Versuchs zur Bestimmung der Dunkel- und Hellkennlinie mittels Sonnensimulator}
+        \label{fig:sonne_aufbau}
+    \end{samepage}
+\end{figure}
+\subsection{Wärmepumpe}
+\label{subsec:waermepumpe}
+Für den Versuch Wärmepumpe wird der bereits aufgebaute Versuch -- schematisch in \autoref{fig:waerme_aufbau} verwendet. Lediglich die Temperaturmessgeräte werden noch mittels Cassy Lab2 Schnittstelle an den nebenstehenden Computer verbunden. 
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=0.8\linewidth]{fig/Waermepumpe_schematisch.png}
+        \caption[Schematischer Aufbau Wärmepumpe]{Versuchsaufbau. 1: Kompressor 230 V; 50/60 Hz. Leistungsaufnahme ca. 130 W bei
+        50 Hz; 2: ausschwenkbare Stellfläche für rot-markierten Warmwasserbehälter; 3: Verflüssiger; 4:
+        Sammler/Reiniger; 5: Expansionsventil; 6: Temperaturfühler des Expansionsventils; 7: Verdampfer; 8: ausschwenkbare Stellfläche Kaltwasserbehälter; 9: Rohrwindungen als elastische Verbindung zwischen Kompressor und Wärmetauscher; 10: Druckwächter; 11: Kunststoffhalter (2x) für
+        Thermometer und Temperaturfühler, zum Anklemmen an Kupferrohre; 12: Kupfer-Meßschuh (2x)
+        zum Einstecken von Temperaturfühlern für Temperaturmessungen an den Kupferrohren des Kältemittelkreislaufs; 13: Manometer für die Niederdruckseite; innere Skala für Druckmessung von -
+        1...+10 bar, äußerste Skala mit zugehöriger Taupunkttemperatur für R134a von -60 °C bis +40 °C;
+        14: Manometer für die Hochdruckseite; innere Skala: Druck von -1...+30 bar, äußerste Skala mit
+        zugehöriger Taupunkttemperatur für R 134a von -60 °C bis + 85°C. \cite{ref:angabe_waerme}}
+        \label{fig:waerme_aufbau}
+    \end{samepage}
+\end{figure}
 
 
 \section{Geräteliste}
@@ -72,23 +122,20 @@
         \caption[Geräteliste]{Verwendete Geräte und wichtige Materialien}  % optional argument for List of Tables, mandatory argument for caption
         \label{tab:geraeteliste}
         \begin{tblrx}{colspec={QQQQQ}, row{1}={guard}}
-            Gerät                     & Hersteller & Modell    & Anmerkung                                                     \\
-            QTH10/M                   & THORLABS   & -                       & inkl. Infrarot Filter                                         \\
-            LED $2\times$             & THORLABS   & -                       & rot \& blau                                                   \\
-            Diffusor                  & -          & -                       & -                                                             \\
-            Probenhalter XYF1         & THORLABS   & -                       & -                                                             \\
-            Probe                     & THORLABS   & -                       & -                                                             \\
-            Plankonvexe Sammellinsen  & -          & -                       & unbekannte Brennweite                                         \\
-            Optischer Tisch           & -          & -                       & inkl. Befestigungsschienen                                    \\
-            Van Leeuwenhoek Mikroskop & 3D-Drucker & -                       & inkl. Schraube, LED \& Batterie                               \\
-            Kamerasensor              & CS165MU/M  & -                       & $\SI{1,6}{\mega\px}$ -- Pixelgröße: $\SI{3,45}{\micro\meter}$ \\
-            Kamerasoftware            & THORLABS   & ThorCam\texttrademark{} & $\SI{1,6}{\mega\px}$ -- Pixelgröße: $\SI{3,45}{\micro\meter}$ \\
-            Kameraobjektiv            & -          & -                       & $f=\SI{150}{mm}$                                              \\
-            Objektiv                  & -          & -                       & $f=\SI{35}{mm}$                                               \\
-            Okular                    & -          & -                       & $f=\SI{50}{mm}$                                               \\
-            Mikroskopobjektiv         & Nikon      & -                       & Vergrößerung: $10 \times$                                     \\
-            Achromatische Linse       & -          & -                       & $f=\SI{25}{mm}$, inkl. Irisblende                             \\
-        \end{tblrx}
+            Gerät                     & Modell    &Inv. Nummer & Anmerkung\\
+            2 $\times$ Solarzelle& - &- &- \\
+            Lampe&-&-&-\\
+            Multimeter&Fluke AP-03&-&-\\
+            Widerstand & variabel&-&-\\
+            Sourcemeter&Keithley 2450&310084940000&-\\
+            Powermeter&Spectra-Physics 407A&310041630000&-\\
+            Sonnensimulator&- & 310094110000& -\\
+            PC mit Kickstart Software & - & - & -\\
+            Wärmepumpenaufbau & - &310070540000  & siehe \autoref{fig:waerme_aufbau}\\
+            Eimer        & 5 L& - & -\\
+            Temperaturmessgeräte & - & 666206 & -\\
+            PC mit Cassy Lab2 & - & -& -\\
+            \end{tblrx}
     \end{samepage}
 \end{table}
 
