@@ -1,0 +1,127 @@
+% class
+\documentclass[english, ngerman]{scrartcl}
+
+% input preamble
+\input{../../shared_preamble.tex}
+
+% biblatex
+\addbibresource{wirkungsgrad.bib}
+
+
+% manual header
+\ihead{Advanced Microscopy}  % inner (left) head
+\chead{\textsc{Wachmann} Elias (12004232)\\\textsc{Zach} Andreas (12004790)}  % center head
+\ohead{31.03.2023}  % outer (right) head
+
+
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.5\textwidth]{../../99_Misc/Logo_KF.pdf}\par\vspace{0.8cm}
+    {\scshape\LARGE{Karl-Franzens-Universität Graz}\par}
+    {\scshape\LARGE{Institut für Physik}\par}
+    \vspace{1cm}
+    {\scshape\Large{23S PHY.L02UB Fortgeschrittenenpraktikum 2}\par}
+    678 Bachelorstudium Physik, UG2002/2021W\par
+    \vspace{1.5cm}
+    {\huge\bfseries III. Wirkungsgrad\par}
+    \vspace{2cm}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c c c}
+            \Large \textsc{Wachmann} Elias &  & \Large \textsc{Zach} Andreas \\
+            \Large 12004232                &  & \Large 12004790              \\
+            \multicolumn{3}{c}{Gruppe 12}
+        \end{tabular}
+    \end{table}
+    \vfill
+    \Large Betreut von\par
+    % Assoz. Prof. Mag. Dr.rer.nat. Georg \textsc{Koller}
+    Dr. Joachim \textsc{Krenn}
+    \vfill
+    {\large 21.04.2023\par}
+\end{titlepage}
+
+\clearpage
+\tableofcontents
+\newpage
+
+\section[Aufgabenstellung]{Aufgabenstellung \cite{ref:angabe}}
+\label{sec:aufgabenstellung}
+
+
+
+
+\section[Voraussetzungen und Grundlagen]{Voraussetzungen und Grundlagen \cite{ref:angabe}}
+
+\section{Versuchsanordnung}
+\label{sec:versuchsanordnung}
+
+
+
+
+
+\section{Geräteliste}
+\label{sec:geraeteliste}
+
+\begin{table}[H]
+    \centering
+    \begin{samepage}  % caption and table on same page
+        \caption[Geräteliste]{Verwendete Geräte und wichtige Materialien}  % optional argument for List of Tables, mandatory argument for caption
+        \label{tab:geraeteliste}
+        \begin{tblrx}{colspec={QQQQQ}, row{1}={guard}}
+            Gerät                     & Hersteller & Modell    & Anmerkung                                                     \\
+            QTH10/M                   & THORLABS   & -                       & inkl. Infrarot Filter                                         \\
+            LED $2\times$             & THORLABS   & -                       & rot \& blau                                                   \\
+            Diffusor                  & -          & -                       & -                                                             \\
+            Probenhalter XYF1         & THORLABS   & -                       & -                                                             \\
+            Probe                     & THORLABS   & -                       & -                                                             \\
+            Plankonvexe Sammellinsen  & -          & -                       & unbekannte Brennweite                                         \\
+            Optischer Tisch           & -          & -                       & inkl. Befestigungsschienen                                    \\
+            Van Leeuwenhoek Mikroskop & 3D-Drucker & -                       & inkl. Schraube, LED \& Batterie                               \\
+            Kamerasensor              & CS165MU/M  & -                       & $\SI{1,6}{\mega\px}$ -- Pixelgröße: $\SI{3,45}{\micro\meter}$ \\
+            Kamerasoftware            & THORLABS   & ThorCam\texttrademark{} & $\SI{1,6}{\mega\px}$ -- Pixelgröße: $\SI{3,45}{\micro\meter}$ \\
+            Kameraobjektiv            & -          & -                       & $f=\SI{150}{mm}$                                              \\
+            Objektiv                  & -          & -                       & $f=\SI{35}{mm}$                                               \\
+            Okular                    & -          & -                       & $f=\SI{50}{mm}$                                               \\
+            Mikroskopobjektiv         & Nikon      & -                       & Vergrößerung: $10 \times$                                     \\
+            Achromatische Linse       & -          & -                       & $f=\SI{25}{mm}$, inkl. Irisblende                             \\
+        \end{tblrx}
+    \end{samepage}
+\end{table}
+
+
+
+\section{Versuchsdurchführung und Messergebnisse}
+\label{sec:versuchsdurchfuehrung_messergebnisse}
+
+
+
+\newpage
+\section{Auswertung}
+\label{sec:auswertung}
+
+
+
+\section{Diskussion}
+\label{sec:diskussion}
+
+
+
+\section{Zusammenfassung}
+\label{sec:zusammenfassung}
+
+
+\clearpage
+% Literaturverzeichnis
+\printbibliography
+
+% Abbildungsverzeichnis
+\listoffigures
+
+% Tabellenverzeichnis
+\listoftables
+
+\end{document}
