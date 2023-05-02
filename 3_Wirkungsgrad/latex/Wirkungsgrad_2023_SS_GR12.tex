@@ -9,9 +9,9 @@
 
 
 % manual header
-\ihead{Advanced Microscopy}  % inner (left) head
+\ihead{Wirkungsgrad}  % inner (left) head
 \chead{\textsc{Wachmann} Elias (12004232)\\\textsc{Zach} Andreas (12004790)}  % center head
-\ohead{31.03.2023}  % outer (right) head
+\ohead{21.04.2023}  % outer (right) head
 
 
 
@@ -38,7 +38,6 @@
     \end{table}
     \vfill
     \Large Betreut von\par
-    % Assoz. Prof. Mag. Dr.rer.nat. Georg \textsc{Koller}
     Dr. Joachim \textsc{Krenn}
     \vfill
     {\large 21.04.2023\par}
@@ -53,64 +52,74 @@
 
 \begin{itemize}
     \item Solarzelle
-    \begin{itemize}
-        \item Kennlinie und Kenndaten von Solarzellen in Parallel- und Serienschaltung bestimmen
-        \item Aufnahme der Dunkel- und Hellkennlinie mittels Sonnensimulator
-    \end{itemize}
+          \begin{itemize}
+              \item Kennlinie und Kenndaten von Solarzellen in Parallel- und Serienschaltung bestimmen
+              \item Aufnahme der Dunkel- und Hellkennlinie mittels Sonnensimulator
+          \end{itemize}
     \item Wärmepumpe
-    \begin{itemize}
-        \item Messung des Temperaturverlaufes in zwei Wasserbehältern, der von der Pumpe aufgenommenen Leistung und der Drücke nach Kompression bzw. Expansion im Kältemittelkreislauf über
-        30 min
-        \item Bestimmung der Leistungszahl und des Gütegrades als Funktion der Temperaturdifferenz.
-        \item Erstellung des p-H-Diagrammes des Kreisprozesses aufgrund der gemessenen Werte zu Beginn und am Ende der Messung.
-    \end{itemize}
+          \begin{itemize}
+              \item Messung des Temperaturverlaufes in zwei Wasserbehältern, der von der Pumpe aufgenommenen Leistung und der Drücke nach Kompression bzw. Expansion im Kältemittelkreislauf über \SI{30}{min}.
+              \item Bestimmung der Leistungszahl und des Gütegrades als Funktion der Temperaturdifferenz.
+              \item Erstellung des $p$-$H$-Diagrammes des Kreisprozesses aufgrund der gemessenen Werte zu Beginn und am Ende der Messung.
+          \end{itemize}
 \end{itemize}
 
 
 
 \section[Voraussetzungen und Grundlagen]{Voraussetzungen und Grundlagen \cite{ref:angabe_solar,ref:angabe_waerme}}
 
+\textbf{TODO}
+
 \section{Versuchsanordnung}
 \label{sec:versuchsanordnung}
+
 Das vorliegende Labor teilt sich in zwei Teilversuche auf, welchen Aufbau in den folgenden Abschnitten beschrieben wird.
+
 \subsection{Solarzelle}
-\label{subsec:solarzelle}
-Der Versuch zur Solarzelle teilt sich nun weiter in zwei Aufbauten ein. Der erste der beiden ist in \autoref{fig:solar_aufbau} dargestellt. Dabei wird der Aufbau, wie in \cite{ref:angabe_solar} beschrieben realisiert. Die Lichtquelle, die Lampe rechts im Bild, wird hierzu \SI{30}{cm} von den beiden Solarzellen entfernt positioniert. Ein variabler Widerstand fungiert als Last und die Messung wird wie nachfolgend beschrieben mit zwei Multimeter, jeweils für eine serielle, als auch parallele Schaltung der beiden Solarmodule durchgeführt. 
+\label{subsec:anordnung_solarzelle}
+
+Der Versuch zur Solarzelle teilt sich nun weiter in zwei Aufbauten ein. Der erste der beiden ist in \autoref{fig:solar_aufbau} dargestellt. Dabei wird der Aufbau, wie in \cite{ref:angabe_solar} beschrieben, realisiert. Die Lichtquelle, die Lampe rechts im Bild, wird hierzu \SI{30}{cm} von den beiden Solarzellen entfernt positioniert. Ein variabler Widerstand fungiert als Last und die Messung wird wie nachfolgend beschrieben mit zwei Multimetern, jeweils für eine serielle als auch parallele Schaltung der beiden Solarmodule, durchgeführt.
+%
 \begin{figure}
     \centering
     \begin{samepage}
         \includegraphics[width=0.6\linewidth]{fig/Aufbau_solar.jpeg}
-        \caption{Aufbau des Versuchs zur Bestimmung der Kennlinie einer Solarzelle.}
+        \caption[Aufbau Kennlinie Solarzelle Lampe]{Aufbau des Versuchs zur Bestimmung der Kennlinie einer Solarzelle.}
         \label{fig:solar_aufbau}
     \end{samepage}
 \end{figure}
-Für den zweiten Aufgabenteil wird nun auf den zweiten Versuchsaufbau gewechselt. Hier steht ein Sonnensimulator (rechts in \autoref{fig:sonne_aufbau}) zur Verfügung.  Dieser ist in der Lage eine gewisse konstante Lichtintensität zu erzeugen, welche auf die Solarzelle trifft. Letztere ist an eine Sourcemeter angeschlossen, welches automatisiert die Kennlinienauffzeichnung durchführt. Die Lichtintensität wird vor der Aufzeichung noch mittels Powermeter gemessen.
+%
+Für den zweiten Aufgabenteil wird nun auf den zweiten Versuchsaufbau gewechselt. Hier steht ein Sonnensimulator (rechts in \autoref{fig:sonne_aufbau}) zur Verfügung. Dieser ist in der Lage eine gewisse konstante Lichtintensität zu erzeugen, welche auf die Solarzelle trifft. Letztere ist an ein Sourcemeter angeschlossen, welches automatisiert die Kennlinienauffzeichnung durchführt. Die Lichtintensität wird vor der Aufzeichung noch mittels Powermeter gemessen.
+%
 \begin{figure}
     \centering
     \begin{samepage}
         \includegraphics[width=0.6\linewidth]{fig/Aufbau_Sonnensimulator.jpeg}
-        \caption{Aufbau des Versuchs zur Bestimmung der Dunkel- und Hellkennlinie mittels Sonnensimulator}
+        \caption[Aufbau Hell- und Dunkelkennlinie Solarzelle Sonnensimulator]{Aufbau des Versuchs zur Bestimmung der Dunkel- und Hellkennlinie mittels Sonnensimulator}
         \label{fig:sonne_aufbau}
     \end{samepage}
 \end{figure}
+
+
 \subsection{Wärmepumpe}
-\label{subsec:waermepumpe}
-Für den Versuch Wärmepumpe wird der bereits aufgebaute Versuch -- schematisch in \autoref{fig:waerme_aufbau} verwendet. Lediglich die Temperaturmessgeräte werden noch mittels Cassy Lab2 Schnittstelle an den nebenstehenden Computer verbunden. 
+\label{subsec:anordnung_waermepumpe}
+
+Für den Versuch zur Wärmepumpe wird der bereits aufgebaute Versuch, schematisch in \autoref{fig:waerme_aufbau} dargestellt, verwendet. Lediglich die Temperaturmessgeräte werden noch mittels Cassy Lab2 Schnittstelle mit dem nebenstehenden Computer verbunden.
+%
 \begin{figure}[H]
     \centering
     \begin{samepage}
         \includegraphics[width=0.8\linewidth]{fig/Waermepumpe_schematisch.png}
-        \caption[Schematischer Aufbau Wärmepumpe]{Versuchsaufbau. 1: Kompressor 230 V; 50/60 Hz. Leistungsaufnahme ca. 130 W bei
-        50 Hz; 2: ausschwenkbare Stellfläche für rot-markierten Warmwasserbehälter; 3: Verflüssiger; 4:
-        Sammler/Reiniger; 5: Expansionsventil; 6: Temperaturfühler des Expansionsventils; 7: Verdampfer; 8: ausschwenkbare Stellfläche Kaltwasserbehälter; 9: Rohrwindungen als elastische Verbindung zwischen Kompressor und Wärmetauscher; 10: Druckwächter; 11: Kunststoffhalter (2x) für
-        Thermometer und Temperaturfühler, zum Anklemmen an Kupferrohre; 12: Kupfer-Meßschuh (2x)
-        zum Einstecken von Temperaturfühlern für Temperaturmessungen an den Kupferrohren des Kältemittelkreislaufs; 13: Manometer für die Niederdruckseite; innere Skala für Druckmessung von -
-        1...+10 bar, äußerste Skala mit zugehöriger Taupunkttemperatur für R134a von -60 °C bis +40 °C;
-        14: Manometer für die Hochdruckseite; innere Skala: Druck von -1...+30 bar, äußerste Skala mit
-        zugehöriger Taupunkttemperatur für R 134a von -60 °C bis + 85°C. \cite{ref:angabe_waerme}}
+        \caption[Schematischer Aufbau Wärmepumpe]{Versuchsaufbau. \textbf{1:} Kompressor \SI{230}{V}, \SI{50}{Hz} oder \SI{60}{Hz}. Leistungsaufnahme ca. \SI{130}{W} bei \SI{50}{Hz}; \textbf{2:} ausschwenkbare Stellfläche für rot-markierten Warmwasserbehälter; \textbf{3:} Verflüssiger; \textbf{4:}
+            Sammler/Reiniger; \textbf{5:} Expansionsventil; \textbf{6:} Temperaturfühler des Expansionsventils; \textbf{7:} Verdampfer; \textbf{8:} ausschwenkbare Stellfläche Kaltwasserbehälter; \textbf{9:} Rohrwindungen als elastische Verbindung zwischen Kompressor und Wärmetauscher; \textbf{10:} Druckwächter; \textbf{11:} Kunststoffhalter ($2\times$) für
+            Thermometer und Temperaturfühler, zum Anklemmen an Kupferrohre; \textbf{12:} Kupfer-Messschuh ($2\times$)
+            zum Einstecken von Temperaturfühlern für Temperaturmessungen an den Kupferrohren des Kältemittelkreislaufs; \textbf{13:} Manometer für die Niederdruckseite; innere Skala für Druckmessung von \SIrange{-1}{10}{\bar}, äußerste Skala mit zugehöriger Taupunkttemperatur für R-134a von \SIrange{-60}{40}{\celsius};
+            \textbf{14:} Manometer für die Hochdruckseite; innere Skala: Druck von \SIrange{-1}{30}{\bar}, äußerste Skala mit
+            zugehöriger Taupunkttemperatur für R-134a von \SIrange{-60}{85}{\celsius} \cite{ref:angabe_waerme}.}
         \label{fig:waerme_aufbau}
     \end{samepage}
 \end{figure}
+
 
 
 \section{Geräteliste}
@@ -121,21 +130,21 @@ Für den Versuch Wärmepumpe wird der bereits aufgebaute Versuch -- schematisch 
     \begin{samepage}  % caption and table on same page
         \caption[Geräteliste]{Verwendete Geräte und wichtige Materialien}  % optional argument for List of Tables, mandatory argument for caption
         \label{tab:geraeteliste}
-        \begin{tblrx}{colspec={QQQQQ}, row{1}={guard}}
-            Gerät                     & Modell    &Inv. Nummer & Anmerkung\\
-            2 $\times$ Solarzelle& - &- &- \\
-            Lampe&-&-&-\\
-            Multimeter&Fluke AP-03&-&-\\
-            Widerstand & variabel&-&-\\
-            Sourcemeter&Keithley 2450&310084940000&-\\
-            Powermeter&Spectra-Physics 407A&310041630000&-\\
-            Sonnensimulator&- & 310094110000& -\\
-            PC mit Kickstart Software & - & - & -\\
-            Wärmepumpenaufbau & - &310070540000  & siehe \autoref{fig:waerme_aufbau}\\
-            Eimer        & 5 L& - & -\\
-            Temperaturmessgeräte & - & 666206 & -\\
-            PC mit Cassy Lab2 & - & -& -\\
-            \end{tblrx}
+        \begin{tblrx}{row{1}={guard}}
+            Gerät                     & Modell               & Inv. Nummer  & Anmerkung                         \\
+            $2\times$ Solarzelle      & -                    & -            & -                                 \\
+            Lampe                     & -                    & -            & -                                 \\
+            Multimeter                & Fluke AP-03          & -            & -                                 \\
+            Widerstand                & variabel             & -            & -                                 \\
+            Sourcemeter               & Keithley 2450        & 310084940000 & -                                 \\
+            Powermeter                & Spectra-Physics 407A & 310041630000 & -                                 \\
+            Sonnensimulator           & -                    & 310094110000 & -                                 \\
+            PC mit Kickstart Software & -                    & -            & -                                 \\
+            Wärmepumpenaufbau         & -                    & 310070540000 & siehe \autoref{fig:waerme_aufbau} \\
+            Eimer                     & \SI{5}{\liter}       & -            & -                                 \\
+            Temperaturmessgeräte      & -                    & 666206       & -                                 \\
+            PC mit Cassy Lab2         & -                    & -            & -                                 \\
+        \end{tblrx}
     \end{samepage}
 \end{table}
 
@@ -144,9 +153,124 @@ Für den Versuch Wärmepumpe wird der bereits aufgebaute Versuch -- schematisch 
 \section{Versuchsdurchführung und Messergebnisse}
 \label{sec:versuchsdurchfuehrung_messergebnisse}
 
+\subsection{Solarzelle mit Lampe}
+\label{subsec:durchfuehrung_solar_lampe}
+%? Disclaimer: Hamma das mit der Abdeckung der einen Solarzelle falsch gemacht? Mir kommt vor, wir haben eine der beiden vollständig abgedeckt, wir hätten die aber, glaub ich, nur teilweise abdecken sollen.
+Der Aufbau wird, wie in \autoref{subsec:anordnung_solarzelle} beschrieben und in \autoref{fig:solar_aufbau} dargestellt, aufgebaut. Der Abstand zwischen Lampe und Solarzellenmodulen beträgt circa \SI{30}{cm}. Nacheinander werden nun insgesamt drei Variatonen desselben Aufbaus experimentell behandelt. Zuerst werden die beiden Solarzellenmodule in Serie geschaltet, anschließend parallel und zu guter Letzt wieder in Serie, diesmal wird jedoch ein Modul gänzlich von Lichteinfall abgeschirmt.
+
+Zu Beginn wird der Schiebewiderstand auf seinen Maximalwert von \SI{1}{\kilo\ohm} eingestellt. Stückweise wird nun der Widerstandswert verringert indem die gesamte Bandbreite des variablen Widerstands ausgenutzt wird, um die Strom-Spannungskennlinie der Solarzelle bestimmen zu können. Bei jeder neuen Position des Schiebers (und damit neuem Widerstandswert) werden sowohl Strom als auch Spannung an Ampere- bzw. Voltmeter abgelesen und notiert. Im Bereich des annähernd linearen Verlaufs der Kurve werden großzügigere Widerstandswertschritte gewählt, im interessanten Bereich des Punkts der maximalen Leistung werden kleinere Schrittweiten am Widerstand gewählt. Die erhaltenen Messwerte für Strom und Spannung im seriellen Aufbau finden sich in \autoref{tab:messergebnisse_solar_seriell}.
+%
+\begin{table}[H]
+    \centering
+    \begin{samepage}
+        \caption[Messergebnisse Solarzelle seriell]{Gemessene Ströme $I$ und Spannungen $U$ der beiden Solarzellenmodule in Serienschaltung zur Bestimmung der Kennlinie der Zelle. Der Verbraucherwiderstand wird mittels variablem Schiebewiderstand ($R_{\text{max}}=\SI{1}{\kilo\ohm}$) laufend verändert. Unsicherheiten: \textbf{TODO} % todo: Unsicherheiten
+        }
+        \label{tab:messergebnisse_solar_seriell}
+        \begin{tblr}{colspec={S[table-format=2.2]S[table-format=2.2]}, row{1}={guard}}
+            $I$ / \si{mA} & $U$ / \si{V} \\
+            0             & 11.65        \\
+            11.70         & 11.48        \\
+            15.19         & 11.40        \\
+            19.79         & 11.30        \\
+            24.17         & 11.20        \\
+            26.60         & 11.15        \\
+            28.92         & 11.10        \\
+            30.93         & 11.06        \\
+            34.05         & 10.98        \\
+            38.52         & 10.86        \\
+            43.50         & 20.72        \\
+            48.40         & 10.55        \\
+            52.01         & 10.39        \\
+            54.51         & 10.24        \\
+            55.58         & 10.14        \\
+            56.56         & 9.94         \\
+            57.06         & 9.81         \\
+            57.20         & 9.67         \\
+            57.30         & 9.55         \\
+            57.30         & 9.40         \\
+            57.25         & 9.34         \\
+            57.30         & 8.98         \\
+            57.80         & 7.77         \\
+            58.20         & 6.25         \\
+            58.70         & 5.49         \\
+            59.50         & 4.31         \\
+            61.20         & 2.72         \\
+            63.30         & 0.69         \\
+            65.50         & 0.12         \\
+            65.40         & 0            \\
+        \end{tblr}
+    \end{samepage}
+\end{table}
+%
+Anschließend werden die beiden Solarzellenmodule parallel verbunden und eine erneute Messserie wird dokumentiert. Die Messergebnisse finden sich in \autoref{tab:messergebnisse_solar_parallel}.
+\begin{table}[H]
+    \centering
+    \begin{samepage}
+        \caption[Messergebnisse Solarzelle parallel]{Gemessene Ströme $I$ und Spannungen $U$ der beiden Solarzellenmodule in Parallelschaltung zur Bestimmung der Kennlinie der Zelle. Der Verbraucherwiderstand wird mittels variablem Schiebewiderstand ($R_{\text{max}}=\SI{1}{\kilo\ohm}$) laufend verändert. Unsicherheiten: \textbf{TODO} % todo: Unsicherheiten
+        }
+        \label{tab:messergebnisse_solar_parallel}
+        \begin{tblr}{colspec={S[table-format=3.2]S[table-format=1.3]}, row{1}={guard}}
+            $I$ / \si{mA} & $U$ / \si{V} \\
+            0             & 5.793        \\
+            5.98          & 5.85         \\
+            7.82          & 5.834        \\
+            9.34          & 5.820        \\
+            11.49         & 5.81         \\
+            13.28         & 5.796        \\
+            18.55         & 5.765        \\
+            28.04         & 5.710        \\
+            36.25         & 5.66         \\
+            45.68         & 5.602        \\
+            53.68         & 5.552        \\
+            60.6          & 5.507        \\
+            67.1          & 5.46         \\
+            70.7          & 5.438        \\
+            78.6          & 5.386        \\
+            91.2          & 5.295        \\
+            98.1          & 5.245        \\
+            111.0         & 5.145        \\
+            127.4         & 5.00         \\
+            141.8         & 4.85         \\
+            150.2         & 4.77         \\
+            169           & 4.48         \\
+            183.5         & 3.85         \\
+            185           & 1.50         \\
+            189           & 0.02         \\
+            189           & 0            \\
+        \end{tblr}
+    \end{samepage}
+\end{table}
+%
+Zu guter Letzt wird die Anordnung wieder seriell verschaltet und eine der beiden Zellen mittels mehreren Blättern Papiers vor einfallendem Licht abgeschirmt. Die Messergebnisse finden sich in \autoref{tab:messergebnisse_solar_seriell_abgeschirmt}.
+%
+\begin{table}[H]
+    \centering
+    \begin{samepage}
+        \caption[Messergebnisse Solarzelle seriell]{Gemessene Ströme $I$ und Spannungen $U$ der beiden Solarzellenmodule in Serienschaltung, wobei eine der beiden Zellen vor dem einfallenden Licht abgeschirmt ist, zur Bestimmung der Kennlinie der Zelle. Der Verbraucherwiderstand wird mittels variablem Schiebewiderstand ($R_{\text{max}}=\SI{1}{\kilo\ohm}$) laufend verändert. Unsicherheiten: \textbf{TODO} % todo: Unsicherheiten
+        }
+        \label{tab:messergebnisse_solar_seriell_abgeschirmt}
+        \begin{tblr}{colspec={S[table-format=1.2]S[table-format=2.3]}, row{1}={guard}}
+            $I$ / \si{mA} & $U$ / \si{V} \\
+            0             & 10.1         \\
+            2.93          & 2.86         \\
+            2.95          & 1.82         \\
+            2.96          & 1.1          \\
+            2.97          & 0.62         \\
+            2.99          & 0.472        \\
+            2.97          & 0            \\
+        \end{tblr}
+    \end{samepage}
+\end{table}
 
 
-\newpage
+\subsection{Solarzelle mit Sonnensimulator}
+\label{subsec:durchfuehrung_solar_sonnensimulator}
+
+\subsection{Wärmepumpe}
+\label{subsec:durchfuehrung_waermepumpe}
+
+
+
 \section{Auswertung}
 \label{sec:auswertung}
 
