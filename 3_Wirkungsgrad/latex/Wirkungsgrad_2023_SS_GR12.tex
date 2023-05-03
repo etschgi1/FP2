@@ -13,6 +13,8 @@
 \chead{\textsc{Wachmann} Elias (12004232)\\\textsc{Zach} Andreas (12004790)}  % center head
 \ohead{21.04.2023}  % outer (right) head
 
+\newcommand{\FF}{\ensuremath{\mathit{FF}}}
+
 
 
 \begin{document}
@@ -68,7 +70,43 @@
 
 \section[Voraussetzungen und Grundlagen]{Voraussetzungen und Grundlagen \cite{ref:angabe_solar,ref:angabe_waerme}}
 
-\textbf{TODO}
+\subsection{Solarzelle}
+\label{subsec:grundlagen_solar}
+
+Die Solarzelle besteht aus einer n-dotierten und einer p-dotierten Schicht, zwischen denen sich eine elektrisch neutrale Grenzschicht befindet. Die n-Schicht enthält als frei bewegliche Ladungsträger Elektronen, während die p-Schicht Elektronenlöcher aufweist. Die n-Schicht ist sehr dünn konstruiert, damit Sonnenlicht vor allem am p/n-Übergang absorbiert wird. Die p-Schicht dient der mechanischen Stabilität. Im vorliegenden Laborversuch werden monokristalline Siliziumsolarzellen verwendet. Die n-Schicht dieser Zellen wird durch oberflächennahes Einbringen von Phosphor-Atomen in das p-leitende Silizium-Substrat erzeugt, während die p-Schicht durch Dotieren mit Bor-Atomen entsteht. Die Fermi-Energie der n-Schicht wird dabei angehoben, jene der p-Schicht abgesenkt. Durch die unterschiedlichen Fermi-Niveaus wandern die Löcher in die n-Schicht und die Elektronen in die p-Schicht. Dadurch entsteht an der Grenzschicht eine von freien Ladungsträgern verarmte Sperrschicht. Durch diese Verschiebung der Ladungsträger bekommt das p-Gebiet eine negative, und das n-Gebiet eine positive Raumladung (Raumladungszone), welche das weitere Diffundieren der Ladungsträger verhindert. Erst durch Anlegen einer entgegengesetzten Spannung kann die entstandene Potentialbarriere abgebaut werden und Strom fließen. Wird eine äußere Spannung in umgekehrter Polarität angelegt, vergrößert sich die Potentialbarriere, die Sperrschicht dehnt sich weiter aus und kein Strom kann fließen. Damit verhält sich der p/n-Übergang als Gleichrichter und entspricht einer Diode. Wird die Sperrschicht mit Photonen einer genügend hohen Energie bestrahlt, so entstehen zusätzliche Elektron-Loch-Paare, welche die Energiebarriere überwinden können und ein Fotostrom in Sperrrichtung der Diode kann fließen. Aus der einfachen Diode ist dann eine Fotodiode geworden, welche als Solarzelle zur Stromerzeugung aus Strahlung verwendet werden kann.
+
+Durch Ausmessen der Stromstärken zu in Durchlassrichtung angelegten Spannungen kann die $I$-$U$-Kennlinie der Diode	dargestellt werden. Per Konvention wird die Strom-Achse dabei invertiert dargestellt. Aus jener Kurve lassen sich Kenngrößen ablesen, wie etwa die Leerlaufspannung $U_L$ bei keinem Stromfluss oder der Kurzschlussstrom $I_K$ bei keiner angelegten Spannung. Die Leistung der Diode kann in Abhängigkeit von der Spannung über die Formel
+%
+\begin{equation}
+    \label{eq:leistung}
+    P = U \cdot I
+\end{equation}
+%
+berechnet werden. Der Punkt maximaler Leistung $P_{\text{max}} = U_{\text{max}} \cdot I_{\text{max}}$ dient in Kombination mit der Leerlaufspannung und dem Kurzschlussstrom der Berechnung des Füllfaktors $\FF$
+%
+\begin{equation}
+    \label{eq:fuellfaktor}
+    \FF = \frac{U_{\text{max}} \cdot I_{\text{max}}}{U_L \cdot I_K}
+\end{equation}
+%
+Dieser Faktor beschreibt das Verhältnis der rechteckigen Flächen bis zum Punkt maximaler Leistung und der aus Kurzschlussstrom und Leerlaufspannung aufgespanntem, was dem Energieverlust aufgrund der Kennlinienkrümmung entspricht. Dieser Zusammenhang ist in \autoref{fig:fuellfaktor} dargestellt.
+%
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=0.7\linewidth]{fig/fuellfaktor.png}
+        \caption[Füllfaktor]{Punkt maximaler Leistung im invertierten Strom-Spannung-Diagramm}
+        \label{fig:fuellfaktor}
+    \end{samepage}
+\end{figure}
+
+Im vorliegenden Laborversuch wird weiters die abgestrahlte Leistung eines Sonnensimulators berechnet. Hierzu skaliert man die auf der Solarzelle eintreffende Intensität $I_{\text{Licht}}$ mit ihrer aktiven Fläche $A = a \cdot b$, wobei $a$ und $b$ Länge respektive Breite der aktiven Fläche beschreiben. Setzt man die maximale Ausgangsleistung der Solarzelle $P_{\text{max}}$ in Relation zur einfallenden Lichtleistung $P_{\text{Licht}}$, erhält man den Wirkungsgrad $\eta$ des Gesamtsystems. Der Wirkungsgrad beschreibt, wie viel Eingangsleistung tatsächlich umgesetzt werden kann.
+%
+\begin{equation}
+    \label{eq:wirkungsgrad}
+    \eta = \frac{P_{\text{max}}}{P_{\text{Licht}}}
+\end{equation}
+
 
 \section{Versuchsanordnung}
 \label{sec:versuchsanordnung}
@@ -163,7 +201,7 @@ Zu Beginn wird der Schiebewiderstand auf seinen Maximalwert von \SI{1}{\kilo\ohm
 \begin{table}[H]
     \centering
     \begin{samepage}
-        \caption[Messergebnisse Solarzelle seriell]{Gemessene Ströme $I$ und Spannungen $U$ der beiden Solarzellenmodule in Serienschaltung zur Bestimmung der Kennlinie der Zelle. Der Verbraucherwiderstand wird mittels variablem Schiebewiderstand ($R_{\text{max}}=\SI{1}{\kilo\ohm}$) laufend verändert. Unsicherheiten: \textbf{TODO} % todo: Unsicherheiten
+        \caption[Messergebnisse Solarzelle seriell]{Gemessene Ströme $I$ und Spannungen $U$ der beiden Solarzellenmodule in Serienschaltung zur Bestimmung der Kennlinie der Zelle. Der Verbraucherwiderstand wird mittels variablem Schiebewiderstand ($R_{\text{max}}=\SI{1}{\kilo\ohm}$) laufend verändert. Unsicherheiten: \todo{TODO} % todo: Unsicherheiten
         }
         \label{tab:messergebnisse_solar_seriell}
         \begin{tblr}{colspec={S[table-format=2.2]S[table-format=2.2]}, row{1}={guard}}
@@ -265,11 +303,36 @@ Zu guter Letzt wird die Anordnung wieder seriell verschaltet und eine der beiden
 
 \subsection{Solarzelle mit Sonnensimulator}
 \label{subsec:durchfuehrung_solar_sonnensimulator}
-
+Für den zweiten Teilversuch mit Solarzellen wird nun der bereits aufgebaute und verkabelte Sonnensimulator verwendet. Beginnend mit einer Messung bei Dunkelheit wird die Dunkelkennlinie bestimmt. Naturgemäß muss man dazu die Blende am Sonnensimulator schließen, sodass in die ansonst auch vollkommen abgedunkelte Kammer kein Licht eindringen kann. Mittels des zur Verfügung gestellten Softwareprogramms \glq Kickstart \grq wird nun vollautomatisch die Kennlinie aufgenommen und abgespeichert.\\
+Schließlich wird die Hellkennlinie für zwei Bestrahlungsstärken: \SI{400}{\watt\per\meter\squared} und \SI{1000}{\watt\per\meter\squared} aufgenommen. Um sicherzustellen, dass die korrekte Bestrahlungsstärken eingestellt ist, wird diese mittels Powermeter gemessen. Der kreisrunde Sensor des Powermeter hat dabei eine Fläche von $A_{\text{PM}} = \SI{2.27(6)e-4}{m\squared}$ und die rechteckige Solarzelle eine Fläche von $A_{\text{SZ}} = \SI{6.5(5)e-4}{m\squared}$. Unter Annahme einer homogenen Ausleuchtung des Bereichs im Sonnensimulator kann nun mittels Powermetermessung ein Wert von \SI{0,09}{\watt} für \SI{400}{\watt\per\meter\squared} und \SI{0,23}{\watt} für \SI{1000}{\watt\per\meter\squared} ermessen werden. Nach dem jeweiligen Einstellen der Bestrahlungsstärken wird der Powermetersonsor durch die Solarzelle ersetzt und abermals eine Kennlinie aufgenommen. Dabei versteht sich, dass die Schiebeblende vollkommen geöffnet ist.
 \subsection{Wärmepumpe}
 \label{subsec:durchfuehrung_waermepumpe}
-
-
+Der zweite große Teil dieses Labortages beschäftigt sich mit einer Wärmepumpe in Form eines Kompressors, der Wärme aus einem Reservoir in ein anderes leitet. Da der Versuchsaufbau bereits parat steht (siehe \autoref{fig:waerme_aufbau}), wird lediglich der nebenstehende PC in Betrieb genommen und die Temperatursensoren werden verbunden und mittels Cassy Lab2 in Messbereitschaft versetzt. Bevor die Messung jedoch starten kann, werden die beiden Kübel rot und blau, respektive für warmes und kaltes Reservoir, mit ca. \SI{4}{\liter} Wasser gefüllt. Zeitgleich wird nun die Messung der Temperatur am PC und der Kompressor gestartet. Damit die Messung nicht durch Wärmekonvektion verfälscht wird und nicht zuletzt auch um Langeweile bei den Experimentierenden während der \SI{30}{\minute} langen Versuchsdauer vorzubeugen wird stets fleißig umgerührt (siehe Symbolbild in \ref{fig:umruehren}). Zu Beginn und anschließend im 5-minuten Takt werden zusätzlich die Drücke an den beiden Zubringerleitungen zu den Kompressoren gemessen. Die aufgezeichneten Temperaturdaten werden schließlich als \texttt{csv}-Datei abgespeichert, die Drücke ergeben sich zu den in \autoref{tab:waerme_druecke} aufgelisteten.
+\begin{table}[H]
+    \centering
+    \begin{samepage}
+        \caption[Messergebnisse Drücke Wärmepumpe]{Messergebnisse Drücke Wärmepumpe. Gemessene Drücke an den jeweiligen Zubringerleitungen $p_{\text{k}}$ für die warme (rote) Seite und $p_{\text{w}}$ für die kalte (blaue) Seite zum Zeitpunkt $t$ in Minuten vom Startpunkt. Die Unsicherheit ergibt sich zu $\Delta p = \pm \SI{0,1}{\bar}$}
+        \label{tab:waerme_druecke}
+        \begin{tblr}{colspec={S[table-format=1.2]S[table-format=1.2]S[table-format=2.3]}, row{1}={guard}}
+            $t$ / \si{\minute} & $p_{\text{k}}$ / \si{bar} & $p_{\text{w}}$ / \si{bar} \\
+            0                  & 3,7                       & 5,4                       \\
+            5                  & 2,9                       & 6,8                       \\
+            10                 & 2,4                       & 8,0                       \\
+            15                 & 2,0                       & 8,9                       \\
+            20                 & 1,9                       & 9,8                       \\
+            25                 & 1,7                       & 10,6                      \\
+            30                 & 1,9                       & 11,3                      \\
+        \end{tblr}
+    \end{samepage}
+\end{table}
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=0.6\linewidth]{fig/Spass1.jpeg}
+        \caption[Symbolbild Experimentatoren]{Symbolbild Experimentatoren}
+        \label{fig:umruehren}
+    \end{samepage}
+\end{figure}
 
 \section{Auswertung}
 \label{sec:auswertung}
