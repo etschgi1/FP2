@@ -73,6 +73,15 @@
 \subsection{Solarzelle}
 \label{subsec:grundlagen_solar}
 
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=0.7\linewidth]{fig/solarzelle_grundlagen.png}
+        \caption{Schematischer Aufbau einer Solarzelle}
+        \label{fig:solarzelle_schema}
+    \end{samepage}
+\end{figure}
+
 Die Solarzelle besteht aus einer n-dotierten und einer p-dotierten Schicht, zwischen denen sich eine elektrisch neutrale Grenzschicht befindet. Die n-Schicht enthält als frei bewegliche Ladungsträger Elektronen, während die p-Schicht Elektronenlöcher aufweist. Die n-Schicht ist sehr dünn konstruiert, damit Sonnenlicht vor allem am p/n-Übergang absorbiert wird. Die p-Schicht dient der mechanischen Stabilität. Im vorliegenden Laborversuch werden monokristalline Siliziumsolarzellen verwendet. Die n-Schicht dieser Zellen wird durch oberflächennahes Einbringen von Phosphor-Atomen in das p-leitende Silizium-Substrat erzeugt, während die p-Schicht durch Dotieren mit Bor-Atomen entsteht. Die Fermi-Energie der n-Schicht wird dabei angehoben, jene der p-Schicht abgesenkt. Durch die unterschiedlichen Fermi-Niveaus wandern die Löcher in die n-Schicht und die Elektronen in die p-Schicht. Dadurch entsteht an der Grenzschicht eine von freien Ladungsträgern verarmte Sperrschicht. Durch diese Verschiebung der Ladungsträger bekommt das p-Gebiet eine negative, und das n-Gebiet eine positive Raumladung (Raumladungszone), welche das weitere Diffundieren der Ladungsträger verhindert. Erst durch Anlegen einer entgegengesetzten Spannung kann die entstandene Potentialbarriere abgebaut werden und Strom fließen. Wird eine äußere Spannung in umgekehrter Polarität angelegt, vergrößert sich die Potentialbarriere, die Sperrschicht dehnt sich weiter aus und kein Strom kann fließen. Damit verhält sich der p/n-Übergang als Gleichrichter und entspricht einer Diode. Wird die Sperrschicht mit Photonen einer genügend hohen Energie bestrahlt, so entstehen zusätzliche Elektron-Loch-Paare, welche die Energiebarriere überwinden können und ein Fotostrom in Sperrrichtung der Diode kann fließen. Aus der einfachen Diode ist dann eine Fotodiode geworden, welche als Solarzelle zur Stromerzeugung aus Strahlung verwendet werden kann.
 
 Durch Ausmessen der Stromstärken zu in Durchlassrichtung angelegten Spannungen kann die $I$-$U$-Kennlinie der Diode	dargestellt werden. Per Konvention wird die Strom-Achse dabei invertiert dargestellt. Aus jener Kurve lassen sich Kenngrößen ablesen, wie etwa die Leerlaufspannung $U_L$ bei keinem Stromfluss oder der Kurzschlussstrom $I_K$ bei keiner angelegten Spannung. Die Leistung der Diode kann in Abhängigkeit von der Spannung über die Formel
@@ -107,6 +116,54 @@ Im vorliegenden Laborversuch wird weiters die abgestrahlte Leistung eines Sonnen
     \eta = \frac{P_{\text{max}}}{P_{\text{Licht}}}
 \end{equation}
 
+Zur Bestimmung der Diodenparameter anhand der experimentell bestimmten $I$-$U$-Kurve wird die \textsc{Shockley}-Gleichung herangezogen.
+Für einen idealisierten p/n-Übergang mit abruptem Dotierungsprofil erhält man als Strom-Spannungs-Charakteristik I(U) die Shockley-Gleichung:
+%
+\begin{equation}
+    \label{eq:shockley}
+    I(U) = I_S \cdot \left( e^{\frac{q_e U}{k_B T}} - 1 \right)
+\end{equation}
+%
+Dabei beschreibt $U$ die an der Diode angelegte Spannung (positiv in Durchlassrichtung, negativ in Sperrrichtung), $I_S$ den Sättigungsstrom, $T$ die Temperatur, $k_B$ die Boltzmann-Konstante und $q_e$ die Elementarladung. Dieses idealisierte Verhalten ist
+meist in der Praxis nicht gegeben, weshalb man für eine reale Diode den Diodenfaktor $f$ einführt.
+Wird die Sperrschicht zusätzlich beleuchtet, so entstehen Elektron-Loch-Paare, welche einen Fotostrom $I_{\text{ph}}$ in Sperrrichtung verursachen. Aus der Shockley-Gleichung erhält man dann für eine beleuchtete Fotodiode:
+%
+\begin{equation}
+    \label{eq:shockley_beleuchtet}
+    I(U) = I_S \cdot \left( e^{\frac{q_e U}{f k_B T}} - 1 \right) - I_{\text{ph}}
+\end{equation}
+
+
+\subsection{Wärmepumpe}
+\label{subsec:grundlagen_waermepumpe}
+
+Eine Wärmepumpe ist eine thermodynamische Maschine, die einen Kreisprozess realisiert. Ein Arbeitsmedium (hier das Kältemittel R-134a) durchläuft vier Schritte. Zuerst wird es vom Kompressor vom Druck $p_1$ auf den Druck $p_2$ adiabatisch komprimiert. Dabei erwärmt sich
+das Arbeitsmedium auf die Temperatur $T_k$. Das Arbeitsmedium gibt dann über einen Wärmetauscher isobar Wärme an den Körper höherer Temperatur ab und wird annähernd auf dessen Temperatur $T_2$ abgekühlt, wobei es kondensiert. Danach wird das Arbeitsmedium
+anhand eines Ventils auf den niedrigeren Druck $p_1$ entspannt, wobei es erkaltet. Das nun kalte, ensptannte Arbeitsmedium nimmt dann über einen zweiten Wärmetauscher isobar Wärme vom Körper niedrigerer Temperatur auf und erwärmt sich dabei auf annähernd dessen Temperatur $T_1$, wobei es wieder verdampft. Nun beginnt der Kreisprozess von vorne. Durch diesen Vorgang
+wird dem kalten Reservoir ($T_1$) Wärme entzogen und dem warmen ($T_2$) zugefügt. Zusammengefasst besteht der idealisierte Kreisprozess aus einer adiabatischen Kompression, einer isobaren Abkühlung, einer isenthalpen Expansion und einer isobaren Erwärmung.
+
+Zur Bewertung der Leistungsfähigkeit des Kreisprozesses wird die Leistungszahl $\epsilon$ eingeführt. Diese ist definiert als das Verhältnis des dem Reservoir $T_2$ durch die Pumpe zugeführten Wärmestroms $\dot{Q}$ (Wärmemenge $\Delta Q$ pro Zeiteinheit $\Delta t$) zur aufgenommenen Leistung $P$ des Kompressors:
+%
+\begin{equation}
+    \label{eq:leistungszahl}
+    \epsilon = \frac{\dot{Q}}{P}
+\end{equation}
+%
+Der Wärmestrom $\dot{Q}$ lässt sich dabei nach der folgenden Formel berechnen:
+%
+\begin{equation}
+    \label{eq:waermestrom}
+    \dot{Q} = c \cdot m \cdot \dot{T},
+\end{equation}
+%
+wobei $c$ die spezifische Wärmekapazität von Wasser und $m$ die Masse des Wassers darstellt. Man definiert nun noch den Gütegrad $\eta$ einer Wärmepumpe als Verhältnis der Leistungszahl $\epsilon$ der Wärmepumpe zur theoretisch maximal erreichbaren Leistungszahl, der Leistungszahl des Carnot-Prozesses $\epsilon_{\text{max}} = \frac{T_2}{T_2-T_1}$.
+%
+\begin{equation}
+    \label{eq:guetegrad}
+    \eta = \frac{\epsilon}{\epsilon_{\text{max}}}
+\end{equation}
+
+
 
 \section{Versuchsanordnung}
 \label{sec:versuchsanordnung}
@@ -118,7 +175,7 @@ Das vorliegende Labor teilt sich in zwei Teilversuche auf, welchen Aufbau in den
 
 Der Versuch zur Solarzelle teilt sich nun weiter in zwei Aufbauten ein. Der erste der beiden ist in \autoref{fig:solar_aufbau} dargestellt. Dabei wird der Aufbau, wie in \cite{ref:angabe_solar} beschrieben, realisiert. Die Lichtquelle, die Lampe rechts im Bild, wird hierzu \SI{30}{cm} von den beiden Solarzellen entfernt positioniert. Ein variabler Widerstand fungiert als Last und die Messung wird wie nachfolgend beschrieben mit zwei Multimetern, jeweils für eine serielle als auch parallele Schaltung der beiden Solarmodule, durchgeführt.
 %
-\begin{figure}
+\begin{figure}[H]
     \centering
     \begin{samepage}
         \includegraphics[width=0.6\linewidth]{fig/Aufbau_solar.jpeg}
@@ -129,7 +186,7 @@ Der Versuch zur Solarzelle teilt sich nun weiter in zwei Aufbauten ein. Der erst
 %
 Für den zweiten Aufgabenteil wird nun auf den zweiten Versuchsaufbau gewechselt. Hier steht ein Sonnensimulator (rechts in \autoref{fig:sonne_aufbau}) zur Verfügung. Dieser ist in der Lage eine gewisse konstante Lichtintensität zu erzeugen, welche auf die Solarzelle trifft. Letztere ist an ein Sourcemeter angeschlossen, welches automatisiert die Kennlinienauffzeichnung durchführt. Die Lichtintensität wird vor der Aufzeichung noch mittels Powermeter gemessen.
 %
-\begin{figure}
+\begin{figure}[H]
     \centering
     \begin{samepage}
         \includegraphics[width=0.6\linewidth]{fig/Aufbau_Sonnensimulator.jpeg}
@@ -172,7 +229,7 @@ Für den Versuch zur Wärmepumpe wird der bereits aufgebaute Versuch, schematisc
             Gerät                     & Modell               & Inv. Nummer  & Anmerkung                         \\
             $2\times$ Solarzelle      & -                    & -            & -                                 \\
             Lampe                     & -                    & -            & -                                 \\
-            Multimeter                & Fluke AP-03          & -            & -                                 \\
+            Multimeter                & Fluke 175 True RMS   & -            & -                                 \\
             Widerstand                & variabel             & -            & -                                 \\
             Sourcemeter               & Keithley 2450        & 310084940000 & -                                 \\
             Powermeter                & Spectra-Physics 407A & 310041630000 & -                                 \\
@@ -201,41 +258,40 @@ Zu Beginn wird der Schiebewiderstand auf seinen Maximalwert von \SI{1}{\kilo\ohm
 \begin{table}[H]
     \centering
     \begin{samepage}
-        \caption[Messergebnisse Solarzelle seriell]{Gemessene Ströme $I$ und Spannungen $U$ der beiden Solarzellenmodule in Serienschaltung zur Bestimmung der Kennlinie der Zelle. Der Verbraucherwiderstand wird mittels variablem Schiebewiderstand ($R_{\text{max}}=\SI{1}{\kilo\ohm}$) laufend verändert. Unsicherheiten: \todo{TODO} % todo: Unsicherheiten
-        }
+        \caption[Messergebnisse Solarzelle seriell]{Gemessene Ströme $I$ und Spannungen $U$ der beiden Solarzellenmodule in Serienschaltung zur Bestimmung der Kennlinie der Zelle. Der Verbraucherwiderstand wird mittels variablem Schiebewiderstand ($R_{\text{max}}=\SI{1}{\kilo\ohm}$) laufend verändert. Unsicherheiten laut Fluke-Datenblatt.}
         \label{tab:messergebnisse_solar_seriell}
-        \begin{tblr}{colspec={S[table-format=2.2]S[table-format=2.2]}, row{1}={guard}}
-            $I$ / \si{mA} & $U$ / \si{V} \\
-            0             & 11.65        \\
-            11.70         & 11.48        \\
-            15.19         & 11.40        \\
-            19.79         & 11.30        \\
-            24.17         & 11.20        \\
-            26.60         & 11.15        \\
-            28.92         & 11.10        \\
-            30.93         & 11.06        \\
-            34.05         & 10.98        \\
-            38.52         & 10.86        \\
-            43.50         & 20.72        \\
-            48.40         & 10.55        \\
-            52.01         & 10.39        \\
-            54.51         & 10.24        \\
-            55.58         & 10.14        \\
-            56.56         & 9.94         \\
-            57.06         & 9.81         \\
-            57.20         & 9.67         \\
-            57.30         & 9.55         \\
-            57.30         & 9.40         \\
-            57.25         & 9.34         \\
-            57.30         & 8.98         \\
-            57.80         & 7.77         \\
-            58.20         & 6.25         \\
-            58.70         & 5.49         \\
-            59.50         & 4.31         \\
-            61.20         & 2.72         \\
-            63.30         & 0.69         \\
-            65.50         & 0.12         \\
-            65.40         & 0            \\
+        \begin{tblr}{colspec={S[table-format=2.2]S[table-format=1.2]S[table-format=2.4]S[table-format=1.4]}, row{1}={guard}}
+            $I$ / \si{mA} & $\Delta I$ / \si{mA} & $U$ / \si{V} & $\Delta U$ / \si{V} \\
+            0.00          & 0.03                 & 11.65        & 0.02                \\
+            11.70         & 0.15                 & 11.48        & 0.02                \\
+            15.19         & 0.19                 & 11.40        & 0.02                \\
+            19.8          & 0.3                  & 11.300       & 0.019               \\
+            24.2          & 0.3                  & 11.200       & 0.019               \\
+            26.6          & 0.3                  & 11.150       & 0.019               \\
+            28.9          & 0.4                  & 11.100       & 0.019               \\
+            30.9          & 0.4                  & 11.060       & 0.019               \\
+            34.0          & 0.4                  & 10.980       & 0.019               \\
+            38.5          & 0.5                  & 10.860       & 0.019               \\
+            43.5          & 0.5                  & 10.720       & 0.019               \\
+            48.4          & 0.6                  & 10.550       & 0.018               \\
+            52.0          & 0.6                  & 10.390       & 0.018               \\
+            54.5          & 0.6                  & 10.240       & 0.018               \\
+            55.6          & 0.6                  & 10.140       & 0.018               \\
+            56.6          & 0.6                  & 9.940        & 0.017               \\
+            57.1          & 0.7                  & 9.810        & 0.017               \\
+            57.2          & 0.7                  & 9.670        & 0.017               \\
+            57.3          & 0.7                  & 9.550        & 0.017               \\
+            57.3          & 0.7                  & 9.400        & 0.017               \\
+            57.2          & 0.7                  & 9.340        & 0.017               \\
+            57.3          & 0.7                  & 8.980        & 0.016               \\
+            57.8          & 0.7                  & 7.770        & 0.014               \\
+            58.2          & 0.7                  & 6.250        & 0.012               \\
+            58.7          & 0.7                  & 5.490        & 0.011               \\
+            59.5          & 0.7                  & 4.310        & 0.009               \\
+            61.2          & 1.0                  & 2.720        & 0.007               \\
+            63.3          & 1.0                  & 0.690        & 0.004               \\
+            65.5          & 1.0                  & 0.1200       & 0.0004              \\
+            65.4          & 1.0                  & 0.0000       & 0.0002              \\
         \end{tblr}
     \end{samepage}
 \end{table}
@@ -244,37 +300,36 @@ Anschließend werden die beiden Solarzellenmodule parallel verbunden und eine er
 \begin{table}[H]
     \centering
     \begin{samepage}
-        \caption[Messergebnisse Solarzelle parallel]{Gemessene Ströme $I$ und Spannungen $U$ der beiden Solarzellenmodule in Parallelschaltung zur Bestimmung der Kennlinie der Zelle. Der Verbraucherwiderstand wird mittels variablem Schiebewiderstand ($R_{\text{max}}=\SI{1}{\kilo\ohm}$) laufend verändert. Unsicherheiten: \textbf{TODO} % todo: Unsicherheiten
-        }
+        \caption[Messergebnisse Solarzelle parallel]{Gemessene Ströme $I$ und Spannungen $U$ der beiden Solarzellenmodule in Parallelschaltung zur Bestimmung der Kennlinie der Zelle. Der Verbraucherwiderstand wird mittels variablem Schiebewiderstand ($R_{\text{max}}=\SI{1}{\kilo\ohm}$) laufend verändert. Unsicherheiten laut Fluke-Datenblatt.}
         \label{tab:messergebnisse_solar_parallel}
-        \begin{tblr}{colspec={S[table-format=3.2]S[table-format=1.3]}, row{1}={guard}}
-            $I$ / \si{mA} & $U$ / \si{V} \\
-            0             & 5.793        \\
-            5.98          & 5.85         \\
-            7.82          & 5.834        \\
-            9.34          & 5.820        \\
-            11.49         & 5.81         \\
-            13.28         & 5.796        \\
-            18.55         & 5.765        \\
-            28.04         & 5.710        \\
-            36.25         & 5.66         \\
-            45.68         & 5.602        \\
-            53.68         & 5.552        \\
-            60.6          & 5.507        \\
-            67.1          & 5.46         \\
-            70.7          & 5.438        \\
-            78.6          & 5.386        \\
-            91.2          & 5.295        \\
-            98.1          & 5.245        \\
-            111.0         & 5.145        \\
-            127.4         & 5.00         \\
-            141.8         & 4.85         \\
-            150.2         & 4.77         \\
-            169           & 4.48         \\
-            183.5         & 3.85         \\
-            185           & 1.50         \\
-            189           & 0.02         \\
-            189           & 0            \\
+        \begin{tblr}{colspec={S[table-format=3.2]S[table-format=1.2]S[table-format=1.4]S[table-format=1.4]}, row{1}={guard}}
+            $I$ / \si{mA} & $\Delta I$ / \si{mA} & $U$ / \si{V} & $\Delta U$ / \si{V} \\
+            0.00          & 0.03                 & 5.793        & 0.011               \\
+            5.98          & 0.09                 & 5.850        & 0.011               \\
+            7.82          & 0.11                 & 5.834        & 0.011               \\
+            9.34          & 0.13                 & 5.820        & 0.011               \\
+            11.49         & 0.15                 & 5.810        & 0.011               \\
+            13.28         & 0.17                 & 5.796        & 0.011               \\
+            18.6          & 0.3                  & 5.765        & 0.011               \\
+            28.0          & 0.4                  & 5.710        & 0.011               \\
+            36.2          & 0.4                  & 5.660        & 0.011               \\
+            45.7          & 0.5                  & 5.602        & 0.011               \\
+            53.7          & 0.6                  & 5.552        & 0.011               \\
+            60.6          & 1.0                  & 5.507        & 0.011               \\
+            67.1          & 1.0                  & 5.460        & 0.011               \\
+            70.7          & 1.1                  & 5.438        & 0.011               \\
+            78.6          & 1.1                  & 5.386        & 0.011               \\
+            91.2          & 1.3                  & 5.295        & 0.010               \\
+            98.1          & 1.3                  & 5.245        & 0.010               \\
+            111.0         & 1.5                  & 5.145        & 0.010               \\
+            127.4         & 1.6                  & 5.000        & 0.010               \\
+            141.8         & 1.8                  & 4.850        & 0.010               \\
+            150.2         & 1.9                  & 4.770        & 0.010               \\
+            169           & 2                    & 4.480        & 0.009               \\
+            184           & 3                    & 3.850        & 0.008               \\
+            185           & 3                    & 1.500        & 0.005               \\
+            189           & 3                    & 0.0200       & 0.0003              \\
+            189           & 3                    & 0.0000       & 0.0002              \\
         \end{tblr}
     \end{samepage}
 \end{table}
@@ -284,18 +339,17 @@ Zu guter Letzt wird die Anordnung wieder seriell verschaltet und eine der beiden
 \begin{table}[H]
     \centering
     \begin{samepage}
-        \caption[Messergebnisse Solarzelle seriell]{Gemessene Ströme $I$ und Spannungen $U$ der beiden Solarzellenmodule in Serienschaltung, wobei eine der beiden Zellen vor dem einfallenden Licht abgeschirmt ist, zur Bestimmung der Kennlinie der Zelle. Der Verbraucherwiderstand wird mittels variablem Schiebewiderstand ($R_{\text{max}}=\SI{1}{\kilo\ohm}$) laufend verändert. Unsicherheiten: \textbf{TODO} % todo: Unsicherheiten
-        }
+        \caption[Messergebnisse Solarzelle seriell]{Gemessene Ströme $I$ und Spannungen $U$ der beiden Solarzellenmodule in Serienschaltung, wobei eine der beiden Zellen vor dem einfallenden Licht abgeschirmt ist, zur Bestimmung der Kennlinie der Zelle. Der Verbraucherwiderstand wird mittels variablem Schiebewiderstand ($R_{\text{max}}=\SI{1}{\kilo\ohm}$) laufend verändert. Unsicherheiten laut Fluke-Datenblatt.}
         \label{tab:messergebnisse_solar_seriell_abgeschirmt}
-        \begin{tblr}{colspec={S[table-format=1.2]S[table-format=2.3]}, row{1}={guard}}
-            $I$ / \si{mA} & $U$ / \si{V} \\
-            0             & 10.1         \\
-            2.93          & 2.86         \\
-            2.95          & 1.82         \\
-            2.96          & 1.1          \\
-            2.97          & 0.62         \\
-            2.99          & 0.472        \\
-            2.97          & 0            \\
+        \begin{tblr}{colspec={S[table-format=1.2]S[table-format=1.2]S[table-format=2.4]S[table-format=1.4]}, row{1}={guard}}
+            $I$ / \si{mA} & $\Delta I$ / \si{mA} & $U$ / \si{V} & $\Delta U$ / \si{V} \\
+            0.00          & 0.03                 & 10.100       & 0.018               \\
+            2.93          & 0.06                 & 2.860        & 0.007               \\
+            2.95          & 0.06                 & 1.820        & 0.005               \\
+            2.96          & 0.06                 & 1.100        & 0.004               \\
+            2.97          & 0.06                 & 0.620        & 0.003               \\
+            2.99          & 0.06                 & 0.4720       & 0.0010              \\
+            2.97          & 0.06                 & 0.0000       & 0.0002              \\
         \end{tblr}
     \end{samepage}
 \end{table}
@@ -303,11 +357,16 @@ Zu guter Letzt wird die Anordnung wieder seriell verschaltet und eine der beiden
 
 \subsection{Solarzelle mit Sonnensimulator}
 \label{subsec:durchfuehrung_solar_sonnensimulator}
+
 Für den zweiten Teilversuch mit Solarzellen wird nun der bereits aufgebaute und verkabelte Sonnensimulator verwendet. Beginnend mit einer Messung bei Dunkelheit wird die Dunkelkennlinie bestimmt. Naturgemäß muss man dazu die Blende am Sonnensimulator schließen, sodass in die ansonst auch vollkommen abgedunkelte Kammer kein Licht eindringen kann. Mittels des zur Verfügung gestellten Softwareprogramms \glq Kickstart \grq wird nun vollautomatisch die Kennlinie aufgenommen und abgespeichert.\\
 Schließlich wird die Hellkennlinie für zwei Bestrahlungsstärken: \SI{400}{\watt\per\meter\squared} und \SI{1000}{\watt\per\meter\squared} aufgenommen. Um sicherzustellen, dass die korrekte Bestrahlungsstärken eingestellt ist, wird diese mittels Powermeter gemessen. Der kreisrunde Sensor des Powermeter hat dabei eine Fläche von $A_{\text{PM}} = \SI{2.27(6)e-4}{m\squared}$ und die rechteckige Solarzelle eine Fläche von $A_{\text{SZ}} = \SI{6.5(5)e-4}{m\squared}$. Unter Annahme einer homogenen Ausleuchtung des Bereichs im Sonnensimulator kann nun mittels Powermetermessung ein Wert von \SI{0,09}{\watt} für \SI{400}{\watt\per\meter\squared} und \SI{0,23}{\watt} für \SI{1000}{\watt\per\meter\squared} ermessen werden. Nach dem jeweiligen Einstellen der Bestrahlungsstärken wird der Powermetersonsor durch die Solarzelle ersetzt und abermals eine Kennlinie aufgenommen. Dabei versteht sich, dass die Schiebeblende vollkommen geöffnet ist.
+
+
 \subsection{Wärmepumpe}
 \label{subsec:durchfuehrung_waermepumpe}
+
 Der zweite große Teil dieses Labortages beschäftigt sich mit einer Wärmepumpe in Form eines Kompressors, der Wärme aus einem Reservoir in ein anderes leitet. Da der Versuchsaufbau bereits parat steht (siehe \autoref{fig:waerme_aufbau}), wird lediglich der nebenstehende PC in Betrieb genommen und die Temperatursensoren werden verbunden und mittels Cassy Lab2 in Messbereitschaft versetzt. Bevor die Messung jedoch starten kann, werden die beiden Kübel rot und blau, respektive für warmes und kaltes Reservoir, mit ca. \SI{4}{\liter} Wasser gefüllt. Zeitgleich wird nun die Messung der Temperatur am PC und der Kompressor gestartet. Damit die Messung nicht durch Wärmekonvektion verfälscht wird und nicht zuletzt auch um Langeweile bei den Experimentierenden während der \SI{30}{\minute} langen Versuchsdauer vorzubeugen wird stets fleißig umgerührt (siehe Symbolbild in \ref{fig:umruehren}). Zu Beginn und anschließend im 5-minuten Takt werden zusätzlich die Drücke an den beiden Zubringerleitungen zu den Kompressoren gemessen. Die aufgezeichneten Temperaturdaten werden schließlich als \texttt{csv}-Datei abgespeichert, die Drücke ergeben sich zu den in \autoref{tab:waerme_druecke} aufgelisteten.
+%
 \begin{table}[H]
     \centering
     \begin{samepage}
@@ -325,6 +384,7 @@ Der zweite große Teil dieses Labortages beschäftigt sich mit einer Wärmepumpe
         \end{tblr}
     \end{samepage}
 \end{table}
+%
 \begin{figure}[H]
     \centering
     \begin{samepage}
@@ -334,14 +394,39 @@ Der zweite große Teil dieses Labortages beschäftigt sich mit einer Wärmepumpe
     \end{samepage}
 \end{figure}
 
+
+
 \section{Auswertung}
 \label{sec:auswertung}
 
+\subsection{Solarzelle mit Lampe}
+\label{subsec:auswertung_solar_lampe}
+
+\subsection{Solarzelle mit Sonnensimulator}
+\label{subsec:auswertung_solar_sonnensimulator}
+
+\subsection{Wärmepumpe}
+\label{subsec:auswertung_waermepumpe}
+
+Die von Cassy-Lab2 erhaltenen Daten zu den beiden Temperaturkurven werden eingelesen und in \autoref{fig:plot_waermepumpe} dargestellt.
+
+\begin{figure}[H]
+    \centering
+    \begin{samepage}
+        \includegraphics[width=\linewidth]{}
+        \caption[]{}
+        \label{fig:}
+    \end{samepage}
+\end{figure}
 
 
 \section{Diskussion}
-\label{sec:diskussion}
+% \label{sec:diskussion}
+\subsection{Solarzelle}
+\label{subsec:diskussion_solar}
 
+\subsection{Wärmepumpe}
+\label{subsec:diskussion_waermepumpe}
 
 
 \section{Zusammenfassung}
