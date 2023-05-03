@@ -41,22 +41,23 @@ for key in Data:
     Data[key] = Data[key].rename(columns={"I / mA":"I"," U / V":"U"})
     Data[key]["I"] = lt.unp.uarray(Data[key]["I"],getuncertainty(Data[key]["I"],voltage=False))
     Data[key]["U"] = lt.unp.uarray(Data[key]["U"],getuncertainty(Data[key]["U"]))
-    printlatextable(Data[key]["U"],Data[key]["I"])
+    # printlatextable(Data[key]["U"],Data[key]["I"])
 
 def plotUI(U,I,title):
     lt.plt_uplot(U,I, label="Messwerte")
     kurz_i = I[len(I)-1]
-    plt.errorbar(0,kurz_i.n, xerr=kurz_i.s, fmt="o", label="Kurzschlussstrom")
+    plt.errorbar(0,kurz_i.n, yerr=kurz_i.s, fmt="o", label="Kurzschlussstrom")
     leer_u = U[0]
-    plt.errorbar(leer_u.n,0, yerr=leer_u.s, fmt="o", label="Leerlaufspannung")
+    plt.errorbar(leer_u.n,0, xerr=leer_u.s, fmt="o", label="Leerlaufspannung")
     max_p_pos =  np.argmax(U*I)
     plt.errorbar(U[max_p_pos].n,I[max_p_pos].n, xerr=U[max_p_pos].s, yerr=I[max_p_pos].s, fmt="o", label="Maximale Leistung")
     plt.xlabel("U / V")
     plt.ylabel("I / mA")
-    plt.title(title)
+    # plt.title(title)
     plt.grid()
     plt.legend()
     plt.savefig(plot_root + "/" + title + "_UI_.png", bbox_inches="tight")
+    plt.savefig(plot_root + "/" + title + "_UI_.pdf", bbox_inches="tight")
     plt.cla()
 
 def uncstr(val,unit=None, round_ = 2):
@@ -78,9 +79,10 @@ def plotUP(I,U,P,title):
     plt.text(np.max(U).n*0.3,np.max(P).n*0.05, r"$P_{MPP}=$ " +uncstr(max_p,r"\watt")+ "\n" + r"$U_{MPP}=$ " +uncstr((U_max_p),r"\volt") + "\n" + r"$I_{MPP}=$ " +uncstr(I_max_p,r"\milli\ampere") + "\n" + r"FF = " +uncstr(füllfaktor),  bbox=dict(facecolor='beige', alpha=0.5))
     plt.xlabel("U / V")
     plt.ylabel("P / mW")
-    plt.title(title)
+    # plt.title(title)
     plt.grid()
     plt.savefig(plot_root + "/" + title + "_UP_.png", bbox_inches="tight")
+    plt.savefig(plot_root + "/" + title + "_UP_.pdf", bbox_inches="tight")
     plt.cla()
 
 
