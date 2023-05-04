@@ -1,5 +1,6 @@
 import labtool as lt
 import matplotlib as mpl
+from scipy.signal import savgol_filter
 
 mpl.use("agg")
 lt.plt_latex()
@@ -25,8 +26,14 @@ def plot_leistungszahl(data: lt.pd.DataFrame) -> None:
     m = rho * V  # kg
     P = 120  # W
 
-    data["T1"] = data["T1"] + 273.15  # °C -> K
-    data["T2"] = data["T2"] + 273.15  # °C -> K
+    data["T1"] = savgol_filter(data["T1"] + 273.15, 501, 5)  # °C -> K
+    data["T2"] = savgol_filter(data["T2"] + 273.15, 501, 5)  # °C -> K
+
+    fig, ax = lt.plt.subplots()
+    ax.plot(data["t"], data["T1"], "C0", label="$T_1$")
+    ax.plot(data["t"], data["T2"], "r", label="$T_2$")
+    fig.savefig("./3_Wirkungsgrad/latex/fig/plots/T_Verlauf_Test.pdf")
+    exit()
 
     dotT2 = lt.np.gradient(data["T2"], data["t"])
     dotQ = m * c * dotT2

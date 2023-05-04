@@ -359,7 +359,7 @@ Zu guter Letzt wird die Anordnung wieder seriell verschaltet und eine der beiden
 \label{subsec:durchfuehrung_solar_sonnensimulator}
 
 Für den zweiten Teilversuch mit Solarzellen wird nun der bereits aufgebaute und verkabelte Sonnensimulator verwendet. Beginnend mit einer Messung bei Dunkelheit wird die Dunkelkennlinie bestimmt. Naturgemäß muss man dazu die Blende am Sonnensimulator schließen, sodass in die ansonst auch vollkommen abgedunkelte Kammer kein Licht eindringen kann. Mittels des zur Verfügung gestellten Softwareprogramms \glq Kickstart \grq wird nun vollautomatisch die Kennlinie aufgenommen und abgespeichert.\\
-Schließlich wird die Hellkennlinie für zwei Bestrahlungsstärken: \SI{400}{\watt\per\meter\squared} und \SI{1000}{\watt\per\meter\squared} aufgenommen. Um sicherzustellen, dass die korrekte Bestrahlungsstärken eingestellt ist, wird diese mittels Powermeter gemessen. Der kreisrunde Sensor des Powermeter hat dabei eine Fläche von $A_{\text{PM}} = \SI{2.27(6)e-4}{m\squared}$ und die rechteckige Solarzelle eine Fläche von $A_{\text{SZ}} = \SI{6.5(5)e-4}{m\squared}$. Unter Annahme einer homogenen Ausleuchtung des Bereichs im Sonnensimulator kann nun mittels Powermetermessung ein Wert von \SI{0,09}{\watt} für \SI{400}{\watt\per\meter\squared} und \SI{0,23}{\watt} für \SI{1000}{\watt\per\meter\squared} ermessen werden. Nach dem jeweiligen Einstellen der Bestrahlungsstärken wird der Powermetersonsor durch die Solarzelle ersetzt und abermals eine Kennlinie aufgenommen. Dabei versteht sich, dass die Schiebeblende vollkommen geöffnet ist.
+Schließlich wird die Hellkennlinie für zwei Bestrahlungsstärken: \SI{400}{\watt\per\meter\squared} und \SI{1000}{\watt\per\meter\squared} aufgenommen. Um sicherzustellen, dass die korrekte Bestrahlungsstärken eingestellt ist, wird diese mittels Powermeter gemessen. Der kreisrunde Sensor des Powermeter hat dabei eine Fläche von $A_{\text{PM}} = \SI{2.27(6)e-4}{m\squared}$ und die rechteckige Solarzelle eine Fläche von $A_{\text{SZ}} = \SI{6.5(5)e-4}{m\squared}$. Unter Annahme einer homogenen Ausleuchtung des Bereichs im Sonnensimulator kann nun mittels Powermetermessung ein Wert von \SI{0,09}{\watt} für \SI{400(14)}{\watt\per\meter\squared} und \SI{0,23}{\watt} für \SI{1000(30)}{\watt\per\meter\squared} ermessen werden. Nach dem jeweiligen Einstellen der Bestrahlungsstärken wird der Powermetersonsor durch die Solarzelle ersetzt und abermals eine Kennlinie aufgenommen. Dabei versteht sich, dass die Schiebeblende vollkommen geöffnet ist.
 
 
 \subsection{Wärmepumpe}
@@ -414,7 +414,7 @@ Zur Auswertung zum Versuch mit den Solarzellen werden die jeweiligen Messreihen 
         \centering
         \includegraphics[width=\linewidth]{fig/plots/solar_seriell_UP_.pdf}
     \end{minipage}
-    \caption[I(U)-/P(U)-Kennlinie Serienschaltung Solarzelle]{I(U)-/P(U)-Kennlinie Serienschaltung zweier Solarzelle. Aus den Messwerten wurden der Kurzschlussstrom (links: orange), die Leerlaufspannung (links: grün), der maximale Leistungspunkt (links:rot, rechts: orange). Die maximale Leistung $P_{MPP}$, die Spannung $U_{MPP}$ und der Strom $I_{MPP}$ bei maximaler Leistung, sowie der Füllfaktor $FF$ der Zelle wurden aus den Messwerten berechnet.}
+    \caption[I(U)-/P(U)-Kennlinie Serienschaltung Solarzelle]{I(U)-/P(U)-Kennlinie Serienschaltung zweier Solarzelle. Aus den Messwerten werden der Kurzschlussstrom (links: orange), die Leerlaufspannung (links: grün), der maximale Leistungspunkt (links:rot, rechts: orange). Die maximale Leistung $P_{MPP}$, die Spannung $U_{MPP}$ und der Strom $I_{MPP}$ bei maximaler Leistung, sowie der Füllfaktor $FF$ der Zelle werden aus den Messwerten berechnet.}
     \label{fig:solar_seriell}
 \end{figure}
 \setcaphanging
@@ -431,7 +431,7 @@ Zur Auswertung zum Versuch mit den Solarzellen werden die jeweiligen Messreihen 
         \centering
         \includegraphics[width=\linewidth]{fig/plots/solar_parallel_UP_.pdf}
     \end{minipage}
-    \caption[I(U)-/P(U)-Kennlinie Parallelschaltung Solarzelle]{I(U)-/P(U)-Kennlinie Parallelschaltung zweier Solarzelle. Aus den Messwerten wurden der Kurzschlussstrom (links: orange), die Leerlaufspannung (links: grün), der maximale Leistungspunkt (links:rot, rechts: orange). Die maximale Leistung $P_{MPP}$, die Spannung $U_{MPP}$ und der Strom $I_{MPP}$ bei maximaler Leistung, sowie der Füllfaktor $FF$ der Zelle wurden aus den Messwerten berechnet.}
+    \caption[I(U)-/P(U)-Kennlinie Parallelschaltung Solarzelle]{I(U)-/P(U)-Kennlinie Parallelschaltung zweier Solarzelle. Aus den Messwerten werden der Kurzschlussstrom (links: orange), die Leerlaufspannung (links: grün), der maximale Leistungspunkt (links:rot, rechts: orange). Die maximale Leistung $P_{MPP}$, die Spannung $U_{MPP}$ und der Strom $I_{MPP}$ bei maximaler Leistung, sowie der Füllfaktor $FF$ der Zelle werden aus den Messwerten berechnet.}
     \label{fig:solar_parallel}
 \end{figure}
 \setcaphanging
@@ -448,14 +448,65 @@ Zur Auswertung zum Versuch mit den Solarzellen werden die jeweiligen Messreihen 
         \centering
         \includegraphics[width=\linewidth]{fig/plots/solar_solar_verdeckt_UP_.pdf}
     \end{minipage}
-    \caption[I(U)-/P(U)-Kennlinie Seriellschaltung -- abgedunkelt Solarzelle]{I(U)-/P(U)-Kennlinie Seriellschaltung zweier Solarzelle wobei eine abgedunkelt wurde. Aus den Messwerten wurden der Kurzschlussstrom (links: orange), die Leerlaufspannung (links: grün), der maximale Leistungspunkt (links:rot, rechts: orange). Die maximale Leistung $P_{MPP}$, die Spannung $U_{MPP}$ und der Strom $I_{MPP}$ bei maximaler Leistung, sowie der Füllfaktor $FF$ der Zelle wurden aus den Messwerten berechnet.}
+    \caption[I(U)-/P(U)-Kennlinie Seriellschaltung -- abgedunkelt Solarzelle]{I(U)-/P(U)-Kennlinie Seriellschaltung zweier Solarzelle wobei eine abgedunkelt wurde. Aus den Messwerten werden der Kurzschlussstrom (links: orange), die Leerlaufspannung (links: grün), der maximale Leistungspunkt (links:rot, rechts: orange). Die maximale Leistung $P_{MPP}$, die Spannung $U_{MPP}$ und der Strom $I_{MPP}$ bei maximaler Leistung, sowie der Füllfaktor $FF$ der Zelle werden aus den Messwerten berechnet.}
     \label{fig:solar_verdeckt}
 \end{figure}
 \setcaphanging
 
 \subsection{Solarzelle mit Sonnensimulator}
 \label{subsec:auswertung_solar_sonnensimulator}
+Die Diodencharakteristik wird im Folgendem ausgewertet. Die Gleichung nach Shockley welche prinzipiell implizite Korrekturterme beinhaltet ist in \autoref{eq:shockley} und \autoref{eq:shockley_beleuchtet} schon vereinfacht ohne diese Terme dargestellt. Erstere Gleichung wird zum fitten der Dunkelkennlinie und letztere zum fitten der Hellkennlinie hinzugezogen. Dabei werden die freien Parameter Sättigungsstrom $I_S$, Diodenfaktor $f$ und für die Hellkennlinie auch $I_{ph}$ der Photostrom ermittelt. Die Dunkelkennlinie ist in \autoref{fig:solar_dunkel}, die Hellkennlinie in \autoref{fig:solar_Hell_400} und \autoref{fig:solar_Hell_1000}, respektive für eine Bestrahlungsintensität von $\SI{400(13)}{\watt\per\meter\squared}$ und $\SI{1000(30)}{\watt\per\meter\squared}$.
+\todo{Nochmal drüber schaun ob Formfaktor stimmt und ob ma ned eine Größenordnung irgendwo daneben lieben. }
+\setcapindent{0pt}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.485\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/plots/dunkel_UI.pdf}
+    \end{minipage}%
+    \hspace*{\fill}
+    \begin{minipage}[t]{0.485\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/plots/dunkel_P.pdf}
+    \end{minipage}
+    \caption[I(U)-/P(U)-Dunkelkennlinie Solarzelle -- Sonnensimulator]{I(U)-/P(U)-Dunkelkennlinie der Solarzelle. Aus den Messwerten werden der Sättigungsstrom $I_S$, der Diodenfaktor $f$ sowie die maximale Leistung $P_{MPP}$, die Spannung $U_{MPP}$ und der Strom $I_{MPP}$ bei maximaler Leistung, die zugeführte Leistung $P_{zu}$ und der Wirkungsgrad $\eta$ der Zelle ermittelt. Für die Dunkelkennlinie ergibt sich naturgemäß ein $P_{zu}$ von 0 und somit kann $\eta$ nicht sinnvoll definiert werden und ist auf 0 gesetzt.}
+    \label{fig:solar_dunkel}
+\end{figure}
+\setcaphanging
 
+\setcapindent{0pt}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.485\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/plots/400_UI.pdf}
+    \end{minipage}%
+    \hspace*{\fill}
+    \begin{minipage}[t]{0.485\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/plots/400_P.pdf}
+    \end{minipage}
+    \caption[I(U)-/P(U)-Hellkennlinie Solarzelle -- Sonnensimulator]{I(U)-/P(U)-Hellkennlinie der Solarzelle mit einer Bestrahlungsintensität von $\SI{400(14)}{\watt\per\meter\squared}$. Aus den Messwerten werden der Sättigungsstrom $I_S$, der Diodenfaktor $f$, der Photostrom $I_{ph}$, sowie die maximale Leistung $P_{MPP}$, die Spannung $U_{MPP}$ und der Strom $I_{MPP}$ bei maximaler Leistung, die zugeführte Leistung $P_{zu}$ und der Wirkungsgrad $\eta$ der Zelle ermittelt.}
+    \label{fig:solar_Hell_400}
+\end{figure}
+\setcaphanging
+
+\setcapindent{0pt}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.485\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/plots/1000_UI.pdf}
+    \end{minipage}%
+    \hspace*{\fill}
+    \begin{minipage}[t]{0.485\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/plots/1000_P.pdf}
+    \end{minipage}
+    \caption[I(U)-/P(U)-Hellkennlinie Solarzelle -- Sonnensimulator]{I(U)-/P(U)-Hellkennlinie der Solarzelle mit einer Bestrahlungsintensität von $\SI{1000(30)}{\watt\per\meter\squared}$. Aus den Messwerten werden der Sättigungsstrom $I_S$, der Diodenfaktor $f$, der Photostrom $I_{ph}$, sowie die maximale Leistung $P_{MPP}$, die Spannung $U_{MPP}$ und der Strom $I_{MPP}$ bei maximaler Leistung, die zugeführte Leistung $P_{zu}$ und der Wirkungsgrad $\eta$ der Zelle ermittelt.}
+    \label{fig:solar_Hell_1000}
+\end{figure}
+\setcaphanging
 \subsection{Wärmepumpe}
 \label{subsec:auswertung_waermepumpe}
 
@@ -475,15 +526,76 @@ Die von Cassy-Lab2 erhaltenen Daten zu den beiden Temperaturkurven werden eingel
 % \label{sec:diskussion}
 \subsection{Solarzelle}
 \label{subsec:diskussion_solar}
-
+\subsubsection{Solarzelle mit Lampe}
+\label{subsubsec:diskussion_solar_lampe}
+Es konnte für eine Solarzelle in serieller, als auch paralleler Schaltung die I(U)- und P(U)-Kennlinie ermittelt werden, welche mit den erwarteten Kennlinie in guter Übereinstimmung steht. Dabei liefert die serielle Schaltung eine höhere Spannung bei niedrigerer Stromstärke, wohingegen die parallel Schaltung höheren Strom zu niedrigerer spannung liefert. Zudem konnte die Kennlinien auch für den Fall, bei dem eine der beiden Zellen verdeckt ist aufgenommen. Hier zeigt sich ein wesentlicher Abfall in der maximalen Leistung der Zellen, was wiederrum durch die verdunkelte Zelle, welche als schlechter Leiter und somit Widerstand wirkt, erklärt werden kann. \\
+%
+Für die Versuchsdurchführung ist weiter zu beachten, dass die Lampe schon einige Zeit eingeschaltet sein sollte, damit sich für die Lampe, als auch für die Solarzellen, eine gewisse konstante Temperatur eingestellt hat.\\
+%
+\subsubsection{Solarzelle mit Sonnensimulator}
+\label{subsubsec:diskussion_solar_sonnensimulator} 
+Mittels der vereinfachten Shockley Gleichung in \ref{eq:shockley} und \ref{eq:shockley_beleuchtet} entspricht der Fit nicht ganz dem Modell, welches implizite Korrekturen vorsieht. Jedoch konnte nichtsdestotrotz ein guter Fit erzielt werden. Abweichungen können zum Teil auf das vereinfachte Modell, jedoch auch auf gegebenheiten, wie die homogenität der Ausleuchtung und Messungenauigkeiten des Keithley Gerätes zurückgeführt werden.\\
 \subsection{Wärmepumpe}
 \label{subsec:diskussion_waermepumpe}
 
 
 \section{Zusammenfassung}
 \label{sec:zusammenfassung}
+Im Folgenden werden die Ergebnisse dieses Praktikumlabors nochmals Zusammengefasst. 
+\subsection{Solarzelle}
+\label{subsec:zusammenfassung_solar}
+\paragraph{Serienschaltung zweier Solarzellen}
+\begin{itemize}
+    \item $P_{MPP} = \SI{564(6)}{\watt}$
+    \item $U_{MPP} = \SI{10,14(2)}{\volt}$
+    \item $I_{MPP} = \SI{55,6(6)}{\milli\ampere}$
+    \item $U_{L} = \SI{11,65(2)}{\volt}$
+    \item $I_{K} = \SI{65,4(10)}{\milli\ampere}$
+    \item $FF = \num{0,74(1)}$
+\end{itemize}
+\paragraph{Parallelschaltung zweier Solarzellen}
+\begin{itemize}
+    \item $P_{MPP} = \SI{757(9)}{\watt}$
+    \item $U_{MPP} = \SI{4,48(1)}{\volt}$
+    \item $I_{MPP} = \SI{169(2)}{\milli\ampere}$
+    \item $U_{L} = \SI{5,792(11)}{\volt}$
+    \item $I_{K} = \SI{189(3)}{\milli\ampere}$
+    \item $FF = \num{0,69(1)}$
+\end{itemize}
+\paragraph{Serienschaltung zweier Solarzellen (wobei eine verdunkelt ist)}
+\begin{itemize}
+    \item $P_{MPP} = \SI{8,38(17)}{\watt}$
+    \item $U_{MPP} = \SI{2,86(2)}{\volt}$
+    \item $I_{MPP} = \SI{2,93(6)}{\milli\ampere}$
+    \item $U_{L} = \SI{10,100(18)}{\volt}$
+    \item $I_{K} = \SI{2,97(6)}{\milli\ampere}$
+    \item $FF = \num{0,28(1)}$
+\end{itemize}
+\paragraph{Dunkelkennlinie}
+\begin{itemize}
+    \item $f = \num{1,9(7)}$
+\end{itemize}
+\todo{DES da unten noch richtig hinschreiben}
+\paragraph{Hellkennlinie bei $\SI{400(13)}{\watt\per\square\meter}$}
+\begin{itemize}
+    \item $f = \num{0,028(7)}$
+    \item $P_{MPP} = \SI{8,38(17)}{\watt}$
+    \item $U_{MPP} = \SI{2,86(2)}{\volt}$
+    \item $I_{MPP} = \SI{2,93(6)}{\ampere}$
+    \item $FF = \num{0,28(1)}$
+\end{itemize}
+\paragraph{Hellkennlinie bei $\SI{1000(30)}{\watt\per\square\meter}$}
 
-
+\begin{itemize}
+    \item $I_{S} = \SI{1,0(12)e-7}{\ampere}$
+    \item $f = \num{1,9(7)}$
+    \item $P_{MPP} = \SI{8,38(17)}{\watt}$
+    \item $U_{MPP} = \SI{2,86(2)}{\volt}$
+    \item $I_{MPP} = \SI{2,93(6)}{\ampere}$
+    \item $FF = \num{0,28(1)}$
+\end{itemize}
+\subsection{Wärmepumpe}
+\label{subsec:zusammenfassung_waermepumpe}
 \clearpage
 % Literaturverzeichnis
 \printbibliography

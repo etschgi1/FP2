@@ -7,6 +7,7 @@ import lmfit
 
 import labtool as lt
 lt.plt_latex()
+plt.rcParams.update({'font.size': 14})
 
 dunkeldata = pd.read_csv("3_Wirkungsgrad/data/Versuch 2/dunkel_mod_final.csv", sep=",", decimal=".")
 data400 =  pd.read_csv("3_Wirkungsgrad/data/Versuch 2/400_mod_final.csv", sep=",", decimal=".")
@@ -19,7 +20,7 @@ T = 295 # K
 def darkfit(u,I_s,f):
     return I_s * (np.exp(e*u/(f*k_b*T))-1) 
 def hellfit(u,I_s,f,I_ph):
-    return I_s * (np.exp(e*u/(f*k_b*T))-1) + I_ph
+    return I_s * (np.exp(e*u/(f*k_b*T))-1) - I_ph
 def residual(params, x, y,func):
     _,vals = params.valuesdict().keys(), params.valuesdict().values()
     return func(x, *vals) - y
@@ -32,7 +33,7 @@ def uncstr(val,unit=None):
 def plotkennlinie(data, name):
     fig, ax = plt.subplots()
     cutoffI = [x for x in data["I"] if round(x,3) < 1.0]
-    ax.plot(data["V"][:len(cutoffI)], cutoffI, "x",label="Messwerte")
+    ax.plot(data["V"][:len(cutoffI)], cutoffI, ".",linestyle="--",label="Messwerte")
     ax.set_xlabel("U / V")
     ax.set_ylabel("I / A")
     ax.grid()
@@ -48,11 +49,13 @@ def plotkennlinie(data, name):
         I_S = lt.u.ufloat(result["I_s"].value, result["I_s"].stderr)
         f = lt.u.ufloat(result["f"].value, result["f"].stderr)
         ax.text(-0.8,0.1, r"$I_s = $" + uncstr(I_S, "A") + "\n" + r"$f = $" + uncstr(f),bbox=dict(facecolor='beige', alpha=0.5))
+        ax.set_title("I(U) Kennlinie")
     else:
         params, error = opt.curve_fit(hellfit,data["V"][:len(cutoffI)],data["I"][:len(cutoffI)], p0=[1.41e-7,1.5,1e-7])
         I_S, I_ph, f = lt.u.ufloat(params[0], error[0][0]), lt.u.ufloat(params[1], error[1][1]), lt.u.ufloat(params[2], error[2][2])
         ax.text(-0.8,0.1, r"$I_s = $" + uncstr(I_S, "A") + "\n" +r"$I_{ph} = $" + uncstr(I_ph, "A") +"\n" + r"$f = $" + uncstr(f),bbox=dict(facecolor='beige', alpha=0.5))
         ax.plot(data["V"][:len(cutoffI)], hellfit(data["V"][:len(cutoffI)], *params), label="Fit")
+        ax.set_title("I(U) Kennlinie")
     plt.savefig(f"3_Wirkungsgrad/latex/fig/plots/{name}_UI.png", bbox_inches="tight")
     plt.savefig(f"3_Wirkungsgrad/latex/fig/plots/{name}_UI.pdf", bbox_inches="tight")
 
@@ -62,7 +65,7 @@ def plotLeistung(data,name,P_zu):
     data["I"] = data["I"][:len(cutoffI)]
     data["V"] = data["V"][:len(cutoffI)]
     fig, ax = plt.subplots()
-    ax.plot(data["V"], data["I"]*data["V"], label="Messwerte")
+    ax.plot(data["V"], data["I"]*data["V"],".",linestyle="--", label="Messwerte")
     ax.set_xlabel("U / V")
     ax.set_ylabel("P / W")
     #mark min
@@ -77,8 +80,9 @@ def plotLeistung(data,name,P_zu):
         eta = lt.u.ufloat(0,0)
         P_zu = lt.u.ufloat(0,0)
     ax.legend()
-    ax.text(-0.8,0.1, r"$P_{max} = $" + uncstr(minP_val, "W") + "\n" +r"$U_{max} = $" + uncstr(V_min, "V") +"\n" + r"$I_{max} = $" + uncstr(I_min, "A")+"\n" + r"$P_{zu} = $" + uncstr(P_zu)+"\n" + r"$\eta = $" + uncstr(eta) ,bbox=dict(facecolor='beige', alpha=0.5))
+    ax.text(-0.8,0.1, r"$P_{MPP} = $" + uncstr(minP_val, "W") + "\n" +r"$U_{MPP} = $" + uncstr(V_min, "V") +"\n" + r"$I_{MPP} = $" + uncstr(I_min, "A")+"\n" + r"$P_{zu} = $" + uncstr(P_zu)+"\n" + r"$\eta = $" + uncstr(eta) ,bbox=dict(facecolor='beige', alpha=0.5))
     ax.grid()
+    ax.set_title("Leistungskennlinie")
     plt.savefig(f"3_Wirkungsgrad/latex/fig/plots/{name}_P.png", bbox_inches="tight")
     plt.savefig(f"3_Wirkungsgrad/latex/fig/plots/{name}_P.pdf", bbox_inches="tight")
 

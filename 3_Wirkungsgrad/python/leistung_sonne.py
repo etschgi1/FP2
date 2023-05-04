@@ -8,8 +8,9 @@ def area(d):
     return np.pi * d**2 / 4
 
 
-goal = 1000  # W/m²
+goal = 400  # W/m²
 factor = 0.1
 
 print(goal * area(diameter))
 print(goal * area(diameter) / factor)
+
