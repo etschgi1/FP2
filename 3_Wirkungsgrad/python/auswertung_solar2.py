@@ -52,7 +52,7 @@ def plotkennlinie(data, name):
         ax.set_title("I(U) Kennlinie")
     else:
         params, error = opt.curve_fit(hellfit,data["V"][:len(cutoffI)],data["I"][:len(cutoffI)], p0=[1.41e-7,1.5,1e-7])
-        I_S, I_ph, f = lt.u.ufloat(params[0], error[0][0]), lt.u.ufloat(params[1], error[1][1]), lt.u.ufloat(params[2], error[2][2])
+        I_S, f,I_ph = lt.u.ufloat(params[0], error[0][0]), lt.u.ufloat(params[1], error[1][1]), lt.u.ufloat(params[2], error[2][2])
         ax.text(-0.8,0.1, r"$I_s = $" + uncstr(I_S, "A") + "\n" +r"$I_{ph} = $" + uncstr(I_ph, "A") +"\n" + r"$f = $" + uncstr(f),bbox=dict(facecolor='beige', alpha=0.5))
         ax.plot(data["V"][:len(cutoffI)], hellfit(data["V"][:len(cutoffI)], *params), label="Fit")
         ax.set_title("I(U) Kennlinie")
@@ -75,12 +75,12 @@ def plotLeistung(data,name,P_zu):
     minP_val = I_min * V_min
     ax.plot(data["V"][minP], data["I"][minP]*data["V"][minP], "x",label="Maximale Leistung")
     if P_zu != 0:
-        eta = minP_val/P_zu
+        eta = -minP_val/P_zu
     else:
         eta = lt.u.ufloat(0,0)
         P_zu = lt.u.ufloat(0,0)
     ax.legend()
-    ax.text(-0.8,0.1, r"$P_{MPP} = $" + uncstr(minP_val, "W") + "\n" +r"$U_{MPP} = $" + uncstr(V_min, "V") +"\n" + r"$I_{MPP} = $" + uncstr(I_min, "A")+"\n" + r"$P_{zu} = $" + uncstr(P_zu)+"\n" + r"$\eta = $" + uncstr(eta) ,bbox=dict(facecolor='beige', alpha=0.5))
+    ax.text(-0.8,0.1, r"$P_{MPP} = $" + uncstr(minP_val, "W") + "\n" +r"$U_{MPP} = $" + uncstr(V_min, "V") +"\n" + r"$I_{MPP} = $" + uncstr(I_min, "A")+"\n" + r"$P_{zu} = $" + uncstr(P_zu, "W")+"\n" + r"$\eta = $" + uncstr(eta) ,bbox=dict(facecolor='beige', alpha=0.5))
     ax.grid()
     ax.set_title("Leistungskennlinie")
     plt.savefig(f"3_Wirkungsgrad/latex/fig/plots/{name}_P.png", bbox_inches="tight")

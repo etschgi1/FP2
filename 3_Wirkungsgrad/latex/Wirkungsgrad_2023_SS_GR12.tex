@@ -456,7 +456,6 @@ Zur Auswertung zum Versuch mit den Solarzellen werden die jeweiligen Messreihen 
 \subsection{Solarzelle mit Sonnensimulator}
 \label{subsec:auswertung_solar_sonnensimulator}
 Die Diodencharakteristik wird im Folgendem ausgewertet. Die Gleichung nach Shockley welche prinzipiell implizite Korrekturterme beinhaltet ist in \autoref{eq:shockley} und \autoref{eq:shockley_beleuchtet} schon vereinfacht ohne diese Terme dargestellt. Erstere Gleichung wird zum fitten der Dunkelkennlinie und letztere zum fitten der Hellkennlinie hinzugezogen. Dabei werden die freien Parameter Sättigungsstrom $I_S$, Diodenfaktor $f$ und für die Hellkennlinie auch $I_{ph}$ der Photostrom ermittelt. Die Dunkelkennlinie ist in \autoref{fig:solar_dunkel}, die Hellkennlinie in \autoref{fig:solar_Hell_400} und \autoref{fig:solar_Hell_1000}, respektive für eine Bestrahlungsintensität von $\SI{400(13)}{\watt\per\meter\squared}$ und $\SI{1000(30)}{\watt\per\meter\squared}$.
-\todo{Nochmal drüber schaun ob Formfaktor stimmt und ob ma ned eine Größenordnung irgendwo daneben lieben. }
 \setcapindent{0pt}
 \begin{figure}[H]
     \centering
@@ -578,21 +577,19 @@ Im Folgenden werden die Ergebnisse dieses Praktikumlabors nochmals Zusammengefas
 \todo{DES da unten noch richtig hinschreiben}
 \paragraph{Hellkennlinie bei $\SI{400(13)}{\watt\per\square\meter}$}
 \begin{itemize}
-    \item $f = \num{0,028(7)}$
-    \item $P_{MPP} = \SI{8,38(17)}{\watt}$
-    \item $U_{MPP} = \SI{2,86(2)}{\volt}$
-    \item $I_{MPP} = \SI{2,93(6)}{\ampere}$
-    \item $FF = \num{0,28(1)}$
+    \item $f = \num{3,372(5)}$
+    \item $P_{MPP} = \SI{-0,0106(11)}{\watt}$
+    \item $U_{MPP} = \SI{0,46(4)}{\volt}$
+    \item $I_{MPP} = \SI{-0,0231(17)}{\ampere}$
+    \item $\eta = \num{0,041(5)}$
 \end{itemize}
 \paragraph{Hellkennlinie bei $\SI{1000(30)}{\watt\per\square\meter}$}
-
 \begin{itemize}
-    \item $I_{S} = \SI{1,0(12)e-7}{\ampere}$
-    \item $f = \num{1,9(7)}$
-    \item $P_{MPP} = \SI{8,38(17)}{\watt}$
-    \item $U_{MPP} = \SI{2,86(2)}{\volt}$
-    \item $I_{MPP} = \SI{2,93(6)}{\ampere}$
-    \item $FF = \num{0,28(1)}$
+    \item $f = \num{3,350(5)}$
+    \item $P_{MPP} = \SI{-0,0075(8)}{\watt}$
+    \item $U_{MPP} = \SI{0,46(4)}{\volt}$
+    \item $I_{MPP} = \SI{-0,0162(12)}{\ampere}$
+    \item $\eta = \num{0,0116(14)}$
 \end{itemize}
 \subsection{Wärmepumpe}
 \label{subsec:zusammenfassung_waermepumpe}
