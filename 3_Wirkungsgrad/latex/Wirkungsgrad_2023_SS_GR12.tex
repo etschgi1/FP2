@@ -156,7 +156,7 @@ Der Wärmestrom $\dot{Q}$ lässt sich dabei nach der folgenden Formel berechnen:
     \dot{Q} = c \cdot m \cdot \dot{T},
 \end{equation}
 %
-wobei $c$ die spezifische Wärmekapazität von Wasser und $m$ die Masse des Wassers darstellt. Man definiert nun noch den Gütegrad $\eta$ einer Wärmepumpe als Verhältnis der Leistungszahl $\epsilon$ der Wärmepumpe zur theoretisch maximal erreichbaren Leistungszahl, der Leistungszahl des Carnot-Prozesses $\epsilon_{\text{max}} = \frac{T_2}{T_2-T_1}$.
+wobei $c$ die spezifische Wärmekapazität von Wasser und $m$ die Masse des Wassers darstellt. Man definiert nun noch den Gütegrad $\eta$ einer Wärmepumpe als Verhältnis der Leistungszahl $\epsilon$ der Wärmepumpe zur theoretisch maximal erreichbaren Leistungszahl, der Leistungszahl des Carnot-Prozesses $\epsilon_{\text{max}} = \frac{T_h}{T_h-T_k}$. Dabei beschreibt $T_h$ die Temperatur des warmen Reservoirs und $T_k$ die Temperatur des kalten Reservoirs. Der Gütegrad ist also definiert als:
 %
 \begin{equation}
     \label{eq:guetegrad}
@@ -401,7 +401,7 @@ Der zweite große Teil dieses Labortages beschäftigt sich mit einer Wärmepumpe
 
 \subsection{Solarzelle mit Lampe}
 \label{subsec:auswertung_solar_lampe}
-Zur Auswertung zum Versuch mit den Solarzellen werden die jeweiligen Messreihen in einem I(U)- sowie einem P(U)-Diagramm dargestellt. Aus den Messdaten wird der Punkt der maximalen Leistung $P_{MPP}$, die Spannung $U_{MPP}$ und der Strom $I_{MPP}$ bei maximaler Leistung, sowie der Füllfaktor $FF$ der Zelle errechnet. Die Ergebnisse sind für Seriellschaltung in \autoref{fig:solar_seriell} und für Parallelschaltung in \autoref{fig:solar_parallel} dargestellt. Zudem sind die Werte für den Versuch mit einer verdeckten Zelle in \autoref{fig:solar_verdeckt} abgebildet. 
+Zur Auswertung zum Versuch mit den Solarzellen werden die jeweiligen Messreihen in einem I(U)- sowie einem P(U)-Diagramm dargestellt. Aus den Messdaten wird der Punkt der maximalen Leistung $P_{MPP}$, die Spannung $U_{MPP}$ und der Strom $I_{MPP}$ bei maximaler Leistung, sowie der Füllfaktor $FF$ der Zelle errechnet. Die Ergebnisse sind für Seriellschaltung in \autoref{fig:solar_seriell} und für Parallelschaltung in \autoref{fig:solar_parallel} dargestellt. Zudem sind die Werte für den Versuch mit einer verdeckten Zelle in \autoref{fig:solar_verdeckt} abgebildet.
 \setcapindent{0pt}
 \begin{figure}[H]
     \centering
@@ -532,7 +532,7 @@ Es konnte für eine Solarzelle in serieller, als auch paralleler Schaltung die I
 Für die Versuchsdurchführung ist weiter zu beachten, dass die Lampe schon einige Zeit eingeschaltet sein sollte, damit sich für die Lampe, als auch für die Solarzellen, eine gewisse konstante Temperatur eingestellt hat.\\
 %
 \subsubsection{Solarzelle mit Sonnensimulator}
-\label{subsubsec:diskussion_solar_sonnensimulator} 
+\label{subsubsec:diskussion_solar_sonnensimulator}
 Mittels der vereinfachten Shockley Gleichung in \ref{eq:shockley} und \ref{eq:shockley_beleuchtet} entspricht der Fit nicht ganz dem Modell, welches implizite Korrekturen vorsieht. Jedoch konnte nichtsdestotrotz ein guter Fit erzielt werden. Abweichungen können zum Teil auf das vereinfachte Modell, jedoch auch auf gegebenheiten, wie die homogenität der Ausleuchtung und Messungenauigkeiten des Keithley Gerätes zurückgeführt werden.\\
 \subsection{Wärmepumpe}
 \label{subsec:diskussion_waermepumpe}
@@ -540,7 +540,7 @@ Mittels der vereinfachten Shockley Gleichung in \ref{eq:shockley} und \ref{eq:sh
 
 \section{Zusammenfassung}
 \label{sec:zusammenfassung}
-Im Folgenden werden die Ergebnisse dieses Praktikumlabors nochmals Zusammengefasst. 
+Im Folgenden werden die Ergebnisse dieses Praktikumlabors nochmals Zusammengefasst.
 \subsection{Solarzelle}
 \label{subsec:zusammenfassung_solar}
 \paragraph{Serienschaltung zweier Solarzellen}
