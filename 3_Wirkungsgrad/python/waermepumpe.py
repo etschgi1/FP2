@@ -17,6 +17,11 @@ def plot_verlauf(data: lt.pd.DataFrame) -> None:
     ax.grid()
     ax.legend()
 
+    print(f"T_h_start:\t{data['T2'].iloc[0]}")
+    print(f"T_k_start:\t{data['T1'].iloc[0]}")
+    print(f"T_h_end:\t{data['T2'].iloc[-1]}")
+    print(f"T_k_end:\t{data['T1'].iloc[-1]}")
+
     fig.savefig("./3_Wirkungsgrad/latex/fig/plots/T_Verlauf.pdf")
 
 
@@ -127,10 +132,9 @@ def main() -> None:
         header=0,
         names=["t", "T1", "T2"],
     )
-    # plot_verlauf(data)
-    T_diff, epsilon = plot_leistungszahl(data)
-    plot_guetegrad(data, T_diff, epsilon)
-    # test_filter2(data, epsilon)
+    plot_verlauf(data)
+    # T_diff, epsilon = plot_leistungszahl(data)
+    # plot_guetegrad(data, T_diff, epsilon)
 
 
 if __name__ == "__main__":
