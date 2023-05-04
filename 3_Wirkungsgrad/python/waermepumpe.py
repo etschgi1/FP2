@@ -19,8 +19,40 @@ def plot_verlauf(data: lt.pd.DataFrame) -> None:
     fig.savefig("./3_Wirkungsgrad/latex/fig/plots/T_Verlauf.pdf")
 
 
-def plot_leistungszahl(data: lt.pd.DataFrame) -> None:
-    c = 4.184e3  # J / (kg * K)
+def test_filter(data: lt.pd.DataFrame) -> None:
+    data["T1"] += 273.15
+    data["T2"] += 273.15
+    T1_smoothed = savgol_filter(data["T1"], 101, 7)
+    T2_smoothed = savgol_filter(data["T2"], 401, 5)
+
+    dotT2 = lt.np.gradient(T2_smoothed, data["t"])
+    dotT2_savgol = savgol_filter(data["T2"], 301, 4, deriv=1)
+    dotQ = 4190 * 4 * dotT2
+    epsilon = dotQ / 120
+
+    T_diff = savgol_filter(data["T2"] - data["T1"], 201, 3)
+    T_diff_pre_smoothed = T2_smoothed - T1_smoothed  # type: ignore
+
+    fig, ax = lt.plt.subplots()
+    # ax.plot(data["t"], data["T2"], label="T2")
+    # ax.plot(data["t"], dotT2_gradient_unsmoothed, label="dotT2_gradient_unsmoothed")
+    # ax.plot(data["t"], dotT2, label="dotT2_gradient")
+    # ax.plot(data["t"], dotT2_savgol, label="dotT2_savgol")
+    # ax.plot(data["t"], data["T1"], label="T1")
+    # ax.plot(data["t"], T2_smoothed, label="T2 smoothed")
+    # ax.plot(data["t"], T1_smoothed, label="T1 smoothed")
+    ax.plot(data["t"], data["T2"] - data["T1"], label="actual T_diff")
+    ax.plot(data["t"], T_diff, label="T_diff")
+    # ax.plot(data["t"], T_diff_pre_smoothed, label="T_diff pre-smoothed")
+    ax.set_xlabel(r"$\Delta T$ / °C")
+    ax.set_ylabel(r"$\epsilon$ / 1")
+    ax.legend()
+    ax.grid()
+    fig.savefig("./3_Wirkungsgrad/latex/fig/plots/T_Verlauf_Test.pdf")
+
+
+def plot_leistungszahl(data: lt.pd.DataFrame) -> tuple[NDArray, NDArray]:
+    c = 4184  # J / (kg * K)
     rho = 997  # kg / m^3
     V = 4e-3  # m^3
     m = rho * V  # kg
@@ -35,15 +67,39 @@ def plot_leistungszahl(data: lt.pd.DataFrame) -> None:
     fig.savefig("./3_Wirkungsgrad/latex/fig/plots/T_Verlauf_Test.pdf")
     exit()
 
-    dotT2 = lt.np.gradient(data["T2"], data["t"])
-    dotQ = m * c * dotT2
+    dotT2 = savgol_filter(data["T2"], 301, 4, deriv=1)
+    dotQ = c * m * dotT2  # type: ignore
     epsilon = dotQ / P
 
-    delta_T = lt.np.diff(data["T2"])
+    fig, ax = lt.plt.subplots()
+    ax.plot(T_diff, epsilon)
+    ax.set_xlabel(r"$\Delta T$ / °C")
+    ax.set_ylabel(r"$\epsilon$ / 1")
+    ax.set_title("Leistungszahl der Wärmepumpe")
+    ax.grid()
+
+    fig.savefig("./3_Wirkungsgrad/latex/fig/plots/leistungszahl.pdf")
+
+    return T_diff, epsilon
+
+
+def plot_guetegrad(data: lt.pd.DataFrame, T_diff: NDArray, epsilon: NDArray) -> None:
+    data["T1"] += 273.15
+    data["T2"] += 273.15
+    T_k = lt.np.min(data["T1"])
+    T_h = lt.np.max(data["T2"])
+
+    data["T1"] += 273.15  # °C -> K
+    data["T2"] += 273.15  # °C -> K
+    T_diff = savgol_filter(data["T2"] - data["T1"], 201, 3)
+
+    dotT2 = savgol_filter(data["T2"], 301, 4, deriv=1)
+    dotQ = c * m * dotT2  # type: ignore
+    epsilon = dotQ / P
 
     fig, ax = lt.plt.subplots()
-    ax.plot(delta_T, epsilon[:-1])
-    ax.set_xlabel(r"$\Delta T$ / K")
+    ax.plot(T_diff, epsilon)
+    ax.set_xlabel(r"$\Delta T$ / °C")
     ax.set_ylabel(r"$\epsilon$ / 1")
     ax.set_title("Leistungszahl der Wärmepumpe")
     ax.grid()
@@ -60,7 +116,8 @@ def main() -> None:
         names=["t", "T1", "T2"],
     )
     # plot_verlauf(data)
-    plot_leistungszahl(data)
+    T_diff, epsilon = plot_leistungszahl(data)
+    # test_filter(data)
 
 
 if __name__ == "__main__":
