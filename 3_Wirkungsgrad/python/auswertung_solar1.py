@@ -4,7 +4,11 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 lt.plt_latex() 
-
+#set fontsize bigger
+plt.rcParams.update({'font.size': 14})
+NOSAVE = False
+if NOSAVE:
+    print("!!!!!!!!!!!!!!!No save mode")
 #daten von files einlesen
 data_root = "3_Wirkungsgrad/data/Versuch 1"
 plot_root = "3_Wirkungsgrad/latex/fig/plots"
@@ -41,10 +45,10 @@ for key in Data:
     Data[key] = Data[key].rename(columns={"I / mA":"I"," U / V":"U"})
     Data[key]["I"] = lt.unp.uarray(Data[key]["I"],getuncertainty(Data[key]["I"],voltage=False))
     Data[key]["U"] = lt.unp.uarray(Data[key]["U"],getuncertainty(Data[key]["U"]))
-    # printlatextable(Data[key]["U"],Data[key]["I"])
+    printlatextable(Data[key]["U"],Data[key]["I"])
 
 def plotUI(U,I,title):
-    lt.plt_uplot(U,I, label="Messwerte")
+    lt.plt_uplot(U,I,".",linestyle="--", label="Messwerte")
     kurz_i = I[len(I)-1]
     plt.errorbar(0,kurz_i.n, yerr=kurz_i.s, fmt="o", label="Kurzschlussstrom")
     leer_u = U[0]
@@ -53,11 +57,12 @@ def plotUI(U,I,title):
     plt.errorbar(U[max_p_pos].n,I[max_p_pos].n, xerr=U[max_p_pos].s, yerr=I[max_p_pos].s, fmt="o", label="Maximale Leistung")
     plt.xlabel("U / V")
     plt.ylabel("I / mA")
-    # plt.title(title)
+    plt.title("I(U)-Kennlinie")
     plt.grid()
     plt.legend()
-    plt.savefig(plot_root + "/" + title + "_UI_.png", bbox_inches="tight")
-    plt.savefig(plot_root + "/" + title + "_UI_.pdf", bbox_inches="tight")
+    if not NOSAVE:
+        plt.savefig(plot_root + "/" + title + "_UI_.png", bbox_inches="tight")
+        plt.savefig(plot_root + "/" + title + "_UI_.pdf", bbox_inches="tight")
     plt.cla()
 
 def uncstr(val,unit=None, round_ = 2):
@@ -66,7 +71,7 @@ def uncstr(val,unit=None, round_ = 2):
     return "$("+str(round(val.n,round_)) + r"\pm" + str(round(val.s,round_))+")$"
 
 def plotUP(I,U,P,title):
-    lt.plt_uplot(U,P, label="Messwerte")
+    lt.plt_uplot(U,P,".",linestyle="--", label="Messwerte")
     max_p_pos = np.argmax(P)
     plt.errorbar(U[max_p_pos].n,P[max_p_pos].n, xerr=U[max_p_pos].s, yerr=P[max_p_pos].s, fmt="o", label="Maximale Leistung")
     max_p = P[max_p_pos]
@@ -76,13 +81,19 @@ def plotUP(I,U,P,title):
     leer_u = U[0]
     füllfaktor = fuellfaktor(I_max_p,U_max_p,kurz_i,leer_u)
     # textbox with max_p U_max_p, I_max_p, füllfaktor in light beige
-    plt.text(np.max(U).n*0.3,np.max(P).n*0.05, r"$P_{MPP}=$ " +uncstr(max_p,r"\watt")+ "\n" + r"$U_{MPP}=$ " +uncstr((U_max_p),r"\volt") + "\n" + r"$I_{MPP}=$ " +uncstr(I_max_p,r"\milli\ampere") + "\n" + r"FF = " +uncstr(füllfaktor),  bbox=dict(facecolor='beige', alpha=0.5))
+    if title == "solar_solar_verdeckt":
+        x_pos = np.max(U).n*0.15
+    else:
+        x_pos = np.max(U).n*0.4
+    plt.text(x_pos,np.max(P).n*0.05, r"$P_{MPP}=$ " +uncstr(max_p,r"\watt")+ "\n" + r"$U_{MPP}=$ " +uncstr((U_max_p),r"\volt") + "\n" + r"$I_{MPP}=$ " +uncstr(I_max_p,r"\milli\ampere") + "\n" + r"FF = " +uncstr(füllfaktor),  bbox=dict(facecolor='beige', alpha=0.5))
     plt.xlabel("U / V")
     plt.ylabel("P / mW")
-    # plt.title(title)
+    plt.title("Leistungskennlinie")
+    plt.legend()
     plt.grid()
-    plt.savefig(plot_root + "/" + title + "_UP_.png", bbox_inches="tight")
-    plt.savefig(plot_root + "/" + title + "_UP_.pdf", bbox_inches="tight")
+    if not NOSAVE:
+        plt.savefig(plot_root + "/" + title + "_UP_.png", bbox_inches="tight")
+        plt.savefig(plot_root + "/" + title + "_UP_.pdf", bbox_inches="tight")
     plt.cla()
 
 

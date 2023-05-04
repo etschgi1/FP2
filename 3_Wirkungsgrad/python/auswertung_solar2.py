@@ -87,6 +87,6 @@ solarcell_area = lt.u.ufloat(38e-3,1e-3)*lt.u.ufloat(17e-3,1e-3)
 P_ein = [0,400*solarcell_area, 1000*solarcell_area] # W
 for data,name,p_zu in zip([dunkeldata, data400, data1000], ["dunkel", "400", "1000"],P_ein):
     data.rename(columns={"Smu1.Time[1][1]":"t", "Smu1.V[1][1]":"V", "Smu1.I[1][1]":"I"}, inplace=True)
-    # plotkennlinie(data, name)
+    plotkennlinie(data, name)
     plotLeistung(data,name,p_zu)
     

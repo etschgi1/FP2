@@ -401,6 +401,57 @@ Der zweite große Teil dieses Labortages beschäftigt sich mit einer Wärmepumpe
 
 \subsection{Solarzelle mit Lampe}
 \label{subsec:auswertung_solar_lampe}
+Zur Auswertung zum Versuch mit den Solarzellen werden die jeweiligen Messreihen in einem I(U)- sowie einem P(U)-Diagramm dargestellt. Aus den Messdaten wird der Punkt der maximalen Leistung $P_{MPP}$, die Spannung $U_{MPP}$ und der Strom $I_{MPP}$ bei maximaler Leistung, sowie der Füllfaktor $FF$ der Zelle errechnet. Die Ergebnisse sind für Seriellschaltung in \autoref{fig:solar_seriell} und für Parallelschaltung in \autoref{fig:solar_parallel} dargestellt. Zudem sind die Werte für den Versuch mit einer verdeckten Zelle in \autoref{fig:solar_verdeckt} abgebildet. 
+\setcapindent{0pt}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.485\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/plots/solar_seriell_UI_.pdf}
+    \end{minipage}%
+    \hspace*{\fill}
+    \begin{minipage}[t]{0.485\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/plots/solar_seriell_UP_.pdf}
+    \end{minipage}
+    \caption[I(U)-/P(U)-Kennlinie Serienschaltung Solarzelle]{I(U)-/P(U)-Kennlinie Serienschaltung zweier Solarzelle. Aus den Messwerten wurden der Kurzschlussstrom (links: orange), die Leerlaufspannung (links: grün), der maximale Leistungspunkt (links:rot, rechts: orange). Die maximale Leistung $P_{MPP}$, die Spannung $U_{MPP}$ und der Strom $I_{MPP}$ bei maximaler Leistung, sowie der Füllfaktor $FF$ der Zelle wurden aus den Messwerten berechnet.}
+    \label{fig:solar_seriell}
+\end{figure}
+\setcaphanging
+
+\setcapindent{0pt}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.485\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/plots/solar_parallel_UI_.pdf}
+    \end{minipage}%
+    \hspace*{\fill}
+    \begin{minipage}[t]{0.485\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/plots/solar_parallel_UP_.pdf}
+    \end{minipage}
+    \caption[I(U)-/P(U)-Kennlinie Parallelschaltung Solarzelle]{I(U)-/P(U)-Kennlinie Parallelschaltung zweier Solarzelle. Aus den Messwerten wurden der Kurzschlussstrom (links: orange), die Leerlaufspannung (links: grün), der maximale Leistungspunkt (links:rot, rechts: orange). Die maximale Leistung $P_{MPP}$, die Spannung $U_{MPP}$ und der Strom $I_{MPP}$ bei maximaler Leistung, sowie der Füllfaktor $FF$ der Zelle wurden aus den Messwerten berechnet.}
+    \label{fig:solar_parallel}
+\end{figure}
+\setcaphanging
+
+\setcapindent{0pt}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.485\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/plots/solar_solar_verdeckt_UI_.pdf}
+    \end{minipage}%
+    \hspace*{\fill}
+    \begin{minipage}[t]{0.485\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{fig/plots/solar_solar_verdeckt_UP_.pdf}
+    \end{minipage}
+    \caption[I(U)-/P(U)-Kennlinie Seriellschaltung -- abgedunkelt Solarzelle]{I(U)-/P(U)-Kennlinie Seriellschaltung zweier Solarzelle wobei eine abgedunkelt wurde. Aus den Messwerten wurden der Kurzschlussstrom (links: orange), die Leerlaufspannung (links: grün), der maximale Leistungspunkt (links:rot, rechts: orange). Die maximale Leistung $P_{MPP}$, die Spannung $U_{MPP}$ und der Strom $I_{MPP}$ bei maximaler Leistung, sowie der Füllfaktor $FF$ der Zelle wurden aus den Messwerten berechnet.}
+    \label{fig:solar_verdeckt}
+\end{figure}
+\setcaphanging
 
 \subsection{Solarzelle mit Sonnensimulator}
 \label{subsec:auswertung_solar_sonnensimulator}
@@ -410,14 +461,14 @@ Der zweite große Teil dieses Labortages beschäftigt sich mit einer Wärmepumpe
 
 Die von Cassy-Lab2 erhaltenen Daten zu den beiden Temperaturkurven werden eingelesen und in \autoref{fig:plot_waermepumpe} dargestellt.
 
-\begin{figure}[H]
-    \centering
-    \begin{samepage}
-        \includegraphics[width=\linewidth]{}
-        \caption[]{}
-        \label{fig:}
-    \end{samepage}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \begin{samepage}
+%         \includegraphics[width=\linewidth]{}
+%         \caption[]{}
+%         \label{fig:}
+%     \end{samepage}
+% \end{figure}
 
 
 \section{Diskussion}
