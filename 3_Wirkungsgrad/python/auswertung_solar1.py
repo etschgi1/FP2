@@ -85,7 +85,7 @@ def plotUP(I,U,P,title):
         x_pos = np.max(U).n*0.15
     else:
         x_pos = np.max(U).n*0.4
-    plt.text(x_pos,np.max(P).n*0.05, r"$P_{MPP}=$ " +uncstr(max_p,r"\watt")+ "\n" + r"$U_{MPP}=$ " +uncstr((U_max_p),r"\volt") + "\n" + r"$I_{MPP}=$ " +uncstr(I_max_p,r"\milli\ampere") + "\n" + r"FF = " +uncstr(füllfaktor),  bbox=dict(facecolor='beige', alpha=0.5))
+    plt.text(x_pos,np.max(P).n*0.05, r"$P_{MPP}=$ " +uncstr(max_p,r"\milli\watt")+ "\n" + r"$U_{MPP}=$ " +uncstr((U_max_p),r"\volt") + "\n" + r"$I_{MPP}=$ " +uncstr(I_max_p,r"\milli\ampere") + "\n" + r"FF = " +uncstr(füllfaktor),  bbox=dict(facecolor='beige', alpha=0.5))
     plt.xlabel("U / V")
     plt.ylabel("P / mW")
     plt.title("Leistungskennlinie")
